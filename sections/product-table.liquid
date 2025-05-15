@@ -1,0 +1,92 @@
+{{ 'section-product-table.css' | asset_url | stylesheet_tag }}
+
+<div class="hardware-specification-section-wrapper component" id="harwareSection">
+  <div class="product-detail-header">
+    <h3>{{ section.settings.section_title }}</h3>
+    <p>{{ section.settings.section_subtitle }}</p>
+  </div>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Key Information</th>
+          <th>Specs</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for block in section.blocks %}
+          {% if block.type == 'specification' %}
+            <tr>
+              <td>{{ block.settings.key }}</td>
+              <td>{{ block.settings.value }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Table",
+  "tag": "section",
+  "class": "hardware-specification-section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Technical Specs"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Hardware specifications"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "specification",
+      "name": "Specification",
+      "settings": [
+        {
+          "type": "text",
+          "id": "key",
+          "label": "Key Information",
+          "default": "Specification"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Specification Value",
+          "default": "Value"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Table",
+      "blocks": [
+        {
+          "type": "specification"
+        },
+        {
+          "type": "specification"
+        },
+        {
+          "type": "specification"
+        },
+        {
+          "type": "specification"
+        },
+        {
+          "type": "specification"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

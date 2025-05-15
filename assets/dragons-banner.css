@@ -1,0 +1,140 @@
+.main-sleep-revolution-sec {
+  padding: 23px 0 46px;
+}
+body.index.gradient .main-sleep-revolution-sec {
+  padding-bottom: 0;
+}
+.header-atc .custom-header-button {
+  background-color: #062842;
+}
+.container {
+  max-width: 1417px;
+}
+.banner-image {
+  position: relative;
+}
+.fancybox-slide--video .fancybox-close-small {
+  right: 0 !important;
+}
+.fancybox-button:after,
+.fancybox-button:before {
+  opacity: 0.1 !important;
+}
+.revolution-content {
+  position: absolute;
+  bottom: 51px;
+  left: 180px;
+  max-width: 616px;
+}
+.main-sleep-revolution-sec h1 {
+  font-size: 50px;
+  font-family: Inter, system-ui !important;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.main-sleep-revolution-sec .btn {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+.green-btn a {
+  display: inline-block;
+  padding: 18px 17px;
+  margin-right: 22px;
+  border: 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #062842;
+  border-radius: 50px;
+  font-family: Inter, system-ui !important;
+  width: 100%;
+  text-align: center;
+  border: 1px solid;
+  text-decoration: none;
+}
+.banner-image .desktop-hide {
+  display: none !important;
+}
+.banner-image .mobile-hide {
+  display: block !important;
+}
+.main-sleep-revolution-sec .btn .green-btn:nth-child(2) a {
+  padding: 18px 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .green-btn a {
+    padding: 12px 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .main-sleep-revolution-sec h1 {
+    font-size: 42px;
+  }
+  .revolution-content {
+    left: 0;
+    right: 0;
+    max-width: initial;
+    text-align: center;
+  }
+  .main-sleep-revolution-sec .btn .green-btn:nth-child(2) a {
+    padding: 12px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-sleep-revolution-sec .container,
+  .main-sleep-revolution-sec {
+    padding: 0;
+  }
+  .main-sleep-revolution-sec h1 {
+    font-size: 35px;
+    line-height: normal;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  .main-sleep-revolution-sec .btn {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-sleep-revolution-sec .btn .green-btn {
+    margin-bottom: 10px;
+  }
+  .main-sleep-revolution-sec .btn .green-btn a {
+    width: auto;
+    margin: 0 auto;
+  }
+  .main-sleep-revolution-sec .btn .green-btn:nth-child(2) a {
+    padding: 9px 20px;
+  }
+  .inner-video-sec {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  video#foundersVideoBanner {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .banner-image .desktop-hide {
+    display: block !important;
+  }
+  .banner-image .mobile-hide {
+    display: none !important;
+  }
+  .banner-image img {
+    width: 100%;
+  }
+  .banner-image .green-btn a {
+    padding: 9px 15px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media only screen and (max-width: 390px) {
+}

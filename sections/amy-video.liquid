@@ -1,0 +1,112 @@
+{{ 'section-amy-video.css' | asset_url | stylesheet_tag }}
+
+<div class="anti-snoring-solution component">
+  <div class="amy-video-container">
+    <div class="video-play-sec">
+      <div class="inner-video">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subtext }}</p>
+        <a href="javascript:void(0);" id="video-play-main" target="_blank" rel="noreferrer noopener">
+          <img src="{{ section.settings.play_icon | img_url: 'master' }}" alt="">Watch Video
+        </a>
+      </div>
+      <video class="desktop-video" autoplay="" loop="" muted="" playsinline="">
+        <source src="{{ section.settings.desktop_video }}" type="video/mp4">
+      </video>
+      <video class="mobile-video" autoplay="" loop="" muted="" playsinline="">
+        <source src="{{ section.settings.mobile_video }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="anti-snor-bottom">
+    <h3>{{ section.settings.bottom_heading }}</h3>
+    {% for block in section.blocks %}
+      <div class="g-box" {{ block.shopify_attributes }}>
+        <img
+          src="{{ block.settings.step_image | img_url: 'master' }}"
+          alt="anti-snoring-solution-img"
+          loading="lazy"
+        >
+        <p>
+          <span>{{ forloop.index }}.</span> {{ block.settings.step_text }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Amy Video Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Nora turns any pillow into an anti-snore pillow."
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Contact-free, hassle free."
+    },
+    {
+      "type": "image_picker",
+      "id": "play_icon",
+      "label": "Play Button Icon"
+    },
+    {
+      "type": "url",
+      "id": "desktop_video",
+      "label": "Desktop Video"
+    },
+    {
+      "type": "url",
+      "id": "mobile_video",
+      "label": "Mobile Video"
+    },
+    {
+      "type": "text",
+      "id": "bottom_heading",
+      "label": "Bottom Heading",
+      "default": "Easy as 1, 2, 3."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "step_image",
+          "label": "Step Image"
+        },
+        {
+          "type": "text",
+          "id": "step_text",
+          "label": "Step Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Amy Video Section",
+      "category": "Video",
+      "blocks": [
+        {
+          "type": "step"
+        },
+        {
+          "type": "step"
+        },
+        {
+          "type": "step"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

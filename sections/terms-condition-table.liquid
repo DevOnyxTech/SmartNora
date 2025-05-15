@@ -1,0 +1,66 @@
+{{ 'section-terms-table.css' | asset_url | stylesheet_tag }}
+
+<div class="terms-conditions-sec component">
+  <div class="terms-conditions-container">
+    <h2>{{ section.settings.section_title }}</h2>
+    <div class="terms-conditions-table">
+      {% for block in section.blocks %}
+        {% if block.type == 'table_row' %}
+          <div class="terms-tbl-item">
+            <div class="terms-title t-data">{{ block.settings.title }}</div>
+            <div class="terms-desc t-data">{{ block.settings.description }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Terms & Conditions Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Terms and Conditions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "table_row",
+      "name": "Table Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Field Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Field Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Terms & Conditions Table",
+      "blocks": [
+        {
+          "type": "table_row"
+        },
+        {
+          "type": "table_row"
+        },
+        {
+          "type": "table_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,157 @@
+p.accessories-banner__price.accessories-banner__price--member span {
+  color: red;
+  font-weight: 400;
+}
+.accessories-banner__button--outline {
+  border: 1px solid #97ca3b;
+  color: #97ca3b;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 11px 15px;
+  border-radius: 99px;
+  text-decoration: none;
+}
+.accessories-banner__subtitle {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  max-width: 476px;
+  line-height: normal;
+}
+.accessories-banner__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+.accessories-banner__heading {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  display: flex;
+}
+.accessories-banner__wrap {
+  height: 100%;
+}
+.accessories-banner__heading span {
+  padding-right: 5px;
+}
+.accessories-banner__bottom-content {
+  position: absolute;
+  bottom: 0;
+}
+.accessories-banner__product-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.accessories-banner__top-content {
+  padding-top: 100px;
+}
+.accessories-banner__price--regular {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 400;
+}
+.accessories-banner__button-wrapper {
+  margin-top: 40px;
+  display: flex;
+}
+.accessories-banner__price--member {
+  color: #97ca3b;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+}
+.accessories-banner__button-wrapper {
+  margin-top: 20px;
+  display: flex;
+}
+.accessories-banner {
+  background: url(https://cdn.shopify.com/s/files/1/1053/4408/files/banner-image.webp?v=1737971509)
+    no-repeat center / cover;
+  width: 100%;
+  height: 823px;
+  padding: 72px 0;
+}
+@media only screen and (max-width: 1180px) {
+  .accessories-banner__container {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .accessories-banner {
+    height: 550px;
+  }
+  .accessories-banner__top-content {
+    padding-top: 0;
+  }
+  .membership-wrap__left {
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .accessories-banner__subtitle {
+    font-size: 44px;
+  }
+  .accessories-banner__product-title {
+    font-size: 20px;
+  }
+  .accessories-banner__price--regular {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .accessories-banner__price--member {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .accessories-banner__price--regular,
+  .accessories-banner__price--member {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .accessories-banner__product-title {
+    font-size: 24px;
+    line-height: normal;
+    max-width: 241px;
+    margin: 10px 0;
+  }
+  .accessories-banner {
+    height: 455px;
+    padding: 72px 0;
+  }
+  .accessories-banner__heading {
+    font-size: 14px;
+    line-height: 26px;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .accessories-banner__subtitle {
+    font-size: 36px;
+    text-align: left;
+    max-width: 342px;
+    line-height: normal;
+  }
+  .accessories-banner__bottom-content {
+    position: initial;
+    text-align: left;
+  }
+  .accessories-banner__heading span {
+    height: 21px;
+  }
+  .accessories-banner__button-wrapper {
+    margin-top: 11px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .accessories-banner {
+    background: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Top-wrapper.webp?v=1738234098)
+      no-repeat center / cover;
+  }
+}

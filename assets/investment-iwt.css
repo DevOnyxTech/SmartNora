@@ -1,0 +1,29 @@
+.customer-review-sec {
+  padding-block: 75px;
+}
+.customer-review-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.customer-review-wrapper {
+  display: flex;
+}
+.customer-review-wrapper .half-content,
+.customer-review-wrapper .half-image {
+  width: 50%;
+}
+.customer-review-wrapper .half-content {
+  padding-right: 100px;
+}
+.customer-review-wrapper .half-image img {
+  max-width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+.customer-review-wrapper .half-content p {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 1.4;
+}

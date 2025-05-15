@@ -1,0 +1,75 @@
+.dream-bedroom-container {
+  max-width: 1280px;
+  margin: 20px auto 40px;
+  background-image: url("https://www.smartnora.com/cdn/shop/files/iStock-1156144915-scaled.jpg?v=1698052286");
+  padding: 160px 80px 56px;
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 20px;
+}
+.dream-bnr-content h1 {
+  font-size: 108px;
+  line-height: 108px;
+  color: #fff;
+  font-weight: 400;
+  margin-block: 0;
+}
+
+.giveaway-btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 56px;
+}
+.giveaway-btn a {
+  display: flex;
+  align-items: center;
+  background: #4a4a4a;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: 0.3s;
+  line-height: 24px;
+  font-size: 16px;
+}
+.giveaway-btn a:hover {
+  background-color: rgb(151, 202, 59);
+}
+.giveaway-btn svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.bnr-small-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1279px) {
+  .dream-bedroom-container {
+    margin-inline: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .dream-bnr-content h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .dream-bedroom-container {
+    padding-top: 128px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dream-bedroom-container {
+    padding: 128px 40px 56px;
+    background-position: 91% 50%;
+  }
+  .bnr-small-text {
+    display: none;
+  }
+  .giveaway-btn a {
+    margin-bottom: 20px;
+  }
+}

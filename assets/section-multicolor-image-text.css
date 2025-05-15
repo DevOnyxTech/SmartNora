@@ -1,0 +1,149 @@
+.science-of-nora {
+  background-color: #f1f1f1;
+  padding: 123px 0;
+}
+.science-of-nora .half-block-left h2 {
+  text-align: left;
+  margin-bottom: 40px;
+  letter-spacing: -1.5px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+.science-of-nora-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.science-of-nora-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.science-of-nora-title svg {
+  width: 16px;
+}
+.science-of-nora-title h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(5, 36, 59, 1);
+  margin-left: 16px;
+}
+.science-of-nora .half-block-cover {
+  display: flex;
+  flex-wrap: wrap;
+}
+.science-of-nora .half-block-left {
+  width: 52%;
+}
+.science-of-nora .half-block-right {
+  width: 48%;
+}
+.science-of-nora .half-block-left h2 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  line-height: 48px;
+  color: #05243b;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+}
+.science-of-nora .half-block-left .text-purple {
+  color: #995df6;
+}
+.science-of-nora .half-block-left .text-blue {
+  color: #3161f5;
+}
+.science-of-nora .half-block-left p {
+  line-height: 1.5;
+  font-size: 16px;
+  color: #000;
+}
+.science-of-nora .half-block-right img {
+  width: 100%;
+}
+.science-of-nora .nora-work-btn {
+  margin-top: 25px;
+}
+.science-of-nora .nora-work-btn a {
+  border: 1px solid rgba(74, 74, 74, 1);
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: rgba(74, 74, 74, 1);
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+  line-height: 27px;
+}
+.science-of-nora .nora-work-btn a span {
+  display: flex;
+  align-items: center;
+}
+.science-of-nora .nora-work-btn a svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.science-of-nora .nora-work-btn a:hover {
+  background: rgba(151, 202, 59, 1);
+  color: #fff;
+  border-color: rgba(151, 202, 59, 1);
+}
+@media screen and (max-width: 1280px) {
+  .science-of-nora-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .science-of-nora {
+    padding: 70px 0;
+  }
+  .science-of-nora-title {
+    margin-bottom: 70px;
+  }
+  .science-of-nora .half-block-left h2 {
+    font-size: 46px;
+    line-height: 55px;
+  }
+  .science-of-nora .half-block-left {
+    padding-right: 0;
+  }
+  .science-of-nora .half-block-cover {
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 767px) {
+  .science-of-nora .half-block-cover {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .science-of-nora .half-block-right img {
+    transform: rotateY(180deg);
+  }
+  .science-of-nora-container {
+    padding: 0;
+  }
+  .science-of-nora .half-block-left,
+  .science-of-nora .half-block-right {
+    width: 100%;
+  }
+  .science-of-nora .half-block-left {
+    padding: 40px 0 0;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .science-of-nora .half-block-left h2 {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 28px;
+    letter-spacing: -0.7px;
+  }
+  .science-of-nora-title {
+    margin-bottom: 35px;
+  }
+  .science-of-nora-title h3 {
+    font-size: 14px;
+  }
+}

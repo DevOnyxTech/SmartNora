@@ -1,0 +1,161 @@
+{{ 'gen-2-pro-simple-use.css' | asset_url | stylesheet_tag }}
+
+<div class="simple_use_section">
+  <div class="container">
+    <div class="simple-use-heading">
+      <div class="tagline">
+        <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/heading-icon.svg?v=1743072329" alt="Icon">
+        <span>{{ section.settings.pre_heading }}</span>
+      </div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p class="sub-desc">{{ section.settings.content }}</p>
+    </div>
+    <div class="video-section-wrapper">
+      <div class="video-container">
+        <div class="video-play-sec">
+          <div class="inner-video">
+            <video
+              poster="{{ section.settings.poster | img_url : 'master' }}"
+              class="video-wrapper"
+              muted=""
+              playsinline=""
+            >
+              <source src="{{ section.settings.video.sources[0].url }}" type="video/mp4">
+            </video>
+            <div class="play-button" id="playIcon">
+              <img
+                id="playButton"
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Play_button_88b811ff-3ca3-4ae0-978a-a75695930063.svg?v=1742799102"
+                alt="Play Icon"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="universal-ai-powered">
+      <div class="universal-ai-powered__wrapper swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="undetectable-movement-{{ forloop.index }} swiper-slide">
+            <div class="undetectable-movement">
+              <div class="undetectable-movement__image">
+                <img class="border-radius-20" src="{{ block.settings.image | img_url : 'master'}}" alt="Customizable">
+              </div>
+              <div class="undetectable-movement__text">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  if ($(window).width() < 767) {
+         let slider = new Swiper('.universal-ai-powered', {
+             slidesPerView: 1.05,
+             centeredSlides: true,
+             spaceBetween: 20,
+             loop: true,
+             pagination: {
+                 el: '.swiper-pagination',
+                 clickable: true,
+             },
+         });
+     }
+
+     // Video Play Button
+    $("#playButton").click(function () {
+    let video = $(".video-wrapper")[0];
+    if (video.paused) {
+        video.play();
+        $(this).attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/pause.png?v=1742799102");
+    } else {
+        video.pause();
+        $(this).attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/Play_button_88b811ff-3ca3-4ae0-978a-a75695930063.svg?v=1742799102");
+    }
+    });
+
+    $(".video-wrapper").on("play", function () {
+        $("#playButton").attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/pause.png?v=1742799102");
+    });
+
+    $(".video-wrapper").on("pause", function () {
+        $("#playButton").attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/Play_button_88b811ff-3ca3-4ae0-978a-a75695930063.svg?v=1742799102");
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Simple Use",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "video",
+      "label": "Video",
+      "id": "video"
+    },
+    {
+      "type": "image_picker",
+      "label": "Poster",
+      "id": "poster"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "description"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Pro Simple Use"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

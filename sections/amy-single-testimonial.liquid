@@ -1,0 +1,83 @@
+{{ 'section-single-testimonial.css' | asset_url | stylesheet_tag }}
+
+<div class="any-chant-wrapper component">
+  <div class="container">
+    <div class="any-chant-inner-section flex">
+      <div class="any-chant-left-section">
+        <h3 class="only-mob-title">
+          {{ section.settings.testimonial_text }}
+          <span>{{ section.settings.author_name }}</span>
+        </h3>
+        {% if section.settings.testimonial_image %}
+          <img
+            src="
+              {{
+                section.settings.testimonial_image
+                | img_url: 'master'
+              }}
+            "
+          >
+        {% endif %}
+      </div>
+      <div class="any-chant-right-section">
+        <div class="any-chant-right-inner-section">
+          <h3>
+            {{ section.settings.testimonial_text }}
+            <span>{{ section.settings.author_name }}</span>
+          </h3>
+          <p>{{ section.settings.cta_text }}</p>
+          <h4>{{ section.settings.offer_heading }}</h4>
+          <p>{{ section.settings.offer_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Single Testimonial",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "testimonial_image",
+      "label": "Testimonial Image"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_text",
+      "label": "Testimonial Quote",
+      "default": "\"Nora has impacted our moods and strengthened our relationship.\""
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "Amy Chan"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Call to Action Text",
+      "default": "Try Nora for yourself."
+    },
+    {
+      "type": "text",
+      "id": "offer_heading",
+      "label": "Offer Heading",
+      "default": "Get $50 off"
+    },
+    {
+      "type": "text",
+      "id": "offer_text",
+      "label": "Offer Text",
+      "default": "Limited time offer. Ends soon."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Testimonial",
+      "category": "Testimonial"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,55 @@
+{{ 'section-sleep-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="dream-bedroom-banner">
+  <div class="dream-bedroom-container">
+    <div class="dream-bnr-content">
+      <h1>{{ section.settings.heading }}</h1>
+      <div class="giveaway-btn">
+        <a href="{{ section.settings.button_link }}" target="_blank">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"> </path>
+          </svg>
+          <span>{{ section.settings.button_text }}</span>
+        </a>
+      </div>
+      <div class="bnr-small-text">{{ section.settings.small_text }}</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Dream Bedroom Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Dream Bedroom is within reach!"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Enter giveaway now!"
+    },
+    {
+      "type": "text",
+      "id": "small_text",
+      "label": "Small Text",
+      "default": "See detailed terms and conditions below."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dream Bedroom Banner",
+      "category": "Banner"
+    }
+  ]
+}
+{% endschema %}

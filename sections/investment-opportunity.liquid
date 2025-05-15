@@ -1,0 +1,96 @@
+{{ 'investment-opportunity.css' | asset_url | stylesheet_tag }}
+
+<div class="oppurtunity-highlights">
+  <div class="oppurtunity-container">
+    <div class="oppurtunity-header">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="three-content-wrapper">
+      <h4>{{ section.settings.sub_heading }}</h4>
+      <div class="oppurtunity-m-slider">
+        <ul class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <li class="box-area swiper-slide">
+              <h6>{{ block.settings.title }}</h6>
+              <h5>{{ block.settings.sub_title }}</h5>
+              <p>
+                {{ block.settings.description }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <span class="oppurtunity-swiper-pagination"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    if ($(window).width() < 768) {
+  var swiper2 = new Swiper('.oppurtunity-m-slider', {
+      breakpoints: {
+        768: {
+          slidesPerGroup: 1,
+          spaceBetween: 0,
+          slidesPerView: 1.2,
+          centeredSlides: true,
+          loop:true,
+          pagination: {
+            el: ".oppurtunity-swiper-pagination",
+          },
+        }
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Opprtunity",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Sub Title",
+          "id": "sub_title"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Investment Opportunity"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}

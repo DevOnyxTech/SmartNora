@@ -1,0 +1,140 @@
+{{ 'section-press-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="press-section ">
+  <div class="press-sec-container">
+    <div class="press-title">{{ section.settings.press_title }}</div>
+    <div class="press-wrapper">
+      <div class="press-left-sec">
+        <img
+          loading="lazy"
+          src="{{ section.settings.left_section_image | img_url: 'master' }}"
+          alt="{{ section.settings.left_section_image.alt }}"
+        >
+        <p>
+          {{ section.settings.left_section_text }}
+          <span>{{ section.settings.left_section_span }}</span>
+        </p>
+      </div>
+      <div class="press-right-sec">
+        <div class="press-slider-cover">
+          <div class="press-slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  <div class="swiper-slide ">
+                    <div class="logo-slide-inner">
+                      <img
+                        src="{{ block.settings.slide_image | img_url: 'master' }}"
+                        alt="{{ block.settings.slide_image.alt }}"
+                        loading="lazy"
+                      >
+                      <h3 class="logo-desc">{{ block.settings.slide_description }}</h3>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <!-- Add Pagination -->
+            </div>
+          </div>
+          <div class="press-navs-arrow">
+            <div class="press-nav swiper-button-prev">
+              <img
+                loading="lazy"
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Left_Arrow.svg?v=1732005912"
+                alt="Angle Left"
+              >
+            </div>
+            <div class="press-nav swiper-button-next">
+              <img
+                loading="lazy"
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Right_Arrow.svg?v=1732005912"
+                alt="Angle Right"
+              >
+            </div>
+          </div>
+          <span class="swiper-pagination"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var swiper2 = new Swiper('.press-slider .swiper-container', {
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.press-nav.swiper-button-next',
+      prevEl: '.press-nav.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 1,
+        pagination: {
+          el: ".press-right-sec .swiper-pagination",
+                clickable: true,
+        },
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Press Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "press_title",
+      "label": "Press Section Title",
+      "default": "IN THE PRESS"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_section_image",
+      "label": "Left Section Image"
+    },
+    {
+      "type": "text",
+      "id": "left_section_text",
+      "label": "Left Section Text",
+      "default": "\"Best anti-snoring solution.\""
+    },
+    {
+      "type": "text",
+      "id": "left_section_span",
+      "label": "Left Section Span Text",
+      "default": "2020, 2021, 2022, 2023"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Slide Image"
+        },
+        {
+          "type": "text",
+          "id": "slide_description",
+          "label": "Slide Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Press Slider",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

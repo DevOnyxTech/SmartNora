@@ -1,0 +1,66 @@
+{{ 'dragons-amazing-sleep.css' | asset_url | stylesheet_tag }}
+
+<div class="amazing-sleep">
+  <div class="container">
+    <div class="amazing-box">
+      <div class="desktop-hide">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+      <div class="left-block">
+        <img src="{{ section.settings.image | img_url : 'master' }}">
+      </div>
+      <div class="right-block">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.description }}</p>
+        <div class="green-btn">
+          <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Amazing Sleep",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "description"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+       {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Dragons Amazing Sleep"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

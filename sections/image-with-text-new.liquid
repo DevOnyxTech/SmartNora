@@ -1,0 +1,47 @@
+{{ 'section-new-iwt.css' | asset_url | stylesheet_tag }}
+
+<div class="extnd-wrnty-sec component">
+  <div class="extnd-wrnty-container">
+    <div class="extnd-wrnty-wrapper">
+      <div class="wrnty-half-image half-block">
+        <img loading="lazy" src="{{ section.settings.warranty_image | img_url: 'master' }}" alt="Extend Your Warranty">
+      </div>
+      <div class="wrnty-half-content half-block">
+        <h2>{{ section.settings.heading }}</h2>
+        {{ section.settings.description }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warranty IWT",
+  "tag": "section",
+  "class": "extnd-wrnty-sec",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "warranty_image",
+      "label": "Warranty Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How To Extend Your Warranty?"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>If the delivery date of your device was less than 1 year ago, you are still covered under warranty and your purchase is eligible for an extension.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warranty IWT"
+    }
+  ]
+}
+{% endschema %}

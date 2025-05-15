@@ -1,0 +1,153 @@
+{{ 'pro-app-screen.css' | asset_url | stylesheet_tag }}
+
+<div class="app_screens_section">
+  <div class="container">
+    <div class="app-screen-wrapper">
+      <div class="app-description">
+        {% for block in section.blocks %}
+          <div class="app_descr_item">
+            {% if forloop.index == 1 %}
+              <div class="tagline">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/1053/4408/files/heading-icon-green.svg?v=1743087446"
+                  alt="Icon"
+                >
+                <span>{{ section.settings.pre_heading }}</span>
+              </div>
+            {% endif %}
+            <h2
+              {% if forloop.index == 1 %}
+                class="app-title-lg"
+              {% endif %}
+            >
+              {{ block.settings.title }}
+            </h2>
+            <p>
+              {{ block.settings.content }}
+            </p>
+            {% if block.settings.button_label != blank %}
+              <div class="btn-outline">
+                <a href="{{ block.settings.button_link }}" target="_blank"
+                  ><img
+                    src="https://cdn.shopify.com/s/files/1/1053/4408/files/btn-outline-icon.svg?v=1743087629"
+                    alt="Icon"
+                  >
+                  {{- block.settings.button_label -}}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="app-screen-img app_screen_desktop">
+        {% for block in section.blocks %}
+          <img
+            src="{{ block.settings.desktop_image | img_url : 'master' }}"
+            {% if forloop.index == 1 %}
+              class="active"
+            {% endif %}
+            alt="App Screen"
+          >
+        {% endfor %}
+      </div>
+      <div class="app-screen-img app_screen_mobile">
+        {% for block in section.blocks %}
+          <img
+            src="{{ block.settings.mobile_image | img_url : 'master' }}"
+            {% if forloop.index == 1 %}
+              class="active"
+            {% endif %}
+            alt="App Screen"
+          >
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // App Screen Scroll Section Desktop
+   if ($(window).width() > 767) {
+       $(window).on('scroll', function () {
+           $('.app_descr_item').each(function (index) {
+               if ($(window).scrollTop() >= $(this).offset().top - $(window).height() * 0.7) {
+                   $('.app_screen_desktop img').removeClass('active').eq(index).addClass('active');
+               }
+           });
+       });
+   };
+   // App Screen Scroll Section Mobile
+   if ($(window).width() < 767) {
+       $(window).on('scroll', function () {
+           $('.app_descr_item').each(function (index) {
+               if ($(window).scrollTop() >= $(this).offset().top - $(window).height() * 0.8) {
+                   $('.app_screen_mobile img').removeClass('active').eq(index).addClass('active');
+               }
+           });
+       });
+   };
+</script>
+{% schema %}
+{
+  "name": "Companion App ",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "screen",
+      "name": "Screen",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mobile Image",
+          "id": "mobile_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "Desktop Image",
+          "id": "desktop_image"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "label": "Button Label",
+          "id": "button_label"
+        },
+        {
+          "type": "url",
+          "label": "Button Link",
+          "id": "button_link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 App"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,121 @@
+.testimonial-slider-wrapper {
+  padding: 131px 30px 0 30px;
+}
+
+.review-content {
+  background: #f0f9f9;
+  border-radius: 20px;
+  padding: 20px 20px 40px;
+  max-width: 700px;
+}
+
+.review-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+}
+
+.dr-review-author-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+}
+
+.dr-author-image {
+  position: relative;
+  width: 106px;
+}
+
+.dr-author-image img {
+  width: 106px !important;
+  height: 106px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+.dr-author-content {
+  background: #f4f6f7;
+  max-width: 370px;
+  padding: 10px 10px 10px 30px;
+  margin-left: -20px;
+}
+
+.dr-author-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.dr-author-content span {
+  font-size: 18px;
+  line-height: normal;
+  color: #000;
+}
+
+.item.dr-review-item {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial-slider-wrapper .swiper-slide {
+  padding-bottom: 66px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .testimonial-slider-wrapper {
+    padding: 60px 30px;
+  }
+  .dr-author-content span,
+  .dr-author-content h4 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .review-content {
+    max-width: 590px;
+  }
+
+  .item.dr-review-item {
+    max-width: 780px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .dr-review-author-main {
+    position: initial;
+    justify-content: center;
+    margin-top: -40px;
+    padding-block: 8px;
+  }
+  .dr-author-image img {
+    width: 80px !important;
+  }
+
+  .review-content {
+    max-width: initial;
+  }
+  .testimonial-slider-wrapper .review-content p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .testimonial-slider-wrapper {
+    padding-bottom: 0;
+  }
+  .dr-author-image {
+    width: 80px;
+  }
+  .dr-author-content {
+    width: calc(100% - 80px);
+    max-width: 270px;
+  }
+  .testimonial-slider-wrapper .swiper-slide {
+    padding-bottom: 0;
+  }
+}

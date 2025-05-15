@@ -1,0 +1,314 @@
+{{ 'gen-2-product-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="discover_nora_hero_section">
+  <div class="container">
+    <div class="discover_nora_wrapper">
+      <div class="slider-wrapper block_right_slider">
+        <div class="thumb-slider">
+          {%- for media in product.media -%}
+            <div class="slide">
+              <img src="{{ media | img_url : 'master' }}" alt="{{ forloop.index }}">
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="main-slider">
+          {%- for media in product.media -%}
+            <div class="slide">
+              <img src="{{ media | img_url : 'master' }}" alt="{{ forloop.index }}">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="block_left_content">
+        {% if section.settings.review_text %}
+          <div class="star-reviews">★★★★★ {{ section.settings.review_text }}</div>
+        {% endif %}
+        <h1>{{ section.settings.product_title }}</h1>
+        <div class="price-wrapper">
+          <div class="old_price">{{ section.settings.cutoff_price }}</div>
+          <div class="new_price">
+            <span>{{ section.settings.actual_price }}</span> {{ section.settings.offer_text }}
+          </div>
+        </div>
+        <button
+          class="custom-header-button product-form__submit button button--full-width button--primary"
+          onClick="addItemToCart(51691708219764, 1, 691771605364)"
+        >
+          <svg
+            class="custom-header-icon custom-header-home"
+            width="24"
+            height="24"
+            viewBox="0 0 18 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.32786 1.42785C6.2421 0.513614 7.48207 0 8.775 0C10.0679 0 11.3079 0.513614 12.2221 1.42785C13.1364 2.34209 13.65 3.58207 13.65 4.875V5.85H15.6C16.1071 5.85 16.5295 6.2387 16.5716 6.74403L17.5466 18.444C17.5693 18.7157 17.4771 18.9845 17.2925 19.1852C17.1079 19.3858 16.8477 19.5 16.575 19.5H0.975003C0.702342 19.5 0.442139 19.3858 0.257518 19.1852C0.0728968 18.9845 -0.0192722 18.7157 0.00337102 18.444L0.978371 6.74403C1.02048 6.2387 1.44292 5.85 1.95 5.85H3.9V4.875C3.9 3.58207 4.41362 2.34209 5.32786 1.42785ZM3.9 7.8V8.775C3.9 9.31348 4.33653 9.75 4.875 9.75C5.41348 9.75 5.85 9.31348 5.85 8.775V7.8H11.7V8.775C11.7 9.31348 12.1365 9.75 12.675 9.75C13.2135 9.75 13.65 9.31348 13.65 8.775V7.8H14.7029L15.5154 17.55H2.03463L2.84713 7.8H3.9ZM11.7 5.85H5.85V4.875C5.85 4.09924 6.15817 3.35526 6.70672 2.80671C7.25526 2.25817 7.99924 1.95 8.775 1.95C9.55076 1.95 10.2947 2.25817 10.8433 2.80671C11.3918 3.35526 11.7 4.09924 11.7 4.875V5.85Z"
+              fill="white"
+            />
+          </svg>
+
+          <svg
+            class="custom-header-icon custom-header-rocket"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+          </svg>
+          {{ section.settings.button_label }}
+        </button>
+      </div>
+    </div>
+    <div class="product-description-block">
+      <div class="product-description-wrapper desktop_version">
+        {% for block in section.blocks %}
+           {% case block.type %}
+         {% when 'usp' %}
+          
+          <div
+            {% if forloop.index == 5  %}
+              class="prod-desc-item member--popup"
+              data-fancybox href="#mypopupc"
+            {% else %}
+              class="prod-desc-item"
+            {% endif %}
+          >
+            <img src="{{ block.settings.icon | img_url : 'master' }}" alt="Icon">
+            <div class="prod-desc-text">
+              <span>{{ block.settings.title }}</span> <span>{{ block.settings.content }}</span>
+            </div>
+          </div>
+             {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="product-description-wrapper mobile_version">
+        {% for block in section.blocks %}
+       {% case block.type %}
+         {% when 'mobile_usp' %}
+          <div
+            {% if forloop.last %}
+              class="prod-desc-item member--popup"
+              data-fancybox href="#mypopupc"
+            {% else %}
+              class="prod-desc-item"
+            {% endif %}
+          >
+             <img src="{{ block.settings.mobile_icon | img_url : 'master' }}" alt="Icon">
+            <div class="prod-desc-text">{{ block.settings.mobile_text }}</div>
+          </div>
+         {% endcase %}
+        {% endfor %}
+      </div>
+      <button
+        type="submit"
+        name="add"
+        class="custom-header-button"
+        onClick="addItemToCart(7800288936124, 1, 691771605364)"
+      >
+        <svg
+          class="custom-header-icon custom-header-home"
+          width="24"
+          height="24"
+          viewBox="0 0 18 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.32786 1.42785C6.2421 0.513614 7.48207 0 8.775 0C10.0679 0 11.3079 0.513614 12.2221 1.42785C13.1364 2.34209 13.65 3.58207 13.65 4.875V5.85H15.6C16.1071 5.85 16.5295 6.2387 16.5716 6.74403L17.5466 18.444C17.5693 18.7157 17.4771 18.9845 17.2925 19.1852C17.1079 19.3858 16.8477 19.5 16.575 19.5H0.975003C0.702342 19.5 0.442139 19.3858 0.257518 19.1852C0.0728968 18.9845 -0.0192722 18.7157 0.00337102 18.444L0.978371 6.74403C1.02048 6.2387 1.44292 5.85 1.95 5.85H3.9V4.875C3.9 3.58207 4.41362 2.34209 5.32786 1.42785ZM3.9 7.8V8.775C3.9 9.31348 4.33653 9.75 4.875 9.75C5.41348 9.75 5.85 9.31348 5.85 8.775V7.8H11.7V8.775C11.7 9.31348 12.1365 9.75 12.675 9.75C13.2135 9.75 13.65 9.31348 13.65 8.775V7.8H14.7029L15.5154 17.55H2.03463L2.84713 7.8H3.9ZM11.7 5.85H5.85V4.875C5.85 4.09924 6.15817 3.35526 6.70672 2.80671C7.25526 2.25817 7.99924 1.95 8.775 1.95C9.55076 1.95 10.2947 2.25817 10.8433 2.80671C11.3918 3.35526 11.7 4.09924 11.7 4.875V5.85Z"
+            fill="white"
+          />
+        </svg>
+
+        <svg
+          class="custom-header-icon custom-header-rocket"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+        </svg>
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="membership-accordian fancy-pop-member">
+  <div class="content" id="mypopupc">
+    <div class="content-bottom">Simple. Valuable. Sleep-Enhancing.</div>
+    <ul>
+      <li>Lifetime Protection – Stay covered with a continuous warranty.</li>
+      <li>Always Up-to-Date – Access to firmware updates & new features.</li>
+      <li>VIP Support – Get priority help from our sleep experts.</li>
+      <li>Member-Only Discounts – Save on Nora accessories & partner products.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  let isMobileView = null;
+
+   function initializeSliders() {
+     const isNowMobile = window.innerWidth <= 767;
+
+     if (isMobileView === isNowMobile) return;
+     isMobileView = isNowMobile;
+
+     if ($('.main-slider').hasClass('slick-initialized')) {
+       $('.main-slider').slick('unslick');
+     }
+
+     if ($('.thumb-slider').hasClass('slick-initialized')) {
+       $('.thumb-slider').slick('unslick');
+     }
+
+     if (isNowMobile) {
+       $('.main-slider').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: false,
+         dots: true,
+         infinite: true,
+         vertical: false,
+         verticalSwiping: false,
+       });
+     } else {
+       $('.main-slider').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: false,
+         infinite: true,
+         vertical: true,
+         verticalSwiping: true,
+         asNavFor: '.thumb-slider',
+       });
+
+       $('.thumb-slider').slick({
+         slidesToShow: 6,
+         slidesToScroll: 1,
+         asNavFor: '.main-slider',
+         vertical: true,
+         focusOnSelect: true,
+         infinite: true,
+         arrows: false,
+         responsive: [
+          {
+            breakpoint: 1201,
+            settings: {
+              slidesToShow: 5,
+            }
+          }
+         ]
+       });
+
+       $('.main-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+         setTimeout(() => {
+           $('.thumb-slider').slick('slickGoTo', nextSlide);
+         }, 10);
+       });
+     }
+   }
+
+   $(document).ready(initializeSliders);
+   window.addEventListener('resize', function () {
+     clearTimeout(window.resizeTimer);
+     window.resizeTimer = setTimeout(initializeSliders, 200);
+   });
+</script>
+
+{% schema %}
+{
+  "name": "Product Info",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Review Text",
+      "id": "review_text"
+    },
+    {
+      "type": "html",
+      "label": "Product Title",
+      "id": "product_title"
+    },
+    {
+      "type": "html",
+      "label": "Cutoff Price",
+      "id": "cutoff_price"
+    },
+    {
+      "type": "html",
+      "label": "Actual Price",
+      "id": "actual_price"
+    },
+    {
+      "type": "html",
+      "label": "Offer Text",
+      "id": "offer_text"
+    },
+    {
+      "type": "html",
+      "label": "Button Label",
+      "id": "button_label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    },
+    {
+      "type": "mobile_usp",
+      "name": "Mobile USP",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "mobile_icon"
+        },
+        {
+          "type": "text",
+          "label": "Text",
+          "id": "mobile_text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Product Info"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

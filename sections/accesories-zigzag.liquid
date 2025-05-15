@@ -1,0 +1,84 @@
+{{ 'accesories-zigzag.css' | asset_url | stylesheet_tag }}
+
+<div class="zig-zag-new-section">
+  <div class="zig-zag__container">
+    <div class="zig-zag__wrap">
+      {% for block in section.blocks %}
+        <div class="zig-zag__item">
+          <div class="zig-zag-item__image">
+            <img
+              {% if block.settings.video %}
+                data-fancybox href="#myVideo-{{ forloop.index }}"
+              {% endif %}
+              src="{{ block.settings.image | img_url :'master' }}"
+              alt="100% silk material - gentle on skin and hair"
+            >
+          </div>
+          <div class="zig-zag-item__content">
+            <h2 class="zig-zag-item__title">{{ block.settings.title }}</h2>
+            <p class="zig-zag-item__description">{{ block.settings.content }}</p>
+          </div>
+          {% if block.settings.video %}
+            <video
+              width="70%"
+              height="70%"
+              playsinline
+              webkit-playsinline
+              id="myVideo-{{ forloop.index }}"
+              style="display:none;"
+            >
+              <source src="{{block.settings.video.sources[0].url}}"  type="video/mp4">
+              Your browser doesn't support HTML5 video tag.
+            </video>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accessories ZigZag",
+  "blocks": [
+	{
+	  "type": "block",
+	  "name": "Block",
+	  "settings": [
+		{
+		  "type": "text",
+		  "label": "Title",
+		  "id": "title"
+		},
+		{
+		  "type": "html",
+		  "label": "Content",
+		  "id": "content"
+		},
+		{
+		  "type": "video",
+		  "label": "Video",
+		  "id": "video"
+		},
+		{
+		  "type": "image_picker",
+		  "label": "Image",
+		  "id": "image",
+		  "info": "If Video then upload poster with Icon"
+		}
+	  ]
+	}
+  ],
+  "presets": [
+	{
+	  "name": "Accessories ZigZag"
+	}
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

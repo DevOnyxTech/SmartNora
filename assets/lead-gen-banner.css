@@ -1,0 +1,162 @@
+.limit-offer {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: normal;
+  font-weight: 500;
+  color: #05243b;
+  letter-spacing: 2.4px;
+}
+.lead-right {
+  width: 552px;
+}
+.lead-right img {
+  height: auto;
+}
+.lead-gen-banner {
+  background: linear-gradient(
+    100deg,
+    rgba(234, 234, 234, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 81px 0;
+}
+
+.lead-left h1 {
+  font-size: 50px;
+  color: #05243b;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.lead-left h2 {
+  font-size: 25px;
+  color: #05243b;
+  font-weight: 500;
+  line-height: normal;
+}
+.lead-left {
+  text-align: center;
+  width: 464px;
+}
+.lead-left p {
+  font-size: 20px;
+  color: #05243b;
+  font-weight: 400;
+  line-height: 27px;
+  margin: 46px 0 31px;
+}
+.lead-gen-banner .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.lead-gen-banner .l-banner-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.blue-btn a {
+  background-color: #05243b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 9px 22px;
+  display: inline-block;
+  border-radius: 50px;
+  min-width: 180px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 22px;
+}
+.gray-text {
+  font-size: 12px;
+  font-style: italic;
+  color: #8c98a4;
+  line-height: normal;
+  margin-top: 15px;
+}
+.mobile-hide {
+  display: block;
+}
+.desktop-hide {
+  display: none;
+}
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .lead-right img {
+    object-fit: contain;
+  }
+  .lead-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .lead-left h1 {
+    font-size: 40px;
+  }
+  .lead-left p {
+    margin: 26px 0 10px;
+  }
+  .lead-gen-banner .blue-btn {
+    margin-top: 30px;
+  }
+  .lead-left p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 35px;
+  }
+  .lead-gen-banner .l-banner-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lead-left {
+    width: initial;
+  }
+  .lead-right img {
+    height: initial;
+    object-fit: contain;
+  }
+  .l-banner-wrap .lead-right img {
+    margin: 0 auto;
+  }
+  .limit-offer {
+    font-size: 12px;
+  }
+  .lead-left h1 {
+    font-size: 35px;
+  }
+  .lead-left h2 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .lead-left p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .lead-gen-banner {
+    padding: 43px 0 51px;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-hide {
+    display: block;
+  }
+  .desktop-hide .gray-text {
+    text-align: center;
+  }
+  .lead-gen-banner .blue-btn {
+    margin-top: 18px;
+  }
+  .lead-left p {
+    margin: 15px 0 10px;
+  }
+  .lead-right {
+    width: 100%;
+  }
+}

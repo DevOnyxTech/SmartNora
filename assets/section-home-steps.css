@@ -1,0 +1,198 @@
+.how-nora-works {
+  background-color: #062842;
+}
+.how-nora-works-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-block: 100px;
+}
+.how-nora-works-container h2 {
+  font-size: 60px;
+  line-height: 70px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  max-width: 740px;
+  margin-inline: auto;
+}
+.how-nora-works-container h2 span {
+  display: block;
+}
+.how-nora-works .nora-works-slider {
+  padding-top: 70px;
+}
+.how-nora-works .nora-works-slider .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.how-nora-works .nora-works-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  min-height: 1px;
+}
+.nora-works-slider .swiper-slide .steps-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  padding-top: 20px;
+  max-width: 310px;
+}
+.how-nora-works .nora-work-btn {
+  text-align: center;
+  padding-top: 60px;
+}
+.how-nora-works .nora-work-btn a {
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 14px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  line-height: 1;
+}
+.how-nora-works .nora-work-btn a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.how-nora-works .nora-work-btn a svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.how-nora-works .nora-work-btn a:hover {
+  background: rgba(151, 202, 59, 1);
+  color: #fff;
+  border-color: rgba(151, 202, 59, 1);
+}
+.how-nora-works .nora-works-slider .swiper-pagination {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .how-nora-works .nora-works-slider .swiper-slide {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc(33.33% - 20px);
+    flex: 0 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .how-nora-works-container {
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .how-nora-works .nora-works-slider .swiper-slide {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(50% - 20px);
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .how-nora-works .nora-works-slider .swiper-wrapper {
+    width: auto;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+}
+@media screen and (max-width: 767px) {
+  .how-nora-works-container {
+    background: #05243b;
+  }
+  .how-nora-works-container h2 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 43px;
+    padding-inline: 20px;
+  }
+  .how-nora-works .nora-works-slider {
+    padding-top: 50px;
+    justify-content: inherit;
+    padding-left: 10px;
+  }
+  .how-nora-works .nora-works-slider .steps-title {
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    bottom: 30px;
+    max-width: initial;
+    color: #fff;
+    left: 30px;
+    right: 0;
+  }
+  .how-nora-works .nora-work-btn a {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  .how-nora-works .nora-works-slider .swiper-wrapper {
+    width: inherit;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .how-nora-works .nora-works-slider .swiper-slide {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .how-nora-works-container {
+    padding: 50px 0 30px;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#05243b),
+      to(#0e62a1)
+    );
+    background: -o-linear-gradient(top, #05243b, #0e62a1);
+    background: linear-gradient(180deg, #05243b, #0e62a1);
+  }
+  .how-nora-works .nora-work-btn {
+    padding-top: 35px;
+  }
+  .how-nora-works .nora-works-slider .swiper-pagination {
+    position: relative;
+  }
+  .nora-works-slider .swiper-pagination .swiper-pagination-bullet {
+    border-radius: 2px;
+    width: 57px;
+    height: 4px;
+    border: 1px solid #c4c4c4;
+    opacity: 1;
+    background: transparent;
+    margin: 0 3px;
+  }
+  .nora-works-slider
+    .swiper-pagination
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 1px solid #4c4c4c;
+    background-color: #4c4c4c;
+  }
+  .how-nora-works .nora-works-slider .swiper-pagination {
+    display: block;
+  }
+  .nora-works-slider .swiper-container {
+    padding-right: 40px;
+  }
+  .how-nora-works-container h2 span {
+    display: inline;
+  }
+}

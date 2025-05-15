@@ -1,0 +1,136 @@
+.amazing-sleep .container {
+  max-width: 1000px;
+}
+.amazing-sleep {
+  background-color: #05243b;
+  padding: 119px 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.amazing-sleep:before {
+  content: "";
+  position: absolute;
+  left: -300px;
+  right: 0;
+  background: radial-gradient(
+    circle,
+    rgba(14, 98, 161, 1) 0%,
+    rgba(5, 36, 59, 1) 50%
+  );
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+.amazing-box {
+  display: flex;
+  align-items: center;
+  column-gap: 45px;
+}
+.amazing-sleep .right-block h2 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+  font-family: Inter, system-ui !important;
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.amazing-sleep .right-block p {
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+  font-weight: 400;
+  font-family: Inter, system-ui !important;
+  max-width: 310px;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  text-align: center;
+}
+.amazing-sleep .right-block p span {
+  font-weight: 500;
+}
+.amazing-sleep .left-block {
+  width: 34%;
+}
+.amazing-sleep .left-block img {
+  width: 100%;
+}
+.amazing-sleep .right-block {
+  width: 66%;
+}
+.amazing-sleep .right-block .green-btn {
+  max-width: 265px;
+  margin: 0 auto;
+}
+.amazing-sleep .desktop-hide {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .amazing-sleep .right-block h2 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .amazing-sleep:before {
+    left: -240px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .amazing-box {
+    flex-wrap: wrap;
+  }
+  .amazing-sleep .left-block,
+  .amazing-sleep .right-block {
+    width: 100%;
+    text-align: center;
+  }
+  .amazing-sleep .desktop-hide {
+    display: block;
+    max-width: 275px;
+    margin: 0 auto;
+  }
+  .amazing-sleep .left-block img {
+    width: 212px;
+    margin: 0 auto;
+  }
+  .amazing-sleep .right-block h2 {
+    display: none;
+  }
+  .amazing-sleep h2 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 400;
+    font-family: Inter, system-ui !important;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .amazing-sleep h2 {
+    margin-bottom: 35px;
+  }
+  .amazing-sleep .right-block {
+    margin-top: 30px;
+  }
+  .amazing-sleep .right-block p {
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .amazing-sleep {
+    padding: 78px 0;
+  }
+  .amazing-sleep:before {
+    background: radial-gradient(circle, #0e62a1, #05243b 80%);
+    left: 0;
+  }
+  .amazing-sleep .right-block .green-btn {
+    max-width: 176px;
+  }
+  .amazing-sleep {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 390px) {
+}

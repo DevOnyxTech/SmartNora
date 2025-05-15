@@ -1,0 +1,133 @@
+{{ 'section-home-steps.css' | asset_url | stylesheet_tag }}
+
+<div class="how-nora-works">
+  <div class="how-nora-works-container">
+    <h2>{{ section.settings.title }}</h2>
+    <div class="nora-works-slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <img src="{{ block.settings.image | img_url : 'master' }}" alt="steps" class="swiper-lazy">
+              <h3 class="steps-title">{{ block.settings.content }}</h3>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="nora-work-btn">
+      <a href="{{ section.settings.btn_link }}">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+          </svg>
+          <span>{{ section.settings.btn_label }}</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+let noraWorksSlider; 
+
+function initSlider() {
+  if (window.innerWidth < 767 && !noraWorksSlider) {
+    // Initialize Swiper only on mobile
+    noraWorksSlider = new Swiper('.nora-works-slider .swiper-container', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 20,
+      loop: false,
+      initialSlide: 0, 
+      pagination: {
+        el: '.nora-works-slider .swiper-pagination',
+        clickable: true
+      },
+      lazy: {
+    loadPrevNext: true, 
+    loadOnTransitionStart: true, 
+    loadPrevNextAmount: 2,
+  }
+    });
+
+    // Force Swiper to update after initialization
+    noraWorksSlider.update();
+  }
+}
+
+function destroySlider() {
+  if (window.innerWidth >= 767 && noraWorksSlider) {
+
+    noraWorksSlider.destroy(true, true);
+    noraWorksSlider = null;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initSlider(); // Initialize the slider on page load
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth < 767) {
+      initSlider();
+    } else {
+      destroySlider();
+    }
+  });
+});
+
+</script>
+{% schema %}
+{
+  "name": "Home Steps",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Title",
+      "id": "title"
+    },
+        {
+      "type": "text",
+      "label": "Button Label",
+      "id": "btn_label"
+    },
+            {
+      "type": "url",
+      "label": "Button Link",
+      "id": "btn_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Steps"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,58 @@
+{{ 'section-policy.css' | asset_url | stylesheet_tag }}
+<div class="terms-section">
+  <div class="terms-section__container">
+    <div class="terms-section__wrap">
+      <div class="terms-section__left-box">
+        <h1 class="terms-section__title">{{ section.settings.title }}</h1>
+      </div>
+      <div class="terms-section__right-box">
+        {% for block in section.blocks %}
+          {% if block.settings.subtitle %}
+            <h2 class="terms-section__subtitle">{{ block.settings.subtitle }}</h2>
+          {% endif %}
+          {{ block.settings.paragraph }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Terms & Conditions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Terms & Conditions",
+      "blocks": [
+        {
+          "type": "content_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

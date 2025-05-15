@@ -1,0 +1,70 @@
+{{ 'gen-2-product-table.css' | asset_url | stylesheet_tag }}
+<div class="tech_specs_section">
+  <div class="container">
+    <div class="center-title">
+      <h2>{{ section.settings.heading }}</h2>
+      <div class="sub-text">{{ section.settings.sub_heading }}</div>
+    </div>
+    <div class="tech-specs-table">
+      <div class="tbl-left">
+        <div class="t-data">Key Information</div>
+        {% for block in section.blocks %}
+          <div class="t-data">{{ block.settings.key_information }}</div>
+        {% endfor %}
+      </div>
+      <div class="tbl-right">
+        <div class="t-data">Specs</div>
+        {% for block in section.blocks %}
+          <div class="t-data">{{ block.settings.specs }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Table",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "table_row",
+      "name": "Table Row",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Key Information",
+          "id": "key_information"
+        },
+        {
+          "type": "text",
+          "label": "Specs",
+          "id": "specs"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Product Table"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,144 @@
+<style type="text/css">
+      .template-404 .title + * {
+        margin-top: 1rem;
+      }
+  .custom-404-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .custom-404-content {
+    max-width: 512px;
+    margin: 0 auto;
+    padding: 80px 0px;
+  }
+
+  .custom-404-message {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .custom-404-subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    margin: 0;
+  }
+
+  .custom-404-title {
+    font-size: 36px;
+    line-height: 38px;
+    color: #05243b;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top:11px;
+  }
+
+  .custom-404-button {
+    background-color: #97ca3b;
+    border-radius: 9999px;
+    position: relative;
+    color: white;
+    display: inline-flex;
+    font-weight: 600;
+    align-items: center;
+    padding: 9.4px 20px;
+     padding-left: 48px;
+    font-size: 14px;
+    transition: all 0.3s;
+    text-decoration:none;
+  }
+
+  /* .custom-404-button:hover {
+    background-color: #059669;
+  } */
+
+  .custom-404-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 20px;
+    transition: all 0.3s;
+  }
+
+  .custom-404-icon-home {
+    opacity: 1;
+  }
+
+  .custom-404-button:hover .custom-404-icon-home {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+
+  .custom-404-icon-rocket {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  .custom-404-button:hover .custom-404-icon-rocket {
+    opacity: 1;
+    transform: translateX(0);
+  }
+      @media screen and (min-width: 750px) {
+        .template-404 .title + * {
+          margin-top: 2rem;
+        }
+      }
+</style>
+
+<div class="custom-404-container">
+  <div class="custom-404-content">
+    <div
+      class="custom-404-message"
+      data-sr-id="0"
+      style="visibility: visible; opacity: 1; transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.1s;"
+    >
+      <p class="custom-404-subtitle">Uh oh, we've got a 404 here.</p>
+      <h2 class="custom-404-title">Someone must be sleeping on the job.</h2>
+      <a
+        href="/"
+        class="custom-404-button"
+      >
+        <svg
+          class="custom-404-icon custom-404-icon-home"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+          </path>
+        </svg>
+
+        <svg
+          class="custom-404-icon custom-404-icon-rocket"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+          </path>
+        </svg>
+        <span>Visit Home Page</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+  <div class="template-404 page-width page-margin center">
+    <p>
+      {{ 'templates.404.subtext' | t }}
+    </p>
+    <h1 class="title">
+      {{ 'templates.404.title' | t }}
+    </h1>
+    <a href="{{ routes.all_products_collection_url }}" class="button">
+      {{ 'general.continue_shopping' | t }}
+    </a>
+  </div>
+{% endcomment %}

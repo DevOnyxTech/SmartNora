@@ -1,0 +1,110 @@
+.anti-snore-video-two-sec {
+  padding-block: 20px 100px;
+}
+.anti-snore-video-two-sec h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: #000;
+}
+.anti-snore-video-wrapper .main-auto-video {
+  display: block;
+  border-radius: 30px;
+}
+.anti-snore-video-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anti-snore-video-wrapper .home-vid-two-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(85.79deg, #ffffff80 -0.07%, #99999980 99.93%);
+  background-blend-mode: screen;
+  padding: 16px 20px 16px 50px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+.anti-snore-video-wrapper .home-vid-two-btn::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Button_1.svg?v=1742976109);
+  background-size: contain;
+  left: 20px;
+  background-repeat: no-repeat;
+}
+.anti-snore-video-wrapper .home-vid-two-btn img {
+  width: 20px;
+}
+.anti-snore-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .anti-snore-video-two-sec {
+    padding-block: 1vw 5.2083vw;
+  }
+  .anti-snore-video-two-sec h2 {
+    font-size: 2.6042vw;
+    margin-bottom: 2.6042vw;
+  }
+  .anti-snore-video-wrapper .home-vid-two-btn {
+    padding: 0.8333vw 1.0417vw 0.8333vw 2.604vw;
+    font-size: 0.7813vw;
+  }
+  .anti-snore-video-wrapper .home-vid-two-btn:before {
+    height: 1.042vw;
+    width: 1.042vw;
+    left: 1.042vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .anti-snore-video-two-sec {
+    padding-block: 0 100px;
+  }
+  .anti-snore-video-two-sec h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .anti-snore-video-wrapper .home-vid-two-btn {
+    padding: 12px 15px 12px 50px;
+  }
+  .anti-snore-mobile {
+    display: flex;
+    margin-bottom: 30px;
+    column-gap: 0;
+  }
+  .anti-snore-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .anti-snore-content p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-top: 5px;
+    color: #05243b;
+  }
+  .anti-snore-mobile-block {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 50%;
+  }
+  .anti-snore-icon img {
+    min-width: 30px;
+    display: block;
+  }
+  .anti-snore-mobile {
+    column-gap: 15px;
+    align-items: flex-start;
+  }
+}

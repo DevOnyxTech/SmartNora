@@ -1,0 +1,91 @@
+{{ 'section-home-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="video-section-wrapper">
+  <div class="video-container">
+    <div class="video-play-sec">
+      <div class="inner-video">
+        <h1>{{ section.settings.heading }}</h1>
+        <p class="mobile-block">{{ section.settings.subheading }}</p>
+        <div class="video-btn-wrap">
+          <a class="bg-nora-green" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+        </div>
+      </div>
+      <video
+        poster="{{ section.settings.desktop_poster | image_url }}"
+        class="desktop-video"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="{{ section.settings.desktop_video }}" type="video/mp4">
+      </video>
+      <video
+        poster="{{ section.settings.mobile_poster | image_url }}"
+        class="mobile-video"
+        autoplay=""
+        loop=""
+        muted=""
+        playsinline=""
+      >
+        <source src="{{ section.settings.mobile_video }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Home Banner",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "No mouthguard,<span>no mask, just sleep.</span>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Turn any pillow into an anti-snore pillow."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Start Your Trial"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "desktop_video",
+      "label": "Desktop Video link"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_poster",
+      "label": "Desktop Video Poster"
+    },
+    {
+      "type": "text",
+      "id": "mobile_video",
+      "label": "Mobile Video link"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_poster",
+      "label": "Mobile Video Poster"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Banner",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

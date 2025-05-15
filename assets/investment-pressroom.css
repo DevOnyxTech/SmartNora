@@ -1,0 +1,43 @@
+.press-room-section {
+  padding-block: 100px;
+  background-color: #f3f2ee;
+}
+.press-room-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding-right: 120px;
+}
+.press-room-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+.press-room-wrraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  padding-left: 10px;
+}
+.press-room-img {
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.press-room-img img {
+  width: 100%;
+  display: block;
+}
+.press-room-descriptions h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  min-height: 87px;
+}
+.press-room-descriptions p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #05243b;
+  font-weight: 500;
+}

@@ -1,0 +1,76 @@
+{{ 'lead-gen-offer.css' | asset_url | stylesheet_tag }}
+
+<div class="why-offering-sec">
+  <div class="container">
+    <div class="desktop-hide">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="offering-wrap">
+      <div class="offer-left">
+        <img src="{{ section.settings.image | img_url : 'master' }}">
+        <div class="mobile-hide">
+          <div class="blue-btn">
+            <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="offer-right">
+        <div class="mobile-hide">
+          <h2>{{ section.settings.heading }}</h2>
+        </div>
+        {{ section.settings.content }}
+        <div class="desktop-hide">
+          <div class="blue-btn">
+            <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Offer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+        {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Lead Gen Offering"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

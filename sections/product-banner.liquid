@@ -1,0 +1,287 @@
+{{ 'section-product-banner.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .product-banner-image {
+    background-image: url('{{ section.settings.bg_image | img_url : 'master' | loading: 'lazy', alt: section.settings.product_title }}');
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .product-banner-image {
+      background-image: url('{{ section.settings.mob_bg_image | img_url : 'master' | loading: 'lazy', alt: section.settings.product_title }}');
+    }
+  }
+</style>
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<div class="product-banner-wrapper">
+  <div class="product-banner-inner-section">
+    <div class="product-banner-image min-h-500">
+      <!--
+        <img src="images/COMMERCIAL_Smart-Nora-Shoot_7April2022_3397-2-scaled-e1655483376252-1024x618_2ccfd9e5-fb87-4154-b6a0-bb36999f0929.webp" alt="product-banner-image" loading="lazy" />
+      -->
+      <div class="product-banner-items-wrapper">
+        <div class="four-boxes-wrapper">
+          {% for block in section.blocks %}
+          {% if block.type == 'product_item' %}
+          <div class="product-item-wrapper">
+            <div class="product-item-icon">
+              {{ block.settings.item_icon }}
+            </div>
+            <p class="product-item-title">{{ block.settings.item_title }}</p>
+            <p class="product-item-sub-title">{{ block.settings.item_subtitle }}</p>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="product-banner-content">
+      <h2>{{ section.settings.product_title }}</h2>
+      <div class="product-price-wrapper">
+        <p>
+          <strike>{{ section.settings.original_price }}</strike> {{ section.settings.sale_price }}
+        </p>
+      </div>
+      <div class="rating-wrapper">
+        <a href="#">
+          <div class="star-wrapper">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+          </div>
+          <div class="rating">
+            <p>{{ section.settings.review_count }} 5-star Reviews</p>
+          </div>
+        </a>
+      </div>
+      <ul>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_1 }}</p>
+        </li>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_2 }}</p>
+        </li>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_3 }}</p>
+        </li>
+        {% if section.settings.feature_4 != blank %}
+            <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_4 }}</p>
+        </li>
+          {% endif %}
+      </ul>
+
+      <div class="banner-content-inner-image">
+        {% if section.settings.product_image %}
+          <img src="{{ section.settings.product_image | img_url : 'master' | loading: 'lazy', alt: section.settings.product_title }}">
+        {% endif %}
+      </div>
+
+
+
+
+
+      <div class="product-atc">
+        <div class="affirm-box">
+        <p> As low as $30/month<br></p>
+        <p> with
+            <span> <svg xmlns="http://www.w3.org/2000/svg" class="Header-logo--2anQ2" viewBox="0 0 420 167">
+                <g fill-rule="evenodd" clip-rule="evenodd">
+             <path fill="#060809" d="M34.3 94.1c-11.3 0-24.4 5.4-31.5 11l6.5 13.6c5.7-5.2 14.9-9.6 23.2-9.6 7.9 0 12.2 2.6 12.2 7.9 0 3.6-2.9 5.4-8.3 6.1C16 125.7 0 131.3 0 147c0 12.4 8.9 20 22.7 20 9.9 0 18.7-5.5 22.9-12.7V165H64v-44.9c0-18.5-12.9-26-29.7-26zm-6.9 58.5c-5.2 0-7.8-2.5-7.8-6.7 0-7.8 8.7-10.4 24.6-12.1.1 10.4-7 18.8-16.8 18.8zm210.1-44.9V96.1h-18.4V165h19.7v-33.2c0-15.8 9.5-20.4 16.2-20.4 2.6 0 6.1.8 8.4 2.5l3.6-18.2c-3-1.3-6.2-1.6-8.8-1.6-10.1 0-16.5 4.5-20.7 13.6zm120.9-13.6c-10.4 0-18.2 6.2-22.3 12.1-3.8-7.7-11.7-12.1-21.3-12.1-10.4 0-17.6 5.8-21 12.4V96.1h-19V165h19.7v-35.5c0-12.7 6.7-18.8 12.9-18.8 5.6 0 10.8 3.6 10.8 13V165H338v-35.5c0-12.9 6.5-18.8 13-18.8 5.2 0 10.7 3.8 10.7 12.9V165h19.7v-47.6c0-15.5-10.4-23.3-23-23.3zM133.6 91v5.1h-29.9v-7c0-9.1 5.2-11.7 9.7-11.7 2.6 0 6 .6 8.8 2.2l6.1-13.9c-3.6-2.1-9.5-4-17.4-4-12.6 0-26.9 7.1-26.9 29.4v5.1H72.6v15.2H84V165h19.7v-53.7h29.9V165h19.7v-53.7h17.9V96.1h-17.9v-7c0-9.1 5.2-11.7 9.7-11.7 5 0 8.8 2.2 8.8 2.2l6.1-13.9s-6.2-4-17.4-4c-12.5-.1-26.9 7-26.9 29.3zm49.3 5.1h19.7V165h-19.7z"></path>
+             <path fill="#0fa0ea" d="M297.7 0c-53.2 0-100.6 36.9-114 84.4H203C214.2 49 252.3 18 297.7 18c55.2 0 102.8 42 102.8 107.4 0 14.7-1.9 27.9-5.5 39.6h18.7l.2-.6c3.1-12.1 4.6-25.2 4.6-39C418.5 52.5 365.4 0 297.7 0" class="svg-fill rainbow"></path>
+                </g>
+              </svg></span></p>
+        {% comment %} <b>HSA/FSA Eligible.</b> {% endcomment %}
+        </p>
+        </div>
+        <div>
+
+        </div>
+        {%- render 'buy-buttons', product: product -%}
+
+      </div>
+      <div class="membership-accordian">
+        <div class="faq-box">
+          <div class="title" data-fancybox href="#mypopupc">
+            <div class="member-inner">
+             
+              <span class="inner-title">Nora Membership Details</span>
+              <p>{{ section.settings.subscription_detail }}</p>
+            </div>
+            <span>
+            <svg class="plusminus"  xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+            <path d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3 s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z"></path>
+        </svg>
+            </span>
+          </div>
+        
+        </div>
+      </div>
+      {% comment %}
+      <div class="front-row">
+        {% render 'Frontrow' %}
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+
+<div class="membership-accordian fancy-pop-member">
+  <div class="content" id="mypopupc">
+    <div class="content-bottom">Simple. Valuable. Sleep-Enhancing.</div>
+    <ul>
+      <li>Lifetime Protection – Stay covered with a continuous warranty.</li>
+      <li>Always Up-to-Date – Access to firmware updates & new features.</li>
+      <li>VIP Support – Get priority help from our sleep experts. </li>
+      <li>Member-Only Discounts – Save on Nora accessories & partner products. </li>
+    </ul>
+   
+  </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Product Banner",
+"settings": [
+{
+"type": "text",
+"id": "product_title",
+"label": "Product Title",
+
+"default": "Smart Nora"
+},
+{
+"type": "richtext",
+"id": "original_price",
+"label": "Original Price"
+},
+{
+"type": "richtext",
+"id": "sale_price",
+"label": "Sale Price"
+},
+{
+"type": "text",
+"id": "review_count",
+"label": "Review Count",
+"default": "1,442+"
+},
+{
+"type": "text",
+"id": "subscription_detail",
+"label": "Membership content"
+},
+{
+"type": "image_picker",
+"id": "product_image",
+"label": "Product Image"
+},
+{
+"type": "image_picker",
+"id": "bg_image",
+"label": "Background Image"
+},
+{
+"type": "image_picker",
+"id": "mob_bg_image",
+"label": "Mobile Background Image"
+},
+{
+"type": "text",
+"id": "feature_1",
+"label": "Feature 1",
+"default": "Ships in 1-2 business days"
+},
+{
+"type": "text",
+"id": "feature_2",
+"label": "Feature 2",
+"default": "Easy monthly payments with Affirm"
+},
+{
+"type": "text",
+"id": "feature_3",
+"label": "Feature 3",
+"default": "30 night money-back guarantee"
+},
+  {
+"type": "text",
+"id": "feature_4",
+"label": "Feature 4",
+"default": "Ships in 2 weeks due to high demand"
+}
+],
+"blocks": [
+{
+"type": "product_item",
+"name": "Product Item",
+"settings": [
+{
+"type": "text",
+"id": "item_title",
+"label": "Item Title",
+"default": "Risk Free"
+},
+{
+"type": "text",
+"id": "item_subtitle",
+"label": "Item Subtitle",
+"default": "30-night free return."
+},
+{
+"type": "html",
+"id": "item_icon",
+"label": "Item Icon (SVG)",
+          "default": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Product Banner",
+"category": "Product"
+}
+]
+}
+{% endschema %}

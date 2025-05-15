@@ -1,0 +1,59 @@
+{{ 'section-icons.css' | asset_url | stylesheet_tag }}
+
+<div class="influencers">
+  <div class="logos-container">
+    <div class="influencers-wrapper">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {% when 'image' %}
+            <img
+              loading="lazy"
+              src="{{ block.settings.image | img_url: 'master' }}"
+              alt="{{ block.settings.image.alt }}"
+            >
+        {% endcase %}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Logos",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Logo Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Logos",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

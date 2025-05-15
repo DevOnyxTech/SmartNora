@@ -1,0 +1,90 @@
+{{ 'lead-gen-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="lead-faq-section">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="faq-wrap">
+      {% for block in section.blocks %}
+        <div class="faq-box">
+          <div class="title">
+            <span class="inner-title"> {{ block.settings.question -}}</span>
+            <span>
+              <img
+                class="plusminus"
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Group_20561.png?v=1729146272"
+                alt="Expand"
+              >
+            </span>
+          </div>
+          <div class="content" style="display: none;">
+            {{ block.settings.description }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+   $(document).ready(function () {
+      // Toggle the component with class accordion_body
+      $(".faq-wrap .title").click(function () {
+          var $content = $(this).next(".content");
+          var $icon = $(this).find(".plusminus");
+
+          // Close any currently open content
+          $(".content").not($content).slideUp(300);
+          $(".plusminus").not($icon).attr('src', 'https://cdn.shopify.com/s/files/1/1053/4408/files/Plus_5514b9d0-b37e-4b42-9936-09bda4bf2b69.svg?v=1730976974'); // Set other icons to plus
+
+          // Toggle the clicked content
+          if ($content.is(':visible')) {
+              $content.slideUp(300);
+              $icon.attr('src', 'https://cdn.shopify.com/s/files/1/1053/4408/files/Plus_5514b9d0-b37e-4b42-9936-09bda4bf2b69.svg?v=1730976974'); // Plus icon
+          } else {
+              $content.slideDown(300);
+              $icon.attr('src', 'https://cdn.shopify.com/s/files/1/1053/4408/files/Minus_fe9f2de2-0e6f-462d-ab55-d94b94a0e30f.svg?v=1730976974'); // Minus icon
+          }
+      });
+  });
+</script>
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "settings": [
+            {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question",
+          "id": "question"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lead Gen FAQ"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

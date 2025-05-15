@@ -1,0 +1,84 @@
+.get-nora-section {
+  background-color: #05243b;
+  padding: 123px 0 0;
+}
+.get-nora-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.get-nora-container h2 {
+  font-size: 60px;
+  line-height: 70px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+}
+.get-nora-container .shop-now-btn {
+  margin-top: 32px;
+  text-align: center;
+}
+.get-nora-container .shop-now-btn a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px 20px 12px 48px;
+  background: rgb(151, 202, 59);
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+.get-nora-container .shop-now-btn svg {
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  transition-duration: 0.3s;
+}
+.get-nora-container .shop-now-btn .hover-svg {
+  opacity: 0;
+  transform: translateX(-8px);
+  width: 20px;
+}
+.get-nora-container .shop-now-btn a .shop-svg {
+  margin-top: 2px;
+  width: 16px;
+}
+.get-nora-container .shop-now-btn a:hover .shop-svg {
+  opacity: 0;
+  transform: translateX(8px);
+}
+.get-nora-container .shop-now-btn a:hover .hover-svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+.get-nora-container .get-nora-image {
+  position: relative;
+  bottom: -100px;
+}
+.get-nora-container .get-nora-image img {
+  margin: 0 auto;
+  display: block;
+  height: 370px;
+}
+@media screen and (max-width: 992px) {
+  .get-nora-section {
+    padding: 70px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .get-nora-container {
+    padding: 0 40px;
+  }
+  .get-nora-container h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .get-nora-container .shop-now-btn {
+    margin-block: 32px -52px;
+  }
+  .get-nora-container .get-nora-image img {
+    max-width: 100%;
+  }
+}

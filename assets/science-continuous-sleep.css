@@ -1,0 +1,260 @@
+/*---- full width continuous sleep section starts -----*/
+.graph-box-wrapper #arc-bg {
+  opacity: 0.2;
+}
+.graph-box-wrapper .circle {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto;
+}
+.graph-box-wrapper .score {
+  font-size: 72px;
+  line-height: 74px;
+  font-family: CircularStd-Bold;
+}
+.full-width-image-section-wrapper {
+  position: relative;
+}
+
+.full-width-image__content {
+  max-width: 548px;
+  width: 100%;
+  /* position: absolute;
+  top: 50px; */
+  color: #fff;
+}
+
+.full-width-image-section-wrapper .tagline {
+  color: #fff;
+}
+
+.full-width-image__heading--bold {
+  display: block;
+}
+
+.full-width-image__description--bold,
+.full-width-image__heading--bold {
+  font-weight: 700;
+}
+
+.science h2.full-width-image__heading {
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -1.6px;
+}
+
+.blue-btn .bg-lt-wht {
+  background-color: rgba(115, 174, 229, 0.15);
+}
+
+.blue-btn h5.sleep-counter__label {
+  color: #73aee5;
+}
+
+.full-width-image-section-wrapper .sleep-counter-wrapper {
+  bottom: auto;
+  right: auto;
+  position: relative;
+  top: auto;
+  left: auto;
+  max-width: 328px;
+  width: 100%;
+}
+
+.full-width-image__content .tagline img {
+  filter: invert(1);
+}
+.flex.custom-content-graph-wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
+.full-width-image-section-wrapper {
+  background-image: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Continuous_sleep_2323e55e-5583-47c2-b718-904de6e5fa61.jpg?v=1743658903);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 136px;
+  background-position: right;
+}
+.score-container {
+  background-color: #fff3;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.score-container .title {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-family: "Graphik-Semibold";
+}
+.score-container .circle {
+  position: relative;
+  width: 215px;
+  height: 240px;
+  margin: 0 auto;
+}
+.score-container .score-wrapper {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  text-align: center;
+}
+.flex.custom-content-graph-wrapper {
+  flex-wrap: wrap;
+}
+.score-container .level {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+  font-family: CircularStd-Bold;
+}
+.score-container .note {
+  font-size: 12px;
+  color: #fff;
+  font-family: "Graphik-Medium";
+  line-height: 18px;
+  letter-spacing: 0.24px;
+}
+.score-container .score-footer {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.score-container .score-footer span {
+  color: #8fcccc;
+}
+.score-container #arc-bg {
+  opacity: 0.2;
+}
+.score-container svg {
+  width: 100%;
+}
+.full-width-image-section-wrapper .container {
+  width: 100%;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .full-width-image-section-wrapper {
+    padding-block: 7.5vw;
+  }
+  .graph-box-wrapper .circle {
+    width: 3.67vw;
+    height: 3.67vw;
+  }
+
+  .graph-box-wrapper .score {
+    font-size: 4vw;
+    line-height: 4.11vw;
+  }
+
+  .full-width-image__content {
+    max-width: 30.44vw;
+    top: 2.78vw;
+  }
+
+  .science h2.full-width-image__heading {
+    margin-bottom: 1.11vw;
+    letter-spacing: -0.089vw;
+    font-size: 2.8vw;
+    line-height: 1.2;
+  }
+
+  .full-width-image-section-wrapper .sleep-counter-wrapper {
+    max-width: 19.56vw;
+  }
+
+  /* .full-width-image-section-wrapper .full-width-image__section {
+    padding-block: 7.89vw 7.06vw;
+    padding-right: 6.67vw;
+  }
+ */
+  .score-container {
+    padding: 1.11vw;
+    border-radius: 1.11vw;
+    box-shadow: 0 0.11vw 0.56vw rgba(0, 0, 0, 0.1);
+  }
+
+  .score-container .title {
+    font-size: 0.78vw;
+    margin-bottom: 1.11vw;
+  }
+
+  .score-container .circle {
+    width: 11.94vw;
+    height: 13.33vw;
+  }
+
+  .score-container .score-wrapper {
+    top: 57%;
+  }
+
+  .score-container .level {
+    font-size: 1.11vw;
+    margin-top: 0.56vw;
+  }
+
+  .score-container .note {
+    font-size: 0.67vw;
+    line-height: 1vw;
+    letter-spacing: 0.013vw;
+  }
+
+  .score-container .score-footer {
+    padding-top: 1.11vw;
+    font-size: 0.78vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .full-width-image__content {
+    max-width: 340px;
+  }
+  .full-width-image-section-wrapper {
+    background-position: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .full-width-image__heading--bold {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* .full-width-image__content {
+    max-width: 340px;
+    position: relative;
+    color: #05243b;
+    top: auto;
+    padding-block: 50px;
+  } */
+  .full-width-image-section-wrapper {
+    background-image: url(https://cdn.shopify.com/s/files/1/1053/4408/files/contnuos-sleep-mobile.jpg?v=1743660828);
+    padding-block: 40px;
+    height: 840px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .full-width-image__content {
+    display: none;
+  }
+
+  .full-width-image-section-wrapper .tagline {
+    color: #05243b;
+  }
+
+  .full-width-image__content .tagline img {
+    filter: none;
+  }
+  .flex.custom-content-graph-wrapper {
+    justify-content: center;
+  }
+}
+
+/*---- full width continuous sleep section ends -----*/

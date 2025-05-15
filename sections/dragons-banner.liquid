@@ -1,0 +1,127 @@
+{{ 'dragons-banner.css' | asset_url | stylesheet_tag -}}
+
+<div class="main-sleep-revolution-sec">
+  <div class="container mx-auto">
+    <div class="banner-image">
+      {% if section.settings.background_image != blank %}
+        <img class="desktop-hide" src="{{ section.settings.mob_background_image | img_url : 'master' }}">
+        <img class="mobile-hide" src="{{ section.settings.background_image | img_url : 'master' }}">
+      {% endif %}
+      <div class="revolution-content">
+        {% if section.settings.title != blank %}
+          <h1>{{ section.settings.title }}</h1>
+        {% endif %}
+        <div class="btn">
+          {% for block in section.blocks %}
+            <div
+              class="green-btn"
+              {% if forloop.index == 1 %}
+                id="meetFoundersBtnBanner"
+                data-fancybox href="#myVideo"
+              {% endif %}
+            >
+              <a
+                {% if forloop.index == 2 %}
+                  class="to-prod"
+                {% endif %}
+                href="{{ block.settings.link }}"
+              >
+                {{- block.settings.label -}}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<video width="70%" height="70%" playsinline webkit-playsinline id="myVideo" style="display:none;">
+  <source src="{{ section.settings.video_link }}" type="video/mp4">
+  Your browser doesn't support HTML5 video tag.
+</video>
+
+{% schema %}
+{
+  "name": "Banner",
+  "tag": "section",
+ "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Background Image",
+      "id": "background_image"
+    },
+       {
+      "type": "image_picker",
+      "label": "Mobile Background Image",
+      "id": "mob_background_image"
+    },
+   {
+      "type": "text",
+      "label": "Video Link",
+      "id": "video_link",
+      "info": "Link should be Shopify hosted"
+  }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "label": "Label",
+          "id": "label"
+        },
+        {
+          "type": "url",
+          "label": "Link",
+          "id": "link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dragons Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  $(document).ready(function(){
+     $("a.to-prod").on('click', function(event) {
+       if (this.hash !== "") {
+         event.preventDefault();
+         var hash = this.hash;
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 2000, function(){
+           window.location.hash = hash;
+         });
+       }
+     });
+
+          $(".amazing-box a").on('click', function(event) {
+       if (this.hash !== "") {
+         event.preventDefault();
+         var hash = this.hash;
+         $('html, body').animate({
+           scrollTop: $(hash).offset().top
+         }, 2000, function(){
+           window.location.hash = hash;
+         });
+       }
+     });
+   });
+{% endjavascript %}

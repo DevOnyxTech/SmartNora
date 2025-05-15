@@ -1,0 +1,411 @@
+.b-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  width: 100%;
+}
+.cms-validate {
+  position: relative;
+  background-color: rgb(243 242 238);
+  padding: 80px 0 80px;
+}
+.cms-validate .section-header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 40px;
+}
+.cms-validate .tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(74, 74, 74);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 384px;
+  margin: 0 auto 20px;
+}
+.cms-validate .tagline svg {
+  width: 16px;
+  margin-right: 16px;
+}
+.cms-validate .tagline svg path,
+.cms-validate .tagline svg circle {
+  fill: rgb(74, 74, 74);
+}
+.cms-validate .heading {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 74px;
+  color: rgb(74, 74, 74);
+  margin: 0;
+}
+
+.cms-validate .title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  color: rgb(74, 74, 74);
+  margin: 0 0 12px;
+}
+.cms-validate .section-header p {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+
+.cms-validate .validate-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+.validate-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 80px 20px 20px;
+  border-radius: 12px;
+}
+.validate-box .counter-main {
+  display: flex;
+  font-size: 108px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(74, 74, 74);
+}
+.validate-box .counter {
+  display: flex;
+}
+.validate-box .content {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(74, 74, 74);
+}
+.cms-validate .btn-box {
+  text-align: center;
+  padding: 40px 0 0;
+}
+.result-btn {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(74, 74, 74);
+  padding: 12px 20px 12px;
+  border: solid 1px rgb(74, 74, 74);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.result-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.result-btn svg path {
+  transition: all 0.3s ease-in-out;
+}
+.result-btn:hover {
+  background-color: rgb(151 202 59);
+  color: #fff;
+  border-color: #fff;
+}
+.result-btn:hover svg path {
+  stroke: #fff;
+}
+.how-it-works .cms-validate {
+  padding-block: 100px;
+  background-color: transparent;
+}
+.how-it-works .cms-validate .tagline,
+.how-it-works .cms-validate .title,
+.how-it-works .cms-validate .section-header p {
+  color: inherit;
+}
+.how-it-works .cms-validate .tagline svg path,
+.how-it-works .cms-validate .tagline svg circle {
+  fill: #05243b;
+}
+.how-it-works .validate-box .counter-main {
+  color: #05243b;
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: 700;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.how-it-works .validate-box {
+  padding: 33px 24px;
+  background: #f9f7f7;
+  border-radius: 17.21px;
+}
+.how-it-works .validate-box p {
+  font-weight: 500;
+  color: #7c7c7b;
+  line-height: 33px;
+  font-size: 24px;
+  text-align: center;
+}
+.how-it-works .cms-validate .title {
+  font-size: 52px;
+  line-height: 63px;
+  letter-spacing: -1.82px;
+}
+
+.how-it-works .cms-validate .section-header {
+  max-width: 888px;
+  padding-bottom: 60px;
+  padding-inline: 22px;
+}
+.how-it-works .cms-validate .title b {
+  font-weight: 800;
+}
+.how-it-works .cms-validate .section-header p {
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -1.24px;
+}
+.how-it-works .cms-validate .validate-inner {
+  gap: 60px;
+}
+.how-it-works .cms-validate .tagline {
+  margin: 0 auto 10px;
+}
+.how-it-works .result-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+.how-it-works .result-btn {
+  background-color: #97ca3b;
+  color: #fff;
+  border-color: #fff;
+}
+.how-it-works .result-btn svg path {
+  stroke: #fff;
+}
+.how-it-works .result-btn:hover svg path {
+  stroke: #000;
+}
+.how-it-works .cms-validate .btn-box {
+  padding-top: 60px;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .b-container {
+    max-width: 64vw;
+  }
+
+  .cms-validate {
+    padding: 4.44vw 0;
+  }
+
+  .cms-validate .section-header {
+    max-width: 40vw;
+    padding-bottom: 2.22vw;
+  }
+
+  .cms-validate .tagline {
+    font-size: 1vw;
+    max-width: 21.33vw;
+    margin-bottom: 1.11vw;
+  }
+
+  .cms-validate .tagline svg {
+    width: 0.89vw;
+    margin-right: 0.89vw;
+  }
+
+  .cms-validate .heading {
+    font-size: 4vw;
+    line-height: 4.11vw;
+  }
+
+  .cms-validate .title {
+    font-size: 1.78vw;
+    line-height: 2.11vw;
+    margin-bottom: 0.67vw;
+  }
+
+  .cms-validate .section-header p {
+    font-size: 1.11vw;
+  }
+
+  .cms-validate .validate-inner {
+    gap: 2.22vw;
+  }
+
+  .validate-box {
+    padding: 4.44vw 1.11vw 1.11vw;
+    border-radius: 0.67vw;
+  }
+
+  .validate-box .counter-main {
+    font-size: 6vw;
+  }
+
+  .validate-box .content {
+    font-size: 1.33vw;
+  }
+
+  .cms-validate .btn-box {
+    padding-top: 2.22vw;
+  }
+
+  .result-btn {
+    font-size: 1vw;
+    padding: 0.67vw 1.11vw;
+    border-radius: 999px;
+  }
+
+  .result-btn svg {
+    width: 1.11vw;
+    height: 1.11vw;
+    margin-right: 0.44vw;
+  }
+
+  .how-it-works .cms-validate {
+    padding-block: 2.78vw;
+  }
+
+  .how-it-works .validate-box {
+    padding: 1.83vw 1.33vw;
+    border-radius: 0.96vw;
+  }
+
+  .how-it-works .validate-box .counter-main {
+    font-size: 3.56vw;
+    line-height: 4.28vw;
+    margin-bottom: 1.11vw;
+  }
+
+  .how-it-works .validate-box p {
+    font-size: 1.33vw;
+    line-height: 1.83vw;
+  }
+
+  .how-it-works .cms-validate .title {
+    font-size: 2.89vw;
+    line-height: 3.5vw;
+    letter-spacing: -0.1vw;
+  }
+
+  .how-it-works .cms-validate .section-header {
+    max-width: 48.89vw;
+    padding-bottom: 3.33vw;
+  }
+
+  .how-it-works .cms-validate .section-header p {
+    font-size: 1.33vw;
+    line-height: 1.61vw;
+  }
+
+  .how-it-works .cms-validate .validate-inner {
+    gap: 3.33vw;
+  }
+
+  .how-it-works .cms-validate .btn-box {
+    padding-top: 3.33vw;
+  }
+}
+
+/* 1024 */
+@media only screen and (max-width: 1199px) {
+  .cms-validate {
+    padding: 40px 0 40px;
+  }
+  .cms-validate .heading {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .b-container {
+    padding: 0 40px;
+  }
+}
+
+/* 768 */
+@media only screen and (max-width: 1023px) {
+  .cms-validate .validate-inner {
+    gap: 20px;
+  }
+  .validate-box .counter-main {
+    font-size: 48px;
+  }
+  .validate-box .content {
+    font-size: 16px;
+  }
+  .cms-validate .tagline {
+    font-size: 14px;
+  }
+}
+
+/* 736 */
+@media only screen and (max-width: 767px) {
+  .validate-box {
+    padding: 20px;
+  }
+  .b-container {
+    padding: 0 20px;
+    max-width: 576px;
+  }
+  .how-it-works .quieter-box p {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .how-it-works .cms-validate .btn-box {
+    padding-top: 60px;
+  }
+  .how-it-works .cms-validate {
+    padding-block: 50px;
+  }
+  .how-it-works .cms-validate .section-header p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .how-it-works .cms-validate .title {
+    margin-bottom: 20px;
+  }
+  /* added css on 29/03/2025 */
+  .how-it-works .cms-validate .validate-inner {
+    gap: 30px;
+  }
+  .how-it-works .validate-box {
+    padding: 20px 25px;
+  }
+  .how-it-works .validate-box .counter-main {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+  .how-it-works .validate-box p {
+    line-height: 25px;
+    font-size: 20px;
+  }
+  /* added css on 29/03/2025 */
+}
+
+/* 600 */
+@media only screen and (max-width: 666px) {
+  .cms-validate .validate-inner {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .validate-box {
+    text-align: center;
+  }
+  .validate-box .counter-main {
+    text-align: center;
+    justify-content: center;
+  }
+  .how-it-works .quieter-img video {
+    height: 312px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

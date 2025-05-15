@@ -1,0 +1,135 @@
+{{ 'gen-2-home-two-video.css' | asset_url | stylesheet_tag }}
+<div class="anti-snore-video-two-sec">
+  <div class="container">
+    <div class="anti-snore-mobile">
+      <div class="anti-snore-mobile-block">
+        <div class="anti-snore-icon">
+          <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/contact-free-icon.svg" alt="icon">
+        </div>
+        <div class="anti-snore-content">
+          <h4>{{ section.settings.mob_title_1 }}</h4>
+          <p>{{ section.settings.mob_text_1 }}</p>
+        </div>
+      </div>
+      <div class="anti-snore-mobile-block">
+        <div class="anti-snore-icon">
+          <img
+            src="https://cdn.shopify.com/s/files/1/1053/4408/files/adaptive_ai_icon_7036e1c9-083d-49c2-9633-735b49f34632.svg"
+            alt="icon"
+          >
+        </div>
+        <div class="anti-snore-content">
+          <h4>{{ section.settings.mob_title_2 }}</h4>
+          <p>{{ section.settings.mob_text_2 }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="anti-snore-video-wrapper">
+      <video
+        class="main-auto-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        webkit-playsinline
+      >
+        <source src="{{ section.settings.front_video.sources[1].url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a
+        class="home-vid-two-btn"
+        href="{{ section.settings.main_video.sources[1].url }}"
+        data-fancybox=""
+      >
+        <span>{{ section.settings.play_button_label }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const video = document.querySelector(".main-auto-video");
+
+    if (isSafari && video) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              video.play().catch((e) => {
+                console.warn("Safari autoplay restriction:", e);
+              });
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      observer.observe(document.querySelector(".anti-snore-video-two-sec"));
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Two Videos",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "video",
+      "label": "Front Video",
+      "id": "front_video"
+    },
+    {
+      "type": "video",
+      "label": "Main Video",
+      "id": "main_video"
+    },
+    {
+      "type": "text",
+      "label": "Play Button Label",
+      "id": "play_button_label"
+    },
+        {
+      "type": "text",
+      "label": "Mobile Title 1",
+      "id": "mob_title_1"
+    },
+        {
+      "type": "text",
+      "label": "Mobile Text 1",
+      "id": "mob_text_1"
+    },
+        {
+      "type": "text",
+      "label": "Mobile Title 2",
+      "id": "mob_title_2"
+    },
+        {
+      "type": "text",
+      "label": "Mobile Text 2",
+      "id": "mob_text_2"
+    }
+
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Two Videos"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

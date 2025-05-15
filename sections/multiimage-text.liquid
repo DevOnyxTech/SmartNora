@@ -1,0 +1,81 @@
+{{ 'section-multiimage-text.css' | asset_url | stylesheet_tag }}
+
+<section class="be-lover-section component">
+  <div class="be-lover-container">
+    <div class="half-block-section">
+      <div class="half-block-left">
+        <h2>
+          {{ section.settings.heading }}
+        </h2>
+        <p>
+          {{ section.settings.content }}
+        </p>
+        <div class="nora-work-btn">
+          <a href="{{ section.settings.button_link }}">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+              </svg>
+              <span>{{ section.settings.button_label }}</span>
+            </span>
+          </a>
+        </div>
+        <img src="{{ section.settings.left_image | img_url : 'master' }}" alt="pebble on table" loading="lazy">
+      </div>
+      <div class="half-block-right">
+        <img src="{{ section.settings.right_image | img_url  : 'master' }}" alt="Couple" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Multi Image Text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "image_picker",
+      "label": "Left Image",
+      "id": "left_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Right Image",
+      "id": "right_image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Multi Image Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

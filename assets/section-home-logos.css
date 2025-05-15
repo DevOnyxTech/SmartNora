@@ -1,0 +1,107 @@
+.influencer-logo {
+  padding: 67px 0 64px;
+}
+.influencer-logo .influencer-container {
+  max-width: 870px;
+  width: 100%;
+  margin: 0 auto;
+}
+.influencer-logo .influencer-container .top-influencer-icon {
+  text-align: center;
+}
+.influencer-logo .influencer-container .top-influencer-icon img {
+  margin: 0 auto 52px;
+  max-width: 278px;
+  width: 100%;
+  height: auto;
+}
+.influencer-logo .influencer-container .top-influencer-icon h2 {
+  font-size: 60px;
+  line-height: 60px;
+  color: #19294f;
+  font-weight: 500;
+  margin-bottom: 52px;
+}
+.influencer-logo .grid-wrapper {
+  display: flex;
+  row-gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4.25rem;
+}
+.influencer-logo .grid-wrapper img {
+  max-width: 100%;
+  display: block;
+  height: 25px;
+}
+  .influencer-logo .influencer-container .top-influencer-icon h2 br {
+    display: none;
+  }
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .influencer-logo {
+    padding: 5vw 0;
+  }
+  .influencer-logo .influencer-container .top-influencer-icon img {
+    margin: 0 auto 2.71vw;
+    max-width: 14.48vw;
+  }
+  .influencer-logo .influencer-container .top-influencer-icon h2 {
+    font-size: 3.13vw;
+    line-height: 1em;
+    margin-bottom: 2.71vw;
+  }
+  .influencer-logo .grid-wrapper img {
+    height: 1.3vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .influencer-logo .influencer-container .top-influencer-icon h2 {
+    font-size: 44px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+  .influencer-logo .grid-wrapper {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .influencer-logo .influencer-container .top-influencer-icon h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  /* .influencer-logo .influencer-container .top-influencer-icon h2 br {
+    display: none;
+  } */
+  .influencer-logo .grid-wrapper img:nth-of-type(-n + 2) {
+    display: none;
+  }
+  .influencer-logo .grid-wrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1rem;
+  }
+  .influencer-logo .grid-wrapper img {
+    max-height: 20px;
+    margin: 0 auto;
+  }
+
+  /* gen-2 Home page */
+  .influencer-logo {
+    padding: 50px 0 50px;
+  }
+  .influencer-logo .grid-wrapper img:nth-of-type(-n + 2) {
+    display: block;
+  }
+  .influencer-logo .grid-wrapper img {
+    max-height: 16px;
+  }
+  .influencer-logo .influencer-container .top-influencer-icon h2 {
+    font-size: 28px;
+    font-weight: 500;
+    max-width: 300px;
+    line-height: 30px;
+    margin: 0 auto 25px;
+  }
+  .influencer-logo .influencer-container .top-influencer-icon img {
+    margin: 0 auto 30px;
+  }
+}

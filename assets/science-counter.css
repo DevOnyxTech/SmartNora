@@ -1,0 +1,315 @@
+/* Smart Nora improves sleep section starts */
+.smart-nora-improves-sleep-header .tagline {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.smart-nora-improves-sleep-section {
+  padding-block: 100px;
+}
+
+.smart-nora-improves-sleep-header {
+  margin-bottom: 60px;
+  text-align: center;
+  max-width: 558px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter__box {
+  background-color: #f9f7f7;
+  padding: 33px 24px;
+  border-radius: 18px;
+  height: fit-content;
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 196px;ƒˇ
+  margin: 0;
+  text-align: center;
+  flex-shrink: 0;
+  gap: 30px;
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter__text {
+  margin-bottom: 10px;ƒ
+  height: 58px;
+  overflow: hidden;
+  position: relative;
+  text-align:left;
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter__text span {
+  color: #97ca3b;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  display: inline-block;
+  transform: translateY(0);
+  /* min-width: 107px; */
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter__content {
+  color: #f1f1f1;
+  max-width: 154px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.smart-nora-improves-sleep-header h2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  letter-spacing: -0.56px;
+}
+
+.smart-nora-improves-sleep-section .sleep-continuity-counter__content p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #7c7c7b;
+  line-height: 19px;
+}
+
+.counter-image {
+  max-width: calc(100% - 256px);
+  width: 100%;
+}
+
+.counter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 757px;
+}
+
+.counter-image-wrapper {
+  display: flex;
+  column-gap: 60px;
+  flex-wrap: wrap;
+}
+
+.smart-nora-improves-btn-wrapper {
+  flex-basis: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.d-md-desktop {
+  display: block;
+}
+
+.d-md-mobile {
+  display: none;
+}
+.smart-nora-improves-btn-wrapper button {
+  margin-top: 60px;
+}
+.smart-nora-improves-btn-wrapper a.custom-header-button {
+    column-gap: 10px;
+    padding-inline: 16px !important;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .smart-nora-improves-sleep-section {
+    padding-block: 2.78vw;
+  }
+
+  .smart-nora-improves-sleep-header {
+    margin-bottom: 3.33vw;
+    max-width: 31vw;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__box {
+    padding: 1.83vw 1.33vw;
+    border-radius: 1vw;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__text {
+    margin-bottom: 0.56vw;
+    height: 3.22vw;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__text span {
+    font-size: 2.67vw;
+    line-height: 3.22vw;
+    text-align: left;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__content {
+    max-width: 8.56vw;
+  }
+
+  .smart-nora-improves-sleep-header h2 {
+    font-size: 2.22vw;
+    line-height: 2.67vw;
+    letter-spacing: -0.031vw;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__content p {
+    font-size: 0.89vw;
+    line-height: 1.06vw;
+  }
+
+  .counter-image img {
+    border-radius: 1.11vw;
+    max-width: 42.06vw;
+  }
+
+  .counter-image-wrapper {
+    column-gap: 3.33vw;
+  }
+
+  .smart-nora-improves-btn-wrapper button {
+    margin-top: 3.33vw;
+  }
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__text svg {
+    width: 2.67vw;
+    height: 2vw;
+  }
+  .sleep-continuity-counter__text span {
+    min-width: 84px;
+  }
+  
+  #MainContent
+    .smart-nora-improves-sleep-section
+    .smart-nora-improves-btn-wrapper
+    a
+    svg {
+    width: 1.042vw;
+  }
+  .smart-nora-improves-btn-wrapper a.custom-header-button {
+      column-gap: 0.521vw;
+      padding-inline: 0.833vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .counter-image-wrapper {
+    column-gap: 30px;
+  }
+  #MainContent
+    .smart-nora-improves-sleep-section
+    .smart-nora-improves-btn-wrapper
+    a {
+    padding: 9px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .d-md-desktop {
+    display: none;
+  }
+
+  .d-md-mobile {
+    display: block;
+  }
+
+  .smart-nora-improves-sleep-section .container {
+    padding-inline: 0;
+  }
+
+  .counter-image {
+    max-width: 100%;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .counter-image-wrapper {
+    justify-content: center;
+    position: relative;
+    height: 770px;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter {
+    max-width: 340px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "box1 box2"
+      "box3 box3";
+    gap: 20px;
+  }
+
+  .sleep-continuity-counter__box:nth-child(1) {
+    grid-area: box1;
+  }
+
+  .sleep-continuity-counter__box:nth-child(2) {
+    grid-area: box2;
+  }
+
+  .sleep-continuity-counter__box:nth-child(3) {
+    grid-area: box3;
+    display: none;
+  }
+
+  .smart-nora-improves-sleep-section {
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+
+  .counter-image-wrapper {
+    column-gap: 20px;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__text span {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__box {
+    padding: 25px 24px;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__text {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .sleep-continuity-counter__text img {
+    max-width: 24px;
+  }
+
+  .counter-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0px;
+  }
+
+  .smart-nora-improves-btn-wrapper {
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .sleep-continuity-counter {
+    position: absolute;
+    bottom: 90px;
+  }
+
+  .smart-nora-improves-sleep-section .sleep-continuity-counter__content {
+    margin: 0;
+    max-width: none;
+  }
+
+  .smart-nora-improves-sleep-header {
+    padding-inline: 25px;
+  }
+  .smart-nora-improves-sleep-header h2 {
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -1.12px;
+  }
+  .sleep-continuity-counter__text svg {
+    width: 23px;
+    height: 26px;
+  }
+}
+
+/* Smart Nora improves sleep section ends */

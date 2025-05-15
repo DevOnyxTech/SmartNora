@@ -1,0 +1,345 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-banner",
+      "blocks": {
+        "product_item_Y98qb8": {
+          "type": "product_item",
+          "settings": {
+            "item_title": "Risk Free",
+            "item_subtitle": "30-night free return.",
+            "item_icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewbox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\"></path>\n                                    </svg>"
+          }
+        },
+        "product_item_JtNtja": {
+          "type": "product_item",
+          "settings": {
+            "item_title": "Free Shipping!",
+            "item_subtitle": "Free Shipping and returns.",
+            "item_icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewbox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                                        <path d=\"M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z\"></path>\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0\"></path>\n                                    </svg>"
+          }
+        },
+        "product_item_mXpnGQ": {
+          "type": "product_item",
+          "settings": {
+            "item_title": "1-year",
+            "item_subtitle": "1 year limited warranty.",
+            "item_icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewbox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z\"></path>\n                                    </svg>"
+          }
+        },
+        "product_item_V3EgYd": {
+          "type": "product_item",
+          "settings": {
+            "item_title": "Accepted",
+            "item_subtitle": "FSA/HSA funds accepted.",
+            "item_icon": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewbox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z\"></path>\n                                    </svg>"
+          }
+        }
+      },
+      "block_order": [
+        "product_item_Y98qb8",
+        "product_item_JtNtja",
+        "product_item_mXpnGQ",
+        "product_item_V3EgYd"
+      ],
+      "settings": {
+        "product_title": "Smart Nora",
+        "original_price": "<p>$499</p>",
+        "sale_price": "<p>$439 USD</p>",
+        "review_count": "1,442+",
+        "subscription_detail": "First month of a new membership is on us with your purchase. $5.99/month afterwards.",
+        "product_image": "shopify://shop_images/smart-nora-product-image_92e14c1a-8b64-4247-a42b-c06ade4d981e.jpg",
+        "bg_image": "shopify://shop_images/COMMERCIAL_Smart-Nora-Shoot_7April2022_3397-2-scaled-e1655483376252-1024x618_2ccfd9e5-fb87-4154-b6a0-bb36999f0929.webp",
+        "mob_bg_image": "shopify://shop_images/Screen-Shot-2022-09-01-at-5_22_51-PM_tablet_png_b8dbda55-d154-4c42-b770-5d3e7ad6e234.webp",
+        "feature_1": "FSA/HSA eligible",
+        "feature_2": "Free Shipping and returns",
+        "feature_3": "30 night money-back guarantee",
+        "feature_4": "Ships in 2 weeks due to high demand"
+      }
+    },
+    "17345062936f881b99": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product_navigation_hRFny4": {
+      "type": "product-navigation",
+      "blocks": {
+        "link_K6iWqw": {
+          "type": "link",
+          "settings": {
+            "title": "What's In The Box",
+            "link": "#sliderSection"
+          }
+        },
+        "link_d7PAcd": {
+          "type": "link",
+          "settings": {
+            "title": "Setup",
+            "link": "#setupSection"
+          }
+        },
+        "link_i9EnqM": {
+          "type": "link",
+          "settings": {
+            "title": "Experience",
+            "link": "#experienceSection"
+          }
+        },
+        "link_aig76m": {
+          "type": "link",
+          "settings": {
+            "title": "Design",
+            "link": "#featureSection"
+          }
+        },
+        "link_8YHe7D": {
+          "type": "link",
+          "settings": {
+            "title": "Technical Specs",
+            "link": "#harwareSection"
+          }
+        }
+      },
+      "block_order": [
+        "link_K6iWqw",
+        "link_d7PAcd",
+        "link_i9EnqM",
+        "link_aig76m",
+        "link_8YHe7D"
+      ],
+      "settings": {}
+    },
+    "product_page_slider_dDeCzx": {
+      "type": "product-page-slider",
+      "blocks": {
+        "slide_cpDE6W": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1.webp",
+            "alt": ""
+          }
+        },
+        "slide_AzCFkU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2.webp",
+            "alt": ""
+          }
+        },
+        "slide_FjTxRc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/3.webp",
+            "alt": ""
+          }
+        },
+        "slide_FyfdkT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/4.webp",
+            "alt": ""
+          }
+        },
+        "slide_EiCDRm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/5.webp",
+            "alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_cpDE6W",
+        "slide_AzCFkU",
+        "slide_FjTxRc",
+        "slide_FyfdkT",
+        "slide_EiCDRm"
+      ],
+      "settings": {
+        "title": "What's In The Box",
+        "subtitle": "Everything that comes with Nora."
+      }
+    },
+    "product_setup_q8b4Nr": {
+      "type": "product-setup",
+      "blocks": {
+        "setup_step_GVKckm": {
+          "type": "setup_step",
+          "settings": {
+            "setup_image": "shopify://shop_images/Screen_Shot_2024-02-17_at_4.07.png",
+            "setup_step_title": "1. Place the pad under your pillow."
+          }
+        },
+        "setup_step_yjML43": {
+          "type": "setup_step",
+          "settings": {
+            "setup_image": "shopify://shop_images/Screen_Shot_2024-02-17_at_4.07_1.png",
+            "setup_step_title": "2. Turn on the Pebble."
+          }
+        },
+        "setup_step_YE8pyz": {
+          "type": "setup_step",
+          "settings": {
+            "setup_image": "shopify://shop_images/Screen_Shot_2024-02-17_at_4.07_2.png",
+            "setup_step_title": "3. Go to Sleep!"
+          }
+        }
+      },
+      "block_order": [
+        "setup_step_GVKckm",
+        "setup_step_yjML43",
+        "setup_step_YE8pyz"
+      ],
+      "settings": {
+        "setup_title": "Setup",
+        "setup_description": "Setting up Nora is as easy as 1,2,3."
+      }
+    },
+    "product_image_with_text_kjCayV": {
+      "type": "product-image-with-text",
+      "blocks": {
+        "experience_item_87UDUX": {
+          "type": "experience_item",
+          "settings": {
+            "image": "shopify://shop_images/COMMERCIAL_Smart-Nora-Shoot_7April2022_3395-1-4.png",
+            "image_position": "left",
+            "heading": "Your Smart Nora Experience",
+            "description": "Simply tap to turn the pebble on once you are in bed and ready to sleep. You can also activate the 30-minute delay setting to allow some time to fall asleep before Nora starts actively listening for snoring."
+          }
+        },
+        "experience_item_FtWHz7": {
+          "type": "experience_item",
+          "settings": {
+            "image": "shopify://shop_images/COMMERCIAL_Smart-Nora-Shoot_7April2022_3387-3-1-1.png",
+            "image_position": "right",
+            "heading": "Your first few nights",
+            "description": "The pillow will move a few times during the night when nora detects early sounds of snoring. You and your partner will notice a reduction in the frequency and intensity of snores. Continue to customize your Nora to find your optimal settings. Remember, you can always reach out to our support team for tips."
+          }
+        }
+      },
+      "block_order": [
+        "experience_item_87UDUX",
+        "experience_item_FtWHz7"
+      ],
+      "settings": {
+        "id": "experienceSection",
+        "title": "Experience",
+        "subtitle": "What to Expect"
+      }
+    },
+    "product_image_with_text_ccUiD3": {
+      "type": "product-image-with-text",
+      "blocks": {
+        "experience_item_zfzFxi": {
+          "type": "experience_item",
+          "settings": {
+            "image": "shopify://shop_images/Smart-Nora-snoring-solution-in-Bedroom_full-01-No-Text-1.png",
+            "image_position": "left",
+            "heading": "Discreet Design",
+            "description": "Smart Nora's design is simple yet discreet. Once you put the expander under your pillow and place the felt box under your bed, the only visible part of the product is the elegantly designed Pebble."
+          }
+        },
+        "experience_item_UJUcjd": {
+          "type": "experience_item",
+          "settings": {
+            "image": "shopify://shop_images/Pebble-hand-bright-1-2.png",
+            "image_position": "left",
+            "heading": "Customizable Features",
+            "description": "The intuitive controls allow you to customize nora based on your pillow type, sleep habits, and bedroom environment. The pillow inflation can be adjusted on the silent Base. Work your way up from low to high inflation to get the largest motion without compromising comfort."
+          }
+        },
+        "experience_item_TTmzAh": {
+          "type": "experience_item",
+          "settings": {
+            "image": "shopify://shop_images/COMMERCIAL_Smart-Nora-Shoot_7April2022_0802-1-1.png",
+            "image_position": "left",
+            "heading": "Dedicated Customer Support",
+            "description": "Our Support Specialists are here to help you throughout your Smart Nora journey. Easily get in touch via phone, email, chat, or schedule a free Zoom consultation. We take pride in offering the best customer experience."
+          }
+        }
+      },
+      "block_order": [
+        "experience_item_zfzFxi",
+        "experience_item_UJUcjd",
+        "experience_item_TTmzAh"
+      ],
+      "settings": {
+        "id": "featureSection",
+        "title": "All About Smart Nora",
+        "subtitle": "Key Features"
+      }
+    },
+    "product_table_m9WgMJ": {
+      "type": "product-table",
+      "blocks": {
+        "specification_efCwAH": {
+          "type": "specification",
+          "settings": {
+            "key": "Box Dimensions",
+            "value": "4.5\" x 10\" x 7.3\""
+          }
+        },
+        "specification_7BpKAN": {
+          "type": "specification",
+          "settings": {
+            "key": "Pebble Dimensions",
+            "value": "2.4\" x 3.7\" x 0.5\""
+          }
+        },
+        "specification_NRJa8K": {
+          "type": "specification",
+          "settings": {
+            "key": "Total Weight",
+            "value": "5.5 lbs"
+          }
+        },
+        "specification_96fFEJ": {
+          "type": "specification",
+          "settings": {
+            "key": "Cable Lengths (USB cable, charging cable, and plastic tubing)",
+            "value": "59\" each"
+          }
+        },
+        "specification_qBmYM7": {
+          "type": "specification",
+          "settings": {
+            "key": "Charger Specifications",
+            "value": "Comes with a universal adapter that works in North America, Europe, South America, but not Australia."
+          }
+        }
+      },
+      "block_order": [
+        "specification_efCwAH",
+        "specification_7BpKAN",
+        "specification_NRJa8K",
+        "specification_96fFEJ",
+        "specification_qBmYM7"
+      ],
+      "settings": {
+        "section_title": "Technical Specs",
+        "section_subtitle": "Hardware specifications"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17345062936f881b99",
+    "product_navigation_hRFny4",
+    "product_page_slider_dDeCzx",
+    "product_setup_q8b4Nr",
+    "product_image_with_text_kjCayV",
+    "product_image_with_text_ccUiD3",
+    "product_table_m9WgMJ"
+  ]
+}

@@ -1,0 +1,100 @@
+{{ 'section-protect-nora.css' | asset_url | stylesheet_tag }}
+
+<div class="protect_nora_sec">
+  <div class="protect_nora_container">
+    <div class="half_content_wrapper">
+      <div class="content_left content-box-item">
+        <div class="half-content-inner">
+          <h2>{{ section.settings.heading }}</h2>
+          {{ section.settings.description }}
+        </div>
+        <div class="wrnty-year-box">
+          {% for block in section.blocks %}
+            {% if block.type == 'warranty_option' %}
+              <div class="year-box-item">
+                <div class="year-item-inner">
+                  <div class="price">{{ block.settings.price }}</div>
+                  <div class="year-count">{{ block.settings.year_count }}</div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="image_right content-box-item">
+        <img
+          loading="lazy"
+          src="{{ section.settings.image | img_url: 'master' }}"
+          alt="{{ section.settings.image_alt }}"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warranty Protect Nora",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Protect Your Nora"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Smart Nora comes with a default 1-year warranty from the date of delivery. You have an option to extend the warranty coverage for an additional period of 1, 2, or 3 years.</p><p>The extended warranty enables us to offer continuous support for a longer window of time and maximize the benefits of our high-quality sourcing and manufacturing.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Protect Your Nora"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warranty_option",
+      "name": "Warranty Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$35.99"
+        },
+        {
+          "type": "text",
+          "id": "year_count",
+          "label": "Year Count",
+          "default": "1 year"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warranty Protect Nora",
+      "blocks": [
+        {
+          "type": "warranty_option"
+        },
+        {
+          "type": "warranty_option"
+        },
+        {
+          "type": "warranty_option"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

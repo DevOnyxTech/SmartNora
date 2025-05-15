@@ -1,0 +1,82 @@
+{{ 'section-product-setup.css' | asset_url | stylesheet_tag }}
+
+<div class="product-setup-section-wrapper component" id="setupSection">
+  <div class="product-detail-container">
+    <div class="product-detail-header">
+      <h3>{{ section.settings.setup_title }}</h3>
+      <p>{{ section.settings.setup_description }}</p>
+    </div>
+    <div class="setup-three-box-wrapper">
+      <div class="grid">
+        {% for block in section.blocks %}
+          <div class="setup-grid-box">
+            <div class="setup-image-wrapper">
+              <img
+                src="{{ block.settings.setup_image | img_url: 'master' }}"
+                alt="{{ block.settings.setup_image.alt }}"
+                loading="lazy"
+              >
+            </div>
+            <div class="setup-content-wrapper">
+              <h3>{{ block.settings.setup_step_title }}</h3>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Setup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "setup_title",
+      "label": "Setup Title",
+      "default": "Setup"
+    },
+    {
+      "type": "textarea",
+      "id": "setup_description",
+      "label": "Setup Description",
+      "default": "Setting up Nora is as easy as 1,2,3."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "setup_step",
+      "name": "Setup Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "setup_image",
+          "label": "Setup Image"
+        },
+        {
+          "type": "text",
+          "id": "setup_step_title",
+          "label": "Step Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Setup",
+      "blocks": [
+        {
+          "type": "setup_step"
+        },
+        {
+          "type": "setup_step"
+        },
+        {
+          "type": "setup_step"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

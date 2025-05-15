@@ -1,0 +1,128 @@
+.banner-section-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 21px auto;
+}
+body.page\.investment .announcement-bar-section {
+  display: none;
+}
+.banner_wrapper {
+  min-height: 700px;
+  padding-left: 66px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #f3f2ef;
+  position: relative;
+}
+.banner_content_area {
+  max-width: 485px;
+  width: 100%;
+}
+.banner_content_area h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #000;
+}
+.banner_content_area h1 span {
+  border-bottom: 5px solid #000;
+}
+.banner_content_area p {
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  font-weight: 500;
+}
+.banner_content_area a {
+  display: inline-block;
+  background-color: #062842;
+  color: #fff;
+  border-radius: 23px;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 10px 17px;
+  text-decoration: none;
+  border: 2px solid #062842;
+  margin-block: 36px;
+  font-weight: 700;
+}
+.banner_content_area a:hover {
+  background-color: #fff;
+  color: #062842;
+}
+.banner-image-area {
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  right: 115px;
+  bottom: 0;
+}
+.banner-image-area img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner_wrapper {
+    padding-left: 20px;
+  }
+  .banner_content_area p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .banner_content_area {
+    max-width: 400px;
+  }
+  .banner_content_area h1 {
+    margin-bottom: 15px;
+  }
+  .banner_content_area a {
+    margin-block: 20px;
+  }
+  .banner-image-area {
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .banner-section-container {
+    margin: 16px auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner_wrapper {
+    min-height: 550px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
+  }
+  .banner-image-area {
+    max-width: 250px;
+    position: relative;
+    right: auto;
+  }
+
+  .banner_content_area {
+    max-width: 100%;
+    padding-top: 30px;
+  }
+
+  .banner_content_area p {
+    padding-inline: 15px;
+  }
+
+  .banner_content_area h1 span {
+    border-bottom: 3px solid #000;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+}

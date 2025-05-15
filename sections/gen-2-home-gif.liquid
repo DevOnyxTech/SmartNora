@@ -1,0 +1,72 @@
+{{ 'gen-2-home-gif.css' | asset_url | stylesheet_tag }}
+
+<div class="except-snoring">
+  <div class="container">
+    <div class="except-snoring__header">
+      <h2 class="except-snoring__title">
+        {{ section.settings.heading }}
+      </h2>
+      <p class="except-snoring__description">
+        {{ section.settings.sub_heading }}
+      </p>
+    </div>
+    <div class="except-snoring__media">
+      <video class="except-snoring__video" autoplay loop muted playsinline>
+        <source src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    {% comment %}
+      <div class="btn_green except-snoring__cta">
+        <a href="{{ section.settings.button_link }}" class="btn_green except-snoring__btn">
+          {{- section.settings.button_label -}}
+        </a>
+      </div>
+    {% endcomment %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gen 2 Home Gif",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "video",
+      "label": "Video",
+      "id": "video"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Gen 2 Home Gif"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

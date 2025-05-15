@@ -1,0 +1,353 @@
+{{ 'lead-gen-benefit.css' | asset_url | stylesheet_tag }}
+
+<div class="eb-section mobile-hide">
+  <div class="container">
+    <div class="eb-top">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="eb-wrap">
+      <div class="eb-left">
+        <img src="{{ section.settings.image_1 | img_url : 'master' }}">
+      </div>
+      <div class="eb-right">
+        <h3>{{ section.settings.title_1 }}</h3>
+        <p>{{ section.settings.content_1 }}</p>
+        <ul>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'top_section' %}
+                <li>
+                  <span><img src="{{ block.settings.icon_svg | img_url : 'master' }}"></span>{{ block.settings.title }}
+                </li>
+            {% endcase %}
+          {% endfor %}
+        </ul>
+        {% if section.settings.bot_text != blank %}
+          <p class="bot_text">{{ section.settings.bot_text }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="eb-wrap">
+      <div class="eb-left">
+        {% if section.settings.image_2 != blank %}
+          <img src="{{ section.settings.image_2 | img_url :'master' }}">
+        {% endif %}
+      </div>
+      <div class="eb-right">
+        {% if section.settings.title_2 != blank %}
+          <h3>{{ section.settings.title_2 }}</h3>
+        {% endif %}
+        {% if section.settings.content_2 != blank %}
+          <p>{{ section.settings.content_2 }}</p>
+        {% endif %}
+        <ul>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'middle_section' %}
+                <li>
+                  <span><img src="{{ block.settings.icon_svg | img_url : 'master' }}"></span>{{ block.settings.title }}
+                </li>
+            {% endcase %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="eb-wrap">
+      <div class="eb-left">
+        <img src="{{ section.settings.image_3 | img_url :'master'  }}">
+      </div>
+      <div class="eb-right">
+        <h3>{{ section.settings.title_3 }}</h3>
+        <p>{{ section.settings.content_3 }}</p>
+        <ul>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'bottom_section' %}
+                <li>
+                  {{ block.settings.title }}
+                </li>
+            {% endcase %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="blue-btn">
+      <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="eb-section desktop-hide">
+  <div class="container">
+    <div class="eb-top">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="swiper-container benifit-slider">
+      <div class="swiper-pagination"></div>
+      <div class="swiper-wrapper">
+        <div class="eb-wrap swiper-slide">
+          <div class="eb-left">
+            <img src="{{ section.settings.image_1_mob | img_url : 'master' }}">
+          </div>
+          <div class="eb-right">
+            <h3>{{ section.settings.title_1 }}</h3>
+            <p>{{ section.settings.content_1 }}</p>
+            <ul>
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'top_section' %}
+                    <li>
+                      <span><img src="{{ block.settings.icon_svg | img_url : 'master' }}"></span>
+                      {{- block.settings.title }}
+                    </li>
+                {% endcase %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% if section.settings.image_2_mob != blank %}
+          <div class="eb-wrap swiper-slide">
+            <div class="eb-left">
+              <img src="{{ section.settings.image_2_mob | img_url :'master' }}">
+            </div>
+            <div class="eb-right">
+              <h3>{{ section.settings.title_2 }}</h3>
+              <p>{{ section.settings.content_2 }}</p>
+              <ul>
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'middle_section' %}
+                      <li>
+                        <span><img src="{{ block.settings.icon_svg | img_url : 'master' }}"></span>
+                        {{- block.settings.title }}
+                      </li>
+                  {% endcase %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+        <div class="eb-wrap swiper-slide">
+          <div class="eb-left">
+            <img src="{{ section.settings.image_3_mob | img_url :'master'  }}">
+          </div>
+          <div class="eb-right">
+            <h3>{{ section.settings.title_3 }}</h3>
+            <p>{{ section.settings.content_3 }}</p>
+            <ul>
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'bottom_section' %}
+                    <li>
+                      {{ block.settings.title }}
+                    </li>
+                {% endcase %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="benifits-bottom-text">
+      <p>
+        {{ section.settings.mob_bot_text }}
+      </p>
+    </div>
+    <div class="blue-btn">
+      <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
+</div>
+<script>
+  var Swipes = new Swiper('.benifit-slider', {
+      loop: true,
+    spaceBetween: 20,
+    autoHeight: true,
+      pagination: {
+          el: '.swiper-pagination',
+        clickable: true,
+      },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Benefits",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Description",
+      "id": "description"
+    },
+    {
+      "type": "header",
+      "content": "Top Section"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title_1"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content_1"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image_1"
+    },
+             {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "image_1_mob"
+    },
+      {
+      "type": "text",
+      "label": "Bottom Text",
+      "id": "bot_text"
+    },
+    {
+      "type": "header",
+      "content": "Middle Section"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title_2"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content_2"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image_2"
+    },
+             {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "image_2_mob"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Section"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title_3"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content_3"
+    },
+        {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image_3"
+    },
+         {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "image_3_mob"
+    },
+        {
+      "type": "header",
+      "content": "Button"
+    },
+        {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+        {
+      "type": "header",
+      "content": "Mobile only"
+    },
+      {
+      "type": "html",
+      "label": "Mobile Bottom Text",
+      "id": "mob_bot_text"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "top_section",
+      "name": "Top Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon Svg",
+          "id": "icon_svg"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        }
+      ]
+    },
+    {
+      "type": "middle_section",
+      "name": "Middle Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon Svg",
+          "id": "icon_svg"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        }
+      ]
+    },
+    {
+      "type": "bottom_section",
+      "name": "Bottom Section",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lead Gen Benefits"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

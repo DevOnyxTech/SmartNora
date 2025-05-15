@@ -1,0 +1,70 @@
+{{ 'investment-pressroom.css' | asset_url | stylesheet_tag }}
+
+<div class="press-room-section">
+  <div class="press-room-container">
+    <div class="press-room-title">{{ section.settings.title }}</div>
+    <div class="press-room-wrraper">
+      {% for block in section.blocks %}
+        <div class="press-room-items">
+          <div class="press-room-img">
+            <img src="{{ block.settings.image | img_url : 'master' }}" alt="Press Room Img">
+          </div>
+          <div class="press-room-descriptions">
+            <h3>{{ block.settings.title }}</h3>
+            <p>
+              {{ block.settings.description }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Press Room",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "news",
+      "name": "News",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Investment Press Room"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

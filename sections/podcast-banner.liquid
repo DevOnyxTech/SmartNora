@@ -1,0 +1,52 @@
+{{ 'podcast-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="podcast-banner-section">
+  <div class="podcast-banner__container">
+    <div class="podcast-banner__wrapper">
+      <div class="podcast-banner__header">
+        <span class="podcast-banner__icon">
+          <img
+            src="{{ section.settings.pre_title_icon | img_url :'master' }}"
+            alt="Podcast Icon"
+          >
+          {{ section.settings.pre_title }}
+        </span>
+      </div>
+      <h1 class="podcast-banner__title">{{ section.settings.title }}</h1>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Podcast Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Pre Title Icon",
+      "id": "pre_title_icon"
+    },
+    {
+      "type": "html",
+      "label": "Pre Title",
+      "id": "pre_title"
+    },
+    {
+      "type": "html",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Podcast Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

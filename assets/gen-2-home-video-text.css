@@ -1,0 +1,170 @@
+/* START CSS : Video With Content */
+.snorers {
+  padding: 100px 0;
+}
+
+.snorers__wrapper {
+  display: grid;
+  grid-template-columns: 2.18fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.snorers__video img.video-imgg {
+  border-radius: 15px;
+  width: 100%;
+  aspect-ratio: 1 / 0.8;
+  object-fit: cover;
+}
+p.snorers__about {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+span.snorers__icon {
+  height: 25px;
+}
+
+h2.snorers__title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+p.snorers__description {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 400;
+  margin: 10px 0 15px;
+}
+
+.snorers__video {
+  position: relative;
+}
+
+.snorers__video-element {
+  border-radius: 15px;
+  aspect-ratio: 1 / 0.67;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a.play-button {
+  border: 0;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  outline: none;
+  box-shadow: inherit;
+  text-align: center;
+}
+
+.snorers__cta a {
+  min-width: 103px;
+  padding: 14px 10px;
+  text-align: center;
+}
+.about_mobile_title {
+  display: none;
+}
+.snorers__wrapper .snorers__video a.play-button::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url("https://cdn.shopify.com/s/files/1/1053/4408/files/Button_1.svg?v=1742976109");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+}
+.snorers__wrapper .snorers__video a.play-button {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: inline-block;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .snorers {
+    padding: 0 0 5vw;
+  }
+  .snorers__icon img {
+    width: 1.25vw;
+  }
+  .snorers__wrapper {
+    gap: 3.13vw;
+  }
+
+  p.snorers__about {
+    column-gap: 0.36vw;
+    font-size: 0.94vw;
+    line-height: 1.5em;
+    margin-bottom: 0.52vw;
+  }
+
+  span.snorers__icon {
+    height: 1.3vw;
+  }
+
+  h2.snorers__title {
+    font-size: 2vw;
+    line-height: 1.2em;
+  }
+
+  p.snorers__description {
+    font-size: 1.04vw;
+    line-height: 1.35em;
+    margin: 0.52vw 0 0.78vw;
+  }
+
+  .snorers__cta a {
+    min-width: 5.36vw;
+    padding: 0.73vw 0.52vw;
+  }
+}
+@media (max-width: 1024px) {
+  .snorers__wrapper {
+    gap: 30px;
+  }
+
+  .snorers {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .snorers__wrapper {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  p.snorers__description {
+    margin: 15px 0 20px;
+  }
+
+  .snorers {
+    padding: 100px 0;
+  }
+  .about_mobile_title {
+    text-align: center;
+    display: block;
+  }
+  .about_desktop_title {
+    display: none;
+  }
+  .about_mobile_title .snorers__about {
+    justify-content: center;
+  }
+}
+
+/* END CSS : Video With Content */

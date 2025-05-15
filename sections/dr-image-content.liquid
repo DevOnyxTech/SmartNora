@@ -1,0 +1,108 @@
+{{ 'section-dr-img-content.css' | asset_url | stylesheet_tag }}
+<div class="general-motion-wrapper component">
+  <div class="banner-container">
+    <div class="common-section-wrapper flex">
+      <div class="common-left-section">
+        <div class="ry-content-area">
+          <h2>{{ section.settings.heading }}</h2>
+          <div class="dr-left-features">
+            <div class="dr-left-point">
+              <h5>{{ section.settings.point_1_heading }}</h5>
+              <p>
+                {{ section.settings.point_1_text }}
+              </p>
+            </div>
+
+            <div class="dr-left-point">
+              <h5>{{ section.settings.point_2_heading }}</h5>
+              <p>
+                {{ section.settings.point_2_text }}
+              </p>
+            </div>
+
+            <div class="dr-left-point">
+              <h5>{{ section.settings.point_3_heading }}</h5>
+              <p>
+                {{ section.settings.point_3_text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="common-right-section">
+        <p>{{ section.settings.right_section_text }}</p>
+        <img
+          src="{{ section.settings.right_section_image | img_url: 'master' }}"
+          alt="{{ section.settings.right_section_image.alt }}"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Dr Image Content",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "It creates a gentle motion in the pillow to stop snoring without waking you up."
+    },
+    {
+      "type": "text",
+      "id": "point_1_heading",
+      "label": "Point 1 Heading",
+      "default": "1. Nora detects snoring."
+    },
+    {
+      "type": "textarea",
+      "id": "point_1_text",
+      "label": "Point 1 Text",
+      "default": "Snore sounds are caused by air passing through a partially collapsed airway. Nora monitors breathing patterns withproprietary machine learning algorithms."
+    },
+    {
+      "type": "text",
+      "id": "point_2_heading",
+      "label": "Point 2 Heading",
+      "default": "2. Creates a very slow motion under the pillow."
+    },
+    {
+      "type": "textarea",
+      "id": "point_2_text",
+      "label": "Point 2 Text",
+      "default": "The inflatable piece inside the pillow insert gently raises the head of the user. Just enough to prompt the muscles to support the airway as they normally should."
+    },
+    {
+      "type": "text",
+      "id": "point_3_heading",
+      "label": "Point 3 Heading",
+      "default": "3. Normal and silent breathing resumes."
+    },
+    {
+      "type": "textarea",
+      "id": "point_3_text",
+      "label": "Point 3 Text",
+      "default": "The slow motion prompts the throat muscles to support theairway. Airway resumes its normal open position. As obstruction ofthe airway is reduced, air can flow freely and snoring stops."
+    },
+    {
+      "type": "text",
+      "id": "right_section_text",
+      "label": "Right Section Text",
+      "default": "Completely contact-free: No nose strips, chin straps, or mouth guards."
+    },
+    {
+      "type": "image_picker",
+      "id": "right_section_image",
+      "label": "Right Section Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dr Image Content",
+      "category": "Custom Content"
+    }
+  ]
+}
+{% endschema %}

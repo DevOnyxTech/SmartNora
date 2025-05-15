@@ -1,0 +1,261 @@
+.how-it-works .cms-quieter {
+  position: relative;
+  padding-block: 100px 50px;
+}
+.cms-quieter .section-header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 160px;
+}
+.cms-quieter .tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #05243b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 384px;
+  margin: 0 auto 20px;
+}
+.cms-quieter .tagline img {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+.cms-quieter .heading {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 74px;
+  color: #05243b;
+  margin: 0;
+}
+
+.cms-quieter .quieter-inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+}
+.cms-quieter .quieter-box {
+  position: relative;
+  margin: 0 0 40px;
+}
+.quieter-box .charcoal {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 208px;
+  background-color: #ff4752;
+  border-radius: 16px;
+  padding: 12px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+.quieter-box .charcoal-green {
+  background-color: rgb(151 202 59);
+}
+.quieter-box .charcoal-top {
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.quieter-box .quieter-img {
+  width: 100%;
+  margin: 0 0 20px;
+}
+.quieter-box .quieter-img img {
+  object-fit: cover;
+  width: 100%;
+}
+.quieter-box .content {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+.how-it-works .cms-quieter .heading {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 71px;
+  margin-bottom: 20px;
+}
+.how-it-works .cms-quieter .section-header p {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.how-it-works .cms-quieter .section-header {
+  max-width: 872px;
+  padding: 0 0 57px;
+}
+.how-it-works .quieter-box p {
+  color: #05243b;
+}
+.how-it-works .quieter-box .charcoal {
+  position: absolute;
+  right: -15px;
+  top: -40px;
+  width: 222px;
+  border-radius: 16px;
+  padding: 15px;
+  flex-direction: row;
+  color: #fff;
+  gap: 10px;
+}
+.how-it-works .quieter-img video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+.how-it-works .quieter-box .charcoal-top {
+  font-size: 13px;
+  opacity: 1;
+}
+.how-it-works .charcoal-bot {
+  font-weight: 400;
+}
+.how-it-works .charcoal-icon {
+  flex-shrink: 0;
+  height: max-content;
+}
+.how-it-works .cms-quieter .quieter-inner {
+  gap: 30px;
+}
+.how-it-works .cms-quieter .tagline img,
+.how-it-works .cms-validate .tagline svg {
+  margin-right: 0;
+}
+.how-it-works .cms-quieter .quieter-box {
+  position: relative;
+  margin: 0;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .how-it-works .cms-quieter {
+    position: relative;
+    padding-block: 5.56vw 2.78vw;
+  }
+
+  .cms-quieter .section-header {
+    max-width: 40vw;
+    padding: 0 0 8.89vw;
+  }
+
+  .cms-quieter .tagline {
+    font-size: 1vw;
+    max-width: 21.33vw;
+    margin: 0 auto 1.11vw;
+  }
+
+  .cms-quieter .tagline img {
+    width: 0.89vw;
+    height: 0.89vw;
+    margin-right: 0.89vw;
+  }
+
+  .cms-quieter .quieter-inner {
+    gap: 4.44vw;
+  }
+
+  .cms-quieter .quieter-box {
+    margin: 0 0 2.22vw;
+  }
+
+  .quieter-box .charcoal {
+    right: -2.22vw;
+    top: -2.22vw;
+    width: 11.56vw;
+    border-radius: 0.89vw;
+    padding: 0.67vw 1.11vw 0.67vw;
+    font-size: 0.78vw;
+    line-height: 1.11vw;
+  }
+
+  .quieter-box .charcoal-top {
+    font-size: 0.67vw;
+  }
+
+  .quieter-box .quieter-img {
+    margin: 0 0 1.11vw;
+  }
+
+  .quieter-box .content {
+    font-size: 1.11vw;
+  }
+
+  .how-it-works .cms-quieter .heading {
+    letter-spacing: -0.12vw;
+    font-size: 2.89vw;
+    line-height: 3.94vw;
+  }
+
+  .how-it-works .cms-quieter .section-header p {
+    font-size: 1.33vw;
+    line-height: 1.61vw;
+  }
+
+  .how-it-works .cms-quieter .section-header {
+    max-width: 48.44vw;
+    padding: 0 0 3.17vw;
+  }
+
+  .how-it-works .quieter-box .charcoal {
+    right: -0.83vw;
+    top: -2.22vw;
+    width: 15.33vw;
+    border-radius: 0.89vw;
+    padding: 0.83vw;
+    gap: 0.56vw;
+  }
+
+  .how-it-works .quieter-img video {
+    border-radius: 1.11vw;
+  }
+
+  .how-it-works .quieter-box .charcoal-top {
+    font-size: 0.72vw;
+  }
+
+  .how-it-works .cms-quieter .quieter-inner {
+    gap: 1.67vw;
+  }
+}
+
+/* 1024 */
+@media only screen and (max-width: 1199px) {
+  .how-it-works .cms-quieter {
+    padding: 40px 0 40px;
+  }
+  .how-it-works .cms-quieter .heading {
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+
+/* 768 */
+@media only screen and (max-width: 1023px) {
+  .how-it-works .cms-quieter .quieter-inner {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 50px;
+    max-width: 536px;
+    margin: 0 auto;
+  }
+  .how-it-works .cms-quieter .tagline {
+    font-size: 14px;
+  }
+  .how-it-works .quieter-box .charcoal {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .how-it-works .cms-quieter {
+    padding-block: 50px;
+  }
+}

@@ -1,0 +1,214 @@
+.powering-sleep-section {
+  padding: 30px 0 123px;
+}
+.powering-sleep-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.powering-sleep-container .powering-bg-wrapper img {
+  border-radius: 20px;
+  display: block;
+  max-width: 100%;
+}
+.powering-sleep-container img.mobile-image {
+  display: none;
+}
+.powering-sleep-section .img-text-overlay {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.powering-sleep-section .img-text-overlay h2 {
+  font-size: 85px;
+  line-height: 93px;
+  font-weight: 600;
+  max-width: 1070px;
+  margin: 0 auto;
+  letter-spacing: -3.5px;
+  color: #05243b;
+}
+
+/**/
+.pwr-slider-inner .auther-img img {
+  max-width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+.powering-bg-wrapper {
+  position: relative;
+  padding-bottom: 50px;
+}
+.powering-img-slider {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.powering-slider-wrapper {
+  overflow: hidden;
+}
+.pwr-slider-inner {
+  padding-inline: 20px;
+}
+.powering-navs-arrow .powering-nav {
+  top: 35%;
+  transform: translateY(-50%);
+  background-image: inherit;
+  width: auto;
+  height: auto;
+}
+.powering-navs-arrow .powering-nav.swiper-button-prev {
+  left: -80px;
+}
+.powering-navs-arrow .powering-nav.swiper-button-next {
+  right: -80px;
+}
+.powering-nav img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  object-position: center;
+}
+.pwr-slider-inner .auther-info {
+  padding-top: 23px;
+}
+.pwr-slider-inner p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #05243b;
+}
+.pwr-slider-inner p:not(:first-child) {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.pwr-slider-inner .auth-name {
+  font-weight: bolder;
+}
+.powering-pagination {
+  display: none;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .powering-sleep-section {
+    padding-inline: 40px;
+  }
+
+  /**/
+  .powering-navs-arrow .powering-nav.swiper-button-prev {
+    left: -20px;
+  }
+  .powering-navs-arrow .powering-nav.swiper-button-next {
+    right: -20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .powering-sleep-section .img-text-overlay h2 {
+    max-width: 95%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .powering-sleep-section .img-text-overlay h2 {
+    font-size: 55px;
+    line-height: 63px;
+  }
+
+  /**/
+  .powering-pagination {
+    display: block;
+    text-align: center;
+  }
+  .powering-navs-arrow {
+    display: none;
+  }
+  .powering-pagination .swiper-pagination-bullet {
+    width: 57px;
+    height: 4px;
+    margin: 0 3px;
+    background: transparent;
+    opacity: 1;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+  }
+  .powering-pagination .swiper-pagination-bullet-active {
+    background: #05243b;
+    border: 1px solid #05243b;
+  }
+  .powering-img-slider {
+    margin: 0 -15px;
+    width: 100%;
+  }
+  .powering-sleep-section {
+    padding: 30px 0 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .powering-sleep-section {
+    padding: 0;
+  }
+  .pwr-slider-inner .auther-info {
+    padding-right: 2px;
+  }
+  .powering-sleep-container img {
+    border-radius: 0;
+  }
+  .powering-sleep-container img.mobile-image {
+    width: 100%;
+    display: block;
+  }
+  .powering-sleep-container img.desktop-img {
+    display: none;
+  }
+  .powering-sleep-section .img-text-overlay h2 {
+    font-size: 40px;
+    line-height: 44px;
+    padding: 0 20px;
+    letter-spacing: 0;
+  }
+  .powering-sleep-section .img-text-overlay {
+    top: 47%;
+  }
+  .powering-sleep-section .img-text-overlay h2 span {
+    display: none;
+  }
+
+  /**/
+  .pwr-slider-inner {
+    padding-inline: 55px;
+  }
+  .pwr-slider-inner .auther-img img {
+    width: 100%;
+  }
+  .powering-pagination .swiper-pagination-bullet {
+    border-radius: 2px;
+  }
+  .powering-img-slider {
+    margin: 0;
+    padding: 35px 0 50px;
+    background: #f4f6f7;
+  }
+  .powering-pagination {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .powering-bg-wrapper {
+    padding-bottom: 0;
+  }
+  .powering-sleep-container .powering-bg-wrapper img {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .pwr-slider-inner .auther-img img {
+    height: 325px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 25px;
+  }
+}

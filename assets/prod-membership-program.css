@@ -1,0 +1,114 @@
+.membership_program_section {
+  padding-block: 100px;
+}
+.membership_program_section h2 {
+  font-size: 40px;
+  margin-block: 0 30px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+.membership_program_section .sub-text {
+  font-size: 24px;
+  max-width: 492px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.program-item .icon {
+  height: 43px;
+  width: 43px;
+  border-radius: 10px;
+  background: linear-gradient(225deg, #05243b 0%, #0e62a1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.program-item .icon img {
+  width: 25px;
+  height: auto;
+}
+.program-item .program-title {
+  font-weight: 600;
+  margin-block: 15px 5px;
+  font-size: 22px;
+}
+.program-item .program-desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.membership-program-items {
+  display: grid;
+  column-gap: 35px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-block: 50px;
+}
+.extra-note {
+  font-weight: 500;
+  font-size: 18px;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .membership_program_section {
+    padding-block: 5.21vw;
+  }
+  .membership_program_section h2 {
+    font-size: 2.08vw;
+    margin-block: 0 1.56vw;
+    line-height: 1.3;
+  }
+  .membership_program_section .sub-text {
+    font-size: 1.25vw;
+    max-width: 25.63vw;
+  }
+  .program-item .icon {
+    height: 2.24vw;
+    width: 2.24vw;
+    border-radius: 0.52vw;
+  }
+  .program-item .icon img {
+    width: 1.3vw;
+  }
+  .program-item .program-title {
+    margin-block: 0.8vw 0.4vw;
+    font-size: 1.05vw;
+  }
+  .program-item .program-desc {
+    font-size: 1vw;
+    line-height: 1.3;
+  }
+  .membership-program-items {
+    column-gap: 2vw;
+    margin-block: 2.08vw;
+  }
+  .extra-note {
+    font-size: 1vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .membership_program_section {
+    padding-block: 70px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .membership-program-items {
+    column-gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .membership-program-items {
+    row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 575px) {
+  .membership-program-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .membership-program-items .program-item {
+    display: flex;
+    column-gap: 10px;
+  }
+  .program-item .program-title {
+    margin-top: 0;
+  }
+}

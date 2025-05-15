@@ -1,0 +1,49 @@
+{{ 'section-study-result-with-image.css' | asset_url | stylesheet_tag }}
+<div class="study-result-section component">
+  <div class="container">
+    <div class="study-box-wrap">
+      <div class="study-text">
+        <p class="study-quote">
+          {{ section.settings.study_quote }}
+        </p>
+        <p class="study-author">{{ section.settings.study_author }}</p>
+      </div>
+      <div class="study-image">
+        <img
+          src="{{ section.settings.study_image | img_url: 'master' }}"
+          loading="lazy"
+          alt="{{ section.settings.study_image.alt }}"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Study Image Content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "study_quote",
+      "label": "Study Quote",
+      "default": "\"Our validation study revealed that Smart Nora can help both snorers and their partners in getting better sleep as a result of decreased snoring.\""
+    },
+    {
+      "type": "text",
+      "id": "study_author",
+      "label": "Study Author",
+      "default": "Roy Raymann, Ph.D., VP of Sleep Science and Scientific Affairs, SleepScore Labs."
+    },
+    {
+      "type": "image_picker",
+      "id": "study_image",
+      "label": "Study Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Study Image Content",
+    }
+  ]
+}
+{% endschema %}

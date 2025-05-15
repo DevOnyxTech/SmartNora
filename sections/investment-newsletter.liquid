@@ -1,0 +1,61 @@
+{{ 'investment-newsletter.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="sign-up-wrapper"
+  style="background-image:url(https://cdn.shopify.com/s/files/1/1053/4408/files/sign-up-bg.jpg?v=1727881564)"
+>
+  <div class="container">
+    <div class="sign-up-content">
+      <h2>{{ section.settings.heading }}</h2>
+      <div class="sign-up-inner-content">
+        <p>
+          {{ section.settings.description }}
+        </p>
+        <div class="sign-up-btn">
+          <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Description",
+      "id": "description"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Investment Newsletter"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

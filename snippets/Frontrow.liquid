@@ -1,0 +1,114 @@
+<script>
+  function handleLoad() {
+    document.querySelector(".fr-loading-box").style.display = "none"
+  }
+</script>
+<div id="frontrow-badge">
+  <script
+    async
+    type="text/javascript"
+    src="https://app.thefrontrowhealth.com/api/widgets/script?presentation_type=quant&product_id=989"
+  ></script>
+  <iframe
+    class="iframe-frontrow"
+    onload="handleLoad()"
+    frameborder="0"
+    src="https://app.thefrontrowhealth.com/api/widgets?presentation_type=quant&product_id=989"
+  ></iframe>
+
+  <div class="fr-loading-box">
+    <div class="fr-provider-container">
+      <div class="fr-loading-provider"></div>
+      <div class="fr-loading-provider fr-sample"></div>
+      <div class="fr-loading-provider fr-sample"></div>
+    </div>
+    <div class="fr-text">
+      <span class=""></span>
+      <span class="fr-shorter"></span>
+    </div>
+  </div>
+</div>
+<style>
+    #frontrow-badge {
+      position: relative;
+    }
+    .iframe-frontrow {
+      width: 100%;
+      height: 84px;
+      margin: 0;
+    }
+    .iframe-modal-frontrow, .iframe-ask-doctor-frontrow {
+      display: none;
+      position: fixed;
+      z-index: 99999999;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .fr-loading-box {
+      position: absolute;
+      top: 0;
+      left:0;
+      z-index: 2;
+    }
+    .fr-loading-box div:empty {
+      display: flex;
+    }
+    .fr-loading-box span:empty {
+      display: flex;
+    }
+    .fr-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .fr-text span.fr-shorter {
+      width: 80%;
+    }
+    .fr-text span {
+      display: flex;
+      width: 100%;
+      background-color: #E0E0E0;
+      height: 20px;
+      border-radius: 100px;
+    }
+    .fr-loading-box {
+      display: flex;
+      padding: 18px 16px;
+      gap: 14px;
+      border-radius: 12px;
+      background-color: #FFF;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    .fr-loading-provider {
+      border-radius: 100px;
+      width: 36px;
+      height: 36px;
+      border: 2px #FFF solid;
+      background-color: #E0E0E0;
+    }
+    .fr-provider-container {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      min-width: 80px;
+    }
+    .fr-sample {
+      margin-left: -14px;
+    }
+    @media only screen and (max-width: 480px) {
+    .fr-loading-box {
+      padding: 14px 12px;
+      gap: 8px;
+    }
+  }
+</style>

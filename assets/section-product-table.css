@@ -1,0 +1,45 @@
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+  max-width: 936px;
+  margin-inline: auto;
+  padding: 40px 20px;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: none;
+}
+.responsive-table thead th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: 500;
+  color: #05243b;
+}
+
+.responsive-table tbody td {
+  padding: 8px 16px;
+  border-top: 1px solid #f2f2f2;
+  color: #8c98a4;
+  font-weight: 400;
+}
+
+.responsive-table table,
+.responsive-table th,
+.responsive-table td {
+  border: 1px solid #f2f2f2 !important;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.responsive-table tbody td {
+  font-weight: 500;
+}
+.responsive-table thead th:first-child {
+  width: 42%;
+}
+@media (min-width: 1280px) {
+  .setup-three-box-wrapper {
+    padding-inline: 0;
+  }
+}

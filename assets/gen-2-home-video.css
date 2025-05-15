@@ -1,0 +1,146 @@
+.stopsnoring {
+   height: 789px;
+}
+
+.btn_green_outline span {
+   display: inline-block;
+   padding-right: 10px;
+   height: 18px;
+}
+
+.stopsnoring__cta .btn_green_outline a {
+   display: inline-flex;
+   align-items: center;
+}
+
+.stopsnoring__wrapper {
+   position: relative;
+}
+
+video.stopsnoring__video-element {
+   width: 100%;
+   height: 789px;
+   object-fit: cover;
+   display: block;
+}
+
+.stopsnoring__innerwrap {
+   position: absolute;
+   top: 100px;
+}
+
+.stopsnoring__title {
+   font-size: 18px;
+   line-height: 27px;
+   display: inline-flex;
+   align-items: center;
+   column-gap: 10px;
+   font-weight: 500;
+}
+
+h2.stopsnoring__heading {
+   font-size: 64px;
+   line-height: normal;
+   max-width: 700px;
+   margin: 10px 0 45px 0;
+   font-weight: bold;
+  letter-spacing: -0.56px;
+}
+
+.stopsnoring__step h3 {
+   font-size: 36px;
+   line-height: normal;
+   color: #97CA3B;
+   font-weight: 400;
+   margin: 20px 0;
+
+}
+
+.stopsnoring__step {
+   opacity: 0;
+}
+
+.stopsnoring__cta:last-child {
+   margin-top: 45px;
+}
+
+.stopsnoring__wrapper {
+   position: relative;
+}
+
+.except-overlay {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom left, rgb(5 36 59 / 25%) 60%, rgb(5 36 59) 100%);
+   mix-blend-mode: multiply;
+   left: 0;
+   right: 0;
+}
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .stopsnoring {
+   height: 41.09vw;
+}
+
+.btn_green_outline span {
+   padding-right: 0.52vw;
+   height: 0.94vw;
+}
+
+video.stopsnoring__video-element {
+   height: 41.09vw;
+}
+
+.stopsnoring__innerwrap {
+   top: 5.21vw;
+}
+
+.stopsnoring__title {
+   font-size: 0.94vw;
+   line-height: 1.5em;
+   column-gap: 0.52vw;
+}
+
+h2.stopsnoring__heading {
+   font-size: 3.33vw;
+   margin: 0.52vw 0 2.34vw 0;
+   letter-spacing: -0.029vw;
+}
+
+.stopsnoring__step h3 {
+   font-size: 1.88vw;
+   margin: 1.04vw 0;
+}
+
+.stopsnoring__cta:last-child {
+   margin-top: 2.34vw;
+}
+
+}
+@media (max-width: 767px) {
+   h2.stopsnoring__heading {
+      font-size: 50px;
+      max-width: 352px;
+      margin: 10px 0 38px 0;
+   }
+
+   .stopsnoring__step h3 {
+      margin: 15px 0;
+      font-size: 25px;
+
+   }
+
+   .btn_green_outline a {
+      padding: 12px 16px;
+   }
+
+   .stopsnoring,
+   video.stopsnoring__video-element {
+      height: 834px;
+   }
+
+   .except-overlay {
+      background: linear-gradient(to bottom left, rgb(5 36 59 / 25%) 40%, rgb(5 36 59) 100%);
+   }
+}

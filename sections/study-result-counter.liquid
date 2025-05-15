@@ -1,0 +1,123 @@
+{{ 'section-study-counter.css' | asset_url | stylesheet_tag }}
+<div class="main-indipendently-validated">
+  <div class="container">
+    <div class="top-title">
+      <h4>
+        <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M20.5538 1.69586C21.109 0.955621 20.8211 0.00976562 19.8958 0.00976562H13.9123C13.2543 0.00976562 12.8225 0.400444 12.8225 0.996744C12.8225 1.59304 13.2543 1.98372 13.9123 1.98372H17.8602L12.8019 8.41965C12.2056 9.20101 12.4523 10.0235 13.3365 10.0235H19.7724C20.4304 10.0235 20.8622 9.63282 20.8622 9.03652C20.8622 8.44022 20.4304 8.04953 19.7724 8.04953H15.7012L20.5538 1.69586Z"></path>
+          <circle fill="#fff" cx="13.1199" cy="17.7729" r="2.98482"></circle>
+          <path fill="#fff" d="M4.28643 5.39797C4.5957 5.0887 5.09712 5.0887 5.40639 5.39797L8.59783 8.5894C8.9071 8.89867 8.9071 9.4001 8.59783 9.70937L5.40639 12.9008C5.09712 13.2101 4.5957 13.2101 4.28643 12.9008L1.09499 9.70937C0.78572 9.4001 0.78572 8.89867 1.09499 8.58941L4.28643 5.39797Z"></path>
+        </svg>
+        <span>{{ section.settings.subtitle }}</span>
+      </h4>
+      <h1>{{ section.settings.title }}</h1>
+      <p>{{ section.settings.description }}</p>
+    </div>
+    <div class="validate-inner">
+      {% for block in section.blocks %}
+        {% if block.type == 'validate_box' %}
+          <div class="validate-box">
+            <div class="counter-main">
+              <span class="counter" data-final-number="{{ block.settings.percentage }}">
+                {{- block.settings.percentage -}}</span
+              >%
+            </div>
+            <div class="content">
+              <p>{{ block.settings.content }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="validated-bottom-box">
+      <p>{{ section.settings.bottom_text }}</p>
+      <img src="{{ section.settings.logo_image | img_url: 'master' }}" alt="{{ section.settings.logo_image.alt }}">
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+<script>
+  jQuery(document).ready(function ($) {
+      $('.counter').counterUp({
+          delay: 10,
+          time: 2000
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Study Result Counter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Independently Validated"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "We did the research, so you don't have to."
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "527 Nights of Data, 58 Participants and 6 Scientists."
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom Text",
+      "default": "Smart Nora's Validation Study was independently designed, conducted, and reported by SleepScore Labs."
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "validate_box",
+      "name": "Validate Box",
+      "settings": [
+        {
+          "type": "number",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": 78
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Content",
+          "default": "of snorers say Smart Nora is better than other solutions they've used."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Study Result Counter",
+      "blocks": [
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

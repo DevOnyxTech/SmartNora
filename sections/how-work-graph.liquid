@@ -1,0 +1,70 @@
+{{ 'section-work-graph.css' | asset_url | stylesheet_tag }}
+
+<div class="cms-research component">
+  <div class="b-container">
+    <div class="section-header">
+      <div class="tagline">
+        <img src="{{ section.settings.tagline_icon | img_url: 'master' }}" alt="{{ section.settings.tagline_text }}">
+        <span>{{ section.settings.tagline_text }}</span>
+      </div>
+      <h2 class="heading">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="research-inner">
+      <div class="research-lft">
+        <h2 class="title">{{ section.settings.research_title }}</h2>
+        <div class="content">
+          {{ section.settings.research_content }}
+        </div>
+      </div>
+      <div class="research-rht">
+        <img src="{{ section.settings.graph_image | img_url: 'master' }}" alt="{{ section.settings.research_title }}">
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "How work Graph",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "tagline_icon",
+      "label": "Tagline Icon"
+    },
+    {
+      "type": "text",
+      "id": "tagline_text",
+      "label": "Tagline Text",
+      "default": "The Science of Nora"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "We did the research, so you don't have to."
+    },
+    {
+      "type": "text",
+      "id": "research_title",
+      "label": "Research Title",
+      "default": "Overnight Results"
+    },
+    {
+      "type": "richtext",
+      "id": "research_content",
+      "label": "Research Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "graph_image",
+      "label": "Graph Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "How Work Graph",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

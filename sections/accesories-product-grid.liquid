@@ -1,0 +1,94 @@
+{{ 'accesories-product-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="accessories-info-box">
+  <div class="accessories-info-box__container">
+    {% if section.settings.heading != blank %}
+      <div class="accessories-info-box__title-bar">
+        <span class="accessories-info-box__title-icon">
+          <img src="{{ section.settings.heading_icon |  img_url: 'master' }}" alt="Snoring Icon">
+        </span>
+        <span class="accessories-info-box__title-text">{{ section.settings.heading }}</span>
+      </div>
+    {% endif %}
+
+    <div class="accessories-info-box__wrap">
+      {% for block in section.blocks %}
+        {% assign d_product = block.settings.productsd %}
+        <div class="accessories-info-box__item">
+          <a href="{{ all_products[d_product].url }}">
+            <div class="accessories-info-box__image">
+              <img
+                class="accessories-info-box__image-element"
+                src="{{ all_products[d_product].featured_image |  img_url: 'master' }}"
+                alt="Smart Nora Sleep Mask - Box 1"
+              >
+            </div>
+            <div class="accessories-info-box__content">
+              <h3 class="accessories-info-box__title">{{ all_products[d_product].title }}</h3>
+              <div class="accessories-info-box__price-box">
+                <p class="accessories-info-box__price accessories-info-box__price--regular">
+                  Regular:{{ all_products[d_product].price | money }}
+                </p>
+
+                <p class="accessories-info-box__price accessories-info-box__price--member">
+                  Member price: ${{ all_products[d_product].metafields.custom.member_s_price }}
+                  <span>(40% off)</span>
+                </p>
+              </div>
+              <div class="accessories-info-box__button-wrapper">
+                <span
+                  class="accessories-info-box__button accessories-info-box__button--outline"
+                  href="{{ all_products[d_product].url }}"
+                >
+                  {%- if all_products[d_product].available %}Shop now {% else %} Sold Out {% endif -%}
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accessories Product Grid",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Heading Icon",
+      "id": "heading_icon"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "label": "Product",
+          "id": "productsd"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accessories Product Grid"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,42 @@
+.grey-box-wrapper {
+  background-color: #f2f2f2;
+  padding: 8px 20px 8px 0;
+}
+
+.grey-box-content {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grey-box-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.grey-box-content ul li a {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  color: #05243b;
+  font-weight: 500;
+  padding: 20px 28px;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .grey-box-content ul li a {
+    font-size: 14px;
+    padding: 20px 16px;
+  }
+  .grey-box-content {
+    overflow-x: scroll;
+    padding-left: 200px;
+  }
+}

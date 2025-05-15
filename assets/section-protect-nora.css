@@ -1,0 +1,127 @@
+.protect_nora_sec .protect_nora_container {
+  margin: 110px auto 120px;
+  max-width: 1210px;
+}
+.protect_nora_sec .half_content_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.protect_nora_sec .content-box-item {
+  padding-inline: 15px;
+}
+.protect_nora_sec .half-content-inner h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  color: rgb(5, 36, 59);
+  margin-bottom: 20px;
+}
+.protect_nora_sec .half-content-inner p {
+  color: #4a4a4a;
+  max-width: 540px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.protect_nora_sec .wrnty-year-box {
+  min-width: 675px;
+  margin: 20px -15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: initial;
+}
+.protect_nora_sec .wrnty-year-box .year-box-item {
+  max-width: 225px;
+  width: 33.33%;
+  padding: 0 15px;
+  margin-top: 20px;
+}
+.protect_nora_sec .wrnty-year-box .year-item-inner {
+  box-shadow: 0px 13px 57px #00000014;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 38px 15px;
+}
+.protect_nora_sec .wrnty-year-box .year-item-inner .price {
+  color: #8c98a4;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.protect_nora_sec .wrnty-year-box .year-item-inner .year-count {
+  color: #05243b;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  margin: 15px 0 0;
+}
+.protect_nora_sec .image_right img {
+  margin-top: 15px;
+  margin-left: auto;
+  max-width: 505px;
+  display: block;
+  width: 100%;
+}
+@media only screen and (max-width: 1900px) {
+  .protect_nora_sec .half-content-inner h2 {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .protect_nora_sec .wrnty-year-box {
+    min-width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .protect_nora_sec .half_content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .protect_nora_sec .content_left {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .protect_nora_sec .content_left .half-content-inner {
+    max-width: 576px;
+    margin: 0 auto;
+  }
+  .protect_nora_sec .image_right img {
+    margin-top: 0;
+  }
+  .protect_nora_sec .wrnty-year-box {
+    margin-top: 0;
+    margin-inline: -15px;
+    justify-content: center;
+  }
+  .protect_nora_sec .wrnty-year-box .year-box-item {
+    margin-top: 20px;
+    width: 50%;
+  }
+  .protect_nora_sec .half-content-inner p {
+    margin-inline: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .protect_nora_sec .wrnty-year-box .year-item-inner {
+    padding: 25px 15px;
+  }
+  .protect_nora_sec .wrnty-year-box .year-item-inner .price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .protect_nora_sec .wrnty-year-box .year-item-inner .year-count {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 10px 0 0;
+  }
+  .protect_nora_sec .wrnty-year-box {
+    margin-inline: 0;
+    row-gap: 10px;
+  }
+}

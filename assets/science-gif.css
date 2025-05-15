@@ -1,0 +1,121 @@
+/* Smart Nora helps you starts */
+.smart-nora-helps-wrapper {
+  padding-block: 100px;
+}
+
+.smart-nora-helps-wrapper .smart-nora-helps-header {
+  max-width: 688px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.smart-nora-helps-wrapper .smart-nora-helps-header h2 {
+  margin-bottom: 26px;
+}
+
+.smart-nora-helps-wrapper .smart-nora-helps-header p span {
+  font-weight: 700;
+}
+
+.smart-nora-helps-image-wrapper {
+  margin-top: 90px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.smart-nora-helps-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.smart-nora-helps-button-wrapper {
+  text-align: center;
+}
+
+.smart-nora-helps-button-wrapper .custom-header-button {
+  margin-top: 90px;
+}
+.smart-nora-helps-image-wrapper video {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+#MainContent .smart-nora-helps-button-wrapper button{
+  margin-top: 90px;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+   #MainContent .smart-nora-helps-button-wrapper button {
+    margin-top: 4vw;
+  }
+  .smart-nora-helps-wrapper {
+    padding-block: 4.56vw 2.78vw;
+  }
+
+  .smart-nora-helps-wrapper .smart-nora-helps-header {
+    max-width: 38.22vw;
+  }
+
+  .smart-nora-helps-wrapper .smart-nora-helps-header h2 {
+    margin-bottom: 1.44vw;
+  }
+
+  .smart-nora-helps-image-wrapper {
+    margin-top: 3vw;
+    border-radius: 1.11vw;
+  }
+
+  .smart-nora-helps-image-wrapper img {
+    border-radius: 1.11vw;
+  }
+
+  .smart-nora-helps-button-wrapper .custom-header-button {
+    margin-top: 3vw;
+  }
+
+  .smart-nora-helps-image-wrapper video {
+    border-radius: 1.11vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .smart-nora-helps-wrapper .smart-nora-helps-header h2 span {
+    display: inline;
+  }
+
+  .smart-nora-helps-wrapper {
+    padding-block: 50px;
+  }
+
+  .smart-nora-helps-image-wrapper,
+  .smart-nora-helps-button-wrapper .custom-header-button {
+    margin-top: 45px;
+  }
+  .smart-nora-helps-header h2 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+  .smart-nora-helps-header p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .snoring-breaks-image-wrapper {
+    margin-left: 0px;
+  }
+  #MainContent .smart-nora-helps-button-wrapper button {
+    margin-top: 50px;
+}
+}
+@media screen and (max-width: 767px) {
+  .smart-nora-helps-image-wrapper img,.smart-nora-helps-image-wrapper video {
+    height: 417px;
+    object-fit: cover;
+    object-position: 70%;
+  }
+  .smart-nora-helps-image-wrapper video {
+    object-position: 36%;
+  }
+}
+
+/* Smart Nora helps you ends */

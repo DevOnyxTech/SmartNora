@@ -1,0 +1,38 @@
+{{ 'section-study-result-setup.css' | asset_url | stylesheet_tag }}
+<div class="study-setup-sec component">
+  <div class="container">
+    <div class="study-setup-wrap">
+      <div class="study-left">
+        <h2>{{ section.settings.heading }}</h2>
+      </div>
+      <div class="study-right">
+        {{ section.settings.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Study Setup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Study Setup"
+    },
+    {
+      "type": "html",
+      "id": "content",
+      "label": "Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Study Setup",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

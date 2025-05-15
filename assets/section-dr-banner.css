@@ -1,0 +1,164 @@
+.custom-banner-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.shopify.com/s/files/1/1053/4408/files/banner.webp?v=1729864881");
+}
+
+.banner-image-area {
+  width: 50%;
+}
+
+.banner-container {
+  max-width: 1368px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.custom-banner-wrapper .banner-content.flex.justify-between {
+  padding-top: 20px;
+}
+.custom-banner-wrapper .banner-btn a {
+  text-decoration: none;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.banner-image-area img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1.banner-title {
+  color: #5f4d4d;
+  font-size: 55px;
+  line-height: 66px;
+  font-family: Inter, system-ui !important;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  margin-top: 78px;
+  padding-right: 55px;
+}
+h1.banner-title span {
+  display: block;
+}
+.banner-sub-title-area {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+h4.banner-subtitle {
+  color: #5f4d4d;
+  font-family: Inter, system-ui !important;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 160px;
+}
+
+.banner-text {
+  width: 70%;
+}
+
+.banner-btn {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.banner-btn a {
+  border-radius: 50px;
+  background: #97ca3b;
+  color: #fff;
+  font-family: Inter, system-ui !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 8px 0;
+  display: inline-block;
+  max-width: 287px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 1400px) {
+  .banner-container {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  h1.banner-title {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  h4.banner-subtitle {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  h1.banner-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  h4.banner-subtitle {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+  h1.banner-title span {
+    display: inline;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1.banner-title {
+    margin-top: 28px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  h4.banner-subtitle {
+    margin-top: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .banner-btn a {
+    font-size: 18px;
+  }
+
+  .banner-content {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .banner-text,
+  .banner-image-area {
+    width: 100%;
+  }
+
+  .banner-image-area img {
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  .custom-banner-wrapper .banner-container {
+    padding-bottom: 50px;
+  }
+
+  .banner-sub-title-area {
+    margin: 0 auto;
+  }
+}

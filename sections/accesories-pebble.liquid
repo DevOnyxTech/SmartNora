@@ -1,0 +1,81 @@
+{{ 'accesories-pebble.css' | asset_url | stylesheet_tag }} 
+
+<div class="ai-powered">
+	<div class="ai-powered__container">
+		<div class="ai-powered__inner">
+			<div class="ai-powered__image">
+				<img class="ai-powered__mobilehide" src="{{ section.settings.pebble |  img_url: 'master' }}" alt="Smart Nora device">
+        <img class="ai-powered__desktophide" src="{{ section.settings.pebble_mobile |  img_url: 'master' }}" alt="Smart Nora device">
+			</div>
+			<div class="ai-powered__details">
+				<h2 class="ai-powered__title">{{section.settings.heading}}</h2>
+				<p class="ai-powered__description">
+				{{section.settings.content}}
+				</p>
+				<div class="ai-powered__pricing">
+					<p class="ai-powered__price ai-powered__price--regular">{{section.settings.price}}</p>
+          <p class="ai-powered__price ai-powered__price--discount">{{section.settings.offer_price}}</p>
+				</div>
+				<div class="ai-powered__cta">
+          {% include 'accessories-buy-button'%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+    {
+      "name": "Accessories Pebble",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Pebble Image desktop",
+          "id": "pebble"
+        },
+        {
+          "type": "image_picker",
+          "label": "Pebble Image Mobile",
+          "id": "pebble_mobile"
+        },
+        {
+          "type": "html",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "html",
+          "label": "Price",
+          "id": "price"
+        },
+        {
+          "type": "html",
+          "label": "Offer Price",
+          "id": "offer_price"
+        },
+        {
+          "type": "text",
+          "label": "Button Label",
+          "id": "button_label"
+        }
+      ],
+      "blocks": [],
+      "presets": [
+        {
+          "name": "Accessories Pebble"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}
+    

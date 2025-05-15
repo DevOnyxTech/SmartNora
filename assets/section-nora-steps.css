@@ -1,0 +1,103 @@
+.how-nora-works-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-block: 50px;
+}
+.how-nora-works-container h2 {
+  font-size: 60px;
+  line-height: 70px;
+  color: #05243b;
+  text-align: center;
+  font-weight: 400;
+}
+.how-nora-works .nora-works-slider {
+  padding-top: 70px;
+  overflow: hidden;
+}
+.how-nora-works .nora-works-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+.how-nora-works .anti-snore-pillow .g-box p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #05243b;
+  padding-top: 20px;
+  text-align: left;
+  max-width: 310px;
+}
+.nora-works-slider .swiper-slide .steps-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #05243b;
+  padding-top: 20px;
+  max-width: 310px;
+}
+.how-nora-works .nora-work-btn {
+  text-align: center;
+  padding-top: 30px;
+}
+.how-nora-works .nora-work-btn a {
+  border: 1px solid rgba(74, 74, 74, 1);
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: rgba(74, 74, 74, 1);
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+  line-height: 27px;
+}
+.how-nora-works .nora-work-btn a span {
+  display: flex;
+  align-items: center;
+}
+.how-nora-works .nora-work-btn a svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.how-nora-works .nora-work-btn a:hover {
+  background: rgba(151, 202, 59, 1);
+  color: #fff;
+  border-color: rgba(151, 202, 59, 1);
+}
+@media screen and (max-width: 1280px) {
+  .how-nora-works-container {
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .how-nora-works-container {
+    background: #05243b;
+  }
+  .how-nora-works-container h2 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .how-nora-works-container h2 br {
+    display: none;
+  }
+  .how-nora-works .nora-works-slider {
+    padding-top: 50px;
+    overflow: hidden;
+  }
+  .how-nora-works .nora-works-slider .steps-title {
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    bottom: 20px;
+    max-width: initial;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    right: 0;
+  }
+  .how-nora-works .nora-work-btn a {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+}

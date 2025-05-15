@@ -1,0 +1,71 @@
+{{ 'section-video-with-icons.css' | asset_url | stylesheet_tag }}
+
+<div class="snoring-solution component">
+  <div class="snoring-solution-container">
+    <div class="video-wrapper">
+      <h2>
+        {{ section.settings.heading }}
+      </h2>
+      <video poster="{{ section.settings.video_poster }}" autoplay="" loop="" muted="" playsinline="">
+        <source src="{{ section.settings.video_link }}" type="video/mp4">
+      </video>
+    </div>
+    <div class="influencer-logo-wrapper">
+      {% for block in section.blocks %}
+        <img loading="lazy" src="{{ block.settings.logo | img_url : 'master' }}" alt="brand-logo">
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "image_picker",
+      "label": "Video Poster",
+      "id": "video_poster"
+    },
+    {
+      "type": "text",
+      "label": "Video Link",
+      "id": "video_link"
+    },
+        {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icons",
+      "name": "Icons",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Logo",
+          "id": "logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video with Icons"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

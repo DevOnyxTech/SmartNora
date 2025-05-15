@@ -1,0 +1,103 @@
+{{ 'accesories-product-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="accessories-info-box">
+  <div class="accessories-info-box__container">
+    {% if section.settings.heading != blank %}
+      <div class="accessories-info-box__title-bar">
+        <span class="accessories-info-box__title-icon">
+          <img src="{{ section.settings.heading_icon |  img_url: 'master' }}" alt="Snoring Icon">
+        </span>
+        <span class="accessories-info-box__title-text">{{ section.settings.heading }}</span>
+      </div>
+    {% endif %}
+
+    <div class="accessories-info-box__wrap">
+      {% comment %}
+        Extract cart item variant IDs
+      {% endcomment %}
+      {% assign cart_product_ids = '' %}
+      {% for item in cart.items %}
+        {% assign cart_product_ids = cart_product_ids | append: item.variant_id | append: ',' %}
+      {% endfor %}
+
+      {% for block in section.blocks %}
+        {% assign d_product = block.settings.products %}
+        {% assign product_id = d_product.variants.first.id | downcase %}
+
+        {% unless cart_product_ids contains product_id %}
+          <div data-pro-id="{{ product_id }}" class="accessories-info-box__item">
+            <div class="accessories-info-box__image">
+              <img
+                class="accessories-info-box__image-element"
+                src="{{ all_products[d_product].featured_image |  img_url: 'master' }}"
+                alt="{{ all_products[d_product].title }}"
+              >
+            </div>
+            <div class="accessories-info-box__content">
+              <h3 class="accessories-info-box__title">{{ all_products[d_product].title }}</h3>
+              <div class="accessories-info-box__price-box">
+                <p class="accessories-info-box__price accessories-info-box__price--regular">
+                  Regular: {{ all_products[d_product].price | money_with_currency }}
+                </p>
+                  
+                <p class="accessories-info-box__price accessories-info-box__price--member">
+                  Member price: ${{ all_products[d_product].metafields.custom.member_s_price }}
+                  <span>(40% off)</span>
+                </p>
+              </div>
+              <div class="accessories-info-box__button-wrapper">
+                <a
+                  class="accessories-info-box__button accessories-info-box__button--outline"
+                  href="{{ all_products[d_product].url }}"
+                  >Shop now</a
+                >
+              </div>
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accessories Product Grid",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Heading Icon",
+      "id": "heading_icon"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "label": "Product",
+          "id": "products"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accessories Product Grid"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

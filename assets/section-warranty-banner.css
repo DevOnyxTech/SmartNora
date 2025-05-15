@@ -1,0 +1,109 @@
+.wrnty-bnr-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.wrnty-bnr .wrnty-bnr-wrapper {
+  background-image: url("../images/banner_bg.webp");
+  height: 546px;
+  max-height: 546px;
+  padding: 143px 80px 0;
+  margin: 15px auto -60px;
+  border-radius: 20px;
+}
+.wrnty-bnr .wrnty-bnr-wrapper h1 {
+  font-size: 72px;
+  line-height: 108px;
+  color: #fff;
+}
+.bnr-overlaping-blocks {
+  display: flex;
+  justify-content: center;
+}
+.bnr-overlaping-blocks .box-items {
+  width: 33.33%;
+  padding: 0 20px;
+  max-width: 355px;
+}
+.bnr-overlaping-blocks .box-items-inner {
+  background-color: #fff;
+  box-shadow: 0px 10px 9px #0000000f;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+}
+.bnr-overlaping-blocks .box-icon {
+  width: 50px;
+  height: 50px;
+}
+.bnr-overlaping-blocks .box-items p {
+  max-width: calc(100% - 50px);
+  padding-left: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #05243b;
+}
+.bnr-overlaping-blocks .box-items-inner:hover {
+  background-color: #05243b;
+}
+.bnr-overlaping-blocks .box-items:hover p {
+  color: #fff;
+}
+.bnr-overlaping-blocks .box-items:hover svg path.hover_white {
+  fill: #fff;
+}
+@media only screen and (max-width: 1280px) {
+  .wrnty-bnr .wrnty-bnr-wrapper {
+    background-position: 91% 50%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .wrnty-bnr .wrnty-bnr-wrapper h1 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+  .wrnty-bnr .wrnty-bnr-wrapper {
+    padding: 90px 40px 150px;
+    max-height: initial;
+    height: 570px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .bnr-overlaping-blocks .box-items-inner {
+    padding: 15px 10px 15px 10px;
+  }
+  .bnr-overlaping-blocks .box-items p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .bnr-overlaping-blocks {
+    flex-wrap: wrap;
+  }
+  .wrnty-bnr .wrnty-bnr-wrapper {
+    height: 420px;
+  }
+  .bnr-overlaping-blocks .box-items {
+    width: calc(50% - 10px);
+    margin: 0 5px 10px;
+  }
+  .bnr-overlaping-blocks .box-items-inner {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .wrnty-bnr .wrnty-bnr-wrapper {
+    padding: 90px 20px 150px;
+  }
+  .bnr-overlaping-blocks .box-items {
+    width: 100%;
+    margin: 0 5px 10px;
+  }
+  .bnr-overlaping-blocks .box-items-inner {
+    justify-content: flex-start;
+  }
+}

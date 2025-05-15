@@ -1,0 +1,127 @@
+{{ 'gen-2-home-video-text.css' | asset_url | stylesheet_tag }}
+
+<!-- START : Video With Content -->
+<div class="snorers">
+  <div class="container">
+    <div class="snorers__wrapper">
+      <div class="about_mobile_title">
+        <p class="snorers__about">
+          <span class="snorers__icon">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/Icon_e9972a67-b6ce-41f2-b194-c9f90d7e0e75.svg?v=1742799102"
+              alt="Icon"
+            >
+          </span>
+          {{ section.settings.pre_heading }}
+        </p>
+        <h2 class="snorers__title">{{ section.settings.heading }}</h2>
+      </div>
+      <div class="snorers__video">
+        <img class="video-imgg" src="{{ section.settings.image | img_url : 'master' }}">
+
+        <a class="play-button" data-fancybox href="{{ section.settings.video.sources[1].url }}"></a>
+      </div>
+      <div class="snorers__content">
+        <div class="about_desktop_title">
+          <p class="snorers__about">
+            <span class="snorers__icon">
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Icon_e9972a67-b6ce-41f2-b194-c9f90d7e0e75.svg?v=1742799102"
+                alt="Icon"
+              >
+            </span>
+            {{ section.settings.pre_heading }}
+          </p>
+          <h2 class="snorers__title">{{ section.settings.heading }}</h2>
+        </div>
+        <p class="snorers__description">
+          {{ section.settings.content }}
+        </p>
+        {% if section.settings.button_label != blank %}
+          <div class="btn blue_outline snorers__cta">
+            <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END : Video With Content -->
+<script>
+    //START : Video-Auto-play
+  $("#playButton").click(function () {
+          var video = $("#myVideo")[0];
+          if (video.paused) {
+              video.play();
+              $(this).attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/pause.png?v=1742799102");
+          } else {
+              video.pause();
+              $(this).attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/play.png?v=1708076017");
+          }
+      });
+
+      $("#myVideo").on("play", function () {
+          $("#playButton").attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/pause.png?v=1742799102");
+      });
+
+      $("#myVideo").on("pause", function () {
+          $("#playButton").attr("src", "https://cdn.shopify.com/s/files/1/1053/4408/files/Button_1.svg");
+      });
+      //END : Video-Auto-play
+</script>
+
+{% schema %}
+{
+  "name": "Gen 2 Video Text",
+  "settings": [
+    {
+      "type": "video",
+      "label": "Video",
+      "id": "video"
+    },
+    {
+      "type": "image_picker",
+      "label": "Video Poster",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Gen 2 Home Video Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

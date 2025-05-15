@@ -1,0 +1,93 @@
+{{ 'section-how-work-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="cms-pillow">
+  <div class="b-container">
+    <div class="section-header">
+      <div class="tagline">
+        <img
+          src="{{ section.settings.tagline_icon | img_url: 'master' }}"
+          alt="{{ section.settings.tagline_icon.alt | escape }}"
+        >
+        <span>{{ section.settings.tagline }}</span>
+      </div>
+      <h1 class="mainhead">{{ section.settings.heading }}</h1>
+    </div>
+    <div class="pillow-inner">
+      <div class="pillow-lft">
+        <div class="tagline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" class="w-6 h-6">
+            <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+          </svg>
+          <span>{{ section.settings.getting_started }}</span>
+        </div>
+        <h2 class="title">{{ section.settings.subheading }}</h2>
+        <div class="content">
+          <p>
+            {{ section.settings.description }}
+          </p>
+        </div>
+      </div>
+      <div class="pillow-rht">
+        <img
+          src="{{ section.settings.main_image | img_url: 'master' }}"
+          alt="{{ section.settings.main_image.alt | escape }}"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How It Works Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Contact-free, hassle free."
+    },
+    {
+      "type": "image_picker",
+      "id": "tagline_icon",
+      "label": "Tagline Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Turn any pillow into an anti-snore pillow."
+    },
+    {
+      "type": "text",
+      "id": "getting_started",
+      "label": "Getting Started Text",
+      "default": "Getting Started"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Easy to setup, even easier to use."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Smart Nora consists of three main parts. The Pebble that detects snoring, the padded Pillow Insert that goes under your pillow, and the silent pump that inflates and deflates the padded insert."
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works Banner",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

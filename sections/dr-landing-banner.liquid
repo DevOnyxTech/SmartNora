@@ -1,0 +1,84 @@
+{{ 'section-dr-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-banner-wrapper">
+  <div class="banner-container">
+    <div class="banner-content flex justify-between">
+      <div class="banner-text">
+        <h1 class="banner-title">
+          {{ section.settings.banner_title -}}
+          <span>{{ section.settings.banner_title_span }}</span>
+        </h1>
+        <div class="banner-sub-title-area">
+          <h4 class="banner-subtitle">
+            {{ section.settings.banner_subtitle }}
+            <span>{{ section.settings.banner_subtitle_span }}</span>
+          </h4>
+          <div class="banner-btn">
+            <a class="banner-button" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="banner-image-area">
+        <img
+          src="{{ section.settings.banner_image | img_url: 'master' }}"
+          loading="lazy"
+          alt="{{ section.settings.banner_image.alt | escape }}"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "50% of your patients are sleep deprived due to snoring!"
+    },
+    {
+      "type": "text",
+      "id": "banner_title_span",
+      "label": "Banner Title Span",
+      "default": "sleep deprived due to snoring!"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle",
+      "default": "Join our mission in helping 2 billion people alleviate their snoring."
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle_span",
+      "label": "Banner Subtitle Span",
+      "default": "people alleviate their snoring."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

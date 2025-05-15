@@ -1,0 +1,71 @@
+{{ 'section-amy-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="amy-main-banner">
+  <div class="amy-banner-container">
+    <div class="amy-main-banner-wrapper">
+      <div class="left-image">
+        <img
+          src="{{ section.settings.banner_image | img_url: 'master' }}"
+          alt="{{ section.settings.image_alt }}"
+          loading="lazy"
+        >
+      </div>
+      <div class="right-content">
+        <p>{{ section.settings.quote_text_1 }}</p>
+        <p>{{ section.settings.quote_text_2 }}</p>
+        <p>
+          <strong>{{ section.settings.author_name }}</strong>
+        </p>
+        <p>{{ section.settings.author_title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Amy Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text",
+      "default": "Amy Banner Image"
+    },
+    {
+      "type": "textarea",
+      "id": "quote_text_1",
+      "label": "First Quote Paragraph",
+      "default": "I used to just accept that I snored and there was nothing I could do about it. But it was actually selfish of me to not find a solution because it was my partner suffering from being woken up throughout the night."
+    },
+    {
+      "type": "textarea",
+      "id": "quote_text_2",
+      "label": "Second Quote Paragraph",
+      "default": "Smart Nora has been a game changer - I don't wake up my partner anymore, and we are both more well rested. Nora has impacted our moods and strengthened our relationship."
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "Amy Chan"
+    },
+    {
+      "type": "text",
+      "id": "author_title",
+      "label": "Author Title",
+      "default": "Author and Founder of Breakup Bootcamp"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Amy Banner"
+    }
+  ]
+}
+{% endschema %}

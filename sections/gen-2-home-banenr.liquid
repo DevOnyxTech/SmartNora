@@ -1,0 +1,138 @@
+{{ 'gen-2-home-banner.css' | asset_url | stylesheet_tag }}
+<div class="generation-banner">
+  <div class="container">
+    <div class="generation-banner__wrapper">
+      <!-- Left Section -->
+      <div class="generation-banner__content">
+        <div class="generation-banner__rating">
+          {% if section.settings.pre_heading != blank %}
+            <span>
+              <p class="generation-banner__rating-text">{{ section.settings.pre_heading }}</p>
+            </span>
+          {% endif %}
+        </div>
+        <h1 class="generation-banner__title">{{ section.settings.heading }}</h1>
+        <p class="generation-banner__description">
+          {{ section.settings.sub_heading }}
+        </p>
+        <div class="btn_green generation-banner__cta">
+          <a href="{{ section.settings.button_link }}" class="generation-banner__cta-btn">
+            {{- section.settings.button_label -}}
+          </a>
+        </div>
+      </div>
+      <!-- Right Section (Image) -->
+      <!-- <div class="generation-banner__image">
+        <img src="{{ section.settings.image | img_url : 'master' }}" alt="Smart Nora Gen 2 Device">
+      </div> -->
+    </div>
+    <!-- Feature Section -->
+    <div class="generation-banner__features">
+      {% for block in section.blocks %}
+        <div class="generation-banner__feature">
+          <div class="generation-banner__feature-icon">
+            <img src="{{ block.settings.icon | img_url : 'master' }}" alt="Pillow Compatibility Icon">
+          </div>
+          <div class="generation-banner__feature-content">
+            <h4 class="generation-banner__feature-title">{{ block.settings.title }}</h4>
+            <p class="generation-banner__feature-text">{{ block.settings.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <video class="hero-bg-video" autoplay="" playsinline muted="" id="heroVideo">
+    <source src="{{ section.settings.desktop_background_video.sources[1].url }}" type="video/mp4" media="(min-width: 768px)">
+    <source src="{{ section.settings.mobile_background_video.sources[1].url }}" type="video/mp4" media="(max-width: 767px)">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<script>
+  function setVideoLoop() {
+        const video = document.getElementById('heroVideo');
+        if (window.innerWidth < 768) {
+            video.setAttribute('loop', 'loop');
+        } else {
+            video.removeAttribute('loop');
+        }
+    }
+    setVideoLoop();
+</script>
+
+{% schema %}
+{
+  "name": "Gen 2 Home Banner",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+   {
+      "type": "video",
+      "label": "Desktop Background Video",
+      "id": "desktop_background_video"
+    },
+    {
+      "type": "video",
+      "label": "Mobile Background Video",
+      "id": "mobile_background_video"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Home Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

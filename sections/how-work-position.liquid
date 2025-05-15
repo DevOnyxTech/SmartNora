@@ -1,0 +1,148 @@
+{{ 'section-how-work-position.css' | asset_url | stylesheet_tag }}
+
+<div class="cms-quieter component">
+  <div class="b-container">
+    <div class="section-header">
+      <div class="tagline">
+        <img src="{{ section.settings.nora_icon | img_url: '100x' }}" alt="{{ section.settings.tagline }}">
+        <span>{{ section.settings.tagline }}</span>
+      </div>
+      <h2 class="heading">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.content }}</p>
+    </div>
+    <div class="quieter-inner">
+      <div class="quieter-box">
+        <div class="charcoal charcoal-red">
+            <div class="charcoal-icon"> <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/Subtract.svg?v=1743178782"></div>
+          <div class="charcoal-content">
+          <div class="charcoal-top">{{ section.settings.why_snoring_title }}</div>
+          <div class="charcoal-bot">{{ section.settings.why_snoring_subtitle }}</div>
+          </div>
+        </div>
+        <div class="quieter-img">
+          <video
+            width="536"
+            height="301"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="{{ section.settings.snoring_gif }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="content">
+          <p>{{ section.settings.why_snoring_content }}</p>
+        </div>
+      </div>
+      <div class="quieter-box">
+        <div class="charcoal charcoal-green">
+          <div class="charcoal-icon"> <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/right_icon_893ee1a5-9af1-47e5-a3d8-9d07a5a88ba7.png?v=1743001612"></div>
+          <div class="charcoal-content">
+            <div class="charcoal-top">{{ section.settings.how_nora_helps_title }}</div>
+            <div class="charcoal-bot">{{ section.settings.how_nora_helps_subtitle }}</div>
+          </div>
+        </div>
+        <div class="quieter-img">
+          <video
+            width="536"
+            height="301"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="{{ section.settings.nora_help_gif }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="content">
+          <p>{{ section.settings.how_nora_helps_content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How work position",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "nora_icon",
+      "label": "Nora Icon"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "The Science of Nora"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Nora positions you for quieter nights."
+    },
+       {
+      "type": "html",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "snoring_gif",
+      "label": "Snoring GIF"
+    },
+    {
+      "type": "text",
+      "id": "nora_help_gif",
+      "label": "Nora Help GIF"
+    },
+    {
+      "type": "text",
+      "id": "why_snoring_title",
+      "label": "Why Snoring Occurs Title",
+      "default": "WHY SNORING OCCURS"
+    },
+    {
+      "type": "text",
+      "id": "why_snoring_subtitle",
+      "label": "Why Snoring Occurs Subtitle",
+      "default": "Snoring occurs when the airway becomes narrow."
+    },
+    {
+      "type": "textarea",
+      "id": "why_snoring_content",
+      "label": "Why Snoring Occurs Content",
+      "default": "When we fall asleep the upper throat muscles relax and the airway becomes narrower. When we breathe through a partially collapsed airway, the airway vibrates and creates the familiar snoring sound."
+    },
+    {
+      "type": "text",
+      "id": "how_nora_helps_title",
+      "label": "How Nora Helps Title",
+      "default": "HOW NORA HELPS"
+    },
+    {
+      "type": "text",
+      "id": "how_nora_helps_subtitle",
+      "label": "How Nora Helps Subtitle",
+      "default": "Nora gently moves the pillow to open airways."
+    },
+    {
+      "type": "textarea",
+      "id": "how_nora_helps_content",
+      "label": "How Nora Helps Content",
+      "default": "When snoring is detected, Smart Nora starts a gentle movement in the pillow. This movement stimulates the throat muscles, allowing for natural breathing to resume, helping the partner and the snorer sleep through the night."
+    }
+  ],
+  "presets": [
+    {
+      "name": "How work position",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

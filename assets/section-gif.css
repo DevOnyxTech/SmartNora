@@ -1,0 +1,101 @@
+.no-mask-sec {
+  padding: 123px 0 123px;
+}
+.index .no-mask-sec {
+  padding-bottom: 0px;
+}
+.no-mask-container .sleep_sub_title p {
+  font-weight: 500;
+}
+.no-mask-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.no-mask-container h2 {
+  font-size: 60px;
+  line-height: 70px;
+  color: #05243b;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+.no-mask-container h2 br {
+  display: none;
+}
+.no-mask-container .sleep_img {
+  margin: 55px 0 35px;
+}
+.no-mask-container .sleep_img video {
+  width: 100%;
+  border-radius: 20px;
+  max-width: 856px;
+  margin: 0 auto;
+  display: block;
+}
+.no-mask-container .sleep_sub_title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #05243b;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .no-mask-container {
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .no-mask-sec {
+    padding: 50px 0 70px;
+    background-color: #f8f8f8;
+  }
+}
+@media screen and (max-width: 767px) {
+  .no-mask-container h2 {
+    font-size: 36px;
+    line-height: 43px;
+    display: none;
+  }
+  .no-mask-container h2 br {
+    display: block;
+  }
+  .no-mask-container {
+    padding-inline: 0;
+    position: relative;
+  }
+  .no-mask-container .sleep_img video {
+    border-radius: 0;
+    height: 441px;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    /* -o-object-position: center; */
+    object-position: center;
+  }
+  .no-mask-container .sleep_sub_title br {
+    display: none;
+  }
+  .no-mask-container .sleep_sub_title {
+    max-width: 310px;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    /* -webkit-transform: translate(-50%); */
+    /* -ms-transform: translate(-50%); */
+    transform: translate(-50%);
+    color: #fff;
+  }
+  .no-mask-container .sleep_img {
+    margin: 0;
+  }
+  .no-mask-sec {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 467px) {
+  .no-mask-container .sleep_img video {
+    object-position: 43% 100%;
+  }
+}

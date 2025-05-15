@@ -1,0 +1,353 @@
+{{ 'section-amy-product.css' | asset_url | stylesheet_tag }}
+
+<div class="add_to_cart_wrapper component">
+  <div class="amy-pro-container">
+    <div class="grid-2">
+      <div class="grid-box add_to_cart_left_section">
+        <div class="mobile-product-detail">
+          <h3>{{ section.settings.title }}</h3>
+          <div class="rating-wrapper">
+            <div class="star-wrapper">
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+                loading="lazy"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+                loading="lazy"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+                loading="lazy"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+                loading="lazy"
+                alt="star"
+              >
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+                loading="lazy"
+                alt="star"
+              >
+            </div>
+            <div class="rating">
+              <p>{{ section.settings.review_text }}</p>
+            </div>
+          </div>
+          <div class="price-section">
+            <span class="line-through">{{ section.settings.price2 }}</span>
+            <span>{{ section.settings.price1 }}</span>
+          </div>
+          <p class="additional-para">{{ section.settings.content }}</p>
+          <div class="product-atc">
+            {%- render 'featured-buy-button', product: product -%}
+          </div>
+        </div>
+        <div class="swiper">
+          <div class="gallery">
+            <div class="swiper-container gallery-slider">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'slide' %}
+                    <div class="swiper-slide">
+                      <img
+                        src="{{ block.settings.slider_image | img_url : 'master' }}"
+                        alt="slider image"
+                      >
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'slide' %}
+                    <div class="swiper-slide">
+                      <img
+                        src="{{ block.settings.slider_image | img_url : 'master'}}"
+                        alt="slider image"
+                      >
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-box add_to_cart_right_section">
+        <div class="rating-wrapper m-hide">
+          <div class="star-wrapper">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+          </div>
+          <div class="rating">
+            <p>{{ section.settings.review_text }}</p>
+          </div>
+        </div>
+        <div class="desktop-product-detail">
+          <h3>{{ section.settings.title }}</h3>
+          <div class="price-section">
+            <span class="line-through">{{ section.settings.price2 }}</span>
+            <span>{{ section.settings.price1 }}</span>
+          </div>
+          <p class="additional-para">{{ section.settings.content }}</p>
+
+          <div class="product-atc">
+            {%- render 'featured-buy-button', product: product -%}
+          </div>
+        </div>
+        <div class="influencer-delivery-sec flex desktop-sec">
+          {% for block in section.blocks %}
+            {% if block.type == 'icons' %}
+              <div class="d-box text-center">
+                <img
+                  class="mx-auto"
+                  src="{{ block.settings.icon | img_url : 'master' }}"
+                  alt="Free Trial"
+                  loading="lazy"
+                >
+                <p>{{ block.settings.title }}</p>
+                <span>{{ block.settings.sub_title }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="custom-tab-wrapper">
+          <div class="tabs-wrapper">
+            <div class="tab-buttons">
+              <button class="tab-button active" data-tab="tab1">{{ section.settings.tab_1_title }}</button>
+              <button class="tab-button" data-tab="tab2">{{ section.settings.tab_2_title }}</button>
+            </div>
+            <div class="tab-content active" id="tab1">
+              <div class="desktop-tab">
+                {{ section.settings.tab_1_content }}
+              </div>
+              <div class="mobile-tab-sec">
+                <ul>
+                  {{ section.settings.tab_1_content_for_mobile }}
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content" id="tab2">
+              <img src="{{ section.settings.tab_2_image | img_url : 'master' }}" alt="tab-2" loading="lazy">
+              <div class="included-content">
+                {% assign tab_2_count = 0 %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'tab_2_content' %}
+                    {% assign tab_2_count = tab_2_count | plus: 1 %}
+                    <div class="i-box">
+                      <h4>
+                        <span>{{ tab_2_count }}</span>{{ block.settings.title }}
+                      </h4>
+                      <p>{{ block.settings.description }}</p>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var slider = new Swiper(".gallery-slider", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      loop: true,
+      speed: 600,
+      loopedSlides: 5, // Number of slides to be duplicated for the loop
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+  });
+
+  var thumbs = new Swiper(".gallery-thumbs", {
+      slidesPerView: "5",
+      spaceBetween: 10,
+      centeredSlides: true,
+      loop: true,
+      slideToClickedSlide: true, // Clicking on thumbnails changes the main slider
+      watchSlidesProgress: true, // Ensure progress is tracked for active thumbnail
+      watchSlidesVisibility: true, // Make sure only visible slides are interactable
+  });
+
+  // Linking the two Swipers
+  slider.controller.control = thumbs;
+  thumbs.controller.control = slider;
+
+  document.addEventListener("DOMContentLoaded", function () {
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+              // Remove active class from all buttons and contents
+              tabButtons.forEach((btn) => btn.classList.remove("active"));
+              tabContents.forEach((content) => content.classList.remove("active"));
+
+              // Add active class to the clicked button and corresponding content
+              button.classList.add("active");
+              const tabId = button.getAttribute("data-tab");
+              document.getElementById(tabId).classList.add("active");
+          });
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "AMY Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Review Text",
+      "id": "review_text"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "text",
+      "label": "Price",
+      "id": "price1"
+    },
+    {
+      "type": "text",
+      "label": "Cuttoff Price ",
+      "id": "price2"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "header",
+      "content": "Tabs"
+    },
+    {
+      "type": "text",
+      "label": "Tab 1 Title",
+      "id": "tab_1_title"
+    },
+    {
+      "type": "text",
+      "label": "Tab 2 Title",
+      "id": "tab_2_title"
+    },
+    {
+      "type": "richtext",
+      "label": "Tab 1 content",
+      "id": "tab_1_content"
+    },
+    {
+      "type": "richtext",
+      "label": "Tab 1 content For Mobile",
+      "id": "tab_1_content_for_mobile"
+    },
+    {
+      "type": "image_picker",
+      "label": "Tab 2 Image",
+      "id": "tab_2_image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icons",
+      "name": "Icons",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "Sub Title",
+          "id": "sub_title"
+        }
+      ]
+    },
+    {
+      "type": "tab_2_content",
+      "name": "Tab 2 content",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    },
+        {
+      "type": "slide",
+      "name": "Slider Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "slider_image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "AMY Product"
+    }
+  ]
+}
+{% endschema %}

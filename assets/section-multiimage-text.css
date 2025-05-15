@@ -1,0 +1,110 @@
+.be-lover-section {
+  background-color: #f3f2ee;
+  padding: 123px 0;
+}
+.be-lover-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.be-lover-section .nora-work-btn a {
+  border: 1px solid rgba(74, 74, 74, 1);
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: rgba(74, 74, 74, 1);
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+  line-height: 27px;
+}
+.be-lover-section .nora-work-btn a span {
+  display: flex;
+  align-items: center;
+}
+.be-lover-section .nora-work-btn a svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.be-lover-section .nora-work-btn a:hover {
+  background: rgba(151, 202, 59, 1);
+  color: #fff;
+  border-color: rgba(151, 202, 59, 1);
+}
+.be-lover-section .half-block-section {
+  display: flex;
+  align-items: center;
+}
+.be-lover-section .half-block-section img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+.be-lover-section .half-block-left {
+  width: 40%;
+}
+.be-lover-section .half-block-right {
+  width: 60%;
+  padding-left: 85px;
+}
+.be-lover-section .half-block-left h2 {
+  margin-bottom: 15px;
+  font-size: 60px;
+  line-height: 70px;
+  color: #05243b;
+  font-weight: 400;
+}
+.be-lover-section .half-block-left p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
+.be-lover-section .nora-work-btn {
+  padding-block: 70px 80px;
+}
+@media screen and (max-width: 1280px) {
+  .be-lover-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .be-lover-section {
+    padding: 70px 0;
+  }
+  .be-lover-section .half-block-left {
+    width: 58%;
+  }
+  .be-lover-section .half-block-right {
+    width: 42%;
+    padding-left: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .be-lover-section .half-block-section {
+    flex-direction: column;
+  }
+  .be-lover-section .half-block-left {
+    width: 100%;
+  }
+  .be-lover-section .half-block-left h2 {
+    font-size: 36px;
+    line-height: 38px;
+    text-align: left;
+    padding: 30px 0 0;
+  }
+  .be-lover-section .half-block-left p {
+    font-size: 18px;
+    max-width: 560px;
+  }
+  .be-lover-section .nora-work-btn {
+    padding-block: 35px 0;
+  }
+  .be-lover-section .half-block-section img {
+    display: none;
+  }
+  .be-lover-section .half-block-right {
+    display: none;
+  }
+  .be-lover-section {
+    padding: 0 0 35px;
+    background-color: transparent;
+  }
+}

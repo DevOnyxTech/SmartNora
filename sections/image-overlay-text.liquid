@@ -1,0 +1,153 @@
+{{ 'section-image-overlay-text.css' | asset_url | stylesheet_tag }}
+
+<div class="powering-sleep-section component">
+  <div class="powering-sleep-container">
+    <div class="powering-bg-wrapper">
+      <img
+        class="desktop-img"
+        src="{{ section.settings.desktop_image | img_url : 'master' }}"
+        alt="multiple people with white overlay"
+        loading="lazy"
+      >
+      <img
+        class="mobile-image"
+        src="{{ section.settings.mobile_image | img_url : 'master' }}"
+        alt="multiple people with white overlay"
+        loading="lazy"
+      >
+      <div class="img-text-overlay">
+        <h2>{{ section.settings.heading }}</h2>
+      </div>
+    </div>
+    <div class="powering-img-slider">
+      <div class="powering-slider-wrapper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="pwr-slider-inner">
+                <div class="auther-img">
+                  <img
+                    loading="lazy"
+                    src="{{ block.settings.image | img_url : 'master' }}"
+                    alt="{{ block.settings.name }}"
+                  >
+                </div>
+                <div class="auther-info">
+                  <p class="auth-name">{{ block.settings.name }}</p>
+                  <p class="auth-designation">{{ block.settings.designation }}</p>
+                  <p>{{ block.settings.quote }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="powering-navs-arrow">
+        <div class="powering-nav swiper-button-prev">
+          <img
+            loading="lazy"
+            src="https://cdn.shopify.com/s/files/1/1053/4408/files/angle_left.png?v=1729613601"
+            alt="Angle Left"
+          >
+        </div>
+        <div class="powering-nav swiper-button-next">
+          <img
+            loading="lazy"
+            src="https://cdn.shopify.com/s/files/1/1053/4408/files/angle_right.png?v=1729613601"
+            alt="Angle Right"
+          >
+        </div>
+      </div>
+      <span class="powering-pagination"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  var swiper1 = new Swiper('.powering-slider-wrapper', {
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    spaceBetween: 10,
+    loop:true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.powering-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      1000: {
+        spaceBetween: 30,
+      },
+      767: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Image Text Overlay",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "desktop_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mobile_image"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+"blocks": [
+    {
+      "type": "Testimonial",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "name"
+        },
+        {
+          "type": "text",
+          "label": "Designation",
+          "id": "designation"
+        },
+        {
+          "type": "html",
+          "label": "Quote",
+          "id": "quote"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Overlay"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

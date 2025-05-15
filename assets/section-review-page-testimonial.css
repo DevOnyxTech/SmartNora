@@ -1,0 +1,125 @@
+.testimony-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding-block: 40px;
+}
+.testimony-wrapper {
+  background-color: rgb(243, 242, 238);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+body .fancybox-slide {
+  padding: 48px 8px 8px !important;
+}
+.testimony-slider .tm-nav-arrow {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  top: 50%;
+}
+.tm-slide-cover {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 80px;
+  gap: 40px;
+  cursor: grab;
+}
+.tm-video-block-inner img {
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+}
+.tm-content h3 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: normal;
+  color: rgb(5, 36, 59);
+  margin-bottom: 20px;
+}
+.tm-content p {
+  font-size: 18px;
+  color: rgb(5, 36, 59);
+  line-height: 27px;
+}
+.tm-video-block-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+.tm-video-block-inner .vid-pop-btn {
+  position: absolute;
+}
+.tm-video-block-inner svg {
+  width: 64px;
+  background: rgb(5 36 59);
+  border-radius: 100%;
+  color: #fff;
+}
+.testimony-wrapper .swiper-pagination-bullet {
+  box-shadow: 0 4px 8px #0000001a;
+  background: #fff;
+  height: 9px;
+  width: 9px;
+  opacity: 1;
+}
+.testimony-wrapper .swiper-pagination-bullet-active {
+  background: #05243b;
+}
+.testimony-wrapper .swiper-pagination.swiper-pagination-bullets {
+  bottom: 32px;
+}
+.testimony-wrapper .tm-nav {
+  background: inherit;
+  height: auto;
+  color: rgb(74, 74, 74);
+}
+.testimony-wrapper .tm-nav.swiper-button-next {
+  right: 40px;
+}
+.testimony-wrapper .tm-nav.swiper-button-prev {
+  left: 40px;
+}
+body .fancybox-slide--video .fancybox-content {
+  max-width: 960px !important;
+  max-height: 540px !important;
+}
+@media screen and (max-width: 1100px) {
+  .testimony-wrapper {
+    padding-bottom: 48px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .tm-slide-cover {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  .tm-slide-cover .tm-content {
+    order: 2;
+  }
+  .testimony-wrapper {
+    padding-bottom: 0;
+  }
+  .testimony-wrapper {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tm-nav-arrow {
+    display: none;
+  }
+  .testimony-wrapper .swiper-pagination.swiper-pagination-bullets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: auto;
+    margin-bottom: 16px;
+  }
+}

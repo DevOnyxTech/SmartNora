@@ -1,0 +1,119 @@
+{{ 'section-companion-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="main-companion-banner">
+  <div class="container">
+    {% if section.settings.nora_logo != blank %}
+      <div class="top-logo desktop-hide">
+        <img src="{{ section.settings.nora_logo |  img_url: 'master' }}">
+      </div>
+    {% endif %}
+    <div class="com-cover">
+      <div class="c-left white-text">
+        {% if section.settings.nora_logo != blank %}
+          <div class="top-logo mobile-hide">
+            <img src="{{ section.settings.nora_logo |  img_url: 'master' }}">
+          </div>
+        {% endif %}
+        <div class="com-title-content">
+          <h1>{{ section.settings.heading }}</h1>
+          {% if section.settings.button_label != blank %}
+            <div class="d-green-btn">{{ section.settings.button_label }}</div>
+          {% endif %}
+          <div class="com-app-bottom">
+            <p class="com-font">{{ section.settings.content }}</p>
+            <div class="g-btn-wrap">
+              {% if section.settings.apple_store_image != blank %}
+                <a href="{{ section.settings.apple_store_link }}">
+                  <img src="{{ section.settings.apple_store_image |  img_url: 'master' }}"
+                ></a>
+              {% endif %}
+              {% if section.settings.google_play_image != blank %}
+                <a href="{{ section.settings.google_play_link }}">
+                  <img src="{{ section.settings.google_play_image |  img_url: 'master' }}"
+                ></a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-right">
+        <div class="gradiant-bg"></div>
+        <img src="{{ section.settings.image  |  img_url: 'master' }}">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).on('click', '.d-green-btn a', function (event) {
+  	event.preventDefault();
+
+  	$('html, body').animate({
+  		scrollTop: $($.attr(this, 'href')).offset().top - 50
+  	}, 1000);
+  });
+</script>
+{% schema %}
+   {
+"name": "Companion Banner",
+     "class": "companion-banner",
+     "settings": [
+
+	{
+	"type": "image_picker",
+         "label": "Nora Logo",
+         "id": "nora_logo"
+       },
+	{
+	"type": "html",
+         "label": "Heading",
+	  "id": "heading"
+       },
+       {
+         "type": "richtext",
+         "label": "Button Label",
+         "id": "button_label"
+       },
+       {
+         "type": "html",
+         "label": "Content",
+         "id": "content"
+       },
+       {
+         "type": "image_picker",
+         "label": "Apple store Image",
+         "id": "apple_store_image"
+	},
+	{
+         "type": "url",
+         "label": "Apple store Link",
+         "id": "apple_store_link"
+	},
+	{
+         "type": "image_picker",
+         "label": "Google Play Image",
+         "id": "google_play_image"
+	},
+	{
+         "type": "url",
+         "label": "Google Play Link",
+	"id": "google_play_link"
+	},
+       {
+         "type": "image_picker",
+         "label": "Image",
+         "id": "image"
+       }
+],
+     "presets": [
+       {
+         "name": "Companion Banner"
+       }
+     ]
+   }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,93 @@
+
+{{ 'accesories-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="accessories-banner">
+	<div class="accessories-banner__container">
+		<div class="accessories-banner__wrap">
+			<div class="accessories-banner__top-content">
+				<div class="accessories-banner__heading">
+					<span>
+            <img src="{{ section.settings.pre_heading_icon |  img_url: 'master' }}">
+            </span>
+					{{ section.settings.pre_heading }}
+				</div>
+        <h1 class="accessories-banner__subtitle">{{ section.settings.heading }}</h1>
+			</div>
+			<div class="accessories-banner__bottom-content">	
+				<div class="accessories-banner__product-title">{{ section.settings.bottom_heading }}</div>
+				<p class="accessories-banner__price accessories-banner__price--regular">{{section.settings.regular_price}}</p>
+				<p class="accessories-banner__price accessories-banner__price--member">{{section.settings.member_price}}</p>
+				<div class="accessories-banner__button-wrapper">
+					<a class="accessories-banner__button accessories-banner__button--outline" href="{{section.settings.button_link}}">
+            {{section.settings.button_label}}
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+    {
+      "name": "Accessories Banner",
+      "settings": [
+        {
+        "type": "image_picker",
+          "label": "Background Image",
+          "id": "background_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "Pre Heading Icon",
+          "id": "pre_heading_icon"
+        },
+        {
+          "type": "html",
+          "label": "Pre Heading",
+          "id": "pre_heading"
+        },
+        {
+          "type": "html",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "text",
+          "label": "Bottom Heading",
+          "id": "bottom_heading"
+        },
+        {
+          "type": "text",
+          "label": "Regular Price",
+          "id": "regular_price"
+        },
+        {
+          "type": "text",
+          "label": "Member Price",
+          "id": "member_price"
+        },
+        {
+          "type": "text",
+          "label": "Button Label",
+          "id": "button_label"
+        },
+        {
+          "type": "url",
+          "label": "Button Link",
+          "id": "button_link"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Accessories Banner"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}

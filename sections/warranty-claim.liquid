@@ -1,0 +1,53 @@
+{{ 'section-warranty-claim.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="claim-wrnty-sec component"
+>
+  <div class="claim-wrnty-container">
+    <div class="claim-wrnty-wrapper">
+      <div class="content-block">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.description }}</p>
+      </div>
+      <div class="cotnact-btn" data-fancybox data-src="#open">
+        <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Claim Warranty",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Need to make a claim on your warranty?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Contact support for warranty claims in the period of coverage"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Contact Us"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Claim Warranty"
+    }
+  ]
+}
+{% endschema %}

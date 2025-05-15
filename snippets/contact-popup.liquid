@@ -1,0 +1,90 @@
+<style>
+  .contact-popup{
+  	max-width: 550px;
+  	padding:44px 80px 44px;
+  	border-radius: 8px;
+  	text-align: center;
+  	height: auto;
+  }
+  .contact-popup button.fancybox-button.fancybox-close-small {
+  	position: absolute;
+  	background: transparent;
+  	right: 0;
+  	margin-top: 8px;
+  	padding: 0;
+  	opacity: 1;
+  }
+  .contact-popup .fancybox-close-small:focus:after { outline: 0; }
+  .contact-popup .fancybox-button svg path {
+  	fill: #05243b;
+  	stroke-width: 4px;
+  }
+  .contact-popup .fancybox-button svg { width: 28px; }
+  .contact-popup .fancybox-button:after,
+  .contact-popup .fancybox-button:before {
+  	background: transparent;
+  	opacity: 1;
+  	color: #111827;
+  }
+  .contact-popup .fancybox-close-small:hover:after { color: #111827; }
+  .hidden {
+  	display: none;
+  }
+  .contact-popup h2 {
+  	font-size: 18px;
+  	line-height: 24px;
+  	font-weight: 900;
+  	font-family: Inter, system-ui;
+  	color: #111827;
+    margin-bottom:16px;
+  }
+  .contact-popup p,
+  .contact-popup p a {
+  	font-size: 14px;
+  	line-height: 20px;
+  	font-weight: 600;
+  	color: #05243b;
+  	font-family: Inter, system-ui;
+  	text-decoration: none;
+  	margin: 0;
+  }
+  .contact-popup p a {
+  	display: block;
+  	font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+  	.contact-popup p:nth-child(2),
+  	.contact-popup p:nth-child(2) a {
+  		/* color: #6b7280; */
+  		font-size: 14px;
+  		line-height: 20px;
+  	}
+  	.contact-popup p {
+  		font-size: 14px;
+  		line-height: 20px;
+  	}
+  	.contact-popup {
+  		padding: 20px 16px 16px;
+  		width: 92%;
+  	}
+  }
+  .fancybox-bg { background-color: rgba(31, 41, 55, 0.75); }
+</style>
+
+<div class="hidden">
+  <div class="contact-popup" id="open">
+    <h2>Got Questions?</h2>
+    <p>
+      Our sleep coaches are here to help you. Get in touch with us via chat or send us an email.
+
+      <a href="mailto:support@smartnora.com" target="_blank" rel="noreferrer noopener">support@smartnora.com</a>
+    </p>
+    <p>
+      <br>
+      For business inquiries please contact:
+      <a href="mailto:hello@smartnora.com" target="_blank" rel="noreferrer noopener">hello@smartnora.com</a><br>
+      For investment opportunities please contact:
+      <a href="mailto:invest@smartnora.com" target="_blank" rel="noreferrer noopener">invest@smartnora.com</a><br>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+.defence-snoring {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.defence-snoring__tagline {
+  font-weight: 500;
+  font-size: 18px;
+  color: #05243b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 384px;
+  margin: 0 auto 10px;
+}
+
+.defence-snoring__tagline img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.defence-snoring .defence-snoring__image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.defence-snoring .defence-snoring__image img {
+  display: block;
+  width: 100%;
+}
+
+.defence-snoring .defence-snoring__content {
+  padding-top: 58px;
+  max-width: 758px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.defence-snoring .defence-snoring__content h2 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 63px;
+  letter-spacing: -1.82px;
+  margin-bottom: 10px;
+}
+
+.defence-snoring .defence-snoring__content p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 0;
+  max-width: 680px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .defence-snoring {
+    padding-bottom: 2.78vw;
+    padding-top: 2.78vw;
+  }
+
+  .defence-snoring__tagline {
+    font-weight: 500;
+    font-size: 1vw;
+    max-width: 21.33vw;
+    margin-bottom: 1.11vw;
+  }
+
+  .defence-snoring__tagline img {
+    width: 0.89vw;
+    height: 0.89vw;
+    margin-right: 0.44vw;
+  }
+
+  .defence-snoring .defence-snoring__image {
+    border-radius: 1.11vw;
+  }
+
+  .defence-snoring .defence-snoring__content {
+    padding-top: 3.22vw;
+    max-width: 42.11vw;
+  }
+
+  .defence-snoring .defence-snoring__content h2 {
+    font-size: 2.89vw;
+    line-height: 3.5vw;
+    letter-spacing: -0.03vw;
+    margin-block: 0.56vw;
+  }
+
+  .defence-snoring .defence-snoring__content p {
+    font-size: 1.33vw;
+    line-height: 1.61vw;
+    max-width: 37.78vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .defence-snoring {
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .defence-snoring {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .defence-snoring .defence-snoring__image img {
+    height: 328px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .defence-snoring {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}

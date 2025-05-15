@@ -1,0 +1,89 @@
+{{ 'section-warranty-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="wrnty-bnr">
+  <div class="wrnty-bnr-container">
+    <div
+      class="wrnty-bnr-wrapper"
+      {% if section.settings.background_image %}
+        style="background-image: url('{{ section.settings.background_image | img_url: 'master' }}');"
+      {% endif %}
+    >
+      <h1>
+        {{ section.settings.heading }}
+      </h1>
+    </div>
+    <div class="bnr-overlaping-blocks">
+      {% for block in section.blocks %}
+        {% if block.type == 'warranty_item' %}
+          <div class="box-items">
+            <div class="box-items-inner">
+              <div class="box-icon">
+                {% if block.settings.icon %}
+                  {{ block.settings.icon }}
+                {% endif %}
+              </div>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warranty Banner",
+  "tag": "section",
+  "class": "warranty-banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Extended<br> Warranty"
+
+    }
+  ],
+  "blocks": [
+    {
+      "type": "warranty_item",
+      "name": "Warranty Item",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Warranty Feature"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warranty Banner",
+      "blocks": [
+        {
+          "type": "warranty_item"
+        },
+        {
+          "type": "warranty_item"
+        },
+        {
+          "type": "warranty_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

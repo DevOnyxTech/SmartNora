@@ -1,0 +1,396 @@
+{{ 'components-dragons-product.css' | asset_url | stylesheet_tag }}
+
+{%- assign product = section.settings.product -%}
+<div class="main-product-sec" id="dragons-product-old">
+  <div class="dragons-scroll" id="dragons-scroll"></div>
+  <div class="container">
+    <div class="center-dragon-logo"  >
+      <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/Untitled_design_1_7_1.png?v=1727985042">
+    </div>
+    <div class="comman-title"  id="dragons-product">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="product-inner-box" >
+      <div class="left-block">
+        <div class="container">
+          <div id="mob-red" class="mobile-hide">
+            <div class="slider slider-content">
+              <div class="image-box swiper-container product-slider">
+                <div class="swiper-wrapper">
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'images' -%}
+                        <div class="swiper-slide">
+                          <img
+                            id="mainImage"
+                            src="{{ block.settings.image | img_url : 'master' }}"
+                            alt="Main Image"
+                            class="swiper-lazy"
+                          >
+                        </div>
+                    {% endcase %}
+                  {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="thumbnails">
+            <div class="swiper-container product-thumbs">
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'images' -%}
+                      <div class="swiper-slide">
+                        <img
+                          class="dragons-thumbnails swiper-lazy"
+                          src="{{ block.settings.image | img_url : 'master' }}"
+                          alt="Thumbnail 1"
+                        >
+                      </div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="desktop-hide">
+            <div class="thumbnails slide-pro-new owl-carousel">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'images' -%}
+                    <div class="item">
+                      <img
+                        class="dragons-thumbnails swiper-lazy"
+                        src="{{ block.settings.image | img_url : 'master' }}"
+                        alt="Thumbnail 1"
+                      >
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-block">
+        <div class="only-for-mob">
+          <div class="center-dragon-logo">
+            <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/Untitled_design_1_7_1.png?v=1727985042">
+          </div>
+        </div>
+        <div class="title">{{ product.title | remove: '- Snoring Solution' | escape }}</div>
+        <div class="dragon-price-wrapper">
+          {{ section.settings.price }}
+        </div>
+
+        <div {{ block.shopify_attributes }}>
+          {%- form 'product', product, data-productid: product.id -%}
+            <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+
+        <p class="d-title">{{ section.settings.promo_text }}</p>
+        {%- render 'dragons-buy-button',
+          block: block,
+          product: product,
+          product_form_id: product_form_id,
+          section_id: section.id
+        -%}
+
+        <div class="review-star">
+          <div class="flex space-x-1 text-yellow-500 mb-3 sm:mb-0">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+          </div>
+          <p>({{ section.settings.rating_text }})</p>
+        </div>
+
+        <div class="product-timer">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'usp' -%}
+                <div class="timer-box">
+                  <img src="{{ block.settings.icon | img_url : 'master' }}">
+                  <div class="timer-title">{{ block.settings.title }}</div>
+                  <p>{{ block.settings.sub_title }}</p>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        <div class="pro-tab-with-collapse">
+          <div class="top-tab">
+            <a href="#" class="tab active" data-toggle-target=".tab-content-1">{{ section.settings.tb_1_titlee }}</a>
+            <a href="#" class="tab" data-toggle-target=".tab-content-2">{{ section.settings.tb_2_titlee }}</a>
+          </div>
+          <div class="tab-content tab-content-1 active">
+            <div class="acc-container">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'tab1' -%}
+                    <div class="acc">
+                      <div class="acc-head">
+                        <p>{{ block.settings.tb1_title }}</p>
+                      </div>
+                      <div class="acc-content">
+                        <p>
+                          {{ block.settings.tb1_content }}
+                        </p>
+                      </div>
+                    </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="tab-content tab-content-2">
+            <div class="acc-container">
+              <img src="https://3akncjhe2byedc6p-10534408.shopifypreview.com/cdn/shop/files/Group_1_1.png">
+              {% assign tab_index = 1 %}
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'tab2' -%}
+                    <div class="acc">
+                      <div class="acc-head">
+                        <p>
+                          <span>{{ tab_index }}. </span>{{ block.settings.tb2_title }}
+                        </p>
+                      </div>
+                      <div class="acc-content">
+                        <p>
+                          {{ block.settings.tb2_content }}
+                        </p>
+                      </div>
+                    </div>
+                    {% assign tab_index = tab_index | plus: 1 %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize the product main slider
+  var productSlider = new Swiper(".product-slider", {
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    direction: "horizontal",
+    loopedSlides: 5,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    lazy: {
+      loadPrevNext: true,
+      loadOnTransitionStart: true,
+      loadPrevNextAmount: 2,
+    },
+    resizeObserver: true,
+    pagination: false,
+    slidesPerView: "auto", 
+    breakpoints: {
+      580: {
+        spaceBetween: 100,
+        centeredSlides: true, 
+        slidesPerView: 1, 
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
+  });
+
+  var productThumbs = new Swiper(".product-thumbs", {
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    slideToClickedSlide: true,
+    direction: "horizontal",
+    slidesPerView: 5,
+    loopedSlides: 5,
+  });
+
+  productSlider.controller.control = productThumbs;
+  productThumbs.controller.control = productSlider;
+
+  window.addEventListener("resize", function () {
+    setTimeout(function () {
+      productSlider.update();
+      productThumbs.update();
+    }, 100); 
+  });
+
+});
+
+  
+  $(document).ready(function () {
+    $(".tab").on("click", function (evt) {
+      evt.preventDefault();
+      $(".tab").removeClass("active");
+      $(this).addClass("active");
+      var sel = this.getAttribute("data-toggle-target");
+      console.log(sel);
+      $(".tab-content").removeClass("active").filter(sel).addClass("active");
+    });
+
+    $(".acc-head").on("click", function () {
+      if ($(this).hasClass("active")) {
+        $(this).siblings(".acc-content").slideUp();
+        $(this).removeClass("active");
+      } else {
+        $(".acc-content").slideUp();
+        $(".acc-head").removeClass("active");
+        $(this).siblings(".acc-content").slideToggle();
+        $(this).toggleClass("active");
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "product",
+      "label": "Product",
+      "id": "product",
+      "info": "Select a product you want to add it to cart"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Rating Text",
+      "id": "rating_text"
+    },
+    {
+      "type": "html",
+      "label": "Price",
+      "id": "price"
+    },
+    {
+      "type": "inline_richtext",
+      "label": "Promo Text",
+      "id": "promo_text"
+    },
+    {
+      "type": "text",
+      "label": "Tab 1 Title",
+      "id": "tb_1_titlee"
+    },
+    {
+      "type": "text",
+      "label": "Tab 2 Title",
+      "id": "tb_2_titlee"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "Sub Title",
+          "id": "sub_title"
+        }
+      ]
+    },
+    {
+      "type": "images",
+      "name": "Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    },
+   {
+      "type": "tab1",
+      "name": "Tab 1 content",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "tb1_title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "tb1_content"
+        }
+      ]
+    },
+    {
+      "type": "tab2",
+      "name": "Tab 2 content",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "tb2_title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "tb2_content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dragons Product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

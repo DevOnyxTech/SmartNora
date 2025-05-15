@@ -1,0 +1,354 @@
+/* START : Benefits Of Unbroken Sleep */
+
+.tab-comman-image.active {
+  opacity: 1;
+}
+
+.tab-comman-image {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: 0.8s;
+  top: 0;
+}
+
+.benefit-of-sleep {
+  position: relative;
+}
+
+.benefit-of-sleep__image img {
+  width: 100%;
+  height: 734px;
+  object-fit: cover;
+}
+
+.benefit-of-sleep__image {
+  position: relative;
+  z-index: 1;
+  height: 734px;
+  object-fit: cover;
+}
+
+.benefit-of-sleep__image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(
+    to bottom left,
+    rgb(5 36 59 / 25%) 45%,
+    rgb(5 36 59) 100%
+  ); */
+  mix-blend-mode: multiply;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.progress-cover {
+  display: flex;
+  position: relative;
+  margin-top: 45px;
+}
+.progress-cover ul {
+  margin: 0;
+  padding-left: 35px;
+}
+.benefit-of-sleep__content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.benefit-of-sleep__subtitle {
+  font-size: 48px;
+  font-weight: bold;
+  max-width: 545px;
+  margin-top: 20px;
+}
+
+.benefit-of-sleep__progresswrap ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.benefit-of-sleep__progressbar {
+  padding-block: 12px;
+  max-width: 470px;
+  list-style-type: none;
+  position: relative;
+}
+.benefit-of-sleep__progressbar:nth-child(2)
+  p.benefit-of-sleep__progressbar-text {
+  max-width: 380px;
+}
+.benefit-of-sleep__progressbar.active h3.benefit-of-sleep__progressbar-title {
+  opacity: 1;
+}
+h3.benefit-of-sleep__progressbar-title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  opacity: 0.6;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.active h3.benefit-of-sleep__progressbar-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  cursor: inherit;
+}
+
+p.benefit-of-sleep__progressbar-text {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.benefit-of-sleep__try-smart-nora {
+  margin-top: 45px;
+}
+
+.benefit-of-sleep__try-smart-nora-icon {
+  width: 18px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  transition: all 0.3s;
+}
+
+.benefit-of-sleep__try-smart-nora-icon--home {
+  opacity: 1;
+}
+
+.benefit-of-sleep__try-smart-nora-icon--rocket {
+  width: 18px;
+  height: 20px;
+  opacity: 0;
+  transform: translate(-8px);
+}
+
+.benefit-of-sleep__try-smart-nora:hover
+  .benefit-of-sleep__try-smart-nora-icon--home {
+  opacity: 0;
+  transform: translate(8px);
+}
+
+.benefit-of-sleep__try-smart-nora:hover
+  .benefit-of-sleep__try-smart-nora-icon--rocket {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.benefit-of-sleep__try-smart-nora a {
+  padding: 14px 18px 14px 50px;
+  font-size: 16px;
+  position: relative;
+}
+.benefit-of-sleep__progressbar-text {
+  opacity: 0;
+  max-height: 0;
+  transition: 0.4s;
+}
+
+.benefit-of-sleep__progressbar.active .benefit-of-sleep__progressbar-text {
+  opacity: 1;
+  max-height: 72px;
+}
+.progress-cover ul::before {
+  background: #97ca3b33;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.progress-cover ul::before,
+.benefit-of-sleep__progressbar::before,
+.benefit-of-sleep__progressbar.active::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  top: 0;
+  border-radius: 5px;
+}
+.benefit-of-sleep__progressbar::before,
+.benefit-of-sleep__progressbar.active::after {
+  left: -35px;
+  background: #97ca3b;
+}
+.benefit-of-sleep__progressbar::before {
+  height: 0;
+  transition: 0.5s;
+}
+.benefit-of-sleep__progressbar.active::before {
+  transition: 2s;
+  height: 100%;
+  transition-delay: 1s;
+}
+.benefit-of-sleep__progressbar.active::after {
+  height: 5px;
+}
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .benefit-of-sleep__image img {
+  height: 38.23vw;
+}
+
+.benefit-of-sleep__image {
+  height: 38.23vw;
+}
+
+.progress-cover {
+  margin-top: 2.34vw;
+}
+
+.progress-cover ul {
+  padding-left: 1.82vw;
+}
+
+.benefit-of-sleep__subtitle {
+  font-size: 2.5vw;
+  margin-top: 1.04vw;
+  max-width: 26.354vw;
+}
+
+.benefit-of-sleep__progressbar {
+  padding-block: 0.63vw;
+  max-width: 24.48vw;
+}
+
+.benefit-of-sleep__progressbar:nth-child(2) p.benefit-of-sleep__progressbar-text {
+  max-width: 19.79vw;
+}
+
+h3.benefit-of-sleep__progressbar-title {
+  font-size: 1.04vw;
+}
+
+.active h3.benefit-of-sleep__progressbar-title {
+  font-size: 1.25vw;
+  margin-bottom: 0.52vw;
+}
+
+p.benefit-of-sleep__progressbar-text {
+  font-size: 1.04vw;
+  line-height: 1.2em;
+}
+
+.benefit-of-sleep__try-smart-nora {
+  margin-top: 2.34vw;
+}
+
+.benefit-of-sleep__try-smart-nora-icon {
+  width: 0.94vw;
+  height: 1.04vw;
+  left: 1.04vw;
+}
+
+.benefit-of-sleep__try-smart-nora-icon--rocket {
+  width: 0.94vw;
+  height: 1.04vw;
+  transform: translate(-0.42vw);
+}
+
+.benefit-of-sleep__try-smart-nora:hover .benefit-of-sleep__try-smart-nora-icon--home {
+  transform: translate(0.42vw);
+}
+
+.benefit-of-sleep__try-smart-nora a {
+  padding: 0.73vw 0.94vw 0.73vw 2.6vw;
+  font-size: 0.83vw;
+}
+
+.benefit-of-sleep__progressbar.active .benefit-of-sleep__progressbar-text {
+  max-height: 3.75vw;
+}
+
+.progress-cover ul::before,
+.benefit-of-sleep__progressbar::before,
+.benefit-of-sleep__progressbar.active::after {
+  width: 0.26vw;
+}
+
+.benefit-of-sleep__progressbar::before,
+.benefit-of-sleep__progressbar.active::after {
+  left: -1.82vw;
+}
+
+.benefit-of-sleep__progressbar.active::after {
+  height: 0.26vw;
+}
+
+}
+@media (max-width: 767px) {
+  .benefit-of-sleep__image,
+  .benefit-of-sleep__image img {
+    height: 964px;
+  }
+  .benefit-of-sleep__try-smart-nora {
+      text-align: center;
+      margin-top: 33px;
+      margin-bottom: 60px;
+  }
+  h3.benefit-of-sleep__progressbar-title {
+    font-size: 18px;
+  }
+  p.benefit-of-sleep__progressbar-text {
+    font-size: 16px;
+  }
+  .benefit-of-sleep__subtitle {
+    font-size: 40px;
+    text-align: center;
+  }
+  .benefit-of-sleep__title {
+    text-align: center;
+  }
+  .benefit-of-sleep__header {
+      margin-top: 40px;
+      margin-bottom: auto;
+  }
+  .benefit-of-sleep__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+  .benefit-of-sleep__image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom left,
+      rgb(5 36 59 / 25%) 45%,
+      rgb(5 36 59) 100%
+    );
+    mix-blend-mode: multiply;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .benefit-of-sleep__content {
+    left: 0;
+  }
+  h3.benefit-of-sleep__progressbar-title {
+    opacity: 0.8;
+  }
+  .progress-cover {
+      width: calc(100% - 48px);
+      margin-inline: auto;
+  }
+  .benefit-of-sleep__progressbar.active .benefit-of-sleep__progressbar-text {
+      max-height: 90px;
+  }
+  .benefit-of-sleep__image:after {
+      /* background: linear-gradient(360deg, rgba(5, 36, 59, 0) 53.74%, #05243B 107.8%),
+      linear-gradient(180deg, rgba(5, 36, 59, 0) 55.5%, rgba(5, 36, 59, 0.8) 90.39%); */
+      /* background: linear-gradient(360deg, #05243b21 53.74%, #05243b 100%), 
+      linear-gradient(180deg, #05243b14 45%, #05243bcc 80%); */
+  }
+}
+@media (max-width: 575px) {
+  .benefit-of-sleep__image, .benefit-of-sleep__image img {
+      height: 92vh;
+  }
+}
+
+/* END : Benefits Of Unbroken Sleep */

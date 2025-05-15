@@ -1,0 +1,80 @@
+{{ 'section-home-logos.css' | asset_url | stylesheet_tag }}
+
+<div class="influencer-logo">
+  <div class="influencer-container">
+    <div class="top-influencer-icon">
+      <img src="{{ section.settings.top_logo | img_url: 'master' }}" alt="pressawards-wirecutter" loading="lazy">
+      <h2>{{ section.settings.top_quote }}</h2>
+    </div>
+    <div class="grid-wrapper">
+      {% for block in section.blocks %}
+        <img
+          src="{{ block.settings.logo_image | img_url: 'master' }}"
+          alt="{{ block.settings.logo_alt }}"
+          loading="lazy"
+        >
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home Logos",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "top_logo",
+      "label": "Top Featured Logo"
+    },
+    {
+      "type": "html",
+      "id": "top_quote",
+      "label": "Top Quote Text",
+      "default": "\"The best anti-snore<br> solution.\""
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "text",
+          "id": "logo_alt",
+          "label": "Alt Text",
+          "info": "Descriptive alt text for the logo image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Home Logos",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

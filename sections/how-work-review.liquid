@@ -1,0 +1,65 @@
+{{ 'how-work-review.css' | asset_url | stylesheet_tag }}
+
+<div class="customer-review">
+  <div class="customer-review__container">
+    <div class="customer-review__content">
+      <h3 class="customer-review__quote">"{{ section.settings.content }}"</h3>
+      <div class="customer-review__author">
+        <div class="customer-review__author-image">
+          <img src="{{ section.settings.author_image | img_url : 'master' }}" alt="Author Image">
+        </div>
+        <div class="customer-review__author-details">
+          <h5 class="customer-review__author-name">{{ section.settings.author_name }}</h5>
+          <div class="customer-review__author-logos">
+            <img src="{{ section.settings.logo_1 | img_url : 'master' }}" alt="Philips Logo">
+            <img src="{{ section.settings.logo_2 | img_url : 'master' }}" alt="SleepScore Labs Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Review",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "image_picker",
+      "label": "Author Image",
+      "id": "author_image"
+    },
+    {
+      "type": "text",
+      "label": "Author Name",
+      "id": "author_name"
+    },
+    {
+      "type": "image_picker",
+      "label": "Logo 1",
+      "id": "logo_1"
+    },
+    {
+      "type": "image_picker",
+      "label": "Logo 2",
+      "id": "logo_2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Work Review"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

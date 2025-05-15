@@ -1,0 +1,83 @@
+{{  'section-companion-talk-to-us.css'  |  asset_url |  stylesheet_tag  }}
+
+<div class="talk-to-us desktop-hide component">
+	<div class="container">
+		<h2>{{section.settings.title}}</h2>
+		<p>{{section.settings.content}}</p>
+		<div class="blue-btn-wrap">
+			{% if section.settings.button_1_label != blank %}
+			<a href="{{  section.settings.button_1_link  }}" class="link"><img src="{{section.settings.button_1_icon |  img_url: 'master'}}">{{section.settings.button_1_label}}</a>
+			{%endif%}
+			<a id="chat-click-talk" href="javascript:void(0);" class="link"><img
+					src="{{section.settings.button_2_icon |  img_url: 'master'}}">{{section.settings.button_2_label}}</a>
+		</div>
+	</div>
+</div>
+
+<script>
+  document.getElementById('chat-click-talk').addEventListener('click', function () {
+  document.getElementById('zsiq_float').click();
+});
+</script>
+
+{% schema %}
+	{
+	  "name": "Companion Talk",
+	  "class": "companion-talk",
+	"settings": [
+		{
+		"type": "html",
+		  "label": "Title",
+		  "id": "title"
+		},
+		{
+		  "type": "html",
+		  "label": "Content",
+		  "id": "content"
+		},
+		{
+		  "type": "image_picker",
+		  "label": "Button 1 Icon",
+		  "id": "button_1_icon"
+		},
+		{
+		  "type": "image_picker",
+		  "label": "Button 2 Icon",
+		  "id": "button_2_icon"
+		},
+		{
+		  "type": "text",
+		  "label": "Button 1 Label",
+		  "id": "button_1_label"
+		},
+		{
+		  "type": "url",
+		  "label": "Button 1 Link",
+		  "id": "button_1_link"
+		},
+		{
+		  "type": "text",
+		  "label": "Button 2 Label",
+		  "id": "button_2_label"
+		},
+		{
+		  "type": "url",
+		  "label": "Button 2 Link",
+		  "id": "button_2_link"
+		}
+	  ],
+	  "blocks": [],
+	  "presets": [
+		{
+		  "name": "Companion Talk"
+		}
+	  ]
+	}
+	{% endschema %}
+	
+	{% stylesheet %}
+	{% endstylesheet %}
+	
+	{% javascript %}
+	{% endjavascript %}
+	

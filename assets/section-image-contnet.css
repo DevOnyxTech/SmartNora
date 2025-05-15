@@ -1,0 +1,150 @@
+.couples-wrapper {
+  padding: 80px 0;
+  background-color: rgb(243 242 238);
+}
+
+.couples-title-wrapper {
+  max-width: 750px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.couples-wrapper .rating-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.couples-wrapper .star-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3px;
+}
+
+.couples-wrapper .star-wrapper img {
+  width: 16px;
+  height: 16px;
+}
+
+.couples-wrapper .rating-wrapper .rating p {
+  color: #05243b;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.couples-wrapper h2 {
+  font-size: 60px;
+  line-height: 72px;
+  color: #05243b;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  .couples-wrapper {
+    display: none;
+  }
+}
+
+.half-content-image-wrapper {
+  background-color: rgb(243 242 238);
+}
+
+.padding-t-80 {
+  padding-top: 80px;
+}
+
+.text-nora-blue {
+  color: #05243b;
+  font-size: 72px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.half-content-wrapper p {
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.half-content-image-container {
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  column-gap: 100px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.image-wrapper img,
+.content-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.half-content-image-container:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+@media only screen and (min-width: 1024px) {
+  .half-content-wrapper p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .half-content-image-container {
+    column-gap: 50px;
+    padding-inline: 25px;
+  }
+
+  .text-nora-blue {
+    font-size: 36px;
+  }
+
+  .mt-80 {
+    margin-top: 40px;
+  }
+
+  .padding-t-80 {
+    padding-top: 40px;
+  }
+
+  .half-content-image-container {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .half-image-content-section:has(.image-wrapper) {
+    display: none;
+  }
+
+  .w-50 {
+    width: 100%;
+  }
+
+  .half-content-image-container {
+    max-width: 576px;
+  }
+  .text-nora-blue {
+    margin-bottom: 45px;
+  }
+}

@@ -1,0 +1,110 @@
+.main-com-feature .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.main-com-feature {
+  background-color: #05243b;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+.main-com-feature h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  line-height: normal;
+}
+.com-feature {
+  display: flex;
+  column-gap: 60px;
+}
+.com-feature .c-f-box img {
+  padding-right: 110px;
+}
+.com-feature .c-f-box .c-f-content {
+  margin-top: 25px;
+}
+.com-feature .c-f-box .c-f-content h3 {
+  font-size: 36px;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.com-feature .c-f-box .c-f-content p {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: normal;
+}
+.white-text {
+  color: #fff;
+}
+.g-bottom-shape {
+  background: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Vector_1_1_ec0e2132-c4c9-4139-a430-ea4b9069fdfe.svg?v=1733824962)
+    no-repeat center / cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+@media only screen and (max-width: 1600px) {
+  .g-bottom-shape {
+    height: 726px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .com-feature {
+    column-gap: 40px;
+  }
+  .com-feature .c-f-box .c-f-content h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+  }
+  .com-feature .c-f-box .c-f-content p {
+      font-size: 18px;
+   }
+}
+@media only screen and (max-width: 767px) {
+  .main-com-feature h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .com-feature {
+    flex-wrap: wrap;
+    column-gap: 0;
+  }
+  .com-feature .c-f-box img {
+    padding-right: 0;
+    width: 115px;
+  }
+  .com-feature .c-f-box .c-f-content {
+    padding-left: 40px;
+    margin-top: 0;
+  }
+  .c-f-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .c-f-box:last-child {
+    padding-bottom: 0;
+  }
+  .c-f-box:nth-child(2) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .com-feature .c-f-box .c-f-content h3 {
+    font-size: 24px;
+  }
+  .com-feature .c-f-box .c-f-content p {
+    font-size: 14px;
+    max-width: 178px;
+  }
+  .com-feature .c-f-box:nth-child(2) .c-f-content {
+    padding-left: 0;
+  }
+  .main-com-feature {
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,172 @@
+{{ 'how-work-counter.css' | asset_url | stylesheet_tag }}
+
+<style>
+      .cms-validate {
+          background-color: {{section.settings.section_background}};
+      }
+        .cms-validate .title {
+          color: {{ section.settings.title_color }};
+      }
+        .cms-validate .section-header p {
+          color:{{section.settings.subtitle_color}};
+        }
+      .validate-box {
+        background-color: {{section.settings.box_background}};
+    }
+    .validate-box .content,
+    .validate-box .counter-main {
+      color: {{ section.settings.box_color }};
+  }
+</style>
+
+<div class="cms-validate component">
+  <div class="b-container">
+    <div class="section-header">
+      <div class="tagline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-nora-charcoal fill-current w-5 h-5" viewBox="0 0 21 21">
+          <path d="M20.5538 1.69586C21.109 0.955621 20.8211 0.00976562 19.8958 0.00976562H13.9123C13.2543 0.00976562 12.8225 0.400444 12.8225 0.996744C12.8225 1.59304 13.2543 1.98372 13.9123 1.98372H17.8602L12.8019 8.41965C12.2056 9.20101 12.4523 10.0235 13.3365 10.0235H19.7724C20.4304 10.0235 20.8622 9.63282 20.8622 9.03652C20.8622 8.44022 20.4304 8.04953 19.7724 8.04953H15.7012L20.5538 1.69586Z"> </path>
+          <circle r="2.98482" cy="17.7729" cx="13.1199"></circle>
+          <path d="M4.28643 5.39797C4.5957 5.0887 5.09712 5.0887 5.40639 5.39797L8.59783 8.5894C8.9071 8.89867 8.9071 9.4001 8.59783 9.70937L5.40639 12.9008C5.09712 13.2101 4.5957 13.2101 4.28643 12.9008L1.09499 9.70937C0.78572 9.4001 0.78572 8.89867 1.09499 8.58941L4.28643 5.39797Z"> </path>
+        </svg>
+        <span>{{ section.settings.tagline }}</span>
+      </div>
+      <h2 class="title">{{ section.settings.title }}</h2>
+      <p>
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="validate-inner">
+      {% for block in section.blocks %}
+        {% if block.type == 'validate_box' %}
+          <div class="validate-box">
+            <div class="counter-main">
+              <span data-final-number="{{ block.settings.percentage }}" class="counter">
+                {{- block.settings.percentage -}}</span
+              >%
+            </div>
+            <div class="content">
+              <p>{{ block.settings.content }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="btn-box">
+      <a target="_blank" class="result-btn" href="{{ section.settings.button_link }}">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.411 15.5673C20.2103 14.9418 19.9354 14.2836 19.5889 13.6075C18.8688 14.6155 18.0247 15.6153 17.0673 16.5726C16.1133 17.5266 15.1171 18.3683 14.1127 19.0867C14.788 19.4327 15.4456 19.7073 16.0705 19.9078C18.296 20.622 19.6128 20.2775 20.1967 19.6935C20.7806 19.1096 21.1252 17.7928 20.411 15.5673ZM15.8741 15.3794C16.9757 14.2778 17.9037 13.1292 18.647 11.9976C17.9042 10.8675 16.9774 9.72065 15.8773 8.62061C14.7781 7.52142 13.6322 6.59511 12.503 5.85259C11.3711 6.59599 10.2224 7.52407 9.12061 8.62585C8.02227 9.72419 7.09654 10.8692 6.35432 11.9976C7.09708 13.1275 8.02387 14.2742 9.12378 15.3741C10.2245 16.4749 11.3721 17.4023 12.5029 18.1453C13.6312 17.4032 14.776 16.4776 15.8741 15.3794ZM21.3899 20.8867C23.1608 19.1159 22.7371 15.6209 20.6309 11.9973C22.7344 8.37556 23.1567 4.88325 21.3867 3.11325C19.6169 1.34338 16.1249 1.76556 12.5035 3.8687C8.87881 1.76101 5.38252 1.33666 3.61117 3.10801C1.84032 4.87886 2.26395 8.37369 4.37011 11.9973C2.2612 15.6228 1.83627 19.1202 3.60801 20.892C5.37987 22.6639 8.87767 22.2387 12.5035 20.1295C16.126 22.2342 19.6195 22.6571 21.3899 20.8867ZM16.0673 4.09216C15.4435 4.29234 14.7873 4.56626 14.1132 4.91139C15.1185 5.63023 16.1156 6.47254 17.0705 7.4274C18.0262 8.38308 18.8691 9.38107 19.5884 10.3873C19.9336 9.71304 20.2076 9.05662 20.4078 8.43271C21.122 6.20721 20.7775 4.89039 20.1935 4.30646C19.6096 3.72252 18.2928 3.37795 16.0673 4.09216ZM8.93063 4.08692C9.55703 4.28794 10.2162 4.56333 10.8933 4.91053C9.88503 5.6307 8.88498 6.47508 7.9274 7.43265C6.97311 8.38694 6.13125 9.38342 5.4127 10.3882C5.06597 9.71176 4.79092 9.05326 4.59009 8.42746C3.87588 6.20197 4.22045 4.88514 4.80438 4.30121C5.38831 3.71728 6.70513 3.37271 8.93063 4.08692ZM4.58692 15.5725C4.78826 14.9451 5.0642 14.2849 5.41217 13.6067C6.13153 14.6132 6.97465 15.6114 7.93057 16.5673C8.88731 17.5241 9.88645 18.3678 10.8938 19.0876C10.2154 19.4357 9.555 19.7117 8.92746 19.9131C6.70197 20.6273 5.38514 20.2827 4.80121 19.6988C4.21728 19.1149 3.87271 17.798 4.58692 15.5725ZM12.8241 9.85845C12.6472 9.68158 12.3605 9.68158 12.1836 9.85845L10.3584 11.6836C10.1816 11.8605 10.1816 12.1472 10.3584 12.3241L12.1836 14.1492C12.3605 14.3261 12.6472 14.3261 12.8241 14.1492L14.6492 12.3241C14.8261 12.1472 14.8261 11.8605 14.6492 11.6836L12.8241 9.85845Z" fill="white"/>
+        </svg>
+        <span>{{ section.settings.button_text }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+
+<script>
+  jQuery(document).ready(function ($) {
+      $('.counter').counterUp({
+          delay: 10,
+          time: 2000
+      });
+  });
+</script>
+{% schema %}
+{
+  "name": "Counter",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Section Background",
+      "id": "section_background"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "title_color"
+    },
+    {
+      "type": "color",
+      "label": "Subtitle Color",
+      "id": "subtitle_color"
+    },
+    {
+      "type": "color",
+      "label": "Box Background",
+      "id": "box_background"
+    },
+    {
+      "type": "color",
+      "label": "Box color",
+      "id": "box_color"
+    },
+    {
+      "type": "html",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "The Science of Nora"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Scientifically validated."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Research conducted by SleepScore Labs, shows effectiveness of using Smart Nora based on 500+ nights of collected data."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Study Results"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "validate_box",
+      "name": "Counter Box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": "78"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content",
+          "default": "of snorers say Smart Nora is better than other solutions they've used."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Work Counter",
+      "blocks": [
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

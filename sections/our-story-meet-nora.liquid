@@ -1,0 +1,53 @@
+{{ 'section-our-story-meet-nora.css' | asset_url | stylesheet_tag }}
+<style>
+  .meet-nora-wrapper {
+    background-image: url('{{  section.settings.image | img_url : 'master'}}');
+    }
+</style>
+<div class="meet-nora-section component">
+  <div class="meet-nora-wrapper">
+    <img class="mobile-img" loading="lazy" src="{{ section.settings.image | img_url : 'master' }}" alt="Meet Nora">
+    <div class="meet-nora-content">
+      <h2>{{ section.settings.title }}</h2>
+      <h3>
+        {{ section.settings.sub_title }}
+      </h3>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Meet Nora",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "html",
+      "label": "Sub Title",
+      "id": "sub_title"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Our Story Meet Nora"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

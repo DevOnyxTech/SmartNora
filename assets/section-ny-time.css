@@ -1,0 +1,49 @@
+.newyork-times-container {
+  max-width: 1152px;
+  margin: 40px auto;
+  background: rgb(5, 36, 59);
+  padding: 40px 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.newyork-times-logo img {
+  height: auto;
+  width: 100%;
+  max-width: 109px;
+  display: block;
+}
+
+.newyork-times-descr p span {
+  text-decoration: underline;
+}
+.newyork-times-descr p {
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 80px;
+}
+@media screen and (max-width: 1280px) {
+  .newyork-times-section {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .newyork-times-container {
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .newyork-times-container {
+    display: block;
+  }
+  .newyork-times-descr p {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 21px;
+    text-align: center;
+  }
+  .newyork-times-logo img {
+    margin: 0 auto;
+  }
+}

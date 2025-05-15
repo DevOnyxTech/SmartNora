@@ -1,0 +1,371 @@
+{{ 'gen-2-home-img-counter.css' | asset_url | stylesheet_tag }}
+
+<div class="independently-tested gen-counter" id="independently-tested">
+  <div class="container">
+    <div class="independently-tested__wrap">
+      <div class="independently-tested__image">
+        <img
+          class="desktop-image"
+          src="{{ section.settings.desktop_image | img_url : 'master' }}"
+          alt="Independently Tested Image"
+        >
+        <img
+          class="mobile-image"
+          src="{{ section.settings.mobile_image | img_url : 'master' }}"
+          alt="Independently Tested Image"
+        >
+      </div>
+      <div class="independently-tested__content">
+        <!-- Stopsnoring Score Section -->
+        <div class="stopsnoring__score">
+          <div class="stopsnoring__score-progress">
+            <div class="circle">
+              <svg width="70" height="70" viewBox="0 0 200 200">
+                <!-- Background 3/4 arc -->
+                <path
+                  d="M55,155 A75,75 0 1,1 145,155"
+                  stroke="#eee"
+                  stroke-width="36"
+                  fill="none"
+                  id="arc-bg"
+                  stroke-linecap="round"
+                />
+                <!-- Progress arc -->
+                <path
+                  id="progress"
+                  d="M55,155 A75,75 0 1,1 145,155"
+                  stroke="#51DF83"
+                  stroke-width="36"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+              <div class="score" id="score">{{ section.settings.snore_score }}</div>
+            </div>
+          </div>
+          <div class="stopsnoring__score-content">
+            <p class="stopsnoring__score-title">Snore Score</p>
+            <div class="stopsnoring__score-average">
+              <span>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/1053/4408/files/down-arrow.svg?v=1742799102"
+                  alt="Down Arrow"
+                >
+                {{ section.settings.weekly_avg_percentage }}%
+              </span>
+              <span class="stopsnoring__score-weekly">Weekly Avg</span>
+            </div>
+          </div>
+        </div>
+        <!-- Last Night's Sleep Data -->
+        <div class="stopsnoring__last-night">
+          <div class="stopsnoring__last-night-box">
+            <p class="stopsnoring__last-night-title white-text">{{ section.settings.night_data_title }}</p>
+            <div class="stopsnoring__last-night-with">
+              <img
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/light-blue-pabble.svg?v=1742799102"
+                alt="Light Blue Pebble"
+              >
+              With Nora
+            </div>
+          </div>
+          <div class="sleep">
+            <div class="sleep__entry">
+              <div class="sleep__icon">
+                <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/moon.svg?v=1742799102" alt="Moon Icon">
+              </div>
+              <div class="sleep__data">
+                <div
+                  class="sleep-counter__text"
+                >
+                  <p>You Slept</p>
+                  <h3 class="sleep-time">
+                    <span class="hours">{{ section.settings.slept_hours }}</span><span class="h-sign">h</span>
+                    <span class="minutes">{{ section.settings.slept_minutes }}</span><span class="m-sign">m</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="sleep__entry">
+              <div class="sleep__icon">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/1053/4408/files/light-green-pabble.svg?v=1742799102"
+                  alt="Green Pebble"
+                >
+              </div>
+              <div class="sleep__data">
+                <div class="sleep-counter__text">
+                  <p>Nora helped you</p>
+                  <h3 class="sleep-time">
+                    <span class="hours">{{ section.settings.nora_helped_times }} </span><span>times</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sleep Continuity Section -->
+    <div class="sleep-continuity">
+      <div class="sleep-continuity__header">
+        <div class="sleep-continuity__title white-text">
+          <span class="sleep-continuity__icon">
+            <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/white-icon.svg?v=1742799102" alt="White Icon">
+          </span>
+          {{ section.settings.pre_heading }}
+        </div>
+        <h2 class="sleep-continuity__subtitle white-text">{{ section.settings.heading }}</h2>
+        <p class="sleep-continuity__description white-text">
+          {{ section.settings.content }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Counter Section -->
+    <div class="sleep-continuity-counter">
+      <div class="sleep-continuity-counter__box">
+        <div class="sleep-continuity-counter__text">
+          <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 37" width="32" height="37">
+            <title>90%</title>
+            <defs>
+            	<image  width="136" height="39" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAnCAMAAADjLvBbAAAAAXNSR0IB2cksfwAAAKJQTFRFAAAAl8c4n89Alsk9lco6k8s8l8s8l8s7lso7l8o7l8k6l8o6l8o7lsw9nM46l8o7mMo5lsk7l8k8l8o7lck8lso8k8c8l8dAlsk7l8o6mMs6mso5l8s6mso6mcs6lsk6lco5lsw7lsk7l8o6mMk7l8o7l8k6mMs7mMs6l8s7lcU1mMg5l8c6lso5mck9lcU6l8c8lss6mck6lMs6lso7mck7m1HCYgAAADZ0Uk5TACAQUGBAQL/v/9+f31Afz2+ggL+AkEAgX2BPP38wf69vX4/fj59/j6/PMG9gP1AwQK9/T89fhRqBbAAABE5JREFUeJy9mGtTEzEUhk9Cu6WFnQqO1KrFUbygFHX8///A8YPjoCOKKF7G8YJcpLQFum5OcrIn2aRq6ZgPZcnm8uTNycnbCvifRYAYRV9NeSopIJNnoekSIfLZhOhlfwaZVx/ZUahhGuyeF3ngTaWf9v32C32acnDGqheHALWfIw+krj4aP0LzVaoRkCqBJPUhr5/bdWS59Kt4Tr/ax5bq3fziK3IekMVj74U4ZqK09/ibvmWcz9WRagumBlLicEnUhJDMCYGD1whL9dLNpgUS4OAr73xXn/18xuVv+cPSe12NGzPEkJkSSMtGbCMVJ8c980/7rXlIT2lgMZt/XNnS1Uqnq2/gn0DkvFexoCNOr/r2R12ZHOBuVGbNwaCwxGVgLOg5tH4qgEm1vwbxC2mgIh5kDRiVeruvB6Y9CIIkM6C361wgRgOBu4DKs1FNKOQ5aTiKgrSOctk6m3A+EEcQuLsDXk+Z6JEvbxcgKA+GLcaIWoqgaJoYxBEEVvUOXPxYNLj3TgPpNI3Tozx4vNQUmFkKCScEcQWBmiyBGFI6H7NqoqR3utATupu7MRODuIKQIsuvihaGzZwPihkzaZ7C1AjJPqubCMQThLgCMWJvgCa7iPJuamOyAbsDJgPxBIELA/232HKbaW+8MGQpkWQrG/p439xgQyqQ7gb1d0GKeq/4guh0mZfk0MsjALeeU6/KnELJrm9meuOkYzfy9g9e29vJAeluOfcnK74geZiaR5NZE2mVLkDyqddh295M3uACHr4StpKDdLdKjU0pCQLwyIbp6vavlXeyaMxBnAFYbwRRHHZGBtLFcxckKQtSSGJL50McxJoQ5mKFGUHPWIB0zflnJ91Zj78k2ThzGoleXT9QsLJiN6a9q6TTLlZQNOMbC0Ic116X1xMSJMfrc6OYHAhzDw5KPppMiKzSDioXK4CTEMg4jqAgqjzeJFGy5U1jhSDrg1/IhPDMcueZAE5iQMZxRARBxB9X9wZQuSh2RtaklpMSmRDH0wnM/AUJpoNGexxHVJAwL8/6WKwJQRfbqIn6J1Wd4nm3JHhEMjGGY4wgbpnX+3T/qbcOuusQCI0UXkMm8RT5tyhhjrAgSYJ/Zg5tZJqdKYWINSF4K+AZxhy0ZlZfJglzRAShFG+/JuDCwU/j3IRcU8GDvkHbaUrFPkmEIxYhZiPoPpUdY5r7bj5kJiQG4pFEOKIRQnZDrD0dgazQl09fEGZCoiAOifmuUSrRI2PtRx4ocGqfPUG4CcEYwTOFYbvG/EhBEsjrxYogeGQo9TjFG8cxIRii6GJx0CVujIgkyoHsEM4hj1/+icM1IVrDpc+QYmJrOg5Nk0Q5yIeGc0iJxB/HMyGui+25VlGRxDnGCQLse6YeesW7/30T4tzXt557P13JtBXlGC8IojTpVSPd8W9dZkIM2ZG9JNefTPs3NNlOTqA6+BL7yc4t3MVO+8e8fyzWxcJv9tzlYEF+T8cAAAAASUVORK5CYII="/>
+            </defs>
+            <style>
+            </style>
+            <use id="Background" href="#img1" x="0" y="-1"/>
+          </svg>
+          <span> {{ section.settings.loud_snoring_count }}%</span>
+        </div>
+        <div class="sleep-continuity-counter__content">
+          <p>{{ section.settings.loud_snoring_title }}</p>
+        </div>
+      </div>
+      <div class="sleep-continuity-counter__box">
+        <div class="sleep-continuity-counter__text">
+          <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 37" width="32" height="37">
+            <title>90%</title>
+            <defs>
+            	<image  width="136" height="39" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAnCAMAAADjLvBbAAAAAXNSR0IB2cksfwAAAKJQTFRFAAAAl8c4n89Alsk9lco6k8s8l8s8l8s7lso7l8o7l8k6l8o6l8o7lsw9nM46l8o7mMo5lsk7l8k8l8o7lck8lso8k8c8l8dAlsk7l8o6mMs6mso5l8s6mso6mcs6lsk6lco5lsw7lsk7l8o6mMk7l8o7l8k6mMs7mMs6l8s7lcU1mMg5l8c6lso5mck9lcU6l8c8lss6mck6lMs6lso7mck7m1HCYgAAADZ0Uk5TACAQUGBAQL/v/9+f31Afz2+ggL+AkEAgX2BPP38wf69vX4/fj59/j6/PMG9gP1AwQK9/T89fhRqBbAAABE5JREFUeJy9mGtTEzEUhk9Cu6WFnQqO1KrFUbygFHX8///A8YPjoCOKKF7G8YJcpLQFum5OcrIn2aRq6ZgPZcnm8uTNycnbCvifRYAYRV9NeSopIJNnoekSIfLZhOhlfwaZVx/ZUahhGuyeF3ngTaWf9v32C32acnDGqheHALWfIw+krj4aP0LzVaoRkCqBJPUhr5/bdWS59Kt4Tr/ax5bq3fziK3IekMVj74U4ZqK09/ibvmWcz9WRagumBlLicEnUhJDMCYGD1whL9dLNpgUS4OAr73xXn/18xuVv+cPSe12NGzPEkJkSSMtGbCMVJ8c980/7rXlIT2lgMZt/XNnS1Uqnq2/gn0DkvFexoCNOr/r2R12ZHOBuVGbNwaCwxGVgLOg5tH4qgEm1vwbxC2mgIh5kDRiVeruvB6Y9CIIkM6C361wgRgOBu4DKs1FNKOQ5aTiKgrSOctk6m3A+EEcQuLsDXk+Z6JEvbxcgKA+GLcaIWoqgaJoYxBEEVvUOXPxYNLj3TgPpNI3Tozx4vNQUmFkKCScEcQWBmiyBGFI6H7NqoqR3utATupu7MRODuIKQIsuvihaGzZwPihkzaZ7C1AjJPqubCMQThLgCMWJvgCa7iPJuamOyAbsDJgPxBIELA/232HKbaW+8MGQpkWQrG/p439xgQyqQ7gb1d0GKeq/4guh0mZfk0MsjALeeU6/KnELJrm9meuOkYzfy9g9e29vJAeluOfcnK74geZiaR5NZE2mVLkDyqddh295M3uACHr4StpKDdLdKjU0pCQLwyIbp6vavlXeyaMxBnAFYbwRRHHZGBtLFcxckKQtSSGJL50McxJoQ5mKFGUHPWIB0zflnJ91Zj78k2ThzGoleXT9QsLJiN6a9q6TTLlZQNOMbC0Ic116X1xMSJMfrc6OYHAhzDw5KPppMiKzSDioXK4CTEMg4jqAgqjzeJFGy5U1jhSDrg1/IhPDMcueZAE5iQMZxRARBxB9X9wZQuSh2RtaklpMSmRDH0wnM/AUJpoNGexxHVJAwL8/6WKwJQRfbqIn6J1Wd4nm3JHhEMjGGY4wgbpnX+3T/qbcOuusQCI0UXkMm8RT5tyhhjrAgSYJ/Zg5tZJqdKYWINSF4K+AZxhy0ZlZfJglzRAShFG+/JuDCwU/j3IRcU8GDvkHbaUrFPkmEIxYhZiPoPpUdY5r7bj5kJiQG4pFEOKIRQnZDrD0dgazQl09fEGZCoiAOifmuUSrRI2PtRx4ocGqfPUG4CcEYwTOFYbvG/EhBEsjrxYogeGQo9TjFG8cxIRii6GJx0CVujIgkyoHsEM4hj1/+icM1IVrDpc+QYmJrOg5Nk0Q5yIeGc0iJxB/HMyGui+25VlGRxDnGCQLse6YeesW7/30T4tzXt557P13JtBXlGC8IojTpVSPd8W9dZkIM2ZG9JNefTPs3NNlOTqA6+BL7yc4t3MVO+8e8fyzWxcJv9tzlYEF+T8cAAAAASUVORK5CYII="/>
+            </defs>
+            <style>
+            </style>
+            <use id="Background" href="#img1" x="0" y="-1"/>
+          </svg>
+          <span> {{ section.settings.less_sleep_count }}X</span>
+        </div>
+        <div class="sleep-continuity-counter__content">
+          <p>{{ section.settings.less_sleep_title }}</p>
+        </div>
+      </div>
+      <div class="sleep-continuity-counter__box">
+        <div class="counter__text--increase sleep-continuity-counter__text">
+          <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 37" width="33" height="37">
+            <title>90% (1)</title>
+            <defs>
+            	<image  width="135" height="39" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAAAnCAMAAAASJavWAAAAAXNSR0IB2cksfwAAAIpQTFRFAAAAl8c4l8o6l8s7lso7l8o7l8o7lsg7l8c6n89Al8o7mMo5l8k8l8dAl8k6lso8l8o7l8s6l8k6mMs6mso5l8o7k8c8lsw9mMs6mMs7lsk6mMg5nM46lco6lsk7lsw7l8s8mMk7lco6l8o6l8c4k8s8lso5l8s7lcU6mcg7mMk2mck7lMs6mck612whWAAAAC50Uk5TACBgv+//z3BgEN9vgCDfkL9/f08/n0BQr4+vbx9gX19AjzCfQEA/zzBwL19Pf9qVMDkAAAN4SURBVHicxZhtT9swEMftdrCGNrRIdF1RVxgCoX3/rzJNaBpMY6xDaGXdxhro4+zz0/mJxCAxv0jjq+P7+W/7fAklz1goWcf/eq5So5Q5o3QWZHE5Gqt6Ee5nK9I//WvXWyt1N0XWfFqTd9kfDNKeE7I58TgaS0IjIBsRjtZPq5rf6ds5Mm+ZynppQGp1dlmsXQ6GQWIgFTmQQ8TRukdNmhMNvWRt8hvicMjWYZBqHC9X5t5wZHPup1mnFBB2rqW9y6rZb+JwaOggSCUOGKDP0eNDBoevx+yy+12Y+azIWUIcSLsQSCWO7gRVDMfOrfIORN2RgX71jdgc1hQGQAZOnV6J3/6FscGyC3AA3t4XdjngbuUCqdfMWtEcFkZ0saJSFxtRTK8o1qyUcvClpDex4nAwykEOhJ6WHHJWBpdVOPKCoqdpBKMUJCDH4Vdhmi9cDmd9AAff4MMz7c3CWFNzfRgkJIcMHf2LDZfjzZVCBmU4EXeJQivFGHkdhN0fzUtBpE8sh+yFjdHjyEChYW05hlj/9qMIu2gQFGPciAnu/VqWgaiNgXqSAZ2P0eOw9zOH5+MYfDY2ijFk895lXgYSkOPkXJP5HBm1zxeYlTnqnGIMzUFKQJQcTGDHRGckxIG29ProVKwu9DB77t0ng2E4SkCkHObA0u352RniYGt1zOvr7aIQ6oBDwyE7EFbDQSy7UwJyyAUgmgc52ETsk1sILe2pPaWcA529Fodld4ovhySTnUc4rMYLOy2j4FC5wxzYHuiHYDnUMjz+UIEDDTC7I41CcZB8WwYlmwPZ7eLL0RYpoAqPD3PopKNV8JhMj88LNx+zOSLFlwOFjnIOlXTk92pm+HOP4PDl0AGdlHOopAOfzQwkncOXQ0Ygmd2UcKikw4qwzUk6R1SOYLGCFTFJh5jK4URmrL1kjkDsSODQSQd0A6u1w99/NpM5fDlSOHTS0f/BvXOEJj8JhqkcATkSOEzSAZ7gT5GhpXIE5KjOgZKOJ3KE5CCdmdNKcvFtM8ANUdIBnk7eP5YjJIdX6AsLRxecdIAnsz66aRxBOapyWEkHeIfhQMKduF8qyRHhsJMO0WZYI9dwNC2SOKrJEeFwko4O/mzSHSVxSDnMW0cCh5t0POF8UXIsol+54hx+VmVAsr3TZ/w+5pXs6ExnrP+Tg6M0d0XGSv4BoKDE13RI22MAAAAASUVORK5CYII="/>
+            </defs>
+            <style>
+            </style>
+            <use id="Background" href="#img2" x="0" y="-1"/>
+          </svg>
+          <span>{{- section.settings.more_partners_count }}%</span>
+        </div>
+        <div class="sleep-continuity-counter__content">
+          <p>{{ section.settings.more_partners_title }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="btn btn_green_outline">
+      <a href="{{ section.settings.button_link }}" target="_blank">
+        <span class="btn__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.911 13.5673C17.7103 12.9418 17.4354 12.2836 17.0889 11.6075C16.3688 12.6155 15.5247 13.6153 14.5673 14.5726C13.6133 15.5266 12.6171 16.3683 11.6127 17.0867C12.288 17.4327 12.9456 17.7073 13.5705 17.9078C15.796 18.622 17.1128 18.2775 17.6967 17.6935C18.2806 17.1096 18.6252 15.7928 17.911 13.5673ZM13.3741 13.3794C14.4757 12.2778 15.4037 11.1292 16.147 9.99759C15.4042 8.8675 14.4774 7.72065 13.3773 6.62061C12.2781 5.52142 11.1322 4.59511 10.003 3.85259C8.87113 4.59599 7.72239 5.52407 6.62061 6.62585C5.52227 7.72419 4.59654 8.86919 3.85432 9.99759C4.59708 11.1275 5.52387 12.2742 6.62378 13.3741C7.72453 14.4749 8.87215 15.4023 10.0029 16.1453C11.1312 15.4032 12.276 14.4776 13.3741 13.3794ZM18.8899 18.8867C20.6608 17.1159 20.2371 13.6209 18.1309 9.99727C20.2344 6.37556 20.6567 2.88325 18.8867 1.11325C17.1169 -0.656623 13.6249 -0.234443 10.0035 1.8687C6.37881 -0.238986 2.88252 -0.663341 1.11117 1.10801C-0.659678 2.87886 -0.236053 6.37369 1.87011 9.99727C-0.238797 13.6228 -0.663734 17.1202 1.10801 18.892C2.87987 20.6639 6.37767 20.2387 10.0035 18.1295C13.626 20.2342 17.1195 20.6571 18.8899 18.8867ZM13.5673 2.09216C12.9435 2.29234 12.2873 2.56626 11.6132 2.91139C12.6185 3.63023 13.6156 4.47254 14.5705 5.4274C15.5262 6.38308 16.3691 7.38107 17.0884 8.38729C17.4336 7.71304 17.7076 7.05662 17.9078 6.43271C18.622 4.20721 18.2775 2.89039 17.6935 2.30646C17.1096 1.72252 15.7928 1.37795 13.5673 2.09216ZM6.43063 2.08692C7.05703 2.28794 7.7162 2.56333 8.39328 2.91053C7.38503 3.6307 6.38498 4.47508 5.4274 5.43265C4.47311 6.38694 3.63125 7.38342 2.9127 8.38816C2.56597 7.71176 2.29092 7.05326 2.09009 6.42746C1.37588 4.20197 1.72045 2.88514 2.30438 2.30121C2.88831 1.71728 4.20513 1.37271 6.43063 2.08692ZM2.08692 13.5725C2.28826 12.9451 2.5642 12.2849 2.91217 11.6067C3.63153 12.6132 4.47465 13.6114 5.43057 14.5673C6.38731 15.5241 7.38645 16.3678 8.3938 17.0876C7.71542 17.4357 7.055 17.7117 6.42746 17.9131C4.20197 18.6273 2.88514 18.2827 2.30121 17.6988C1.71728 17.1149 1.37271 15.798 2.08692 13.5725ZM10.3241 7.85845C10.1472 7.68158 9.86046 7.68158 9.68359 7.85845L7.85844 9.6836C7.68157 9.86046 7.68157 10.1472 7.85844 10.3241L9.68359 12.1492C9.86046 12.3261 10.1472 12.3261 10.3241 12.1492L12.1492 10.3241C12.3261 10.1472 12.3261 9.86046 12.1492 9.68359L10.3241 7.85845Z" fill="#97C93D"/>
+          </svg>
+        </span>
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  </div>
+</div>
+<!-- END : Independently Tested -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Progress Bar Elements
+    const progress = document.getElementById("progress");
+    const scoreEl = document.getElementById("score");
+    const progressSection = document.getElementById("independently-tested");
+
+    let score = 74;
+    const minScore = 15;
+    const maxScore = 74;
+
+    const fullArcLength = progress.getTotalLength();
+    const startFraction = 0.60; // fraction of arc at maxScore
+    const endFraction = 0.15; // fraction of arc at minScore
+
+    progress.style.strokeDasharray = fullArcLength;
+
+    function getColor(s) {
+      return s > 50 ? "#f44336" : "#51DF83";
+    }
+
+    function updateProgress(s) {
+      const f = (maxScore - s) / (maxScore - minScore);
+      const currentFraction = startFraction - f * (startFraction - endFraction);
+      const visibleArc = fullArcLength * currentFraction;
+      const offset = fullArcLength - visibleArc;
+
+      progress.style.strokeDashoffset = offset;
+      progress.style.stroke = getColor(s);
+
+      scoreEl.textContent = s;
+      scoreEl.style.color = getColor(s);
+      document.getElementById("arc-bg").setAttribute("stroke", getColor(s));
+    }
+
+
+    // GSAP ScrollTrigger for Progress Bar
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      trigger: progressSection,
+      start: "top 80%",
+      onEnter: () => {
+        let interval = setInterval(() => {
+          if (score <= minScore) {
+            clearInterval(interval);
+            updateProgress(minScore);
+            return;
+          }
+          score--;
+          updateProgress(score);
+        }, 50);
+      },
+    });
+
+    updateProgress(score); // Set initial progress
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Gen 2 Img Counter",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "desktop_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mobile_image"
+    },
+    {
+      "type": "text",
+      "label": "Snore Score",
+      "id": "snore_score"
+    },
+    {
+      "type": "text",
+      "label": "Weekly Avg percentage",
+      "id": "weekly_avg_percentage"
+    },
+    {
+      "type": "text",
+      "label": "Night Data Title",
+      "id": "night_data_title"
+    },
+    {
+      "type": "text",
+      "label": "Slept Hours",
+      "id": "slept_hours"
+    },
+    {
+      "type": "text",
+      "label": "Slept Minutes",
+      "id": "slept_minutes"
+    },
+    {
+      "type": "text",
+      "label": "Nora Helped Times",
+      "id": "nora_helped_times"
+    },
+    {
+      "type": "header",
+      "content": "Sleep Continuity Section"
+    },
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Loud Snoring Title",
+      "id": "loud_snoring_title"
+    },
+    {
+      "type": "text",
+      "label": "Loud Snoring Count",
+      "id": "loud_snoring_count"
+    },
+    {
+      "type": "text",
+      "label": "Less Sleep Title",
+      "id": "less_sleep_title"
+    },
+    {
+      "type": "text",
+      "label": "Less Sleep Count",
+      "id": "less_sleep_count"
+    },
+    {
+      "type": "text",
+      "label": "More Partners Title",
+      "id": "more_partners_title"
+    },
+    {
+      "type": "text",
+      "label": "More Partners Count",
+      "id": "more_partners_count"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Home Img Counter"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

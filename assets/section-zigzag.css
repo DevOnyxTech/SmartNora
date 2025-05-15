@@ -1,0 +1,183 @@
+.better-sleep-section {
+  padding: 123px 0;
+  background-color: #05243b;
+}
+.better-sleep-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.better-sleep-section .half-block-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.better-sleep-section .half-block-left {
+  width: 55%;
+}
+.better-sleep-section .half-block-left h2 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 100px;
+  max-width: 440px;
+  font-size: 60px;
+  line-height: 70px;
+}
+.better-sleep-section .half-block-right {
+  width: 45%;
+}
+.better-sleep-section .half-block-right p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+  max-width: 458px;
+  padding-left: 5px;
+}
+.m-better-sleep-img-cover {
+  width: 585px;
+  height: 390px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.m-better-sleep-img-cover .zig-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  max-width: calc(100% - 50px);
+}
+.m-better-sleep-img-cover .zig-tag {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #00000080;
+  max-width: 120px;
+  border-radius: 11px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.m-better-sleep-img-cover .z-inner-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+.m-better-sleep-slider .swiper-wrapper .swiper-slide:not(:last-child) {
+  margin-bottom: 85px;
+}
+.m-better-sleep-slider .swiper-slide:nth-child(even) .m-better-sleep-img-cover {
+  margin-left: auto;
+}
+.m-better-sleep-slider .swiper-pagination {
+  display: none;
+}
+@media screen and (min-width: 767px) {
+  .m-better-sleep-slider .swiper-wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .better-sleep-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .better-sleep-section {
+    padding: 70px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .better-sleep-section .half-block-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .better-sleep-container {
+    padding: 0;
+  }
+  .better-sleep-section .half-block-left,
+  .better-sleep-section .half-block-right {
+    width: 100%;
+    text-align: center;
+  }
+  .better-sleep-section .half-block-left h2 {
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-inline: 10px;
+  }
+  .better-sleep-section .half-block-right p {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  .m-better-sleep-slider {
+    display: block;
+    overflow: hidden;
+    margin-top: 30px;
+    padding-inline: 0;
+  }
+  .m-better-sleep-img-cover {
+    width: 100%;
+    border-radius: 0;
+    background-size: cover;
+    height: 370px;
+  }
+  .m-better-sleep-img-cover .zig-tag {
+    font-size: 10px;
+    line-height: 11px;
+    padding: 7px 5px;
+    max-width: 80px;
+    border-radius: 9px;
+    letter-spacing: 0.9px;
+  }
+  .m-better-sleep-img-cover .z-inner-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .m-better-sleep-slider .swiper-wrapper .swiper-slide:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .m-better-sleep-img-cover .z-inner-title br {
+    display: none;
+  }
+  .better-sleep-section {
+    padding-bottom: 0;
+  }
+  .m-better-sleep-img-cover .zig-bottom {
+    bottom: 50px;
+  }
+  .m-better-sleep-slider .swiper-wrapper {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .m-better-sleep-slider .swiper-pagination {
+    display: block;
+  }
+  .m-better-sleep-slider .swiper-pagination-bullet {
+    border-radius: 2px;
+    width: 57px;
+    height: 4px;
+    border: 1px solid #c4c4c4;
+    background: transparent;
+    opacity: 1;
+    margin: 0 3px;
+  }
+  .m-better-sleep-slider
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 1px solid #4c4c4c;
+    background-color: #4c4c4c;
+  }
+}
+@media screen and (max-width: 575px) {
+  .better-sleep-section .half-block-right p {
+    max-width: 317px;
+  }
+}

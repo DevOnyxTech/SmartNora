@@ -1,0 +1,125 @@
+.b-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  width: 100%;
+}
+.b-container img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.cms-pillow {
+  position: relative;
+  padding: 80px 0 40px;
+}
+.cms-pillow .section-header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 100px;
+}
+.cms-pillow .tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #05243b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 384px;
+  margin: 0 auto 20px;
+}
+.cms-pillow .tagline img {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+.cms-pillow .mainhead {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 74px;
+  color: #05243b;
+  margin: 0;
+}
+
+.cms-pillow .pillow-inner {
+  max-width: 876px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+.cms-pillow .pillow-lft {
+  grid-column: span 5;
+}
+.cms-pillow .pillow-lft .tagline svg {
+  width: 24px;
+  margin-right: 16px;
+}
+.cms-pillow .pillow-lft .tagline {
+  justify-content: flex-start;
+}
+.cms-pillow .pillow-lft .title {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #05243b;
+  margin: 0 0 12px;
+}
+.cms-pillow .content {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
+.cms-pillow .pillow-rht {
+  grid-column: span 7;
+}
+
+/* 1024 */
+@media only screen and (max-width: 1199px) {
+  .b-container {
+    padding: 0 40px;
+  }
+  .cms-pillow .mainhead {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .cms-pillow .heading {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  .cms-pillow {
+    padding: 40px 0 40px;
+  }
+  .cms-pillow .section-header {
+    padding: 0 0 40px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .cms-pillow .tagline {
+    font-size: 14px;
+  }
+  .cms-pillow .pillow-lft .tagline {
+    justify-content: flex-start;
+    max-width: inherit;
+  }
+}
+/* 736 */
+@media only screen and (max-width: 767px) {
+  .b-container {
+    padding: 0 20px;
+    max-width: 576px;
+  }
+
+  .cms-pillow .pillow-inner {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0;
+    row-gap: 40px;
+  }
+}

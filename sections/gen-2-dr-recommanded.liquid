@@ -1,0 +1,172 @@
+{{ 'section-dr-recommanded.css' | asset_url | stylesheet_tag }}
+<style>
+  .doctor-recomended-section-wrapper .doctor-container .doctor-header-section .top-d-wrap p{
+    font-size:18px;line-height:27px;fon-weight:500;
+  }
+  @media (max-width: 767px) {
+       .index .doctor-recomended-section-wrapper .doctor-container .doctor-header-section h2 {
+        font-size: 50px;
+        line-height: 62px;
+        max-width: 360px;
+        margin: 0 auto 45px;
+    }
+  }
+</style>
+<div class="doctor-recomended-section-wrapper">
+  <div class="doctor-container">
+    <div class="doctor-header-section">
+      <div class="top-d-wrap">
+        <p>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5737 2.36752C20.1024 1.66253 19.8283 0.761719 18.947 0.761719H13.2484C12.6218 0.761719 12.2105 1.13379 12.2105 1.7017C12.2105 2.2696 12.6218 2.64168 13.2484 2.64168H17.0084L12.1909 8.77113C11.623 9.51528 11.858 10.2986 12.7001 10.2986H18.8295C19.4562 10.2986 19.8674 9.92653 19.8674 9.35863C19.8674 8.79072 19.4562 8.41864 18.8295 8.41864H14.9522L19.5737 2.36752ZM12.4936 20.5217C14.0635 20.5217 15.3362 19.249 15.3362 17.679C15.3362 16.109 14.0635 14.8363 12.4936 14.8363C10.9236 14.8363 9.65088 16.109 9.65088 17.679C9.65088 19.249 10.9236 20.5217 12.4936 20.5217ZM5.14732 5.89333C4.85277 5.59879 4.37523 5.59879 4.08069 5.89333L1.04122 8.9328C0.746677 9.22733 0.746677 9.70488 1.04122 9.99943L4.08069 13.0389C4.37523 13.3335 4.85277 13.3335 5.14732 13.0389L8.18678 9.99943C8.48132 9.70488 8.48132 9.22733 8.18678 8.93279L5.14732 5.89333Z" fill="#05243B"/>
+          </svg>
+          {{ section.settings.heading }}
+        </p>
+      </div>
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="custom-slider-wrapper">
+      <div class="slides-arrow-wrapper">
+        <div class="swiper-container drr-slide">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="s-box item">
+                  <div class="s-img">
+                    <img
+                      class="mobile-hide swiper-lazy"
+                      src="{{ block.settings.image | img_url : 'master' }}"
+                      alt="dr image"
+                    >
+                    <img
+                      class="desktop-hide swiper-lazy"
+                      src="{{ block.settings.mob_image | img_url : 'master' }}"
+                      alt="dr image"
+                    >
+                  </div>
+                  <div class="s-content">
+                    <div class="inner-c">
+                      <strong>{{ block.settings.title }}</strong>
+                      {{ block.settings.designation }}
+                    </div>
+
+                    {{ block.settings.content }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var customSwiper = new Swiper(".custom-slider-wrapper .swiper-container", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      loopAdditionalSlides: 4,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: '.custom-slider-wrapper .swiper-pagination',
+        clickable: true,
+      },
+      lazy: {
+        loadPrevNext: true,
+        loadOnTransitionStart: true,
+        loadPrevNextAmount: 2,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Doctor Recommanded",
+  "tag": "section",
+ "settings": [
+     {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+ "blocks": [
+    {
+      "type": "expert",
+      "name": "Expert",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Desktop Image",
+          "id": "image"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mobile Image",
+          "id": "mob_image"
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "title"
+        },
+        {
+          "type": "richtext",
+          "label": "Designation",
+          "id": "designation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Doctor Recommanded"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+    $(document).ready(function(){
+  $maxHeight = 0;
+    $(".main-dr-expert .sleep-expert-box .s-content .inner-c").each(function(){
+      if($(this).height() > $maxHeight) {
+        $maxHeight = $(this).height();
+      }
+    });
+    $(".main-dr-expert .sleep-expert-box .s-content .inner-c").height($maxHeight);
+  });
+{% endjavascript %}

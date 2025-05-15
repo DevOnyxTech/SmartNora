@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "header": {
+      "custom_css": [
+        "@media only screen and (max-width: 767px) {.custom-header-button {background-color: #062842; }}"
+      ],
+      "settings": {},
+      "blocks": {}
+    },
+    "announcement_bar_NEEypJ": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}

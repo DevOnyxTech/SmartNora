@@ -1,0 +1,213 @@
+.nora-membership {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(231, 239, 255, 1) 70%
+  );
+}
+.membership-wrap {
+  padding: 123px 0 100px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.membership-wrap__left {
+  width: 40%;
+}
+.membership-wrap__right {
+  width: 60%;
+}
+.nora-membership__container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.membership-wrap__title {
+  font-size: 36px;
+  line-height: 48px;
+  color: #05243b;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.offer-content-wrapper .membership-wrap__title {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.membership-wrap__icon {
+  font-size: 18px;
+  line-height: 25px;
+  color: #05243b;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.membership-wrap__icon img {
+  margin-right: 10px;
+}
+p.membership-wrap__description {
+  font-size: 20px;
+  line-height: 27px;
+  color: #05243b;
+  padding-bottom: 50px;
+  font-weight: 400;
+}
+.offer-content-wrapper p.membership-wrap__description {
+  padding-bottom: 15px;
+}
+p.membership-wrap__price-text {
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(5, 36, 59, 0.7);
+  font-weight: 600;
+}
+.membership-wrap__cta-button {
+  background-color: #97ca3b;
+  border-radius: 9999px;
+  position: relative;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 400;
+  align-items: center;
+  padding: 15px 17.4px 15px 44px;
+  font-size: 16px;
+  line-height: 20px;
+  transition: all 0.3s;
+  text-decoration: none;
+  min-height: 44px;
+  text-transform: capitalize;
+  max-width: inherit;
+}
+.nora-membership .custom-header-home {
+  opacity: 1;
+}
+.nora-membership .custom-header-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 20px;
+  transition: all 0.3s;
+}
+.nora-membership .membership-wrap__cta-button:hover .custom-header-home {
+  opacity: 0;
+  transform: translate(8px);
+}
+.nora-membership .custom-header-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 20px;
+  transition: all 0.3s;
+}
+.nora-membership .membership-wrap__cta-button:hover .custom-header-rocket {
+  opacity: 1;
+  transform: translate(0);
+}
+.nora-membership .custom-header-rocket {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transform: translate(-8px);
+}
+.membership-wrap__price {
+  margin-bottom: 10px;
+}
+.membership-wrap__benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+  gap: 30px;
+}
+.m-benefit {
+  background: rgba(14, 98, 161, 0.8);
+  border-radius: 17.21px;
+  padding: 33px 24px;
+  text-align: center;
+}
+h4.benefit__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 400;
+  margin: 20px 0;
+}
+p.benefit__description {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+.benefit__icon {
+  height: 30px;
+}
+@media only screen and (max-width: 1180px) {
+  .nora-membership__container {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .membership-wrap__benefits {
+    gap: 10px;
+  }
+  .membership-wrap__title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  p.membership-wrap__price-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  h4.benefit__title {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0;
+  }
+  p.benefit__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .membership-wrap__title {
+    font-size: 32px;
+    line-height: 48px;
+    padding: 3px 0 6px;
+  }
+  .membership-wrap {
+    flex-direction: column;
+    row-gap: 60px;
+    padding: 60px 0 60px;
+  }
+  p.membership-wrap__description {
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .membership-wrap__left {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+  }
+  .membership-wrap__right {
+    width: 100%;
+  }
+  .membership-wrap__icon {
+    justify-content: left;
+    font-size: 14px;
+    line-height: 27px;
+  }
+  p.membership-wrap__price-text {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  h4.benefit__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  p.benefit__description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .m-benefit {
+    padding: 15px 20px;
+  }
+}

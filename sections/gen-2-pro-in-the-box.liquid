@@ -1,0 +1,166 @@
+{{ 'gen-2-pro-in-the-box.css' | asset_url | stylesheet_tag }}
+
+<div class="in_the_box_section">
+  <div class="container">
+    <div class="in-the-box-wrapper desktop_tabs">
+      <div class="box-tabs-items-wrapper">
+        <div class="tagline">
+          <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/heading-icon.svg?v=1743072329" alt="Icon">
+          <span>{{ section.settings.pre_heading }}</span>
+        </div>
+        <div class="box-tabs-items">
+          {% for block in section.blocks %}
+            <div class="accordion">
+              <div class="box-tab-title">{{ block.settings.title }}</div>
+              <p class="tab-desc">
+                {{ block.settings.description }}
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="extra-item">+ {{ section.settings.additional_bottom_content }}</div>
+      </div>
+      <div class="accordion_images">
+        {% for block in section.blocks %}
+          <img src="{{ block.settings.image | img_url : 'master' }}" alt="Box Item">
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="in-the-box-wrapper mobile_tab_slider">
+      <div class="box-tabs-items-wrapper">
+        <div class="tagline">
+          <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/heading-icon.svg?v=1743072329" alt="Icon">
+          <span>{{ section.settings.pre_heading }}</span>
+        </div>
+        <div class="box-tabs-cover">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="box-tab-item swiper-slide">
+                <img src="{{ block.settings.image | img_url : 'master' }}" alt="Box Item">
+                <div class="box-tab-title">{{ block.settings.title }}</div>
+                <p class="tab-desc">
+                  {{ block.settings.description }}
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="extra-item">+ {{ section.settings.additional_bottom_content }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const accordions = document.querySelectorAll(".accordion");
+  const accordionImages = document.querySelector(".accordion_images");
+
+  const openAccordion = (accordion) => {
+  const content = accordion.querySelector(".tab-desc");
+  accordion.classList.add("accordion_active");
+  content.style.maxHeight = content.scrollHeight + "px";
+  };
+
+  const closeAccordion = (accordion) => {
+  const content = accordion.querySelector(".tab-desc");
+  accordion.classList.remove("accordion_active");
+  content.style.maxHeight = null;
+  };
+
+  const activateImages = (index) => {
+  const images = accordionImages.querySelectorAll("img");
+  images.forEach((img, i) => {
+      if (i === index) {
+      img.classList.add("active");
+      } else {
+      img.classList.remove("active");
+      }
+  });
+  };
+
+  const firstAccordion = accordions[0];
+  openAccordion(firstAccordion);
+  activateImages(0);
+
+  accordions.forEach((accordion, index) => {
+  const intro = accordion.querySelector(".box-tab-title");
+
+  intro.onclick = () => {
+      accordions.forEach((acc, i) => {
+      if (acc !== accordion) closeAccordion(acc);
+      });
+
+      if (!accordion.classList.contains("accordion_active")) {
+      openAccordion(accordion);
+      activateImages(index);
+      }
+  };
+  });
+
+    if ($(window).width() < 767) {
+        let slider = new Swiper('.box-tabs-cover', {
+            slidesPerView: 1,
+            centeredSlides: false,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+</script>
+
+{% schema %}
+{
+  "name": "In The Box",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Additional Bottom Content",
+      "id": "additional_bottom_content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product In The Box"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

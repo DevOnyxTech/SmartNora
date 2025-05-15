@@ -1,0 +1,164 @@
+.customer-review-sec {
+  padding-block: 75px;
+  background: #f3f2ee;
+}
+.customer-review-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.customer-review-sec .section-title {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #05243b;
+}
+.customer-review-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.customer-review-wrapper .half-content {
+  width: 40%;
+}
+.customer-review-wrapper .half-image {
+  width: 60%;
+  padding-left: 85px;
+}
+.customer-review-wrapper .half-image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+.customer-review-wrapper .half-content p {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 28px;
+}
+.customer-review-sec .nora-work-btn {
+  padding-top: 30px;
+}
+.customer-review-sec .nora-work-btn a {
+  border: 1px solid rgb(74, 74, 74);
+  border-radius: 30px;
+  padding: 14px 20px;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  line-height: 1;
+}
+.customer-review-sec .nora-work-btn a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.customer-review-sec .nora-work-btn a svg {
+  width: 20px;
+  margin-right: 8px;
+}
+.customer-review-sec .nora-work-btn a:hover {
+  background: rgba(151, 202, 59, 1);
+  color: #fff;
+  border-color: rgba(151, 202, 59, 1);
+}
+.mobile-hide {
+  display: block;
+}
+.desktop-hide {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .customer-review-container {
+    max-width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .customer-review-sec {
+    padding-block: 60px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .customer-review-wrapper .half-content {
+    width: 100%;
+  }
+  .customer-review-wrapper .half-image {
+    width: 70%;
+    padding-left: 35px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .customer-review-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#fff),
+      color-stop(85.5%, #e0ebff)
+    );
+    background: -o-linear-gradient(bottom, #fff, #e0ebff 85.5%);
+    background: linear-gradient(360deg, #fff, #e0ebff 85.5%);
+  }
+  .customer-review-wrapper .half-image {
+    padding-left: 0;
+  }
+  .customer-review-wrapper .half-content,
+  .customer-review-wrapper .half-image {
+    width: 100%;
+  }
+  .customer-review-wrapper .half-content {
+    padding: 60px 40px 30px 40px;
+  }
+  .customer-review-sec {
+    padding: 0;
+    width: 100%;
+  }
+  .customer-review-wrapper .half-content p {
+    font-size: 18px;
+    max-width: 560px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  .customer-review-sec .nora-work-btn {
+    padding-top: 0;
+    text-align: center;
+  }
+  .customer-review-sec .section-title {
+    font-size: 36px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-hide {
+    display: block;
+  }
+  .customer-review-container {
+    padding-inline: 0;
+  }
+  .customer-review-wrapper .half-image img {
+    border-radius: 0;
+  }
+  .customer-review-sec .nora-work-btn a {
+    font-size: 14px;
+  }
+}

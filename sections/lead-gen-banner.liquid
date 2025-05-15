@@ -1,0 +1,100 @@
+{{ 'lead-gen-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="lead-gen-banner">
+  <div class="container">
+    <div class="l-banner-wrap">
+      <div class="lead-left">
+        <div class="limit-offer">{{ section.settings.pre_heading }}</div>
+        <h1>{{ section.settings.heading }}</h1>
+        <h2>{{ section.settings.sub_heading }}</h2>
+        {{ section.settings.content }}
+        <div class="mobile-hide">
+          <div class="blue-btn">
+            <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+          </div>
+          <div class="gray-text">{{ section.settings.button_caption }}</div>
+        </div>
+      </div>
+      <div class="lead-right">
+        <img src="{{ section.settings.image | img_url : 'master' }}">
+      </div>
+      <div class="desktop-hide">
+        <div class="blue-btn">
+          <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        </div>
+        <div class="gray-text">{{ section.settings.button_caption }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "richtext",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Button Caption",
+      "id": "button_caption"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Lead Gen Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+    $('a[href^="#"]').on('click',function (e) {
+    var target = this.hash,
+        $target = $(target);
+
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top-70
+    }, 900, 'swing', function () {
+      window.location.hash = target;
+    });
+  });
+{% endjavascript %}

@@ -1,0 +1,125 @@
+/* START CSS : Miracle Slider */
+
+.miracle-slider {
+  padding: 200px 0;
+  background-color: #05243b;
+  overflow: hidden;
+}
+
+.miracle-slider__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.miracle-slider .swiper-slide.swiper-slide-active h4 {
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 30px 0;
+  opacity: 1;
+  font-size: 96px;
+}
+
+.miracle-slider__author {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  /* Cuts off side slides */
+  padding: 40px 0;
+}
+
+.miracle-slider {
+  width: 100%;
+  height: 626px;
+}
+
+.miracle-slider .swiper-slide h4 {
+  font-size: 40px;
+  white-space: nowrap;
+  opacity: 0.5;
+  transition: 0.8s;
+  text-align: center;
+  font-weight: 600;
+  margin: 0px 0 10px 0;
+  letter-spacing: -0.32px;
+  line-height: 1;
+}
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .miracle-slider {
+  padding: 10.42vw 0;
+}
+
+.miracle-slider__title {
+  font-size: 1.04vw;
+  margin-bottom: 1.56vw;
+}
+
+.miracle-slider .swiper-slide.swiper-slide-active h4 {
+  font-size: 4vw;
+}
+
+.miracle-slider__author {
+  font-size: 1.04vw;
+}
+
+.slider-container {
+  padding: 2.08vw 0;
+}
+
+.miracle-slider {
+  height: 32.6vw;
+}
+
+.miracle-slider .swiper-slide h4 {
+  font-size: 2.08vw;
+  margin: 0px 0 0.52vw 0;
+  letter-spacing: -0.0167vw;
+}
+
+}
+@media (max-width: 1200px) {
+  .miracle-slider .swiper-slide.swiper-slide-active h4 {
+    font-size: 24px;
+    margin: 0 0 10px;
+  }
+
+  .miracle-slider .swiper-slide h4 {
+    font-size: 20px;
+  }
+
+  .miracle-slider__author {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .miracle-slider {
+    padding: 117px 0 162px;
+    height: 437px;
+  }
+  .miracle-slider__title {
+    max-width: 240px;
+    margin: 0 auto 30px;
+  }
+  .miracle-slider .swiper-slide h4, .miracle-slider .swiper-slide.swiper-slide-active h4 {
+    font-size: 30px;
+    margin-bottom: 30px !important;
+    line-height: normal !important;
+  }
+
+  .miracle-slider__author {
+    font-size: 20px;
+  }
+}
+
+/* START END : Miracle Slider */

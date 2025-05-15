@@ -1,0 +1,164 @@
+{{ 'science-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="full-width-banner">
+  <div class="full-width-banner__section full-width-banner__section--half flex align-center">
+    <div class="snoring-breaks-equal-blocks snoring-content-break-section">
+      <div class="snoring-breaks__content">
+        <div class="tagline">
+          <img src="//www.smartnora.com/cdn/shop/files/nora-pebble-icon.svg?v=1698053671" alt="Nora Pebble Icon"
+            class="snoring-breaks__tagline-icon">
+          <span class="snoring-breaks__tagline-text d-desktop">{{ section.settings.desktop_pre_heading }}</span>
+          <span class="snoring-breaks__tagline-text d-mobile">{{ section.settings.mobile_pre_heading }}</span>
+        </div>
+        <h2 class="snoring-breaks__heading">
+          {{ section.settings.heading }}
+        </h2>
+        <p class="snoring-breaks__description">
+          {{ section.settings.content }}
+        </p>
+      </div>
+    </div>
+    <div class="snoring-breaks-equal-blocks snoring-image-break-section">
+      <div class="snoring-breaks-image-wrapper">
+        <!--
+            <img src="{{ section.settings.background_image | img_url : 'master' }}" class="w-100 d-block d-bg">
+            <img
+              src="{{ section.settings.mob_background_image | img_url : 'master' }}"
+              class="w-100 d-block m-bg"
+            >
+          -->
+        <div class="sleep-counter-wrapper">
+          <h2 class="d-mobile">{{ section.settings.desktop_pre_heading }}</h2>
+          <div class="sleep-counter flex">
+            <div class="sleep-counter__box">
+              <div class="sleep-counter__hour">
+                <div class="sleep-counter__label_wrapper">
+                  <h5 class="sleep-counter__label">{{ section.settings.sleep_counter_title }}</h5>
+                </div>
+                <div class="sleep-counter__icon-wrapper flex">
+                  <div class="sleep-counter__icon">
+                    <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/moon.svg?v=1742799102" alt="Moon icon">
+                  </div>
+                  <div class="sleep-counter__text">
+                    <p>You Slept</p>
+                    <h3 class="sleep-time">
+                      <span class="hours">{{ section.settings.you_slept_hours }}</span><span class="h-sign">h</span>
+                      <span class="minutes">{{ section.settings.you_slept_minutes }}</span><span class="m-sign">m</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sleep-counter__box">
+              <div class="sleep-counter__hour">
+                <div class="sleep-counter__label_wrapper text-right">
+                  <h5 class="sleep-counter__label bg-lt-wht">
+                    <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/without-nora-icon.svg?v=1742820522"
+                      alt="Moon icon">Without Nora
+                  </h5>
+                </div>
+                <div class="sleep-counter__icon-wrapper flex">
+                  <div class="sleep-counter__icon">
+                    <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/lost_sleep.svg?v=1742820522"
+                      alt="Lost sleep icon">
+                  </div>
+                  <div class="sleep-counter__text">
+                    <p>Your lost sleep:</p>
+                    <h3 class="sleep-time">
+                      <span class="hours">{{ section.settings.lost_sleep_hours }}</span><span class="h-sign">h</span>
+                      <span class="minutes">{{ section.settings.lost_sleep_minutes }}</span><span
+                        class="m-sign">m</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph-box-wrapper">
+            <img src="{{ section.settings.graph_image | img_url : 'master' }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Science Banner",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Desktop Pre Heading",
+      "id": "desktop_pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Mobile Pre Heading",
+      "id": "mobile_pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Sleep counter Title",
+      "id": "sleep_counter_title"
+    },
+    {
+      "type": "text",
+      "label": "You Slept Hours",
+      "id": "you_slept_hours"
+    },
+    {
+      "type": "text",
+      "label": "You Slept Minutes",
+      "id": "you_slept_minutes"
+    },
+    {
+      "type": "text",
+      "label": "Lost Sleep Hours",
+      "id": "lost_sleep_hours"
+    },
+    {
+      "type": "text",
+      "label": "Lost Sleep Minutes",
+      "id": "lost_sleep_minutes"
+    },
+    {
+      "type": "image_picker",
+      "label": "Graph Image",
+      "id": "graph_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Background Image",
+      "id": "background_image"
+    },
+      {
+      "type": "image_picker",
+      "label": "Mobile Background Image",
+      "id": "mob_background_image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Science Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

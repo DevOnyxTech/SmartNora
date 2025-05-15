@@ -1,0 +1,18 @@
+.podcast-banner__container{max-width:1140px;margin:0 auto;}
+.podcast-banner__wrapper{padding: 60px 0;}
+span.podcast-banner__icon {
+    display: flex;
+    align-items: center;
+    font-size:18px;line-height: 27px;color:#05243B;
+    margin-bottom: 5px;
+}
+span.podcast-banner__icon img{
+  padding-right: 10px;
+}
+.podcast-banner__title{font-size:36px;line-height: normal;color:#05243B;}
+@media (max-width: 1180px) {
+	.podcast-banner__container{padding: 0 30px;}
+}
+@media (max-width: 767.98px) {
+	span.podcast-banner__icon{font-size: 14px;line-height: normal;}
+}

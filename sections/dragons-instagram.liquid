@@ -1,0 +1,193 @@
+{{ 'dragons-instagram.css' | asset_url | stylesheet_tag }}
+
+<div class="main-instagram-review">
+  <div class="container">
+    <div class="comman-title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="insta-wrap">
+      <div class="swiper-container insta--box">
+        <div class="instagram-review-box swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="i-box swiper-slide">
+              <!-- <div class="vid-play-icon-wrapp"> -->
+              <img
+                class="vid-play"
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Play_Button.svg?v=1733311547"
+              >
+              <!-- </div> -->
+              <video
+                poster="{{ block.settings.poster | img_url : 'master' }}"
+                playsinline
+                webkit-playsinline
+                x-webkit-airplay="allow"
+                preload="metadata"
+                src="{{ block.settings.video_url }}"
+              ></video>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  {% if section.settings.label != blank %}
+    <div class="btn_green insta__cta">
+      <a class="btn_green insta__cta" target="_blank" href="{{ section.settings.link }}">
+        {{- section.settings.label -}}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+    var mySwiper = new Swiper('.insta--box', {
+    slidesPerView: 3,
+    loop: true,
+    centeredSlides: true,
+    simulateTouch: false,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: '.insta-wrap .swiper-button-next',
+      prevEl: '.insta-wrap .swiper-button-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 0,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: false,
+      },
+      768: {
+        slidesPerView: 1.4,
+        spaceBetween: 0,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: false,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        simulateTouch: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: false,
+      },
+      1199: {
+        slidesPerView: 3,
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      transitionStart: function () {
+        var videos = document.querySelectorAll('.main-instagram-review video');
+        Array.prototype.forEach.call(videos, function (video) {
+          video.pause();
+          video.previousElementSibling.style.display = "block";  // Show the play icon when paused
+        });
+      },
+    }
+  });
+
+  // Function to pause all videos
+  function pauseAllVideos() {
+    var videos = document.querySelectorAll('.main-instagram-review video');
+    videos.forEach(function (video) {
+      video.pause();
+      video.previousElementSibling.style.display = "block";  // Show the play icon when paused
+    });
+  }
+
+  // Click event for video elements
+  var videos = document.querySelectorAll('.main-instagram-review video, .main-instagram-review img');
+  videos.forEach(function (video) {
+    video.addEventListener('click', function () {
+      if (video.paused) {
+        pauseAllVideos(); // Pause all other videos before playing the clicked one
+        video.play();
+        video.previousElementSibling.style.display = "none";  // Hide the play icon when playing
+      } else {
+        video.pause();
+        video.previousElementSibling.style.display = "block";  // Show the play icon when paused
+      }
+    });
+  });
+
+  // Handle play and pause events on each video to toggle the visibility of the play icon
+  videos.forEach(function (video) {
+    video.addEventListener('play', function () {
+      video.previousElementSibling.style.display = "none";  // Hide the play icon when playing
+    });
+
+    video.addEventListener('pause', function () {
+      video.previousElementSibling.style.display = "block";  // Show the play icon when paused
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Instagram",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+        {
+      "type": "text",
+      "label": "Button Label",
+      "id": "label"
+    },
+        {
+      "type": "url",
+      "label": "Button Link",
+      "id": "link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Video URL",
+          "id": "video_url",
+          "info": "Shopify hosted link"
+        },
+                {
+          "type": "image_picker",
+          "label": "Poster Image",
+          "id": "poster"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dragons Instagram"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

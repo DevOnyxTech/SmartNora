@@ -1,0 +1,119 @@
+{{ 'section-review-page-testimonial.css' | asset_url | stylesheet_tag }}
+<div class="testimony-slider component">
+  <div class="testimony-container scroll-trigger animate--slide-in">
+    <div class="testimony-wrapper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide scroll-trigger animate--slide-in">
+            <div class="tm-slide-cover">
+              <div class="tm-content">
+                <h3 class="scroll-trigger animate--slide-in">{{ block.settings.title }}</h3>
+                <p class="scroll-trigger animate--slide-in">
+                  {{ block.settings.description }}
+                </p>
+              </div>
+              <div class="tm-video-block scroll-trigger animate--slide-in">
+                <a class="tm-video-block-inner" href="{{ block.settings.video_link }}" data-fancybox="">
+                  <div class="vid-pop-btn">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <img
+                    loading="lazy"
+                    height
+                    width
+                    class=""
+                    src="{{ block.settings.video_thumbnail | img_url : 'master' }}"
+                    alt="Testimonial 1"
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="tm-nav-arrow scroll-trigger animate--slide-in">
+        <div class="tm-nav swiper-button-prev">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </div>
+        <div class="tm-nav swiper-button-next">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+      <span class="swiper-pagination"></span>
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(function() {
+      // Testimonial Slider
+      var swiper2 = new Swiper('.testimony-wrapper', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: true,
+        parallax: true,
+        autoplay: true,
+        speed: 1000,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Description",
+          "id": "description"
+        },
+        {
+          "type": "image_picker",
+          "label": "Video Thumbnail",
+          "id": "video_thumbnail"
+        },
+        {
+          "type": "text",
+          "label": "Video Link",
+          "id": "video_link",
+          "info": "Enter only vimeo "
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Page Testimonial"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,68 @@
+{{ 'lead-gen-story.css' | asset_url | stylesheet_tag }}
+
+<div class="lead-story">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="story-wrap">
+      <div class="left-story">
+        <div class="semi-bold">
+          <p>{{ section.settings.title }}</p>
+        </div>
+        {{ section.settings.content }}
+      </div>
+      <div class="right-story" data-fancybox href="#leadStoryVideo">
+        <img src="{{ section.settings.video_poster | img_url : 'master' }}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<video width="70%" height="70%" playsinline webkit-playsinline id="leadStoryVideo" style="display:none;">
+  <source src="{{ section.settings.video_link }}" type="video/mp4">
+  Your browser doesn't support HTML5 video tag.
+</video>
+{% schema %}
+{
+  "name": "Our Story",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "image_picker",
+      "label": "Video Poster",
+      "id": "video_poster"
+    },
+    {
+      "type": "text",
+      "label": "Video Link",
+      "id": "video_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Lead Gen Story"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

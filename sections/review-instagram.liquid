@@ -1,0 +1,148 @@
+{{ 'review-instagram.css' | asset_url | stylesheet_tag }}
+<div class="review_video_section">
+  <div class="container">
+    <div class="review-video-title">
+      {% if section.settings.pre_heading %}
+        <p>★★★★★ {{ section.settings.pre_heading }}</p>
+      {% endif %}
+      <h1>{{ section.settings.heading }}</h1>
+    </div>
+    <div class="review-video-container">
+      <div class="review-video-wrapper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="review-video">
+                <video
+                  class="video-content"
+                  poster="{{ block.settings.poster | img_url : 'master' }}"
+                  playsinline=""
+                  webkit-playsinline=""
+                  x-webkit-airplay="allow"
+                  preload="metadata"
+                  src="{{ block.settings.video.sources[1].url }}"
+                ></video>
+                <div class="v-play-btn">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/1053/4408/files/v-play-btn.svg?v=1742989613"
+                    alt="Play Button"
+                  >
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <span class="swiper-pagination"></span>
+      </div>
+      <div class="video-slider-nav-wrapper">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    jQuery(document).ready(function() {
+       // Review Video Slider
+      let slider = new Swiper('.review-video-wrapper', {
+          slidesPerView: 3,
+          centeredSlides: false,
+          spaceBetween: 30,
+          loop: true,
+          simulateTouch: false,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          navigation: {
+              nextEl: '.video-slider-nav-wrapper .swiper-button-next',
+              prevEl: '.video-slider-nav-wrapper .swiper-button-prev',
+          },
+          on: {
+              slideChange: function() {
+                  const videos = document.querySelectorAll('video');
+                  videos.forEach(function(video) {
+                      video.pause();
+                  });
+              },
+          },
+          breakpoints: {
+            767: {
+                slidesPerView: 1.6,
+                centeredSlides: true,
+                spaceBetween: 20,
+            },
+            1024: {
+                simulateTouch: true,
+            }
+          },
+      });
+      const videos = document.querySelectorAll('.review-video-wrapper video');
+          videos.forEach((video) => {
+          video.addEventListener('play', () => {
+              videos.forEach((v) => {
+              if (v !== video) {
+                  v.pause();
+              }
+              });
+          });
+      });
+      // Play Pause Video
+      $('.v-play-btn, .video-content').click(function () {
+          const video = $(this).hasClass('v-play-btn') ? $(this).siblings('.video-content').get(0) : this;
+          video.paused ? video.play() : video.pause();
+      });
+
+      $('.video-content').on('play pause', function (e) {
+          $(this).siblings('.v-play-btn').toggle(e.type === 'pause');
+      });
+       });
+</script>
+
+{% schema %}
+{
+  "name": "Instagram",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "label": "Video",
+          "id": "video"
+        },
+           {
+          "type": "image_picker",
+          "label": "Poster Image",
+          "id": "poster"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Instagram"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

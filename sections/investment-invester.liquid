@@ -1,0 +1,62 @@
+{{ 'investment-invester.css' | asset_url | stylesheet_tag }}
+
+<div class="our-investors-section">
+  <div class="our-investors-container">
+    <div class="investors-title">
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+      <p>
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="investors-logo">
+      {% for block in section.blocks %}
+        <div class="logo-items">
+          <img src="{{ block.settings.logo | img_url : 'master' }}" alt="{{ block.settings.logo.alt }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Investors",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Description",
+      "id": "description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Logo",
+          "id": "logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Investment Investor"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

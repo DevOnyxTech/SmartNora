@@ -1,0 +1,150 @@
+.bedroom-makeover-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-block: 56px;
+}
+.bedroom-makeover-section .half-content-img {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+}
+.bedroom-makeover-section .half-content h2 {
+  font-size: 72px;
+  line-height: 74px;
+  font-weight: inherit;
+  color: #05243b;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.bedroom-makeover-section .half-content p {
+  font-size: 20px;
+  color: #4a4a4a;
+  line-height: 30px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+.bedroom-makeover-section .enter-now-btn {
+  padding: 12px 20px;
+  color: #4a4a4a;
+  border: 1px solid rgb(74, 74, 74);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 16px;
+}
+.bedroom-makeover-section .enter-now-btn:hover {
+  color: #fff;
+  background-color: rgb(151, 202, 59);
+  border-color: rgb(151, 202, 59);
+}
+.bedroom-makeover-section .half-image img {
+  margin-top: 80px;
+  max-width: 100%;
+  border-radius: 24px;
+  display: block;
+}
+@media screen and (max-width: 1279px) {
+  .bedroom-makeover-container {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .bedroom-makeover-container {
+    padding-block: 40px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bedroom-makeover-container {
+    max-width: 576px;
+    padding-block: 40px;
+  }
+  .bedroom-makeover-section .half-content-img {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .bedroom-makeover-section .half-content h2 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .bedroom-makeover-section .half-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .bedroom-makeover-section .half-image {
+    display: none;
+  }
+}
+.bedroom-makeover-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-block: 56px;
+}
+.bedroom-makeover-section .half-content-img {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+}
+.bedroom-makeover-section .half-content h2 {
+  font-size: 72px;
+  line-height: 74px;
+  font-weight: inherit;
+  color: rgb(5, 36, 59);
+  margin-bottom: 20px;
+}
+.bedroom-makeover-section .half-content p {
+  font-size: 20px;
+  color: rgb(74, 74, 74);
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.bedroom-makeover-section .enter-now-btn {
+  padding: 12px 20px;
+  color: rgb(74, 74, 74);
+  border: 1px solid rgb(74, 74, 74);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 24px;
+}
+.bedroom-makeover-section .enter-now-btn:hover {
+  color: #fff;
+  background-color: rgb(151, 202, 59);
+  border-color: rgb(151, 202, 59);
+}
+.bedroom-makeover-section .half-image img {
+  margin-top: 80px;
+  max-width: 100%;
+  border-radius: 24px;
+  display: block;
+}
+@media screen and (max-width: 1279px) {
+  .bedroom-makeover-container {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bedroom-makeover-container {
+    max-width: 576px;
+    padding-block: 40px;
+  }
+  .bedroom-makeover-section .half-content-img {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .bedroom-makeover-section .half-content h2 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .bedroom-makeover-section .half-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .bedroom-makeover-section .half-image {
+    display: none;
+  }
+}

@@ -1,0 +1,72 @@
+{{ 'section-home-image-text.css' | asset_url | stylesheet_tag }}
+<div class="customer-review-sec component">
+  <div class="customer-review-container">
+    <div class="customer-review-wrapper">
+      <div class="half-content">
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+        <p>{{ section.settings.description }}</p>
+        <div class="nora-work-btn">
+          <a href="{{ section.settings.button_link }}">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+              </svg>
+              <span>{{ section.settings.button_text }}</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="half-image">
+        <img src="{{ section.settings.desktop_image | img_url: 'master' }}" alt="" loading="lazy" class="mobile-hide">
+        <img src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="" loading="lazy" class="desktop-hide">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home Customer Review",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Be a lover,\nnot a snorer."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description Text",
+      "default": "Consistent sleep is the foundation of a healthy, intimate relationship. Smart Nora customers report peaceful nights, better mood, and greater intimacy."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Customer Review",
+      "category": "Image with text"
+    }
+  ]
+}
+{% endschema %}

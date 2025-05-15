@@ -1,0 +1,222 @@
+.main-companion-banner {
+    background-color: #05243B;
+    position: relative;
+    z-index: 1;
+    padding: 112px 0 230px;
+    overflow: hidden;
+}
+
+.g-btn-wrap {
+    display: flex;
+    column-gap: 13px;
+}
+
+.main-companion-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.top-logo img {
+    width: 142px;
+}
+
+.com-cover {
+    display: flex;
+    align-items: center;
+}
+
+.top-logo {
+    padding-bottom: 40px;
+}
+
+.main-companion-banner .c-left {
+    width: 45%;
+    padding-top: 3px;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.main-companion-banner .c-left h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: initial;
+    padding-bottom: 20px;
+}
+
+.main-companion-banner .c-right {
+    width: 60%;
+}
+
+.gradiant-bg {
+    background: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Ellipse_570_1.svg?v=1733904784) no-repeat center / cover;
+    background-size: 100%;
+    width: 800px;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+}
+
+.main-companion-banner .c-right img {
+    width: 100%;
+    margin-left: 50px;
+}
+
+.d-green-btn {
+    margin-bottom: 15px;
+    background-color: rgba(122, 204, 204, 0.2);
+    min-width: 338px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #7ACCCC;
+    text-align: left;
+    font-size: 16px;
+}
+
+.d-green-btn span {
+    font-weight: 400;
+}
+
+.d-green-btn a {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+.com-title-content h2 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 491px;
+}
+
+.com-app-bottom {
+    padding-top: 43px;
+
+}
+
+.com-app-bottom p.com-font {
+    font-size: 16px;
+    font-weight: 400;
+    color: #7ACCCC;
+    line-height: 22.4px;
+    padding-bottom: 8px;
+    max-width: 362px;
+}
+
+.com-app-bottom p.com-font span {
+    font-weight: 600;
+}
+
+.com-app-bottom img {
+    width: 100%;
+    height: 63px;
+}
+
+.mobile-hide {
+    display: block;
+}
+
+.desktop-hide {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .com-app-bottom p.com-font {
+        max-width: initial;
+    }
+    .d-green-btn {
+        text-align: center;
+    }
+    .g-btn-wrap {
+        justify-content: center;
+    }
+
+    .com-cover {
+        flex-direction: column-reverse;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .desktop-hide {
+        display: block;
+    }
+
+    .main-companion-banner .c-right {
+        width: 100%;
+    }
+
+    .main-companion-banner .c-right img {
+        margin-left: 0;
+    }
+
+    .main-companion-banner .c-left {
+        width: 100%;
+    }
+
+    .desktop-hide {
+        display: block;
+        text-align: center;
+    }
+
+    .d-green-btn a {
+        font-size: 12px;
+    }
+
+    .main-companion-banner {
+        padding: 30px 0 180px;
+    }
+
+    .top-logo {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .top-logo img {
+        width: 106px;
+    }
+
+    .main-companion-banner .c-left h1 {
+        font-size: 36px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .d-green-btn,
+    .d-green-btn span a {
+        font-size: 12px;
+        min-width: 196px;
+    }
+
+    .com-title-content {
+        text-align: center;
+    }
+
+    .gradiant-bg {
+        width: 418px;
+        height: 428px;
+        left: -10px;
+        top: 45px;
+    }
+
+    .com-app-bottom {
+        padding-top: 6px;
+        margin: 0 auto;
+    }
+
+    .com-app-bottom img {
+        width: 100%;
+    }
+
+    .com-app-bottom p.com-font {
+        padding-bottom: 25px;
+    }
+}

@@ -1,0 +1,220 @@
+.container {
+  max-width: 1417px;
+  margin: 0 auto;
+}
+.our-story-sec .container {
+  max-width: 1335px;
+}
+.our-story-sec h2 {
+  text-align: center;
+  letter-spacing: -1.5px;
+  font-size: 60px;
+  line-height: 120%;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #05243b;
+}
+.our-story-sec .white-btn button {
+  font-size: 18px;
+  padding: 9px 33px;
+  border: 1px solid #05243b;
+  border-radius: 50px;
+  padding-left: 2.22rem;
+  padding-right: 2.22rem;
+  display: inline-flex;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+.white-btn button:hover {
+  background-color: #97ca3b;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.our-story-sec {
+  padding: 40px 0 90px;
+  background: #f3f2ee;
+}
+.our-story-block {
+  display: flex;
+  /* align-items: center; */
+}
+.our-story-block .left-block {
+  width: 50%;
+  padding-top: 17px;
+}
+.our-story-block .right-block {
+  width: 50%;
+  padding-left: 41px;
+}
+.our-story-block .right-block p {
+  margin-bottom: 23px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #05243b;
+  font-family: Inter, system-ui !important;
+  font-weight: 400;
+}
+.our-story-block .white-btn {
+  margin-top: 48px;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #fff;
+  width: 70%;
+  position: relative;
+}
+.modal.story-modal {
+  align-items: center;
+}
+.story-modal .modal-content {
+  width: 90% !important;
+}
+.close {
+  position: absolute;
+  right: 4px;
+  top: -10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.our-story-sec .desktop-hide {
+  display: none;
+}
+.our-story-sec .mobile-hide {
+  display: flex !important;
+}
+.our-story-sec .white-btn button svg {
+  width: 20px;
+  height: 20px;
+}
+@media only screen and (max-width: 1500px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 1339px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .our-story-sec h2 {
+    font-size: 38px;
+    line-height: normal;
+  }
+  .our-story-block .right-block p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .our-story-sec {
+    padding: 40px 0 70px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .our-story-sec .white-btn button {
+    background-color: transparent;
+    color: #000;
+  }
+  .our-story-sec .container {
+    padding: 0 50px;
+  }
+  .our-story-sec h2 {
+    font-size: 35px;
+    line-height: normal;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .our-story-block {
+    flex-wrap: wrap;
+  }
+  .our-story-block .left-block,
+  .our-story-block .right-block {
+    width: 100%;
+    padding-left: 0;
+  }
+  .our-story-sec .mobile-hide {
+    display: none !important;
+  }
+  .our-story-sec .desktop-hide {
+    display: block;
+  }
+  .our-story-block .left-block video {
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 238px;
+    object-fit: contain;
+  }
+  .our-story-block .white-btn {
+    text-align: center;
+  }
+  .our-story-block .white-btn {
+    margin: 20px 0;
+  }
+  .our-story-block .right-block p {
+    text-align: center;
+  }
+  .our-story-sec {
+    padding: 30px 0 5px;
+  }
+  .our-story-sec .left-block img {
+    width: 54px;
+  }
+  .our-video-wrap {
+    position: relative;
+  }
+  .our-story-sec .video-play-sec {
+    top: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+  .our-story-sec {
+    background: linear-gradient(
+      100deg,
+      rgba(218, 220, 221, 1) 0%,
+      rgba(210, 210, 215, 1) 100%
+    );
+  }
+  .our-story-sec .container {
+    padding: 0;
+  }
+  .mobile-view-image {
+    width: 100%;
+    display: block;
+  }
+  .mobile-view-image img {
+    width: 100%;
+    display: block;
+  }
+  .our-story-sec h2 {
+    font-weight: 400;
+    color: #191e1a;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .our-story-sec {
+    padding: 60px 0 0px;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 390px) {
+}

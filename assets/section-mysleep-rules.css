@@ -1,0 +1,45 @@
+.rules-section {
+  padding: 40px 0;
+}
+.rules-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+.rules-section .rules-wrapper {
+  grid-column: span 2 / span 2;
+}
+.rules-section .rules-descr {
+  grid-column: span 3 / span 3;
+  max-width: 650px;
+}
+.rules-section .rules-wrapper h2 {
+  font-size: 32px;
+  line-height: 38px;
+  color: #05243b;
+  margin-bottom: 12px;
+  font-weight: 400;
+  margin-top: 0;
+}
+.rules-section .rules-descr p {
+  color: #374151;
+  line-height: 28px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 16px;
+}
+@media screen and (max-width: 1279px) {
+  .rules-container {
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rules-container {
+    display: block;
+  }
+  .rules-section .rules-wrapper h2 {
+    margin-bottom: 32px;
+  }
+}

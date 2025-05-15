@@ -1,0 +1,146 @@
+{{ 'section-product-page-slider.css' | asset_url | stylesheet_tag }}
+<div class="product-page-slider-wrapper component" id="sliderSection">
+  <div class="product-detail-slider">
+    <div class="product-detail-header">
+      <h3>{{ section.settings.title }}</h3>
+      <p>{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="swiper">
+      <div class="gallery">
+        <div class="swiper-container product-slider">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.alt }}">
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="false">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              fill="none"
+              class="w-6 h-6"
+            >
+              <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+              </path>
+            </svg>
+          </div>
+          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              fill="none"
+              class="w-6 h-6"
+            >
+              <path d="M9 5l7 7-7 7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-container product-thumbs">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.alt }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+      var slider = new Swiper(".product-slider", {
+          slidesPerView: 1,
+          centeredSlides: true,
+          speed: 600,
+          autoplay: {
+              delay: 3000, // Autoplay delay in milliseconds (3 seconds)
+              disableOnInteraction: false, // Continue autoplay after user interaction
+          },
+          navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+          },
+          on: {
+              reachEnd: function () {
+                  // Adding a small delay for smoother experience
+                  setTimeout(() => {
+                      slider.slideTo(0, 500); // Slides back to the first slide (index 0)
+                  }, 500); // Optional delay of 0.5 seconds
+              },
+          },
+      });
+
+      var thumbs = new Swiper(".product-thumbs", {
+          slidesPerView: 4, // Adjusted slidesPerView to a numeric value
+          spaceBetween: 10,
+          centeredSlides: true,
+          slideToClickedSlide: true, // Clicking on thumbnails changes the main slider
+          watchSlidesProgress: true, // Ensure progress is tracked for active thumbnail
+          watchSlidesVisibility: true, // Make sure only visible slides are interactable
+      });
+
+      // Linking the two Swipers
+      slider.controller.control = thumbs;
+      thumbs.controller.control = slider;
+
+      document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Page Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "What's In The Box"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Everything that comes with Nora."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Alt Text",
+          "info": "Describe the image for screen readers"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product page Slider",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

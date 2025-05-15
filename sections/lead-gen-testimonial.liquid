@@ -1,0 +1,147 @@
+{{ 'lead-gen-testimonial.css' | asset_url | stylesheet_tag }}
+
+<div class="lead-testimonial">
+  <div class="container">
+    <div class="top-sec">
+      <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/Stars.svg?v=1730889402">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.sub_heading }}</p>
+    </div>
+    <div class="bottom-sec swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="testimonial-box swiper-slide">
+            <div class="title">{{ block.settings.title }}</div>
+            <p>
+              {{ block.settings.content }}
+            </p>
+            <div class="author-name">{{ block.settings.customer_name }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="green-btn">
+      <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
+</div>
+<script>
+    $(document).ready(function() {
+       var mySwiper = new Swiper('.bottom-sec', {
+     // direction: 'horizontal',
+           slidesPerView: 3,
+     loop: true,
+     centeredSlides: true,
+          navigation: true,
+  pagination: {
+         el: ".swiper-pagination",
+         type: "fraction",
+       },
+     navigation: {
+       nextEl: '.swiper-button-next',
+       prevEl: '.swiper-button-prev',
+     },
+     breakpoints: {
+       320: {
+         slidesPerView: 1.5,
+         spaceBetween: 30,
+         pagination: {
+           el: '.swiper-pagination',
+             type: "fraction",
+           clickable: true,
+         },
+         navigation: false,
+       },
+       768: {
+         slidesPerView: 2,
+         spaceBetween: 30,
+         pagination: {
+           el: '.swiper-pagination',
+             type: "fraction",
+           clickable: true,
+         },
+         navigation: false,
+       },
+       1024: {
+         slidesPerView: 3,
+         spaceBetween: 0,
+         pagination: {
+           el: '.swiper-pagination',
+             type: "fraction",
+           clickable: true,
+         },
+         navigation: false,
+       },
+       1199: {
+         slidesPerView: 3,
+       }
+     }
+   });
+   });
+</script>
+{% schema %}
+{
+  "name": "Testimonial",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "text",
+          "label": "Customer Name",
+          "id": "customer_name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lead Gen Testimonial"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,100 @@
+.our-investors-section {
+    background: linear-gradient(360deg, #FFFFFF 0%, #EDFAFF 100%);
+    padding-block: 123px 123px;
+    border-bottom: 1px solid #05243B;
+}
+.our-investors-container {
+    max-width: 1012px;
+    margin: 0 auto;
+}
+.investors-title {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section-title {
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #05243B;
+}
+.investors-title .section-title {
+    margin-bottom: 55px;
+}
+.investors-title p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #05243B;
+}
+.investors-logo {
+    margin: 70px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:25px;
+}
+.logo-items img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width:1200px) {
+
+    .our-investors-section {
+        padding-block: 80px;
+    }
+    .investors-title .section-title {
+        margin-bottom: 25px;
+    }
+    .section-title {
+        font-size: 55px;
+        line-height: 72px;
+    }
+    .investors-title p {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .investors-logo {
+        margin: 40px auto 0;
+    }
+    .our-investors-container {
+        max-width: 90%;
+    }
+    .investors-logo .logo-items img {
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .investors-logo .logo-items img {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .our-investors-section {
+        padding-block: 50px;
+    }
+    .investors-logo {
+        margin: 40px auto 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .investors-logo .logo-items img {
+        width: auto;
+        max-width: 100%;
+        height: 35px;
+    }
+}
+@media only screen and (max-width:576px) {
+    .investors-logo {
+        max-width: 330px;
+    }
+    .investors-logo .logo-items {
+        width: auto;
+    }

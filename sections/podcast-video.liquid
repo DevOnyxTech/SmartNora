@@ -1,0 +1,103 @@
+{{ 'podcast-video.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+  <div class="protocol-fix-sleep">
+    <div class="protocol-fix__container">
+      <div class="protocols__wrapper">
+        <div class="protocols__content">
+          <div class="protocols__header">
+            <p class="protocols__subtitle">{{ block.settings.pre_title }}</p>
+            <h2 class="protocols__title">{{ block.settings.title }}</h2>
+          </div>
+        </div>
+        <div class="protocols__video">
+          <img
+            src="{{ block.settings.video_poster |  img_url: 'master' }}"
+          >
+          <div class="protocols-sub__content">
+            <h2>{{ block.settings.video_title }}</h2>
+            <div class="protocols-play__icon">
+              <img
+                {% if block.settings.video %}
+                  data-fancybox
+                  href="#myVideo-{{ forloop.index }}"
+                {% endif %}
+                src="https://cdn.shopify.com/s/files/1/1053/4408/files/Button.svg?v=1738766047">
+            </div>
+            <div class="protocols-sub__title">
+              {{ block.settings.video_sub_title }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if block.settings.video %}
+      <video
+        width="70%"
+        height="70%"
+        playsinline
+        webkit-playsinline
+        id="myVideo-{{ forloop.index }}"
+        style="display:none;"
+      >
+        <source src="{{block.settings.video.sources[0].url}}" type="video/mp4">
+        Your browser doesn't support HTML5 video tag.
+      </video>
+    {% endif %}
+  </div>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Podcast Video",
+  "blocks": [
+    {
+      "type": "podcast",
+      "name": "Podcast",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Pre Title",
+          "id": "pre_title"
+        },
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "image_picker",
+          "label": "Video Poster",
+          "id": "video_poster"
+        },
+        {
+          "type": "video",
+          "label": "Video",
+          "id": "video"
+        },
+        {
+          "type": "html",
+          "label": "Video Title",
+          "id": "video_title"
+        },
+        {
+          "type": "html",
+          "label": "Video Sub Title",
+          "id": "video_sub_title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Podcast Video"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,77 @@
+{{ 'section-gif.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .no-mask-sec {
+    background:{{ section.settings.bg_color }};
+  }
+</style>
+
+<div class="no-mask-sec component">
+  <div class="no-mask-container">
+    <h2>
+      {{ section.settings.heading }}
+    </h2>
+    <div class="sleep_img">
+     <video id="sleepVideo" width="856" height="478"         autoplay
+        loop
+        muted
+        playsinline>
+      <source src="{{ section.settings.gif }}" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    </div>
+    <div class="sleep_sub_title">
+      <p>
+        {{ section.settings.content }}
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById('sleepVideo');
+    if (video) {
+      video.play();
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "Gif section",
+  "tag": "section",
+  "settings": [
+       {
+      "type": "color",
+      "label": "Background Color",
+      "id": "bg_color"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "url",
+      "label": "GIF",
+      "id": "gif"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Gif Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

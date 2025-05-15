@@ -1,0 +1,105 @@
+.contact-support-section {
+  padding: 40px 20px;
+  margin-top: 15px;
+}
+.contact-support-container {
+  background-image: url("https://cdn.shopify.com/s/files/1/1053/4408/files/contact_bg.jpg?v=1698142633");
+  background-position: center right;
+  border-radius: 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 40px;
+  max-width: 1185px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contact-support-section .contact-support-title {
+  max-width: calc(100% - 356px);
+  width: 100%;
+}
+.contact-support-section .contact-box {
+  display: flex;
+  max-width: 356px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contact-support-section .contact-support-title h3 {
+  max-width: 623px;
+  letter-spacing: 0.2px;
+  color: #dfdfdf;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: normal;
+}
+.contact-support-section .phn-icon {
+  width: 60px;
+  height: 60px;
+}
+.contact-support-section .cd-wrapper {
+  max-width: calc(100% - 60px);
+  padding-left: 20px;
+}
+.contact-support-section .cd-wrapper a {
+  letter-spacing: 0.32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 43px;
+  color: #fff;
+  text-decoration: none;
+}
+.contact-support-section .cd-wrapper p {
+  letter-spacing: 0.2px;
+  color: #d8d8d8;
+  font-size: 20px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 992px) {
+  .contact-support-section .contact-support-title {
+    width: 100%;
+    text-align: center;
+    max-width: inherit;
+    margin-bottom: 25px;
+  }
+  .contact-support-section .contact-support-title h3 {
+    max-width: inherit;
+    font-size: 20px;
+  }
+  .contact-support-section .contact-box {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contact-support-container {
+    background-position: center right 28%;
+    padding: 30px;
+  }
+  .contact-support-section .contact-support-title h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .contact-support-section .phn-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .contact-support-section .cd-wrapper {
+    max-width: calc(100% - 50px);
+    padding-left: 20px;
+    text-align: center;
+  }
+  .contact-support-section .cd-wrapper a {
+    font-size: 22px;
+    line-height: 33px;
+  }
+  .contact-support-section .cd-wrapper p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .contact-support-section .contact-support-title h3 {
+    font-size: 18px;
+  }
+}

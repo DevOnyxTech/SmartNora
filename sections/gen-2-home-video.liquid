@@ -1,0 +1,142 @@
+{{ 'gen-2-home-video.css' | asset_url | stylesheet_tag }}
+
+<div class="stopsnoring">
+  <div class="stopsnoring__wrapper">
+    <div class="stopsnoring__video">
+      <div class="except-overlay"></div>
+      <video
+        class="stopsnoring__video-element"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="{{ section.settings.video.sources[1].url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="stopsnoring__content">
+      <div class="container">
+        <div class="stopsnoring__innerwrap">
+          <div class="stopsnoring__title white-text">
+            <span class="stopsnoring__icon">
+              {% if section.settings.pre_heading_icon %}
+                <img src="{{ section.settings.pre_heading_icon | img_url : 'master' }}" alt="White Icon">
+              {% endif %}
+            </span>
+            {{ section.settings.pre_heading }}
+          </div>
+          <h2 class="stopsnoring__heading white-text">{{ section.settings.heading }}</h2>
+          <div class="stopsnoring__animation">
+            <div class="stopsnoring__step">
+              <h3>{{ section.settings.heading_1 }}</h3>
+            </div>
+            <div class="stopsnoring__step">
+              <h3>{{ section.settings.heading_2 }}</h3>
+            </div>
+            <div class="stopsnoring__step">
+              <h3>
+                {{ section.settings.heading_3 }}
+              </h3>
+            </div>
+            <div class="btn_green_outline stopsnoring__cta stopsnoring__step">
+              <a href="{{ section.settings.button_link }}">
+                <span>
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.1234 0.209169C4.84451 -0.0697229 4.39234 -0.0697229 4.11344 0.209169L1.23548 3.08712C0.956593 3.36601 0.956593 3.81818 1.23548 4.09707L4.11344 6.97502C4.39234 7.25394 4.84451 7.25394 5.1234 6.97502L8.00136 4.09707C8.28025 3.81818 8.28025 3.36601 8.00136 3.08712L5.1234 0.209169ZM11.3142 5.45467C11.7801 4.98883 12.5353 4.98883 13.0012 5.45467L17.8083 10.2618C18.2742 10.7276 18.2742 11.4829 17.8083 11.9488L13.0012 16.7559C12.5353 17.2218 11.7801 17.2218 11.3142 16.7559L6.5071 11.9488C6.04125 11.4829 6.04125 10.7276 6.5071 10.2618L11.3142 5.45467ZM2.2259 12.4666C2.42699 12.2655 2.75301 12.2655 2.9541 12.4666L5.02918 14.5417C5.23027 14.7428 5.23027 15.0688 5.02918 15.2699L2.9541 17.345C2.75301 17.5461 2.42699 17.5461 2.2259 17.345L0.150816 15.2699C-0.0502721 15.0688 -0.0502721 14.7428 0.150816 14.5417L2.2259 12.4666Z" fill="#97CA3B"/>
+                  </svg>
+                </span>
+                {{ section.settings.button_label }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // START : Video With Animation
+  document.addEventListener("DOMContentLoaded", () => {
+    let steps = document.querySelectorAll(".stopsnoring__step");
+
+    gsap.set(steps, { opacity: 0 });  // Hide all steps
+    gsap.set(steps[0], { opacity: 1 }); // Keep first step always visible
+
+    let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+        steps.forEach((step, index) => {
+        if (index !== 0) tl.to(step, { opacity: 1, duration: 1 }, "+=1");
+    });
+
+    tl.to([...steps].slice(1), { opacity: 0, duration: 1, delay: 1 })
+    .set(steps[0], { opacity: 1 }); // Keep first step visible
+  });
+  // END : Video With Animation
+</script>
+
+{% schema %}
+{
+  "name": "Gen 2 Home Video",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Pre Heading Icon",
+      "id": "pre_heading_icon"
+    },
+    {
+      "type": "text",
+      "label": "Pre Heading",
+      "id": "pre_heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Heading 1",
+      "id": "heading_1"
+    },
+    {
+      "type": "html",
+      "label": "Heading 2",
+      "id": "heading_2"
+    },
+    {
+      "type": "html",
+      "label": "Heading 3",
+      "id": "heading_3"
+    },
+     {
+      "type": "video",
+      "label": "Video",
+      "id": "video"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Gen 2 Home Video"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

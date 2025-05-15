@@ -1,0 +1,57 @@
+{{ 'section-our-story-banner.css' | asset_url | stylesheet_tag }}
+<div class="snore-denier-banner">
+  <div class="snore-denier-container">
+    <h1>
+      {{ section.settings.heading }}
+    </h1>
+    <p>{{ section.settings.sub_heading }}</p>
+    <div class="hero-bnr-img">
+      <img src="{{ section.settings.image | img_url : 'master' }}" alt="Snore Denier" loading="lazy">
+    </div>
+    <div class="last-content">
+      <div class="banner-bottom-descr">
+        {{ section.settings.content }}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "html",
+      "label": "Bottom Content",
+      "id": "content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Our Story Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

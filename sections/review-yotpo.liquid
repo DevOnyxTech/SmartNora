@@ -1,0 +1,56 @@
+<style>
+    .yotpo-review-right-panel {
+        min-width: inherit !important;
+    }
+    .yot-container .yotpo-base-layout {
+      width: 90% !important;
+    }
+    .yotpo-main-layout.yotpo-main-reviews-widget {
+      scroll-margin-top: 40px;
+  }
+  @media only screen and (max-width:767px) {
+    .yotpo-review-center-panel {
+        flex-basis: inherit !important;
+    }
+  }
+</style>
+
+<div class="yot-container component">
+  <div id="yotpo-reviews" class="w-embed w-script">
+    <div
+      class="yotpo yotpo-main-widget"
+      data-product-id="4465924036"
+      data-name="Smart Nora"
+      data-url="https://www.smartnora.com/products/order"
+      data-image-url="//cdn.shopify.com/s/files/1/1053/4408/products/Nora_product2_ed090a54-5236-4172-8c7e-719b811446b0_large.jpg%3Fv=1491411978"
+      data-description=""
+    ></div>
+    <script type="text/javascript">
+      (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/YxTdkuoA1xTw8NBcM0iEyj9GPgMSBfUpNvQJhIH8/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Yotpo",
+  "tag": "section",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Review Yotpo"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .yot-container {
+      max-width: 768px;
+      margin: 0 auto;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

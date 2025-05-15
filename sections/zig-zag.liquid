@@ -1,0 +1,136 @@
+{{ 'section-zigzag.css' | asset_url | stylesheet_tag }}
+
+<div class="better-sleep-section component">
+  <div class="better-sleep-container">
+    <div class="half-block-cover">
+      <div class="half-block-left">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+      <div class="half-block-right">
+        {{ section.settings.description }}
+      </div>
+    </div>
+    <div class="m-better-sleep-slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == 'slide' %}
+              <div class="swiper-slide">
+                <div
+                  class="m-better-sleep-img-cover"
+                  style="background-image:linear-gradient(180deg, rgba(0, 0, 0, 0) 55.5%, rgba(0, 0, 0, 0.4) 71%), url('{{ block.settings.image | img_url: 'master' }}');"
+                >
+                  <div class="zig-bottom">
+                    <div class="zig-tag">{{ block.settings.tag }}</div>
+                    <div class="z-inner-title">{{ block.settings.title }}</div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var betterSleepSlider;
+
+function initSwiper() {
+    if ($(window).width() < 767) {
+        // Initialize Swiper on mobile screens
+        if (!betterSleepSlider) {  // Only initialize if not already initialized
+            betterSleepSlider = new Swiper('.m-better-sleep-slider .swiper-container', {
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                loop: true,
+                pagination: {
+                    el: '.m-better-sleep-slider .swiper-pagination',
+                    clickable: true
+                },
+            });
+        }
+    } else {
+        // Destroy Swiper on desktop screens
+        if (betterSleepSlider) {
+            betterSleepSlider.destroy(); // Destroy Swiper instance
+            betterSleepSlider = null;  // Reset the swiper instance
+        }
+    }
+}
+
+// Initialize Swiper on page load
+initSwiper();
+
+// Re-initialize Swiper when window is resized
+$(window).on('resize', function() {
+    initSwiper();
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "Zig Zag Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Better sleep means better health"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Chronic snoring and sleep deprivation increase your risk factor for health issues including: Difficulty concentrating, Fatigue and daytime sleepiness, Heart attack, High blood pressure, Stroke, and Type 2 diabetes.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zig Zag Section",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

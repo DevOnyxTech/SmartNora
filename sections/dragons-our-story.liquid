@@ -1,0 +1,109 @@
+{{ 'dragons-our-story.css' | asset_url | stylesheet_tag }}
+<div class="our-story-sec">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="our-story-block mobile-hide">
+      <div class="left-block">
+        <img src="{{ section.settings.image | img_url : 'master' }}">
+      </div>
+      <div class="right-block">
+        {{ section.settings.content }}
+        <div class="white-btn">
+          <button id="meetFoundersBtn" data-fancybox href="#myVideoOur">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              fill="none"
+              class="w-5 h-5"
+            >
+              <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+            </svg>
+            <span>{{ section.settings.button_label }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="our-story-block desktop-hide">
+      <div class="white-btn">
+        <button id="meetFoundersBtnMob" data-fancybox href="#myVideoOur">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            fill="none"
+            class="w-5 h-5"
+          >
+            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+          </svg>
+          <span>{{ section.settings.button_label }}</span>
+        </button>
+      </div>
+      <div class="mobile-view-image">
+        <img src="{{ section.settings.mob_image | img_url : 'master' }}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<video width="70%" height="70%" playsinline webkit-playsinline id="myVideoOur" style="display:none;">
+  <source src="{{ section.settings.video_link }}" type="video/mp4">
+  Your browser doesn't support HTML5 video tag.
+</video>
+
+{% schema %}
+{
+  "name": "Our Story",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "richtext",
+      "label": "Content",
+      "id": "content"
+    },
+     {
+      "type": "richtext",
+      "label": "Mobile Content",
+      "id": "mobile_content"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mob_image"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "text",
+      "label": "Video Link",
+      "id": "video_link",
+      "info": "Link should be Shopify hosted"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Dragons Our Story"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

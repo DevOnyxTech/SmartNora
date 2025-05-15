@@ -1,0 +1,653 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+      .footer {
+        margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+      }
+
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+
+      @media screen and (min-width: 750px) {
+        .footer {
+          margin-top: {{ section.settings.margin_top }}px;
+        }
+
+        .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+      }
+
+
+
+    .footer-input {
+       border: 1px solid #aaaa;
+       height: 46px;
+       border-radius: 5px;
+       padding: 8px;
+       width: 199px;
+    }
+
+    form.signupform {
+       display: flex;
+       gap: 10px;
+    }
+
+    footer.footer {
+       padding: 100px 0;
+    }
+
+    .footer:not(.color-scheme-1) {
+       border-top: none;
+    }
+
+    .footer__content-top {
+       padding-bottom: 5rem;
+       display: block;
+    }
+
+    .footer__content-top .grid {
+       column-gap: 30px !important;
+    }
+
+    h2.footer-block__heading.inline-richtext {
+       font-weight: 600;
+    }
+
+    footer .footer-block--menu a,
+    .footer-block__details-content {
+       font-size: 16px !important;
+       line-height: 27px !important;
+       color: #8c98a4 !important;
+    }
+
+    .footer-block__details-content .list-menu__item--link:hover,
+    .copyright__content a:hover {
+       text-decoration: none !important;
+    }
+
+    h2.footer-block__heading.inline-richtext {
+       font-size: 16px;
+       line-height: 24px;
+       color: #05243b;
+       margin-bottom: 14px;
+    }
+
+    .footer-block--text h2.footer-block__heading.inline-richtext {
+       font-size: 24px;
+       line-height: 32px;
+       color: #05243b;
+    }
+
+    footer .list-menu__item--link {
+       padding-bottom: 7px;
+    }
+
+    .footer {
+       background-color: #ffffff;
+    }
+
+    .footer-grid {
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       gap: 32px;
+       align-items: center
+    }
+
+    .footer-grid-left {
+       display: grid;
+       grid-template-columns: 1fr 1.7fr;
+       gap: 32px;
+       align-items: center
+    }
+
+    .footer-column {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       gap: 32px;
+    }
+
+    .footer-heading {
+       font-size: 14px;
+       line-height: normal;
+       color: rgba(5, 36, 59, 0.5);
+       margin-bottom: 14px;
+       font-weight: 700;
+       margin-top: 0;
+    }
+
+    .footer-list {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+    }
+
+    .footer-link {
+       font-size: 18px !important;
+       line-height: 27px !important;
+       color: #05243b !important;
+       text-decoration: none;
+       transition: color 0.3s ease;
+       margin-bottom: 10px;
+       display: block;
+    }
+
+    .footer-link:hover {
+       color: #05243b !important;
+    }
+
+    .footer-heading-large {
+       font-size: 24px;
+       font-weight: 600;
+       color: #05243b;
+       margin-bottom: 16px;
+       margin-top: 0;
+       line-height: normal;
+    }
+
+    .footer-grid-right .footer-heading {
+       font-size: 20px;
+       color: #05243B;
+       font-weight: 700;
+       margin-top: 0;
+    }
+
+    .footer-grid-right p {
+       font-size: 18px;
+       color: #05243B;
+       margin-bottom: 0px;
+       line-height: 24px;
+       font-weight: 400;
+    }
+
+    .footer-bottom {
+       margin-top: 32px;
+       padding-top: 30px;
+       border-top: 1px solid #e5e5e5;
+    }
+
+    .footer-copyright {
+       font-size: 16px;
+       color: #8c98a4;
+    }
+
+    .footer {
+       background-color: #ffffff;
+    }
+
+    .footer-grid {
+       display: grid;
+       grid-template-columns: 2.5fr 1fr;
+       gap: 32px;
+    }
+
+    .footer-list {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+    }
+
+    .footer-link:hover {
+       color: #05243b;
+    }
+
+    .footer-bottom {
+       margin-top: 32px;
+       padding-top: 32px;
+       border-top: 1px solid #e5e5e5;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .footer-copyright a {
+       color: inherit;
+       text-decoration: none;
+    }
+
+    .footer-copyright a:hover {
+       text-decoration: underline;
+    }
+
+    .footer-left-img {
+       position: relative;
+    }
+
+    .app-content {
+       position: absolute;
+       top: 22px;
+       left: 0;
+       right: 0;
+    }
+
+    .app-content p {
+       font-size: 20px;
+       line-height: normal;
+       font-weight: 600;
+       color: #fff;
+       text-align: center;
+       max-width: 190px;
+       margin: 0 auto;
+    }
+
+    .app-content p span {
+       font-size: 16px;
+       font-weight: 500;
+       display: flex;
+       justify-content: center;
+    }
+
+    .footer-btn {
+       position: absolute;
+       bottom: 30px;
+       left: 0;
+       right: 0;
+       text-align: center;
+    }
+
+    .mobile-hide {
+       display: block;
+    }
+
+    .dektop-hide {
+       display: none;
+    }
+
+    .signupform button.btn_green {
+       background: #97CA3B;
+       border: 1px solid #97CA3B;
+       font-size: 16px;
+       color: #fff;
+       text-transform: capitalize;
+       padding: 10px 26px;
+       border-radius: 9999px;
+       display: inline-block;
+       line-height: 24px;
+       text-align: center;
+       cursor: pointer;
+       border-radius: 5px;
+    }
+
+    .footer-form {
+       padding-top: 40px;
+    }
+
+    .footer-form p {
+       font-size: 18px;
+       color: #05243B;
+       font-weight: 700;
+       margin-bottom: 20px;
+       margin-top: 0;
+    }
+
+    .signupform button.btn_green:hover {
+       background-color: transparent;
+       color: #97CA3B;
+    }
+  @media screen and (max-width: 1550px) {
+    footer.footer {
+        padding: 70px 0;
+    }
+  }
+    @media screen and (max-width: 1024px) {
+       footer .footer-block--menu {
+          width: calc(20% - 10px) !important;
+       }
+
+       .footer-grid {
+          grid-template-columns: 1fr;
+       }
+
+       footer .footer-grid-left .footer-column:nth-child(1) ul li a {
+          margin-bottom: 0;
+       }
+    }
+
+    @media screen and (max-width:767px) {
+       .footer-grid {
+          gap: 25px;
+       }
+  .footer-left-img img.dektop-hide {
+      width: 100%;
+  }
+       .footer-grid-left {
+          grid-template-columns: 1fr;
+          gap: 20px;
+       }
+
+       .mobile-hide {
+          display: none;
+       }
+
+       .dektop-hide {
+          display: block;
+       }
+
+       .footer-heading {
+          font-size: 18px;
+          color: #05243B;
+          font-weight: 700;
+       }
+
+       .signupform button.btn_green {
+          padding: 10px 15px;
+       }
+
+       .footer-input {
+          width: 231px;
+       }
+    }
+{%- endstyle -%}
+
+<footer class="footer" aria-labelledby="footer-heading">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-grid-left">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'image' %}
+              <div class="footer-left-img">
+                <img class="mobile-hide" src="{{ block.settings.desktop_image | img_url : 'master' }}">
+                <img class="dektop-hide" src="{{ block.settings.mobile_image | img_url : 'master' }}">
+                <div class="app-content">
+                  <p>
+                    {{ block.settings.text }}
+                  </p>
+                </div>
+                <div class="footer-btn btn_green">
+                  <a target="_blank" href=" {{ block.settings.button_link }}"> {{ block.settings.button_label }}</a>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+
+        <div class="footer-column">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'link_list' %}
+                <div>
+                  <h3 class="footer-heading">{{ block.settings.heading }}</h3>
+                  <ul class="footer-list">
+                    {% for link in block.settings.menu.links %}
+                      <li>
+                        <a
+                          href="{{ link.url }}"
+                          target="_blank"
+                          {% if link.title == 'Contact' %}
+                            data-fancybox data-src="#open"
+                            class="only-desktop-link footer-link"
+                          {% else %}
+                            class="footer-link"
+                          {% endif -%}
+                        >
+                          {{- link.title -}}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="footer-grid-right">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'text' %}
+              <h3 class="footer-heading">{{ block.settings.heading }}</h3>
+              <p class="footer-text">{{ block.settings.subtext }}</p>
+              <div class="klaviyo-form-Qg3Sj6"></div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.footer.blocks.link_list.settings.heading.default",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "brand_information",
+      "name": "t:sections.footer.blocks.brand_information.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
+          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer.blocks.text.name",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.footer.blocks.text.settings.heading.default",
+          "label": "t:sections.footer.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "t:sections.footer.blocks.text.settings.subtext.default",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+
+
+         {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "desktop_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mobile_image"
+    },
+    {
+      "type": "html",
+      "label": "Text",
+      "id": "text"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__1.content",
+      "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "newsletter_heading",
+      "default": "t:sections.footer.settings.newsletter_heading.default",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__9.content",
+      "info": "t:sections.footer.settings.header__9.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_follow_on_shop",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_follow_on_shop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__2.content",
+      "info": "t:sections.footer.settings.header__2.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__3.content",
+      "info": "t:sections.footer.settings.header__4.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_country_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__5.content",
+      "info": "t:sections.footer.settings.header__6.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__7.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__8.content",
+      "info": "t:sections.footer.settings.header__8.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_policy",
+      "default": true,
+      "label": "t:sections.footer.settings.show_policy.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.footer.settings.margin_top.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+}
+{% endschema %}

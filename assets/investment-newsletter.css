@@ -1,0 +1,83 @@
+.sign-up-wrapper {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 120px 0 100px 0;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+}
+.sign-up-content h2 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sign-up-content p {
+  font-size: 23px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.sign-up-inner-content {
+  max-width: 915px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sign-up-inner-content a {
+  display: inline-block;
+  background-color: #f2c94c;
+  color: #000;
+  border-radius: 23px;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 10px 17px;
+  text-decoration: none;
+  border: 2px solidv #062842;
+  margin-top: 30px;
+  font-weight: 700;
+}
+.sign-up-btn {
+  text-align: center;
+}
+.sign-up-inner-content a:hover {
+  background-color: #fff;
+  color: #000;
+}
+@media only screen and (max-width: 1200px) {
+  .sign-up-wrapper {
+    padding: 70px 20px;
+  }
+  .sign-up-content p {
+    line-height: 26px;
+    font-size: 18px;
+  }
+  .sign-up-content p {
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .sign-up-inner-content a {
+    margin-top: 15px;
+  }
+
+  .sign-up-content h2 {
+    margin-bottom: 23px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sign-up-inner-content {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .sign-up-inner-content {
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,37 @@
+{{ 'section-mysleep-rules.css' | asset_url | stylesheet_tag }}
+
+<section class="rules-section">
+  <div class="rules-container">
+    <div class="rules-wrapper">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="rules-descr">
+      {{ section.settings.description }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rules and Terms",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Rules and Terms"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>A winner will be randomly drawn every month in the first week and notified via email. Please note only active Smart Nora customers are eligible to enter and win. If the product is returned or the entree has not made a purchase, the entry will be voided.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rules and Terms"
+    }
+  ]
+}
+{% endschema %}

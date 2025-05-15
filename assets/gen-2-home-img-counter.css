@@ -1,0 +1,537 @@
+/* START : Independently Tested */
+.independently-tested #arc-bg {
+  opacity: 0.2;
+}
+.independently-tested .circle {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto;
+}
+.independently-tested .score {
+  position: absolute;
+  top: 51%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-family: "CircularStd-Bold";
+  line-height: 26px;
+}
+.independently-tested {
+  background-color: #05243b;
+  padding: 100px 0;
+}
+
+.independently-tested__wrap {
+  max-width: 906px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.independently-tested__image img {
+  width: 100%;
+}
+
+.independently-tested__image {
+  width: 549px;
+}
+
+.independently-tested__content {
+  width: calc(100% - 0px);
+}
+
+.stopsnoring__score {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14.54px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 21px;
+  margin-bottom: 21px;
+  max-width: 278px;
+  display: flex;
+  gap: 20px;
+}
+
+.stopsnoring__score-progress {
+  width: 66px;
+}
+
+.stopsnoring__score-content {
+  width: calc(100% - 66px);
+}
+
+p.stopsnoring__score-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18.66px;
+  letter-spacing: 0.32px;
+  line-height: 18.7px;
+  margin-bottom: 10px;
+}
+
+.stopsnoring__score-average span.stopsnoring__score-weekly {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.stopsnoring__score-average span {
+  color: #8fcccc;
+  font-size: 16px;
+}
+
+.stopsnoring__last-night {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14.54px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px;
+}
+
+.stopsnoring__last-night-box {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+p.stopsnoring__last-night-title {
+  font-size: 12px;
+  font-family: "Graphik-Semibold";
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0;
+}
+
+.stopsnoring__last-night-with {
+  background-color: rgba(115, 174, 229, 0.15);
+  color: #73aee5;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 7px 5px;
+  border-radius: 13px;
+  width: 86px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 5px;
+  height: 23px;
+  line-height: 19px;
+}
+
+.stopsnoring__last-night-with img {
+  width: 12px;
+}
+
+.sleep__entry {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+p.sleep__label {
+  font-family: "Graphik-Medium";
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sleep-counter__text p {
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Graphik-Medium";
+  margin-bottom: 4px;
+}
+span.h-sign,
+span.m-sign,
+.sleep-time span:nth-child(2) {
+  opacity: 0.7;
+}
+h3.sleep-time {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #f3f2ee;
+  font-family: "CircularStd-Bold";
+  margin: 0;
+}
+
+span.sleep__count {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #f3f2ee;
+  font-family: "CircularStd-Bold";
+}
+
+.sleep {
+  display: flex;
+  column-gap: 18px;
+}
+
+.sleep__icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(115, 174, 229, 0.15);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sleep-continuity__header {
+  text-align: center;
+  max-width: 684px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sleep-continuity__title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 27px;
+  column-gap: 5px;
+  justify-content: center;
+}
+
+span.sleep-continuity__icon {
+  height: 21px;
+}
+
+.sleep-continuity {
+  padding-top: 55px;
+}
+
+h2.sleep-continuity__subtitle {
+  font-size: 57px;
+  letter-spacing: -0.56px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+p.sleep-continuity__description {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 400;
+  max-width: 622px;
+  margin: 0 auto;
+}
+
+.sleep-continuity-counter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 33px 0;
+  max-width: 658px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sleep-continuity-counter__text span {
+  color: #97ca3b;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.sleep-continuity-counter__content {
+  color: #f1f1f1;
+  max-width: 154px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sleep-continuity-counter__content p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn.btn_green_outline {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn.btn_green_outline a {
+  display: inline-flex;
+  align-items: center;
+  min-width: 276px;
+  padding: 12px 16px;
+  text-align: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.btn.btn_green_outline a svg {
+    display: block;
+}
+.desktop-image {
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .independently-tested .circle {
+  width: 3.44vw;
+  height: 3.44vw;
+}
+
+.independently-tested .score {
+  font-size: 1.35vw;
+  line-height: 1em;
+}
+
+.independently-tested {
+  padding: 5.21vw 0;
+}
+
+.independently-tested__wrap {
+  max-width: 47.19vw;
+  gap: 1.30vw;
+}
+
+.independently-tested__image {
+  width: 28.59vw;
+}
+
+.stopsnoring__score {
+  padding: 1.09vw;
+  margin-bottom: 1.09vw;
+  max-width: 14.48vw;
+  gap: 1.04vw;
+  align-items: center;
+}
+
+.stopsnoring__score-progress {
+  width: 3.44vw;
+}
+
+.stopsnoring__score-content {
+  width: calc(100% - 3.44vw);
+}
+
+p.stopsnoring__score-title {
+  font-size: 0.97vw;
+  line-height: 1em;
+  margin-bottom: 0.52vw;
+}
+
+.stopsnoring__score-average span.stopsnoring__score-weekly {
+  font-size: 0.83vw;
+}
+
+.stopsnoring__score-average span {
+  font-size: 0.83vw;
+}
+
+.stopsnoring__last-night {
+  padding: 0.94vw;
+}
+
+.stopsnoring__last-night-box {
+  margin-bottom: 0.94vw;
+}
+
+p.stopsnoring__last-night-title {
+  font-size: 0.63vw;
+}
+
+.stopsnoring__last-night-with {
+  font-size: 0.63vw;
+  line-height: 1em;
+  padding: 0.36vw 0.26vw;
+  width: 4.6vw;
+  height: 1.20vw;
+}
+
+.stopsnoring__last-night-with img {
+  width: 0.63vw;
+}
+
+p.sleep__label {
+  font-size: 0.63vw;
+  line-height: 1em;
+}
+
+.sleep-counter__text p {
+  font-size: 0.63vw;
+  line-height: 1em;
+  margin-bottom: 0.21vw;
+}
+
+h3.sleep-time {
+  font-size: 1.25vw;
+  line-height: 1em;
+}
+
+span.sleep__count {
+  font-size: 1.2vw;
+  line-height: 1em;
+}
+
+.sleep {
+  column-gap: 0.94vw;
+}
+
+.sleep__icon {
+  width: 2.08vw;
+  height: 2.08vw;
+}
+
+.sleep-continuity__header {
+  max-width: 35.63vw;
+  padding-bottom: 2.60vw;
+}
+
+.sleep-continuity__title {
+  font-size: 0.94vw;
+  line-height: 1.41em;
+}
+
+span.sleep-continuity__icon {
+  height: 1.09vw;
+}
+
+.sleep-continuity {
+  padding-top: 2.86vw;
+}
+
+h2.sleep-continuity__subtitle {
+  font-size: 2.97vw;
+  margin-bottom: 1.04vw;
+  margin-top: 0.52vw;
+}
+
+p.sleep-continuity__description {
+  font-size: 1.04vw;
+  line-height: 1.35em;
+  max-width: 32.40vw;
+}
+
+.sleep-continuity-counter {
+  padding: 1.72vw 0;
+  max-width: 34.27vw;
+}
+
+.sleep-continuity-counter__text span {
+  font-size: 2.50vw;
+}
+
+.sleep-continuity-counter__content {
+  max-width: 8.02vw;
+}
+
+.sleep-continuity-counter__content p {
+  font-size: 0.83vw;
+}
+
+.btn.btn_green_outline {
+  margin-top: 0.52vw;
+}
+
+.btn.btn_green_outline a {
+  min-width: 14.38vw;
+  padding: 0.63vw 0.833vw;
+  column-gap: 0.521vw;
+}
+.independently-tested .circle svg {
+    width: 3.6vw;
+    height: auto;
+}
+.stopsnoring__last-night .sleep__icon img {
+  height: 1.2vw;
+  width: auto;
+}
+.sleep__entry .sleep__data {
+  min-width: 5vw;
+}
+.sleep-continuity-counter .sleep-continuity-counter__box svg {
+    width: 1.719vw;
+}
+.sleep-continuity-counter .sleep-continuity-counter__box .sleep-continuity-counter__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4vw;
+}
+  .btn_green_outline span {
+    height: auto;
+  }
+.btn_green_outline span svg {
+  width: 1vw;
+  display: block;
+}
+}
+@media (max-width: 1200px) {
+  .independently-tested {
+    padding: 70px 0;
+  }
+
+  .stopsnoring__last-night {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  .stopsnoring__score {
+    max-width: 278px;
+    margin: 0 auto 25px;
+  }
+
+  .independently-tested__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .independently-tested__image {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .independently-tested__image {
+    width: 100%;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  .independently-tested__wrap {
+    position: relative;
+  }
+
+  .independently-tested__content {
+    position: absolute;
+    bottom: 35px;
+  }
+
+  h2.sleep-continuity__subtitle {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .sleep-continuity-counter__box:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: 34px;
+  }
+
+  .sleep-continuity-counter {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .sleep-continuity-counter__content p {
+    font-size: 14px;
+  }
+
+  .sleep-continuity-counter__content {
+    max-width: 147px;
+  }
+}
+
+/* END : Independently Tested */

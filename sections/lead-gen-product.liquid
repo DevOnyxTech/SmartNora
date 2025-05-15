@@ -1,0 +1,331 @@
+{{ 'lead-gen-product.css' | asset_url | stylesheet_tag }}
+
+{%- assign product = section.settings.product -%}
+<div id="lead-pro-sectionn" class="lead-product-sec">
+  <div class="container">
+    <div class="lead-pro-wrap">
+      <div class="product-left">
+        <div class="">
+          <div class="desktop-hide">
+            <div class="title">
+              <h2>{{ section.settings.product_title }}</h2>
+            </div>
+            <div class="review-star">
+              <div class="flex space-x-1 text-yellow-500 mb-3 sm:mb-0">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+              <p>{{ section.settings.review_count }}</p>
+            </div>
+
+            <div class="dragon-price-wrapper">
+              {{ section.settings.price }}
+              <p>{{ section.settings.price_sub_text }}</p>
+            </div>
+          </div>
+          <div class="lead-gallery">
+            <div class="swiper-container lead-gallery-slider">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'product_images' %}
+                      <div class="swiper-slide"><img src="{{ block.settings.image | img_url : 'master' }}" alt=""></div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper-container lead-gallery-thumbs">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'product_images' %}
+                      <div class="swiper-slide"><img src="{{ block.settings.image | img_url : 'master' }}" alt=""></div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-right">
+        <div class="review-star">
+          <div class="flex space-x-1 text-yellow-500 mb-3 sm:mb-0">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+          </div>
+          <p>{{ section.settings.review_count }}</p>
+        </div>
+        <div class="title">
+          <h2>{{ section.settings.product_title }}</h2>
+        </div>
+        <div class="dragon-price-wrapper">
+          {{ section.settings.price }}
+          <p>{{ section.settings.price_sub_text }}</p>
+        </div>
+        <div class="lead-include">
+          <div class="include-t">{{ section.settings.included_title }}</div>
+
+          {{ section.settings.included_content }}
+        </div>
+        <div class="green-btn">
+          <div {{ block.shopify_attributes }}>
+            {%- form 'product', product, data-productid: product.id -%}
+              <input type="hidden" name="id" data-productid="{{ product.id }}" value="{{ product.selected_or_first_available_variant.id }}">
+              {{ form | payment_terms }}
+              {% comment %}
+                <div class="paywhirl-wrap">
+                  
+                </div>
+              {% endcomment %}
+            {%- endform -%}
+          </div>
+
+          <p class="d-title">{{ section.settings.promo_text }}</p>
+          {%- render 'lead-gen-buy-button',
+            block: block,
+            product: product,
+            product_form_id: product_form_id,
+            section_id: section.id
+          -%}
+        </div>
+        <div class="lead-benifits">
+          <h3>{{ section.settings.benefits_title }}</h3>
+          <ul class="mobile-hide">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'benefit' %}
+                  <li>
+                    {% if block.settings.svg != blank %}
+                      <span><img src="{{ block.settings.svg | img_url : 'master' }}"></span>
+                    {% endif %}
+                    {{ block.settings.benefit_content }}
+                  </li>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+          <ul class="desktop-hide">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'benefit' %}
+                  <li>
+                    {% if block.settings.svg != blank %}
+                      <span><img src="{{ block.settings.svg | img_url : 'master' }}"></span>
+                    {% endif %}
+                    {{ block.settings.mob_benefit_content }}
+                  </li>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    var slider = new Swiper('.lead-gallery-slider', {
+        centeredSlides: true,
+        loop: true,
+          loopedSlides: 10,
+          direction: 'horizontal',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: false,
+        },
+    breakpoints: {
+        320: {
+          slidesPerView: 1.3,
+          spaceBetween: 20,
+          pagination: {
+            el: '.swiper-pagination',
+             // dynamicBullets: true,
+            clickable: true,
+             pagination: true,
+          },
+
+        },
+        768: {
+          slidesPerView: 1.3,
+          spaceBetween: 20,
+          navigation: true,
+           pagination: {
+            el: '.swiper-pagination',
+             // dynamicBullets: true,
+            clickable: true,
+             pagination: true,
+          },
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          navigation: true,
+            pagination: false,
+        },
+        1199: {
+          slidesPerView: 1,
+            pagination: false,
+        }
+      },
+    });
+
+  if (window.innerWidth >= 768) {
+      thumbs = new Swiper('.lead-gallery-thumbs', {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          centeredSlides: false,
+          loop: true,
+          slideToClickedSlide: true,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+      });
+
+      slider.controller.control = thumbs;
+      thumbs.controller.control = slider;
+  } else {
+      document.querySelector('.lead-gallery-thumbs').style.display = 'none';
+  }
+
+  //  slider.controller.control = thumbs;
+    //thumbs.controller.control = slider;
+</script>
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "settings": [
+      {
+      "type": "product",
+      "label": "Product",
+      "id": "product",
+      "info": "Select a product you want to add it to cart"
+    },
+    {
+      "type": "text",
+      "label": "Review Count",
+      "id": "review_count"
+    },
+    {
+      "type": "text",
+      "label": "Product Title",
+      "id": "product_title"
+    },
+    {
+      "type": "html",
+      "label": "Price",
+      "id": "price"
+    },
+    {
+      "type": "text",
+      "label": "Price Sub Text",
+      "id": "price_sub_text"
+    },
+    {
+      "type": "text",
+      "label": "Included Title",
+      "id": "included_title"
+    },
+    {
+      "type": "richtext",
+      "label": "Included Content",
+      "id": "included_content"
+    },
+    {
+      "type": "text",
+      "label": "Benefits Title",
+      "id": "benefits_title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon Svg",
+          "id": "svg"
+        },
+        {
+          "type": "text",
+          "label": "Desktop Content",
+          "id": "benefit_content"
+        },
+        {
+          "type": "text",
+          "label": "Mobile Content",
+          "id": "mob_benefit_content"
+        }
+      ]
+    },
+    {
+      "type": "product_images",
+      "name": "Product Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lead Gen Product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

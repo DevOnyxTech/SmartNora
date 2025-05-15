@@ -1,0 +1,106 @@
+{{ 'section-multicolor-image-text.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .science-of-nora {
+      background-color: {{section.settings.background_color}};
+  }
+</style>
+
+<div class="science-of-nora component">
+  <div class="science-of-nora-container">
+    {% if section.settings.title != blank %}
+      <div class="science-of-nora-title">
+        <svg class="w-4 h-4" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5538 1.69586C21.109 0.955621 20.8211 0.00976562 19.8958 0.00976562H13.9123C13.2543 0.00976562 12.8225 0.400444 12.8225 0.996744C12.8225 1.59304 13.2543 1.98372 13.9123 1.98372H17.8602L12.8019 8.41965C12.2056 9.20101 12.4523 10.0235 13.3365 10.0235H19.7724C20.4304 10.0235 20.8622 9.63282 20.8622 9.03652C20.8622 8.44022 20.4304 8.04953 19.7724 8.04953H15.7012L20.5538 1.69586Z" fill="#4A4A4A"></path>
+          <circle cx="13.1199" cy="17.7729" r="2.98482" fill="#4A4A4A"></circle>
+          <path d="M4.28643 5.39797C4.5957 5.0887 5.09712 5.0887 5.40639 5.39797L8.59783 8.5894C8.9071 8.89867 8.9071 9.4001 8.59783 9.70937L5.40639 12.9008C5.09712 13.2101 4.5957 13.2101 4.28643 12.9008L1.09499 9.70937C0.78572 9.4001 0.78572 8.89867 1.09499 8.58941L4.28643 5.39797Z" fill="#4A4A4A"></path>
+        </svg>
+        <h3>{{ section.settings.title }}</h3>
+      </div>
+    {% endif %}
+    <div class="half-block-cover">
+      <div class="half-block-left">
+        <h2>
+          {{ section.settings.heading_1 }}
+        </h2>
+
+        <h2>{{ section.settings.heading_2 }}</h2>
+        <p>
+          {{ section.settings.description }}
+        </p>
+        <div class="nora-work-btn">
+          <a href="{{ section.settings.button_link }}">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+              </svg>
+              <span>{{ section.settings.button_text }}</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="half-block-right">
+        <img loading="lazy" src="{{ section.settings.image | img_url : 'master' }}" alt="Science Of Nora">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Multi Color Image Text",
+  "settings": [
+     {
+      "type": "color",
+      "label": "Section Background",
+      "id": "background_color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Science of Nora"
+    },
+    {
+      "type": "html",
+      "id": "heading_1",
+      "label": "Heading 1",
+      "default": "Nora <span class='text-purple'>predicts snores using A.I.</span> then creates a <span class='text-blue'>gentle and slow motion </span>under the pillow."
+    },
+    {
+      "type": "html",
+      "id": "heading_2",
+      "label": "Heading 2",
+      "default": "This motion stops the snoring without waking you up."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "For best results use Nora for 7-14 consecutive nights. You can customize the movement of the pillow to your desired comfort."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "How Nora Works"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi Color Image Text",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

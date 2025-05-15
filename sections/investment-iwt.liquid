@@ -1,0 +1,55 @@
+{{ 'investment-iwt.css' | asset_url | stylesheet_tag }}
+
+<div class="customer-review-sec">
+  <div class="customer-review-container">
+    <div class="customer-review-wrapper">
+      <div class="half-content">
+        <h2 class="section-title">
+          {{ section.settings.heading }}
+        </h2>
+        <p>
+          {{ section.settings.description }}
+        </p>
+      </div>
+      <div class="half-image">
+        <img src="{{ section.settings.image | img_url : 'master' }}">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image With Text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Description",
+      "id": "description"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Investment IWT"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

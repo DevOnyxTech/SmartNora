@@ -1,0 +1,121 @@
+.flex-box-wrapper {
+  max-width: 1152px;
+  width: 100%;
+  margin: 0 auto;
+}
+div#featureSection,
+div#experienceSection {
+  scroll-margin-top: 100px;
+}
+
+.flex-box-wrapper .flex-box {
+  gap: 40px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-box-wrapper .flex-box .flex-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.flex-box-wrapper .flex-box .flex-box-content-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.flex-box-wrapper
+  .flex-box
+  .flex-box-content-wrapper
+  .flex-box-content-inner-wrapper {
+  max-width: 385px;
+  width: 100%;
+}
+
+.flex-box-wrapper .flex-box .flex-box-content-wrapper h2 {
+  line-height: 38px;
+  color: #05243b;
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.flex-box-wrapper .flex-box .flex-box-content-wrapper p {
+  color: #8c98a4;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-detail-box {
+  padding-block: 56px;
+}
+
+.flex-image-wrapper,
+.flex-box-content-wrapper {
+  width: calc(50% - 20px);
+  flex-shrink: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .flex-box-wrapper .flex-box.cms-rt-image .flex-box-content-wrapper {
+    text-align: right;
+  }
+
+  .flex-box-wrapper .flex-box.cms-rt-image .flex-image-wrapper {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .flex-box-wrapper .flex-box.cms-rt-image .flex-box-content-wrapper {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .flex-box-wrapper
+    .flex-box.cms-rt-image
+    .flex-box-content-wrapper
+    .flex-box-content-inner-wrapper {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .flex-box-wrapper .flex-box .flex-box-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-detail-box {
+    padding-block: 40px;
+  }
+
+  .flex-box-wrapper {
+    padding-inline: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .flex-box-wrapper .flex-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .flex-image-wrapper,
+  .flex-box-content-wrapper {
+    width: 100%;
+  }
+
+  .flex-box-wrapper {
+    max-width: 576px;
+  }
+}

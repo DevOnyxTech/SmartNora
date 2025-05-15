@@ -1,0 +1,76 @@
+.claim-wrnty-sec {
+  padding: 40px 20px;
+}
+.claim-wrnty-sec .claim-wrnty-container {
+  background-image: url(https://cdn.shopify.com/s/files/1/1053/4408/files/warranty_bg.jpg?v=1698142917);
+  border-radius: 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 40px;
+  max-width: 1185px;
+  margin: 80px auto 0;
+}
+.claim-wrnty-sec .claim-wrnty-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+.claim-wrnty-sec .content-block {
+  grid-column: span 2 / span 2;
+}
+.claim-wrnty-sec .content-block h2 {
+  color: #fff;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: normal;
+}
+.claim-wrnty-sec .content-block p {
+  max-width: 623px;
+  letter-spacing: 0.2px;
+  color: #dfdfdf;
+  font-size: 20px;
+  line-height: 30px;
+}
+.claim-wrnty-sec .cotnact-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.claim-wrnty-sec .cotnact-btn a {
+  max-width: 138px;
+  width: 100%;
+  text-align: center;
+  color: #05243b;
+  font-weight: 600;
+  font-size: 14px;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s;
+  line-height: 20px;
+}
+.claim-wrnty-sec .cotnact-btn a:hover {
+  background: rgb(151, 202, 59);
+}
+@media only screen and (max-width: 767px) {
+  .claim-wrnty-sec .claim-wrnty-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .claim-wrnty-sec .content-block h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    line-height: 32px;
+  }
+  .claim-wrnty-sec .content-block p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .claim-wrnty-sec .cotnact-btn a {
+    padding: 14px 30px;
+  }
+}

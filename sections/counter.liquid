@@ -1,0 +1,174 @@
+{{ 'section-counter.css' | asset_url | stylesheet_tag }}
+
+<style>
+      .cms-validate {
+          background-color: {{section.settings.section_background}};
+      }
+        .cms-validate .title {
+          color: {{ section.settings.title_color }};
+      }
+        .cms-validate .section-header p {
+          color:{{section.settings.subtitle_color}};
+        }
+      .validate-box {
+        background-color: {{section.settings.box_background}};
+    }
+    .validate-box .content,
+    .validate-box .counter-main {
+      color: {{ section.settings.box_color }};
+  }
+</style>
+
+<div class="cms-validate component">
+  <div class="b-container">
+    <div class="section-header">
+      <div class="tagline">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-nora-charcoal fill-current w-5 h-5" viewBox="0 0 21 21">
+          <path d="M20.5538 1.69586C21.109 0.955621 20.8211 0.00976562 19.8958 0.00976562H13.9123C13.2543 0.00976562 12.8225 0.400444 12.8225 0.996744C12.8225 1.59304 13.2543 1.98372 13.9123 1.98372H17.8602L12.8019 8.41965C12.2056 9.20101 12.4523 10.0235 13.3365 10.0235H19.7724C20.4304 10.0235 20.8622 9.63282 20.8622 9.03652C20.8622 8.44022 20.4304 8.04953 19.7724 8.04953H15.7012L20.5538 1.69586Z"> </path>
+          <circle r="2.98482" cy="17.7729" cx="13.1199"></circle>
+          <path d="M4.28643 5.39797C4.5957 5.0887 5.09712 5.0887 5.40639 5.39797L8.59783 8.5894C8.9071 8.89867 8.9071 9.4001 8.59783 9.70937L5.40639 12.9008C5.09712 13.2101 4.5957 13.2101 4.28643 12.9008L1.09499 9.70937C0.78572 9.4001 0.78572 8.89867 1.09499 8.58941L4.28643 5.39797Z"> </path>
+        </svg>
+        <span>{{ section.settings.tagline }}</span>
+      </div>
+      <h2 class="title">{{ section.settings.title }}</h2>
+      <p>
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="validate-inner">
+      {% for block in section.blocks %}
+        {% if block.type == 'validate_box' %}
+          <div class="validate-box">
+            <div class="counter-main">
+              <span data-final-number="{{ block.settings.percentage }}" class="counter">
+                {{- block.settings.percentage -}}</span
+              >%
+            </div>
+            <div class="content">
+              <p>{{ block.settings.content }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="btn-box">
+      <a class="result-btn" href="{{ section.settings.button_link }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="#4a4a4a" fill="none" class="w-5 h-5">
+          <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"> </path>
+        </svg>
+        <span>{{ section.settings.button_text }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+
+<script>
+  jQuery(document).ready(function ($) {
+      $('.counter').counterUp({
+          delay: 10,
+          time: 2000
+      });
+  });
+</script>
+{% schema %}
+{
+  "name": "Counter",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Section Background",
+      "id": "section_background"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "title_color"
+    },
+    {
+      "type": "color",
+      "label": "Subtitle Color",
+      "id": "subtitle_color"
+    },
+    {
+      "type": "color",
+      "label": "Box Background",
+      "id": "box_background"
+    },
+    {
+      "type": "color",
+      "label": "Box color",
+      "id": "box_color"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "The Science of Nora"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Scientifically validated."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Research conducted by SleepScore Labs, shows effectiveness of using Smart Nora based on 500+ nights of collected data."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Study Results"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "validate_box",
+      "name": "Counter Box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": "78"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Content",
+          "default": "of snorers say Smart Nora is better than other solutions they've used."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Counter",
+      "blocks": [
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        },
+        {
+          "type": "validate_box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,137 @@
+{{ 'video-text-review.css' | asset_url | stylesheet_tag }}
+
+<!-- Section 3 Start -->
+<div class="testimony-slider">
+  <div class="testimony-container">
+    <div class="testimony-wrapper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="tm-slide-cover">
+              <div class="tm-content">
+                {% if block.settings.pre_title %}
+                  <span class="sub-title-txt">{{ block.settings.pre_title }}</span>
+                {% endif %}
+                <h3>“{{ block.settings.title }}”</h3>
+                <p>
+                  {{ block.settings.content }}
+                </p>
+              </div>
+              <div class="tm-video-block">
+                <a class="tm-video-block-inner" href="{{ block.settings.video }}" data-fancybox="">
+                  <div class="vid-pop-btn">
+                    <img src="https://cdn.shopify.com/s/files/1/1053/4408/files/v-play-btn.svg?v=1742989613">
+                  </div>
+                  <img
+                    loading="lazy"
+                    height
+                    width
+                    class=""
+                    src="{{ block.settings.poster | img_url : 'master' }}"
+                    alt="Testimonial 1"
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="tm-nav-arrow">
+        <div class="tm-nav swiper-button-prev"></div>
+        <div class="tm-nav swiper-button-next"></div>
+      </div>
+    </div>
+    <span class="swiper-pagination"></span>
+    <div class="review-center-btn">
+      <a href="{{ section.settings.button_link }}" class="custom-header-button">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
+</div>
+
+<script>
+    jQuery(document).ready(function() {
+      // Testimonial Slider
+      var swiper2 = new Swiper('.testimony-wrapper', {
+          slidesPerView: 1,
+          loop: true,
+          autoplay: false,
+          speed: 1200,
+          simulateTouch: false,
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+              el: ".testimony-slider .swiper-pagination",
+              clickable: true,
+          },
+         breakpoints: {
+          1024: {
+            simulateTouch: true,
+          }
+        },
+      });
+
+  });
+</script>
+{% schema %}
+{
+  "name": "Video Text Review",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Pre Title",
+          "id": "pre_title"
+        },
+        {
+          "type": "html",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "image_picker",
+          "label": "Poster",
+          "id": "poster"
+        },
+        {
+          "type": "text",
+          "label": "Vimeo Video",
+          "id": "video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Video Text Review"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

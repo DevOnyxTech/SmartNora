@@ -1,0 +1,222 @@
+.main-app-roadamap-sec .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.bottom--roadmap-sec {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0 95px;
+    max-width: 1140px;
+}
+
+.bottom--roadmap-sec .roadmap-box h3 {
+    font-size: 16px;
+    color: #7ACCCC;
+    text-transform: uppercase;
+    max-width: 178px;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-weight: 500;
+}
+.bottom--roadmap-sec .roadmap-box.bold h3,
+.bottom--roadmap-sec .roadmap-box.bold h4 {
+    font-weight: bold;
+}
+.bottom--roadmap-sec .roadmap-box h4 {
+    font-size: 28px;
+    color: #05243B;
+    font-weight: 500;
+    max-width: 178px;
+    line-height: normal;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(2) h3 {
+    color: #556EF2;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(3) h3 {
+    color: #8167E5;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(4) h3 {
+    color: #5CA3E5;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(5) h3 {
+    color: #5CA3E5;
+}
+
+.main-app-roadamap-sec {
+    padding: 120px 0 0px;
+}
+
+.main-app-roadamap-sec h2 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: normal;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.main-app-roadamap-sec p {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 400;
+    max-width: 903px;
+}
+
+.bottom--roadmap-sec .roadmap-box {
+    position: relative;
+    width: 172px;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(1):before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background-color: rgba(122, 204, 204, 0.2);
+    right: -22%;
+    top: 15%;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(2):before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background-color:#CDC2F5;
+    right: -19%;
+    top: 15%;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(3):before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background-color:#CDC2F5;
+    right: -20%;
+    top: 15%;
+}
+
+.bottom--roadmap-sec .roadmap-box:nth-child(4):before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background-color: #99CAFF;
+    right: -20%;
+    top: 15%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .bottom--roadmap-sec .roadmap-box:nth-child(1):before {
+        right: -53%;
+        width: 83px;
+        top: 10%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(2):before {
+        right: -51%;
+        width: 83px;
+        top: 10%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(3):before {
+        right: -47%;
+        width: 83px;
+        top: 10%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(4):before {
+        right: -50%;
+        width: 83px;
+        top: 10%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box {
+        width: 100px;
+    }
+
+    .bottom--roadmap-sec .roadmap-box img {
+        width: 38px;
+    }
+
+    .bottom--roadmap-sec .roadmap-box h3 {
+        font-size: 14px;
+    }
+
+    .bottom--roadmap-sec .roadmap-box h4 {
+        font-size: 20px;
+    }
+
+    .main-app-roadamap-sec h2 {
+        font-size: 32px;
+    }
+
+    .main-app-roadamap-sec p {
+        font-size: 14px;
+    }
+
+    .main-app-roadamap-sec {
+        padding: 60px 0 0px;
+    }
+
+    .bottom--roadmap-sec {
+        padding: 30px 0 62px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main-app-roadamap-sec .container {
+        padding: 0;
+    }
+
+    .main-app-roadamap-sec h2,
+    .main-app-roadamap-sec p {
+        padding: 0 30px;
+    }
+
+    .main-app-roadamap-sec h2 {
+        font-size: 32px;
+    }
+
+    .main-app-roadamap-sec p {
+        font-size: 14px;
+    }
+
+    .bottom--roadmap-sec {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-left: 20px;
+    }
+
+    .bottom--roadmap-sec .roadmap-box {
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(1):before {
+        right: 12%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(2):before {
+        right: 14%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(3):before {
+        right: 12%;
+    }
+
+    .bottom--roadmap-sec .roadmap-box:nth-child(4):before {
+        right: 14%;
+    }
+
+    .g-bottom-shape {
+        height: 490px;
+    }
+}

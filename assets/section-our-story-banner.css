@@ -1,0 +1,97 @@
+.snore-denier-container {
+  max-width: 1031px;
+  margin: 0 auto;
+}
+.snore-denier-banner {
+  padding-block: 65px 70px;
+}
+.snore-denier-banner h1 {
+  font-size: 80px;
+  line-height: 88px;
+  letter-spacing: -3.5px;
+  color: #05243b;
+  margin: 0;
+  font-weight: 600;
+}
+.snore-denier-banner p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding-top: 15px;
+  color: #000;
+}
+.snore-denier-banner .hero-bnr-img {
+  text-align: right;
+  padding-block: 35px 45px;
+}
+.snore-denier-banner img {
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  max-width: 784px;
+}
+.banner-bottom-descr h2 {
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  color: #05243b;
+  padding-bottom: 65px;
+}
+.banner-bottom-descr h2:last-child {
+  padding-bottom: 0;
+}
+@media screen and (max-width: 1280px) {
+  .snore-denier-container {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .snore-denier-container {
+    text-align: center;
+  }
+  .snore-denier-banner img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .snore-denier-banner {
+    padding-block: 0;
+  }
+  .banner-bottom-descr h2 {
+    padding-bottom: 35px;
+  }
+  .banner-bottom-descr {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .snore-denier-banner .hero-bnr-img {
+    padding-block: 35px 0;
+  }
+  .snore-denier-banner h1 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .snore-denier-container {
+    padding: 40px 0;
+  }
+  .snore-denier-banner img {
+    border-radius: 0;
+  }
+  .banner-bottom-descr h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .banner-bottom-descr {
+    padding: 45px 40px 20px 40px;
+  }
+  .snore-denier-banner h1 {
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: -1.5px;
+  }
+  .snore-denier-banner p {
+    letter-spacing: 0;
+  }
+}

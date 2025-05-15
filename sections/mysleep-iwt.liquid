@@ -1,0 +1,70 @@
+{{ 'section-mysleep-iwt.css' | asset_url | stylesheet_tag }}
+
+<div class="bedroom-makeover-section">
+  <div class="bedroom-makeover-container">
+    <div class="half-content-img">
+      <div class="half-content">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.paragraph }}</p>
+        <a class="enter-now-btn" target="_blank" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_text -}}
+        </a>
+      </div>
+      <div class="half-image">
+        <img
+          loading="lazy"
+          src="{{ section.settings.image | img_url: 'master' }}"
+          alt="{{ section.settings.image_alt }}"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "MySleep Image Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Enter to win $3,000 for a bedroom makeover."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Is your bedroom in need of an upgrade? Well, now that you've levelled up your sleep with Smart Nora, we are giving you a chance to transform your bedroom to match the better sleep you're getting. We'll be sponsoring lucky winners $3,000 to upgrade their bedroom. Could you be the one? Enter today."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Enter Now!"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text",
+      "default": "Bedroom Makeover"
+    }
+  ],
+  "presets": [
+    {
+      "name": "MySleep Image Text",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

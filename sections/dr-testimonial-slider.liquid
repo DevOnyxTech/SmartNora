@@ -1,0 +1,104 @@
+{{ 'section-testimonial-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="testimonial-slider-wrapper component">
+  <div class="swiper mySwiper swiper-container testi-slider">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="swiper-slide" {{ block.shopify_attributes }}>
+          <div class="item dr-review-item">
+            <div class="review-content">
+              {{ block.settings.testimonial_content }}
+            </div>
+            <div class="dr-review-author-main">
+              <div class="dr-author-image">
+                {%- if block.settings.author_image -%}
+                  <img src="{{ block.settings.author_image | img_url : 'master' }}">
+                {%- endif -%}
+              </div>
+              <div class="dr-author-content">
+                <h4>{{ block.settings.author_name }}</h4>
+                <span>{{ block.settings.author_designation }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  var swiper = new Swiper(".testi-slider", {
+    slidesPerView: 2,
+    loop: true,
+    speed: 4000,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1199: {
+        slidesPerView: 1,
+      },
+    },
+  });
+  // document.querySelector(".swiper-slide").style.width = "900px";
+  // swiper.update();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "What Experts Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "testimonial_content",
+          "label": "Testimonial Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "author_designation",
+          "label": "Author Designation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dr Testimonial Slider",
+      "blocks": [
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

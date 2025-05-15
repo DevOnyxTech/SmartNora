@@ -1,0 +1,71 @@
+{{  'section-companion-features.css' |  asset_url |  stylesheet_tag  }}
+
+<div class="main-com-feature white-text component">
+	<div class="container">
+		<h2>{{section.settings.heading}}</h2>
+		<div class="com-feature">
+      {% for block in section.blocks  %}
+			<div class="c-f-box">
+        <img src="{{ block.settings.mobile_image |  img_url: 'master' }}">
+				<div class="c-f-content">
+					<h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.content }}</p>
+				</div>
+			</div>
+      {% endfor %}
+	
+		</div>
+  </div>
+	<div class="g-bottom-shape"></div>
+</div>
+
+
+{% schema %}
+    {
+      "name": "Companion Features",
+      "class": "companion-features",
+      "settings": [
+        {
+              "type": "text",
+              "label": "Title",
+              "id": "heading"
+         }
+      ],
+      "blocks": [
+        {
+          "type": "feature",
+          "name": "Feature",
+          "limit": 3,
+          "settings": [
+            {
+              "type": "image_picker",
+              "label": "Mobile Image",
+              "id": "mobile_image"
+            },
+            {
+              "type": "text",
+              "label": "Title",
+              "id": "title"
+            },
+            {
+              "type": "inline_richtext",
+              "label": "Content",
+              "id": "content"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Companion Features"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}
+    

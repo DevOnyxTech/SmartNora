@@ -1,0 +1,77 @@
+{{ 'section-companion-roadmap.css' |  asset_url |  stylesheet_tag }}
+
+<div class="main-app-roadamap-sec component" id="roadmap">
+	<div class="container">
+		<h2>{{section.settings.heading}}</h2>
+    <p>{{section.settings.content}}</p>
+		<div class="bottom--roadmap-sec">
+      {% for block in section.blocks   %}
+            <div class="roadmap-box {% if block.settings.is_content_bold %} bold {%endif%}">
+              <img src="{{block.settings.image |  img_url: 'master'}}">
+              <h3>{{block.settings.pre_title}}</h3>
+              <h4>{{block.settings.title}}</h4>
+            </div>
+      {% endfor %}
+
+		</div>
+  </div>
+</div>
+{% schema %}
+    {
+      "name": "Companion Roadmap",
+      "class": "companion-roadmap",
+      "settings": [
+        {
+          "type": "html",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "phase",
+          "name": "Phase",
+          "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image"
+            },
+                  {
+            "type": "checkbox",
+            "label": "Is content bold ? ",
+            "id": "is_content_bold",
+            "default": false
+          },
+            {
+              "type": "text",
+              "label": "Pre Title",
+              "id": "pre_title"
+            },
+            {
+              "type": "html",
+              "label": "Title",
+              "id": "title"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Companion Roadmap"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}
+    

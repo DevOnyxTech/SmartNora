@@ -1,0 +1,165 @@
+{{ 'section-warranty-plans.css' | asset_url | stylesheet_tag }}
+
+<div class="selection-programme-sec component">
+  <div class="selection-programme-wrapper">
+    <div class="selection-programme-container">
+      <div class="selection-block-wrapper">
+        <div class="selection-block-content">
+          <h2>{{ section.settings.heading }}</h2>
+          <ul>
+            {% for block in section.blocks %}
+              {% if block.type == 'list_item' %}
+                <li>{{ block.settings.item_text }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="selection-block-image">
+          <img
+            loading="lazy"
+            src="{{ section.settings.image | img_url: 'master' }}"
+            alt="{{ section.settings.image_alt }}"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-table">
+    <div class="pricing-table-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'pricing_item' %}
+          <div class="pricing-tbl-item">
+            <div class="tbl-item-inner">
+              <h3>{{ block.settings.duration }}</h3>
+              <div class="price">{{ block.settings.price }}</div>
+              <div class="price-desc">
+                <ul>
+                  <li class="true_arrow">{{ block.settings.feature_1 }}</li>
+                  <li class="true_arrow">{{ block.settings.feature_2 }}</li>
+                  <li class="false_arrow">{{ block.settings.feature_3 }}</li>
+                </ul>
+              </div>
+              <div class="shop-now-btn">
+                <a href="{{ block.settings.button_link }}">
+                  <svg
+                    class="shop-svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z">
+                    </path>
+                  </svg>
+                  <svg
+                    class="hover-svg"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  <span>{{ block.settings.button_text }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warranty Selection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Selection of programme and making payments"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image Alt Text",
+      "default": "Selection of programme"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_item",
+      "name": "Pricing Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "duration",
+          "label": "Duration",
+          "default": "1 year"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$35.99"
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1",
+          "default": "Feature 1"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2",
+          "default": "Feature 2"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3",
+          "default": "Feature 3"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Buy Now"
+        }
+      ]
+    },
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_text",
+          "label": "Item Text",
+          "default": "List item"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Warranty Selection",
+      "category": "Pricing"
+    }
+  ]
+}
+{% endschema %}

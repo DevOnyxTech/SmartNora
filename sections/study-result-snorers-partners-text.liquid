@@ -1,0 +1,76 @@
+{{ 'section-study-result-snorer-partners.css' | asset_url | stylesheet_tag }}
+<div class="snorer-partners-sec component">
+  <div class="container">
+    <div class="snorer-wrap">
+      <div class="left-smorers">
+        <h4>For Snorers</h4>
+        {% for block in section.blocks %}
+          {% if block.type == 'snorer_stat' %}
+            <p>
+              <strong>{{ block.settings.percentage }}%</strong> {{ block.settings.description }}
+            </p>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="right-partners">
+        <h4>For Partners</h4>
+        {% for block in section.blocks %}
+          {% if block.type == 'partner_stat' %}
+            <p>
+              <strong>{{ block.settings.percentage }}%</strong> {{ block.settings.description }}
+            </p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Snorer Partners Text",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "snorer_stat",
+      "name": "Snorer Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": "20"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Increased ability to sleep through the night."
+        }
+      ]
+    },
+    {
+      "type": "partner_stat",
+      "name": "Partner Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "percentage",
+          "label": "Percentage",
+          "default": "31"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Increased ability to sleep through the night."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Snorer Partners Text"
+    }
+  ]
+}
+{% endschema %}

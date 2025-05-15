@@ -1,0 +1,81 @@
+{{ 'prod-membership-program.css' | asset_url | stylesheet_tag }}
+
+<div class="membership_program_section">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <p class="sub-text">{{ section.settings.sub_heading }}</p>
+    <div class="membership-program-items">
+      {% for block in section.blocks %}
+        <div class="program-item">
+          <div class="icon">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | img_url : 'master' }}">
+            {% endif %}
+          </div>
+          <div class="program-item-descr">
+            <h4 class="program-title">{{ block.settings.title }}</h4>
+            <p class="program-desc">{{ block.settings.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="extra-note">{{ section.settings.bottom_content }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Membership Program",
+  "settings": [
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "html",
+      "label": "Bottom Content",
+      "id": "bottom_content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info_block",
+      "name": "Info Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Membership Program"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

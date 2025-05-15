@@ -1,0 +1,129 @@
+{{ 'section-review-press.css' | asset_url | stylesheet_tag }}
+
+<div class="rev-press-container component">
+  <h2 class="scroll-trigger animate--slide-in">In the Press</h2>
+  <div class="rev-press-wrapper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide scroll-trigger animate--slide-in">
+          <img src="{{ block.settings.logo | img_url : 'master' }}" loading="lazy" alt="press logo">
+          <h5>{{ block.settings.title }}</h5>
+          <p>{{ block.settings.content }}</p>
+          <a
+            href="{{ block.settings.button_link }}"
+            class="review-btn"
+            target="_blank"
+          >
+            {{ block.settings.button_label }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="rev-press-navs-wrapper">
+      <div class="rev-press-item arrow-prev">
+        <svg
+          class="w-6 h-6 text-nora-light-grey"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+      </div>
+      <div class="rev-press-item arrow-next">
+        <svg
+          class="w-6 h-6 text-nora-light-grey"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  if ($(window).width() < 640) {
+    var swiper2 = new Swiper('.rev-press-wrapper', {
+      breakpoints: {
+        640: {
+          autoplay: true,
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          loop: true,
+          navigation: {
+            nextEl: '.arrow-next',
+            prevEl: '.arrow-prev',
+          },
+        }
+      }
+    });
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Press",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "press",
+      "name": "Press",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Logo",
+          "id": "logo"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "html",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "header",
+          "content": "Review Button"
+        },
+        {
+          "type": "text",
+          "label": "Button Label",
+          "id": "button_label",
+             "default": "Full Review →"
+        },
+        {
+          "type": "url",
+          "label": "Button Link",
+          "id": "button_link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Press"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

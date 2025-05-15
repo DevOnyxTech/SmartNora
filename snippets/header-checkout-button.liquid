@@ -1,0 +1,9 @@
+{% if cart.item_count > 0 %}
+    <button class="custom-header-button header-checkout-btn">Secure Checkout</button>
+  <script>
+    $('.header-checkout-btn').on('click', function(e){
+      e.preventDefault();
+      $('button#checkout').click();
+    })
+  </script>
+{% endif %}

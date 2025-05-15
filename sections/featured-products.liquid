@@ -1,0 +1,236 @@
+{{ 'section-blog-products.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .product-banner-image {
+      background-image: url('{{ section.settings.bg_image | img_url : 'master' | loading: 'lazy', alt: section.settings.product_title }}');
+  }
+</style>
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{% if section.settings.subtitle_text != blank %}
+  <div class="upgrade-sleep-section component">
+    <div class="upgrade-sleep-container">
+      <h4 class="upgrade-sleep-subtitle">
+        <img
+          src="https://cdn.shopify.com/s/files/1/1053/4408/files/nora-pebble-icon.svg?v=1698053671"
+          class="pebble-icon"
+          alt=""
+        >
+        <span>{{ section.settings.subtitle_text }}</span>
+      </h4>
+      {% if section.settings.title != blank %}
+        <h2 class="upgrade-sleep-title">{{ section.settings.title }}</h2>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+<div class="product-banner-wrapper blog-nora-section">
+  <div class="product-banner-inner-section">
+    <div class="product-banner-image min-h-500">
+      <!--
+        <img src="images/COMMERCIAL_Smart-Nora-Shoot_7April2022_3397-2-scaled-e1655483376252-1024x618_2ccfd9e5-fb87-4154-b6a0-bb36999f0929.webp" alt="product-banner-image" loading="lazy" />
+      -->
+      <div class="product-banner-items-wrapper">
+        <div class="four-boxes-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == 'product_item' %}
+              <div class="product-item-wrapper">
+                <div class="product-item-icon">
+                  {{ block.settings.item_icon }}
+                </div>
+                <p class="product-item-title">{{ block.settings.item_title }}</p>
+                <p class="product-item-sub-title">{{ block.settings.item_subtitle }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="product-banner-content">
+      <h2>{{ section.settings.product_title }}</h2>
+      <div class="product-price-wrapper">
+        <p>
+          <strike>{{ section.settings.original_price }}</strike> {{ section.settings.sale_price }} USD
+        </p>
+      </div>
+      <div class="rating-wrapper">
+        <a href="#">
+          <div class="star-wrapper">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+            <img
+              src="https://cdn.shopify.com/s/files/1/1053/4408/files/star.svg?v=1729765440"
+              loading="lazy"
+              alt="star"
+            >
+          </div>
+          <div class="rating">
+            <p>{{ section.settings.review_count }}</p>
+          </div>
+        </a>
+      </div>
+      <ul>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_1 }}</p>
+        </li>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_2 }}</p>
+        </li>
+        <li>
+          <svg fill="none" stroke="#8c98a4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+          <p>{{ section.settings.feature_3 }}</p>
+        </li>
+      </ul>
+
+      <div class="banner-content-inner-image">
+        {% if section.settings.product_image %}
+          <img src="{{ section.settings.product_image | img_url : 'master' | loading: 'lazy', alt: section.settings.product_title }}">
+        {% endif %}
+      </div>
+
+      <div class="nora-blog-sec">
+        <div class="product-atc">
+          {%- render 'featured-buy-button', product: product -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Product",
+  "settings": [
+      {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+      {
+      "type": "text",
+      "id": "subtitle_text",
+      "label": "Subtitle Text",
+      "default": "Contact-free, hassle-free."
+    },
+        {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Let's upgrade your sleep."
+    },
+    {
+      "type": "text",
+      "id": "product_title",
+      "label": "Product Title",
+      "default": "Smart Nora"
+    },
+    {
+      "type": "text",
+      "id": "original_price",
+      "label": "Original Price",
+      "default": "$499.99"
+    },
+    {
+      "type": "text",
+      "id": "sale_price",
+      "label": "Sale Price",
+      "default": "$449.99"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review Count",
+      "default": "1,442+"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product Image"
+    },
+        {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "feature_1",
+      "label": "Feature 1",
+      "default": "Ships in 1-2 business days"
+    },
+    {
+      "type": "text",
+      "id": "feature_2",
+      "label": "Feature 2",
+      "default": "Easy monthly payments with Affirm"
+    },
+    {
+      "type": "text",
+      "id": "feature_3",
+      "label": "Feature 3",
+      "default": "30 night money-back guarantee"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_item",
+      "name": "Product Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title",
+          "default": "Risk Free"
+        },
+        {
+          "type": "text",
+          "id": "item_subtitle",
+          "label": "Item Subtitle",
+          "default": "30-night free return."
+        },
+        {
+          "type": "html",
+          "id": "item_icon",
+          "label": "Item Icon (SVG)",
+          "default": "<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"#fff\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Featured",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

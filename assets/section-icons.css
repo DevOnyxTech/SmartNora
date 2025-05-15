@@ -1,0 +1,26 @@
+.logos-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.influencers {
+  background: #f6f6f6;
+  padding: 28px 0;
+}
+
+.influencers .influencers-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  max-width: 856px;
+  margin: auto;
+  align-items: center;
+}
+
+.influencers .influencers-wrapper img {
+  max-height: 32px;
+}
+@media only screen and (max-width: 767px) {
+  .influencers {
+    display: none;
+  }
+}

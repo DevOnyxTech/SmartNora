@@ -1,0 +1,59 @@
+{{ 'investment-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="banner-section-container">
+  <div class="banner_wrapper">
+    <div class="banner_content_area">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.sub_heading }}</p>
+      <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    </div>
+    <div class="banner-image-area">
+      <img src="{{ section.settings.background_image | img_url : 'master' }}">
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Investment Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

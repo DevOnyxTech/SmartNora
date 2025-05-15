@@ -1,0 +1,90 @@
+.terms-conditions-container {
+  max-width: 896px;
+  margin: 0 auto;
+  padding-top: 65px;
+  padding-bottom: 40px;
+  padding-inline: 20px;
+}
+.terms-conditions-sec h2 {
+  font-size: 36px;
+  line-height: 38px;
+  text-align: center;
+  color: rgb(5, 36, 59);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.terms-conditions-table {
+  max-width: 766px;
+  margin: 0 auto;
+}
+.terms-conditions-sec .terms-tbl-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.terms-conditions-sec .terms-title.t-data {
+  width: 60%;
+  letter-spacing: 0.2px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.terms-conditions-sec .terms-desc {
+  width: 40%;
+}
+.terms-conditions-sec .t-data {
+  letter-spacing: 0.18px;
+  color: #05243b;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid #c9c9c9;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  padding: 19px 25px;
+}
+.terms-conditions-sec .terms-tbl-item:first-child .terms-title {
+  border-top-left-radius: 12px;
+}
+.terms-conditions-sec .terms-tbl-item:first-child .terms-desc {
+  border-top-right-radius: 12px;
+}
+.terms-conditions-sec .terms-tbl-item:last-child .terms-title {
+  border-bottom-left-radius: 12px;
+}
+.terms-conditions-sec .terms-tbl-item:last-child .terms-desc {
+  border-bottom-right-radius: 12px;
+}
+@media only screen and (max-width: 1900px) {
+  .terms-conditions-sec h2 {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .terms-conditions-sec .terms-desc.t-data {
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .terms-conditions-sec .terms-title.t-data {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .terms-conditions-sec .t-data {
+    padding: 15px 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .terms-conditions-sec .terms-desc,
+  .terms-conditions-sec .terms-title.t-data {
+    width: 100%;
+  }
+  .terms-conditions-sec .terms-tbl-item .terms-title {
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+  }
+  .terms-conditions-sec .terms-tbl-item .terms-desc {
+    border-radius: 0 0 12px 12px !important;
+  }
+  .terms-conditions-sec .terms-tbl-item {
+    margin-bottom: 30px;
+  }
+}

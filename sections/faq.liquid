@@ -1,0 +1,98 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-section component">
+  <div class="faq-container">
+    <h2>{{ section.settings.section_title }}</h2>
+    <div class="faq-items-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq_item' %}
+          <div class="faq-item">
+            <div class="faq-title">
+              <h3>{{ block.settings.question }}</h3>
+              <div class="faq-arrow">
+                <svg
+                  id="tab_1-arrow"
+                  class="h-4 w-4 transform transition-all duration-300 rotate-90"
+                  :class="{'rotate-90': open, 'rotate-0': !open}"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-desc">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+         $('.faq-title').click(function() {
+           $(this).closest('.faq-item').toggleClass('open');
+           $(this).next('.faq-desc').slideToggle();
+         });
+       });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section Subtitle",
+      "default": "Find answers to common questions about Smart Nora"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Enter your question here"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Enter your answer here</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "blocks": [
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        },
+        {
+          "type": "faq_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

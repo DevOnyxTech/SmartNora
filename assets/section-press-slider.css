@@ -1,0 +1,231 @@
+.index .press-section {
+  padding: 70px 0 70px;
+}
+.press-section {
+  padding: 100px 0 70px;
+}
+.press-sec-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.press-section .press-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 40px;
+}
+.press-section .press-left-sec {
+  width: 30%;
+  text-align: center;
+}
+.press-section .press-right-sec {
+  width: 70%;
+  padding-left: 140px;
+}
+.press-section .press-slider-cover {
+  position: relative;
+}
+.press-section .press-title {
+  font-size: 18px;
+  line-height: 22px;
+  color: #05243b;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+}
+.press-section .press-left-sec img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.press-section .press-left-sec p {
+  font-size: 23px;
+  line-height: 26px;
+  font-weight: 500;
+  padding-top: 15px;
+  color: #19294f;
+}
+.press-section .press-left-sec p span {
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: 500;
+  padding-top: 0;
+  display: block;
+}
+.press-section .press-slider {
+  overflow: hidden;
+}
+.press-slider-cover .swiper-pagination {
+  display: none;
+}
+.press-section .press-slider .swiper-slide img {
+  width: auto;
+  object-fit: contain;
+  height: 40px;
+  text-align: left;
+  margin: auto 0 0;
+  display: block;
+}
+.press-section .press-slider .logo-desc {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #05243b;
+  margin-top: 40px;
+}
+
+.press-section .press-slider .logo-slide-inner {
+  padding: 0 20px;
+}
+.press-section .press-slider-cover .press-nav {
+  background-image: none;
+  height: auto;
+  width: auto;
+  top: 43%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.press-section .press-slider-cover .press-nav.swiper-button-prev {
+  left: -50px;
+}
+.press-section .press-slider-cover .press-nav.swiper-button-next {
+  right: 0;
+}
+.press-section .press-slider-cover .press-nav img {
+  width: 17px;
+  display: block;
+}
+@media screen and (max-width: 1800px) and (min-width:1200px) {
+  .index .press-section {
+  padding: 4vw 0 3vw;
+}
+.press-section {
+  padding: 5.21vw 0 3.65vw;
+}
+.press-sec-container {
+  max-width: 60vw;
+}
+.press-section .press-wrapper {
+  padding-left: 2.08vw;
+}
+.press-section .press-left-sec {
+  width: 30%;
+}
+.press-section .press-right-sec {
+  width: 70%;
+  padding-left: 7.29vw;
+}
+.press-section .press-title {
+  font-size: 0.94vw;
+  line-height: 1.22em;
+  margin-bottom: 3.13vw;
+  letter-spacing: 0.16vw;
+}
+.press-section .press-left-sec p {
+  font-size: 1.2vw;
+  line-height: 1.13em;
+  padding-top: 0.78vw;
+}
+.press-section .press-left-sec p span {
+  font-size: 0.83vw;
+  line-height: 1.81em;
+}
+.press-section .press-slider .swiper-slide img {
+  height: 2.08vw;
+}
+.press-section .press-slider .logo-desc {
+  font-size: 0.94vw;
+  line-height: 1.5em;
+  margin-top: 2.08vw;
+}
+.press-section .press-slider .logo-slide-inner {
+  padding: 0 1.04vw;
+}
+.press-section .press-slider-cover .press-nav.swiper-button-prev {
+  left: -2.6vw;
+}
+.press-section .press-slider-cover .press-nav img {
+  width: 0.89vw;
+}
+.press-section .press-left-sec img {
+    height: 4.3vw;
+}
+}
+@media screen and (max-width: 1200px) {
+  .press-sec-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .press-section {
+    padding: 70px 0;
+  }
+  .press-section .press-navs-arrow {
+    display: none;
+  }
+  .press-section .swiper-pagination {
+    display: block;
+    left: 0;
+    right: 0;
+  }
+  .press-section .swiper-pagination-bullet {
+    border: 1px solid #05243b;
+    width: 9px;
+    height: 9px;
+    margin: 0 3px;
+    background: transparent;
+    opacity: 1;
+  }
+  .press-section .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #05243b;
+    border: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .press-section .press-slider .swiper-slide img {
+    margin: 0 auto;
+  }
+  .press-section .press-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .press-section .press-left-sec {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .press-section .press-left-sec p {
+    font-size: 20px;
+  }
+  .press-section .press-left-sec p span {
+    font-size: 14px;
+  }
+  .press-section .press-right-sec {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .press-section .press-wrapper {
+    padding-left: 0;
+  }
+  .press-section .swiper-pagination {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .press-section .swiper-pagination-bullet {
+    border-radius: 2px;
+    border: 1px solid #c4c4c4;
+    width: 40px;
+    height: 4px;
+  }
+  .press-section {
+    padding: 70px 0 120px;
+  }
+
+  /* Gen-2 Home page */
+  .index .press-section {
+    padding: 100px 0;
+  }
+}

@@ -1,0 +1,62 @@
+{{ 'gen-2-image-text.css' | asset_url | stylesheet_tag }}
+<div class="container">
+  <div class="nora-risk-free-section">
+    <div class="risk-free-block-left">
+      <h2 class="nora-heading">
+        {{ section.settings.heading }}
+      </h2>
+      <p class="nora-description">
+        {{ section.settings.description }}
+      </p>
+      <div class="btn_green">
+        <a href="{{ section.settings.button_link }}">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    </div>
+    <div class="risk-free-block-right">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="Try Risk-Free" class="nora-image">
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Try risk-free for 30 nights"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Experience Nora Gen 2 at home. If it’s not the perfect solution, return it for a full refund."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gen 2 Image With text"
+    }
+  ]
+}
+{% endschema %}

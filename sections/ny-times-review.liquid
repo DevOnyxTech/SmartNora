@@ -1,0 +1,48 @@
+{{ 'section-ny-time.css' | asset_url | stylesheet_tag }}
+<div class="newyork-times-section component">
+  <div class="newyork-times-container scroll-trigger animate--slide-in">
+    <div class="newyork-times-logo">
+      <img
+        class="scroll-trigger animate--slide-in"
+        loading="lazy"
+        width
+        height
+        src="{{ section.settings.logo | img_url : 'master' }}"
+        alt="The Newyork Times"
+      >
+    </div>
+    <div class="newyork-times-descr ">
+      <p class="scroll-trigger animate--slide-in">{{ section.settings.description }}</p>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "NY Times Review",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Logo",
+      "id": "logo"
+    },
+    {
+      "type": "html",
+      "label": "Description",
+      "id": "description"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "NY Times Review"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

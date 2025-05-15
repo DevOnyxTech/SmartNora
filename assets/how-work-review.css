@@ -1,0 +1,119 @@
+.customer-review {
+  padding-block: 50px 100px;
+}
+
+.customer-review .customer-review__container {
+  max-width: 732px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.how-it-works
+  .customer-review
+  .customer-review__container
+  .customer-review__content
+  h3 {
+  letter-spacing: -0.6px;
+  font-size: 30px;
+}
+
+.customer-review .customer-review__container .customer-review__content h3 {
+  font-size: 36px;
+  letter-spacing: -0.72px;
+  font-weight: 400;
+  line-height: 44px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.customer-review
+  .customer-review__container
+  .customer-review__content
+  .customer-review__author {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.customer-review
+  .customer-review__container
+  .customer-review__content
+  .customer-review__author-details
+  h5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+}
+
+.customer-review
+  .customer-review__container
+  .customer-review__content
+  .customer-review__author-details
+  .customer-review__author-logos
+  img {
+  display: inline-block;
+}
+.customer-review__author-image img {
+  display: block;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .customer-review {
+    padding-block: 2.78vw 2.78vw;
+  }
+
+  .customer-review .customer-review__container {
+    max-width: 39vw;
+    padding-inline: 0.83vw;
+  }
+
+  .how-it-works
+    .customer-review
+    .customer-review__container
+    .customer-review__content
+    h3 {
+    letter-spacing: -0.03vw;
+    font-size: 1.67vw;
+  }
+
+  .customer-review .customer-review__container .customer-review__content h3 {
+    font-size: 2vw;
+    letter-spacing: -0.04vw;
+    line-height: 2.44vw;
+  }
+
+  .customer-review
+    .customer-review__container
+    .customer-review__content
+    .customer-review__author {
+    margin-top: 1.67vw;
+    gap: 0.83vw;
+  }
+
+  .customer-review
+    .customer-review__container
+    .customer-review__content
+    .customer-review__author-details
+    h5 {
+    font-size: 1vw;
+    line-height: 1.56vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .customer-review .customer-review__container {
+    padding-inline: 24px;
+  }
+  .customer-review .customer-review__container .customer-review__content h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .how-it-works .customer-review {
+    padding-block: 50px;
+  }
+}

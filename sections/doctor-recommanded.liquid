@@ -1,0 +1,153 @@
+{{ 'section-dr-recommanded.css' | asset_url | stylesheet_tag }}
+
+<div class="doctor-recomended-section-wrapper">
+  <div class="doctor-container">
+    <div class="doctor-header-section">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.title }}</p>
+    </div>
+    <div class="custom-slider-wrapper">
+      <div class="slides-arrow-wrapper">
+        <div class="swiper-container drr-slide">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="s-box item">
+                  <div class="s-img">
+                    <img
+                      class="mobile-hide swiper-lazy"
+                      src="{{ block.settings.image | img_url : 'master' }}"
+                      alt="dr image"
+                    >
+                    <img
+                      class="desktop-hide swiper-lazy"
+                      src="{{ block.settings.mob_image | img_url : 'master' }}"
+                      alt="dr image"
+                    >
+                  </div>
+                  <div class="s-content">
+                    <div class="inner-c">
+                      <strong>{{ block.settings.title }}</strong>
+                      {{ block.settings.designation }}
+                    </div>
+
+                    {{ block.settings.content }}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var customSwiper = new Swiper(".custom-slider-wrapper .swiper-container", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      loopAdditionalSlides: 4,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: '.custom-slider-wrapper .swiper-pagination',
+        clickable: true,
+      },
+      lazy: {
+        loadPrevNext: true, 
+        loadOnTransitionStart: true, 
+        loadPrevNextAmount: 2, 
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Doctor Recommanded",
+  "tag": "section",
+ "settings": [
+     {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+ "blocks": [
+    {
+      "type": "expert",
+      "name": "Expert",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Desktop Image",
+          "id": "image"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mobile Image",
+          "id": "mob_image"
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "title"
+        },
+        {
+          "type": "richtext",
+          "label": "Designation",
+          "id": "designation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Doctor Recommanded"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+    $(document).ready(function(){
+  $maxHeight = 0;
+    $(".main-dr-expert .sleep-expert-box .s-content .inner-c").each(function(){
+      if($(this).height() > $maxHeight) {
+        $maxHeight = $(this).height();
+      }
+    });
+    $(".main-dr-expert .sleep-expert-box .s-content .inner-c").height($maxHeight);
+  });
+{% endjavascript %}

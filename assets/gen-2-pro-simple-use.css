@@ -1,0 +1,278 @@
+.simple_use_section {
+  background: #e7efffb2;
+  padding-block: 60px 100px;
+}
+.simple-use-heading {
+  text-align: center;
+}
+.simple-use-heading .tagline {
+  justify-content: center;
+  margin: 0 auto;
+}
+.simple-use-heading h2 {
+  font-size: 52px;
+  line-height: 1.38;
+  font-weight: 700;
+  margin-block: 10px 20px;
+  letter-spacing: 0;
+}
+.simple-use-heading .sub-desc {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* Sub section 1*/
+.simple_use_section .video-section-wrapper {
+  margin-top: 30px;
+  display: none;
+}
+.simple_use_section .video-section-wrapper .video-container .video-play-sec {
+  position: relative;
+}
+.simple_use_section
+  .video-section-wrapper
+  .video-container
+  .video-play-sec
+  video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  max-width: 100%;
+  display: block;
+}
+.simple_use_section .play-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+/* Sub Section 2*/
+.simple_use_section .universal-ai-powered .universal-ai-powered__wrapper {
+  display: grid;
+  gap: 30px;
+}
+.simple_use_section
+  .universal-ai-powered
+  .universal-ai-powered__wrapper
+  .undetectable-movement-2 {
+  grid-column: 1;
+}
+.simple_use_section .universal__content__image {
+  position: relative;
+}
+.simple_use_section .undetectable-movement-1 {
+  color: #fff;
+  position: relative;
+  margin-top: 30px;
+  grid-column: 1;
+  grid-column-end: 3;
+}
+.simple_use_section .universal-ai-powered img {
+  display: block;
+  max-width: 100%;
+  height: 538px;
+  object-fit: cover;
+  width: 100%;
+}
+.simple_use_section .border-radius-20 {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.simple_use_section .undetectable-movement-2 .undetectable-movement__text {
+  left: 40px;
+  bottom: 40px;
+  color: #ffffff;
+  max-width: 230px;
+  width: 100%;
+  position: absolute;
+}
+.simple_use_section .universal-ai-powered h3 {
+  font-size: 40px;
+  letter-spacing: -1.4px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.simple_use_section .universal-ai-powered p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.24;
+}
+.simple_use_section .universal-ai-powered .undetectable-movement-3 {
+  position: relative;
+  grid-column: 2;
+}
+.simple_use_section
+  .universal-ai-powered
+  .undetectable-movement-3
+  .undetectable-movement__text {
+  max-width: 260px;
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.simple_use_section .undetectable-movement-1 .undetectable-movement__text {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  max-width: 291px;
+  width: 100%;
+}
+@media screen and (max-width: 1800px) and (min-width: 1200px) {
+  .simple_use_section {
+    padding-block: 2vw 5.21vw;
+  }
+  .simple-use-heading h2 {
+    font-size: 2.71vw;
+    line-height: 1.38;
+    margin-block: 0.52vw 1.04vw;
+  }
+  .simple-use-heading .sub-desc {
+    font-size: 1.25vw;
+    line-height: 1.2;
+    max-width: 26.04vw;
+  }
+  .simple_use_section .video-section-wrapper {
+    margin-top: 1.56vw;
+  }
+  .simple_use_section
+    .video-section-wrapper
+    .video-container
+    .video-play-sec
+    video {
+    border-radius: 1.04vw;
+  }
+  .simple_use_section .universal-ai-powered .universal-ai-powered__wrapper {
+    gap: 1.56vw;
+  }
+  .simple_use_section .undetectable-movement-1 {
+    margin-top: 1.56vw;
+  }
+  .simple_use_section .universal-ai-powered img {
+    height: 28.02vw;
+  }
+  .simple_use_section .border-radius-20 {
+    border-radius: 1.04vw;
+  }
+  .simple_use_section .undetectable-movement-2 .undetectable-movement__text {
+    left: 2.08vw;
+    bottom: 2.08vw;
+    max-width: 11.98vw;
+  }
+  .simple_use_section .universal-ai-powered h3 {
+    font-size: 2.08vw;
+    margin-bottom: 0.52vw;
+  }
+  .simple_use_section .universal-ai-powered p {
+    font-size: 1.25vw;
+  }
+  .simple_use_section
+    .universal-ai-powered
+    .undetectable-movement-3
+    .undetectable-movement__text {
+    max-width: 13.54vw;
+    top: 1.56vw;
+    left: 1.56vw;
+  }
+  .simple_use_section .undetectable-movement-1 .undetectable-movement__text {
+    left: 2.08vw;
+    max-width: 15.15vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .simple-use-heading h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .simple_use_section .universal-ai-powered h3 {
+    font-size: 35px;
+  }
+  .simple_use_section .universal-ai-powered p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .simple_use_section
+    .universal-ai-powered
+    .undetectable-movement-3
+    .undetectable-movement__text {
+    max-width: 284px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .simple_use_section {
+    overflow: hidden;
+  }
+  .simple_use_section .video-section-wrapper {
+    margin-bottom: 30px;
+  }
+  .simple_use_section
+    .video-section-wrapper
+    .video-container
+    .video-play-sec
+    video {
+    min-height: 251px;
+  }
+  .simple_use_section .universal-ai-powered .universal-ai-powered__wrapper {
+    display: flex;
+    gap: 0;
+  }
+  .simple_use_section .swiper-pagination {
+    position: relative;
+    margin-top: 25px;
+    bottom: 0;
+  }
+  .simple_use_section .swiper-pagination-bullet {
+    background: transparent;
+    border: 1px solid #05243b;
+    opacity: 1;
+    margin: 0 3px !important;
+  }
+  .simple_use_section
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #05243b;
+  }
+  .simple_use_section .undetectable-movement-1 {
+    margin-top: 0;
+  }
+  .simple_use_section .universal-ai-powered img {
+    height: 472px;
+  }
+  .simple_use_section .undetectable-movement-1 .undetectable-movement__text {
+    max-width: 76%;
+    top: auto;
+    transform: inherit;
+    bottom: 40px;
+  }
+  .simple_use_section
+    .universal-ai-powered
+    .undetectable-movement-3
+    .undetectable-movement__text {
+    max-width: 85%;
+  }
+  .simple_use_section .undetectable-movement-2 .undetectable-movement__text {
+    color: #fff;
+    max-width: 80%;
+  }
+  .simple_use_section .undetectable-movement-2 img {
+    object-position: center;
+  }
+  .simple_use_section .undetectable-movement-3 img {
+    object-position: left;
+  }
+  .simple-use-heading {
+    margin-bottom: 30px;
+  }
+}
