@@ -10,24 +10,63 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "podcast-banner",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "pre_title_icon": "shopify://shop_images/podcast.svg",
+        "pre_title": "Podcast",
+        "title": "The Smart Nora Sleep Podcast"
       }
     },
-    "shogun-helper": {
-      "type": "shogun-helper",
+    "podcast_video_jz3NfM": {
+      "type": "podcast-video",
+      "blocks": {
+        "podcast_yLMwH6": {
+          "type": "podcast",
+          "settings": {
+            "pre_title": "Latest episode",
+            "title": "Dr. Matthew Walker: Protocols to Improve your Sleep",
+            "video_poster": "shopify://shop_images/podcast_1.webp",
+            "video": "shopify://files/videos/mobile.mp4",
+            "video_title": "Protocols to fix your sleep",
+            "video_sub_title": "with <br> Dr. Matthew Walker"
+          }
+        },
+        "podcast_Da9eFc": {
+          "type": "podcast",
+          "settings": {
+            "pre_title": "September 20, 2024",
+            "title": "Don Posner: A new way to think about sleep",
+            "video_poster": "shopify://shop_images/Untitled_6ab830d4-ba9c-45a4-9b02-f56a93dad383.png",
+            "video_title": "A new way to think about sleep",
+            "video_sub_title": "with <br>\nDon Posner"
+          }
+        },
+        "podcast_ynyXhM": {
+          "type": "podcast",
+          "settings": {
+            "pre_title": "September 13, 2024",
+            "title": "Dr. Sara Mednick: The Science of Sleep",
+            "video_poster": "shopify://shop_images/Image_1_b7e39a67-0b95-4db6-8d0e-470b91ec3544.png",
+            "video_title": "The Science of Sleep",
+            "video_sub_title": "with <br>\nDr. Sara Mednick"
+          }
+        }
+      },
+      "block_order": ["podcast_yLMwH6", "podcast_Da9eFc", "podcast_ynyXhM"],
       "settings": {}
     },
-    "shogun-optimizer": {
-      "type": "shogun-optimizer",
-      "settings": {}
+    "accesories_pebble_nEkq9X": {
+      "type": "accesories-pebble",
+      "settings": {
+        "pebble": "shopify://shop_images/nora-device.webp",
+        "pebble_mobile": "shopify://shop_images/5-NORA2017001GL_-_Copy_1_webp.webp",
+        "heading": "Smart Nora",
+        "content": "The revolutionary, AI-powered, non-invasive device that stops snoring, saves your sleep and your relationship",
+        "price": "Regular: $680 CAD",
+        "offer_price": "Until June 20th: $595 CAD",
+        "button_label": "Shop Smart Nora now"
+      }
     }
   },
-  "order": [
-    "shogun-helper",
-    "main",
-    "shogun-optimizer"
-  ]
+  "order": ["main", "podcast_video_jz3NfM", "accesories_pebble_nEkq9X"]
 }
