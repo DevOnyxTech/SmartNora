@@ -8,8 +8,526 @@
  * ------------------------------------------------------------
  */
 {
-  "context": {
-    "market": "international"
+  "parent": "index.json",
+  "context": { "market": "international" },
+  "sections": {
+    "gen_2_home_banenr_p7CTBYC": {
+      "type": "gen-2-home-banenr",
+      "disabled": false,
+      "settings": {
+        "pre_heading": "★ ★ ★ ★ ★ Over <br>1,400 5-star reviews",
+        "heading": "The all new Nora Gen 2",
+        "sub_heading": "The revolutionary anti-snoring solution,\u2028just got smarter!",
+        "button_label": "Shop Now",
+        "button_link": "shopify://products/nora-gen-2",
+        "desktop_background_video": "shopify://files/videos/FINAL ATF_Desktop.mp4",
+        "mobile_background_video": "shopify://files/videos/FINAL ATF_Mobile 2.mp4"
+      },
+      "blocks": {
+        "block_XmVhHj": {
+          "type": "block",
+          "disabled": false,
+          "settings": {
+            "icon": "shopify://shop_images/Icon_Pillows.svg",
+            "title": "Contact-free",
+            "content": "Compatible with any bed, pillow, or sleep position"
+          }
+        },
+        "block_E7VFcM": {
+          "type": "block",
+          "disabled": false,
+          "settings": {
+            "icon": "shopify://shop_images/Union.svg",
+            "title": "Adaptive AI",
+            "content": "Learns over time to stop snoring before it starts"
+          }
+        },
+        "block_VVA9Vq": {
+          "type": "block",
+          "disabled": false,
+          "settings": {
+            "icon": "shopify://shop_images/Icon-compact.svg",
+            "title": "More compact",
+            "content": "Minimal design tucks into any bedroom or suitcase"
+          }
+        }
+      },
+      "block_order": ["block_XmVhHj", "block_E7VFcM", "block_VVA9Vq"]
+    },
+    "home_logos_cUHttPC": {
+      "type": "home-logos",
+      "disabled": false,
+      "settings": {
+        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "top_quote": "\"The best <br> anti-snore solution.\""
+      },
+      "blocks": {
+        "logo_Y3RQBt": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo_image": "shopify://shop_images/Time_4461e4d1-ffaf-4ee1-82fa-2864a29b17ae.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_89DKRy": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo_image": "shopify://shop_images/Good_Morning_America_dc8fc3fa-a451-47e9-b522-6724e98bd5dd.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_ygJKDh": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo_image": "shopify://shop_images/Forbes_fdeb0594-223c-49a2-943b-711a522870c9.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_c6dhaV": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo_image": "shopify://shop_images/The_Oprah_Magazine_073324b1-58da-43ed-be11-1acf949b37b8.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_PGbdEk": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo_image": "shopify://shop_images/Menshealth_f7ea7574-88e1-4734-86d0-12b755d84ba4.svg",
+            "logo_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Y3RQBt",
+        "logo_89DKRy",
+        "logo_ygJKDh",
+        "logo_c6dhaV",
+        "logo_PGbdEk"
+      ]
+    },
+    "gen_2_home_two_video_RREeL": {
+      "type": "gen-2-home-two-video",
+      "disabled": false,
+      "settings": {
+        "heading": "",
+        "front_video": "shopify://files/videos/Preview Video Main Video (1).mp4",
+        "main_video": "shopify://files/videos/Nora Gen 2 with BGM Version 1 (3) - Darshit.mp4",
+        "play_button_label": "See how it works",
+        "mob_title_1": "Contact-free",
+        "mob_text_1": "Compatible with any bed, pillow, or sleep position",
+        "mob_title_2": "Adaptive AI",
+        "mob_text_2": "Learns over time to stop snoring before it starts"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "gen_2_home_video_9GEpNeC": {
+      "type": "gen-2-home-video",
+      "disabled": true,
+      "settings": {
+        "pre_heading_icon": null,
+        "pre_heading": "How Nora Works",
+        "heading": "Stops snoring without waking you up",
+        "heading_1": "Nora turns your pillow into a smart pillow.",
+        "heading_2": "AI detection catches your snores early,",
+        "heading_3": "and uses a gentle movement<br> to stop your snoring.",
+        "video": "shopify://files/videos/desktop.mp4",
+        "button_label": "Learn more",
+        "button_link": ""
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "gen_2_home_gif_RWNmBnC": {
+      "type": "gen-2-home-gif",
+      "disabled": false,
+      "settings": {
+        "heading": "Don’t change anything <br>\n(except your snoring)",
+        "sub_heading": "Sleep on your <br><b>side, back, or stomach. </b><br>\nPut your head anywhere <br>on the pillow.",
+        "video": "shopify://files/videos/Back Side Stomach (1).mp4",
+        "button_label": "Try Smart Nora Risk-Free",
+        "button_link": "shopify://products/nora-gen-2"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "gen_2_image_text_HbqAJ": {
+      "type": "gen-2-image-text",
+      "disabled": false,
+      "settings": {
+        "heading": "Try risk-free for 30 nights",
+        "description": "Experience Nora Gen 2 at home. If it’s not the perfect solution, return it for a full refund.",
+        "button_label": "Shop Now",
+        "button_link": "shopify://products/nora-gen-2",
+        "image": "shopify://shop_images/Frame_20409.png"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "gen_2_home_testi_slider_Vi4FyVC": {
+      "type": "gen-2-home-testi-slider",
+      "disabled": false,
+      "settings": { "heading": "Over 100,000 people sleep better with Nora" },
+      "blocks": {
+        "review_JrdAMD": {
+          "type": "review",
+          "disabled": false,
+          "settings": { "title": "It’s a miracle!", "author": "Doug and Cara" }
+        },
+        "review_rBJMqw": {
+          "type": "review",
+          "disabled": false,
+          "settings": { "title": "Changed my life!", "author": "HLC" }
+        },
+        "review_8keYEh": {
+          "type": "review",
+          "disabled": false,
+          "settings": { "title": "Worth every penny", "author": "Eva" }
+        },
+        "review_YE8mgr": {
+          "type": "review",
+          "disabled": false,
+          "settings": { "title": "Saved my marriage", "author": "David W" }
+        }
+      },
+      "block_order": [
+        "review_JrdAMD",
+        "review_rBJMqw",
+        "review_8keYEh",
+        "review_YE8mgr"
+      ]
+    },
+    "press_slider_8GrrybC": {
+      "type": "press-slider",
+      "disabled": false,
+      "settings": {
+        "press_title": "IN THE PRESS",
+        "left_section_image": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "left_section_text": "\"Best anti-snoring solution.\"",
+        "left_section_span": ""
+      },
+      "blocks": {
+        "slide_6HnVR9": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/Men_s_Health_1.svg",
+            "slide_description": "“The device that could save your marriage... Really!”"
+          }
+        },
+        "slide_k3ezrx": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/The_Oprah_Mazagine_1.svg",
+            "slide_description": "“If you sleep with a snorer  you will love Nora!”"
+          }
+        },
+        "slide_UfWagG": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/Forbes_logo.svg",
+            "slide_description": "“Compelled to scream this solution from the rooftops.”"
+          }
+        },
+        "slide_zMMzLX": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/Good_Morning_America_2021_logo.svg",
+            "slide_description": "“It’s the best solution we’ve seen.”"
+          }
+        },
+        "slide_NptNeW": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/thrillist-vector-logo.svg",
+            "slide_description": "“This simple, small device will stop your snoring.”"
+          }
+        },
+        "slide_GXzaAy": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "slide_image": "shopify://shop_images/Bravo_2017_logo.svg",
+            "slide_description": "“Do you sleep with a snorer?This device will save your relationship.”"
+          }
+        }
+      },
+      "block_order": [
+        "slide_6HnVR9",
+        "slide_k3ezrx",
+        "slide_UfWagG",
+        "slide_zMMzLX",
+        "slide_NptNeW",
+        "slide_GXzaAy"
+      ]
+    },
+    "dragons_instagram_JHC9CGC": {
+      "type": "dragons-instagram",
+      "disabled": false,
+      "settings": {
+        "title": "",
+        "label": "Read more reviews",
+        "link": "shopify://pages/reviews"
+      },
+      "blocks": {
+        "video_V8wde": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/44719541a8fa4f07844a3b47b2335508.mp4",
+            "poster": "shopify://shop_images/image_214.png"
+          }
+        },
+        "video_cP8Bj": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/74f7d1f93a604ff9b9b86dd9c7a2e83a.mp4",
+            "poster": "shopify://shop_images/image_215_c2245de1-746e-4f11-9ae2-a69435fbd350.png"
+          }
+        },
+        "video_CmXVN": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/fed722d2e8184a31a18b4f9270bb7729.mp4",
+            "poster": "shopify://shop_images/IMG_2142.png"
+          }
+        },
+        "video_Dr7UT": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/23d1e752185d4792ad3b19c7cade32ce.mp4",
+            "poster": "shopify://shop_images/Group_20370.png"
+          }
+        },
+        "video_aKQj6": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/0950982dd0d34345a1b80378613d813c.mp4",
+            "poster": "shopify://shop_images/IMG_2141.png"
+          }
+        },
+        "video_DfR4q": {
+          "type": "video",
+          "disabled": false,
+          "settings": {
+            "video_url": "https://cdn.shopify.com/videos/c/o/v/ee2a954665424774a72faef7d25a7ea2.mp4",
+            "poster": "shopify://shop_images/IMG_2141_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "video_V8wde",
+        "video_cP8Bj",
+        "video_CmXVN",
+        "video_Dr7UT",
+        "video_aKQj6",
+        "video_DfR4q"
+      ]
+    },
+    "gen_2_home_img_counter_yyeTqWC": {
+      "type": "gen-2-home-img-counter",
+      "disabled": false,
+      "settings": {
+        "desktop_image": "shopify://shop_images/Left.png",
+        "mobile_image": "shopify://shop_images/mobile-img.png",
+        "snore_score": "15",
+        "weekly_avg_percentage": "77",
+        "night_data_title": "Last Night",
+        "slept_hours": "6",
+        "slept_minutes": "57",
+        "nora_helped_times": "98",
+        "header-098f57fa6ec8edf1428da84209c08716": null,
+        "pre_heading": "Independently tested",
+        "heading": "Scientifically proven to improve sleep continuity",
+        "content": "In an independent third party study, Nora was proven to stop snoring. <b>Nora’s AI detection</b> catches snores\n                     before they happen to help everyone in your bed stay asleep all night.",
+        "loud_snoring_title": "Decrease in loud snoring",
+        "loud_snoring_count": "79",
+        "less_sleep_title": "Less sleep disruptions",
+        "less_sleep_count": "4",
+        "more_partners_title": "More partners slept through the night",
+        "more_partners_count": "74",
+        "button_label": "Learn more about the study",
+        "button_link": "shopify://pages/study-results"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "gen_2_home_animated_slider_WHndGwC": {
+      "type": "gen-2-home-animated-slider",
+      "disabled": false,
+      "settings": {
+        "pre_heading": "Benefits",
+        "heading": "Get the benefits of unbroken sleep",
+        "button_label": "Try Smart Nora risk-free",
+        "button_link": "shopify://products/nora-gen-2"
+      },
+      "blocks": {
+        "slide_BVQhtR": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "title": "Cellular repair and immune function",
+            "content": "Deep, continuous sleep is when the body repairs tissues, muscles, and cells. Uninterrupted sleep strengthens the immune system.",
+            "desktop_image": "shopify://shop_images/Benefits_carousel.jpg",
+            "mobile_image": "shopify://shop_images/Benefits_carousel_443087df-fe46-4156-b46d-fa4be63017f9.webp"
+          }
+        },
+        "slide_cAaC8n": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "title": "Metabolism and stress reduction",
+            "content": "Continuous sleep helps regulate cortisol, the stress hormone as well as hunger hormones.",
+            "desktop_image": "shopify://shop_images/Benefits_carousel_2.jpg",
+            "mobile_image": "shopify://shop_images/Benefits_carousel_5.jpg"
+          }
+        },
+        "slide_A7zLmb": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "title": "Memory and focus",
+            "content": "Continuous sleep enhances attention span, problem-solving skills, and decision-making abilities.",
+            "desktop_image": "shopify://shop_images/Benefits_carousel_1.jpg",
+            "mobile_image": "shopify://shop_images/Benefits_carousel-2.webp"
+          }
+        }
+      },
+      "block_order": ["slide_BVQhtR", "slide_cAaC8n", "slide_A7zLmb"]
+    },
+    "gen_2_dr_recommanded_epTK7jC": {
+      "type": "gen-2-dr-recommanded",
+      "disabled": false,
+      "settings": {
+        "heading": "Doctor Recommended",
+        "title": "Backed by industry experts"
+      },
+      "blocks": {
+        "expert_VeydFC": {
+          "type": "expert",
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Stephanie_Hartselle_Desktop_1.webp",
+            "mob_image": "shopify://shop_images/Stephanie_Hartselle_Mobile_1.webp",
+            "content": "<p>I have recommended Nora to several of my patients who snore heavily and in less than two weeks it has made an impressive difference in their lives.</p>",
+            "title": "Dr. Stephanie Hartselle, MD",
+            "designation": "<p>Clinical Associate Professor, Brown University</p>"
+          }
+        },
+        "expert_YfQrHc": {
+          "type": "expert",
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Roy_Raymann_Desktop.webp",
+            "mob_image": "shopify://shop_images/Roy_Raymann_Mobile_1.webp",
+            "content": "<p>Our validation study revealed that Smart Nora can help both snorers and their partners in getting better sleep. It was striking that people really loved the product.</p>",
+            "title": "Dr. Roy Raymann, PhD",
+            "designation": "<p>Sleep Neuroscience, Apple, Philips</p>"
+          }
+        },
+        "expert_QdzCCH": {
+          "type": "expert",
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Janet_Kenedy_Desktop.webp",
+            "mob_image": "shopify://shop_images/Janet_Kennedy_Mobile_1.webp",
+            "content": "<p>Smart Nora has provided an easily accessible, comfortable solution to address snoring and improve sleep quality for snorers and their partners. I have seen tremendous benefit among my patients.</p>",
+            "title": "Dr. Janet K. Kennedy, PhD",
+            "designation": "<p>Clinical Psychologist and founder of NYC Sleep Doctor</p>"
+          }
+        },
+        "expert_VAQ6cq": {
+          "type": "expert",
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Chris_Winter_Desktop.webp",
+            "mob_image": "shopify://shop_images/Chris_Winter_Mobile_1_1.webp",
+            "content": "<p>Nora does the work for you. You don’t have to wake up to adjust your pillow. Nora inflates or deflates it, while you continue to rest comfortably. You don’t have to do anything.</p>",
+            "title": "Dr. ChrisWinter, MD",
+            "designation": "<p>Neurologist, Sleep Specialist, Author of The Sleep Solution </p>"
+          }
+        }
+      },
+      "block_order": [
+        "expert_VeydFC",
+        "expert_YfQrHc",
+        "expert_QdzCCH",
+        "expert_VAQ6cq"
+      ]
+    },
+    "gen_2_home_video_text_Rbmm6kC": {
+      "type": "gen-2-home-video-text",
+      "disabled": false,
+      "settings": {
+        "video": "shopify://files/videos/Founder Story - Final (5) (2).mp4",
+        "image": "shopify://shop_images/Gro3.webp",
+        "pre_heading": "About us",
+        "heading": "Made by snorers, \nfor snorers",
+        "content": "We struggled with snoring, and we couldn’t find a solution that was both comfortable and actually worked. Everything we tried either felt  invasive or didn’t help at all. So we decided to take matters into our  own hands...",
+        "button_label": "",
+        "button_link": ""
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "science_take_back_eHbXczC": {
+      "type": "science-take-back",
+      "disabled": false,
+      "settings": {
+        "image": "shopify://shop_images/image_00004_1_2_1.png",
+        "heading": "Ready to take back your sleep?",
+        "content": "Join over 100,000 people who have transformed their sleep and their relationships with Nora.",
+        "button_label": "Shop Smart Nora now",
+        "button_link": "shopify://products/nora-gen-2"
+      },
+      "blocks": {},
+      "block_order": []
+    },
+    "usp_DPgGJEC": {
+      "type": "usp",
+      "disabled": false,
+      "settings": {
+        "header-4c47be6b0c2a74af43404b3d2759bebb": null,
+        "title_1": "Try risk-free for 30 nights",
+        "description_1": "Enjoy Nora at home, return it for a full refund if you don't love it.",
+        "title_2": "Free shipping & returns",
+        "description_2": "Free shipping with no-cost, hassle-free returns.",
+        "title_3": "Worry-free warranty",
+        "description_3": "1-year warranty with option to extend up to 3 years."
+      },
+      "blocks": {},
+      "block_order": []
+    }
   },
-  "parent": "index.json"
+  "order": [
+    "gen_2_home_banenr_p7CTBYC",
+    "home_logos_cUHttPC",
+    "gen_2_home_two_video_RREeL",
+    "gen_2_home_video_9GEpNeC",
+    "gen_2_home_gif_RWNmBnC",
+    "gen_2_image_text_HbqAJ",
+    "gen_2_home_testi_slider_Vi4FyVC",
+    "press_slider_8GrrybC",
+    "dragons_instagram_JHC9CGC",
+    "gen_2_home_img_counter_yyeTqWC",
+    "gen_2_home_animated_slider_WHndGwC",
+    "gen_2_dr_recommanded_epTK7jC",
+    "gen_2_home_video_text_Rbmm6kC",
+    "science_take_back_eHbXczC",
+    "usp_DPgGJEC"
+  ]
 }
