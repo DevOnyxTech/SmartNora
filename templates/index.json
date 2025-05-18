@@ -316,6 +316,7 @@
     "gen_2_home_img_counter_yyeTqW": {
       "type": "gen-2-home-img-counter",
       "settings": {
+        "desktop_image": "shopify://shop_images/Left.png",
         "snore_score": "15",
         "weekly_avg_percentage": "77",
         "night_data_title": "Last Night",
@@ -437,6 +438,7 @@
       "type": "gen-2-home-video-text",
       "settings": {
         "video": "shopify://files/videos/Founder Story - Final (5) (2).mp4",
+        "image": "shopify://shop_images/Gro3_1.webp",
         "pre_heading": "About us",
         "heading": "Made by snorers, \nfor snorers",
         "content": "We struggled with snoring, and we couldn’t find a solution that was both comfortable and actually worked. Everything we tried either felt  invasive or didn’t help at all. So we decided to take matters into our  own hands...",
