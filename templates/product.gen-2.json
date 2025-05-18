@@ -1,1 +1,128 @@
-{"sections":{"main":{"type":"gen-2-product-banner","blocks":{"usp_4VNxBE":{"type":"usp","settings":{"icon":"shopify:\/\/shop_images\/risk-free-icon.svg","title":"Risk free","content":"30-night free return"}},"usp_mCJkna":{"type":"usp","settings":{"icon":"shopify:\/\/shop_images\/free-shipping-icon.svg","title":"Free shipping!","content":"Free shipping and returns"}},"usp_Wjaxin":{"type":"usp","settings":{"icon":"shopify:\/\/shop_images\/quality-icon.svg","title":"Guaranteed quality","content":"1-year limited warranty"}},"usp_Hr7zUz":{"type":"usp","settings":{"icon":"shopify:\/\/shop_images\/fsa-hsa-icon.svg","title":"FSA\/HSA accepted","content":"Purchase using health benefits"}},"usp_FCWgCq":{"type":"usp","settings":{"icon":"shopify:\/\/shop_images\/plus-icon.svg","title":"1 month Nora+ included","content":"Your first month is on us"}},"mobile_usp_MgLNrj":{"type":"mobile_usp","settings":{"mobile_icon":"shopify:\/\/shop_images\/fsa-hsa-icon.svg","mobile_text":"Free Shipping and returns"}},"mobile_usp_N9pdDw":{"type":"mobile_usp","settings":{"mobile_icon":"shopify:\/\/shop_images\/fsa-hsa-icon.svg","mobile_text":"30 night money-back guarantee"}},"mobile_usp_Rb48h3":{"type":"mobile_usp","settings":{"mobile_icon":"shopify:\/\/shop_images\/fsa-hsa-icon.svg","mobile_text":"Ships in 2 business days"}},"mobile_usp_jCL6zp":{"type":"mobile_usp","settings":{"mobile_icon":"shopify:\/\/shop_images\/fsa-hsa-icon.svg","mobile_text":"FSA\/HSA Accepted"}},"mobile_usp_QHeACj":{"type":"mobile_usp","settings":{"mobile_icon":"shopify:\/\/shop_images\/plus-icon.svg","mobile_text":"1 month Nora+ included"}}},"block_order":["usp_4VNxBE","usp_mCJkna","usp_Wjaxin","usp_Hr7zUz","usp_FCWgCq","mobile_usp_MgLNrj","mobile_usp_N9pdDw","mobile_usp_Rb48h3","mobile_usp_jCL6zp","mobile_usp_QHeACj"],"settings":{"review_text":"Over 1,400 5-star reviews","product_title":"Our Smartest Nora yet","cutoff_price":"$499 USD","actual_price":"$439 USD","offer_text":"until May 15th","button_label":"Add to cart"}},"gen_2_pro_in_the_box_rnXXy8":{"type":"gen-2-pro-in-the-box","blocks":{"item_JkNieK":{"type":"item","settings":{"title":"Pebble","description":"The elegant pebble lives on your beside table. When the pebble detects snoring, it sends a signal to the base to inflate the pillow insert.","image":"shopify:\/\/shop_images\/Pebble.webp"}},"item_qqMGUd":{"type":"item","settings":{"title":"Pillow insert","description":"Nora turns any size pillow into a smart pillow. The inflatable pillow insert adjusts the position of your head while you sleep.","image":"shopify:\/\/shop_images\/Pillow_Insert.webp"}},"item_kEbJFJ":{"type":"item","settings":{"title":"Base","description":"The base is an air pump that sits discreetly on the floor and connects to the pillow insert.","image":"shopify:\/\/shop_images\/Base.webp"}}},"block_order":["item_JkNieK","item_qqMGUd","item_kEbJFJ"],"settings":{"pre_heading":"In the box","additional_bottom_content":"Universal charging cables"}},"gen_2_pro_simple_use_HGqB6d":{"type":"gen-2-pro-simple-use","blocks":{"image_block_dKyBta":{"type":"image_block","settings":{"title":"Customizable","description":"Adjustable inflation height and sensitivity","image":"shopify:\/\/shop_images\/Image_2_483351da-dc00-4801-8308-3bde898054e1.webp"}},"image_block_MCaWYU":{"type":"image_block","settings":{"title":"Works with <br>\n                any pillow","description":"No special bedding needed","image":"shopify:\/\/shop_images\/Image_3_74f15f57-9ddf-4cac-adbd-d662b757d8c0.webp"}},"image_block_7YQG9T":{"type":"image_block","settings":{"title":"Minimalist design","description":"Clean, modern design fits into any bedroom","image":"shopify:\/\/shop_images\/Image_4_c02c9a84-875d-4995-aa72-752c02439158.webp"}}},"block_order":["image_block_dKyBta","image_block_MCaWYU","image_block_7YQG9T"],"settings":{"pre_heading":"Get started with Nora","heading":"Simple to use, fast results","content":"Smart Nora takes only 2 minutes to set up, and works from the very first night.","video":"shopify:\/\/files\/videos\/mobile.mp4","poster":"shopify:\/\/shop_images\/video_poster.webp"}},"gen_2_pro_zigzag_Nhmaxg":{"type":"gen-2-pro-zigzag","blocks":{"image_block_jcV4U7":{"type":"image_block","settings":{"title":"Your new nightly routine","content":"Before you go to sleep, tap the pebble. That’s it! Smart Nora will take care of the rest. In the morning, turn it off with another tap.","image":"shopify:\/\/shop_images\/image_95df0103-b7f5-4e4e-95eb-4ecee92e29ef.webp"}},"image_block_CzVa7A":{"type":"image_block","settings":{"title":"Your first few nights","content":"Continue to customize your Nora as you adjust to the gentle pillow movement. You and your partner will notice a significant reduction in the frequency and intensity of snoring in a few days.","image":"shopify:\/\/shop_images\/image_12_4bfccfb7-f3bf-4ae4-8248-8c7e65247358.webp"}}},"block_order":["image_block_jcV4U7","image_block_CzVa7A"],"settings":{"pre_heading":"Get in bed with Nora","heading":"What to expect from Smart Nora"}},"pro_app_screen_z8iBKU":{"type":"pro-app-screen","blocks":{"screen_DchyRQ":{"type":"screen","settings":{"title":"Don’t just track your sleep, transform it","content":"Our companion app helps you see how Smart Nora is changing your sleep. Download it to track your sleep with or without Nora.","mobile_image":"shopify:\/\/shop_images\/Mobile_phone_1_db9223e6-c163-40ca-8e0e-9c9043d44d99.webp","desktop_image":"shopify:\/\/shop_images\/App_wrap_1.webp","button_label":"Download the Smart Nora App","button_link":"shopify:\/\/pages\/companionapp"}},"screen_9Jbigq":{"type":"screen","settings":{"title":"Nightly tracking helps you see how much you’re snoring","content":"Get push reminders to track each night. The simple interface lets you track your snoring while you sleep.","mobile_image":"shopify:\/\/shop_images\/Mobile_phone_2_7ef1e74b-7aaf-490a-8c29-8b0d4df37480.webp","desktop_image":"shopify:\/\/shop_images\/App_wrap_2.webp","button_label":"","button_link":""}},"screen_AfHVLf":{"type":"screen","settings":{"title":"Track with or without Nora","content":"Track with Smart Nora or just with your phone microphone. You’ll be able to see all your snores and even listen back to them.","mobile_image":"shopify:\/\/shop_images\/Mobile_phone_3_b3e85fe6-d25d-4c7c-b045-ce4af7e05c67.webp","desktop_image":"shopify:\/\/shop_images\/App_wrap_3.webp","button_label":"","button_link":""}},"screen_CddBWM":{"type":"screen","settings":{"title":"See how often Nora intervenes and the impact on your sleep cycle","content":"See in the app each time Nora stops a snore. You’ll be able to visually understand how Nora stops your snoring and helps you and your partner sleep through the night.","mobile_image":"shopify:\/\/shop_images\/Mobile_phone_4_3dc8615d-3f15-4fa7-95ba-cea4fce14e8d.webp","desktop_image":"shopify:\/\/shop_images\/App_wrap_4.webp","button_label":"Download the Smart Nora App","button_link":"shopify:\/\/pages\/companionapp"}}},"block_order":["screen_DchyRQ","screen_9Jbigq","screen_AfHVLf","screen_CddBWM"],"settings":{"pre_heading":"Companion app"}},"prod_membership_program_nAXaLL":{"type":"prod-membership-program","blocks":{"info_block_UB8GiP":{"type":"info_block","settings":{"icon":"shopify:\/\/shop_images\/protect.svg","title":"Lifetime Protection","content":"Stay covered with a continuous warranty"}},"info_block_RDKgUD":{"type":"info_block","settings":{"icon":"shopify:\/\/shop_images\/calendar.svg","title":"Always up-to-date","content":"Access to firmware updates &amp; new features"}},"info_block_HgBdfH":{"type":"info_block","settings":{"icon":"shopify:\/\/shop_images\/vip-one.svg","title":"VIP support","content":"Get priority help from our sleep experts"}},"info_block_Q9Uga7":{"type":"info_block","settings":{"icon":"shopify:\/\/shop_images\/crown-two.svg","title":"Member-only discounts","content":"Save on Nora accessories &amp; partner experts"}}},"block_order":["info_block_UB8GiP","info_block_RDKgUD","info_block_HgBdfH","info_block_Q9Uga7"],"settings":{"heading":"Simple. Valuable. Sleep-enhancing","sub_heading":"Smart Nora’s Membership Program is here to support your sleep for the long run","bottom_content":"Your first month is on us, and then pay only $5.99\/month afterwards"}},"gen_2_product_table_QRd97t":{"type":"gen-2-product-table","blocks":{"table_row_qmPMfp":{"type":"table_row","settings":{"key_information":"Box Dimensions","specs":"4.5\" x 10\" x 7.3\""}},"table_row_EEUpbW":{"type":"table_row","settings":{"key_information":"Pebble","specs":"2.4\" x 3.7\" x 0.5\""}},"table_row_Bmne7y":{"type":"table_row","settings":{"key_information":"Total Weight","specs":"5.5 lbs"}},"table_row_jQEVcD":{"type":"table_row","settings":{"key_information":"Cable Length (USB cable, charging cable, and plastic tubing)","specs":"59\" each"}},"table_row_PDHGRa":{"type":"table_row","settings":{"key_information":"Charger Specifications","specs":"Comes with a universal adapter that works in North America, Europe, South America, but not Australia."}}},"block_order":["table_row_qmPMfp","table_row_EEUpbW","table_row_Bmne7y","table_row_jQEVcD","table_row_PDHGRa"],"settings":{"heading":"Technical Specs","sub_heading":"Hardware specifications"}}},"order":["main","gen_2_pro_in_the_box_rnXXy8","gen_2_pro_simple_use_HGqB6d","gen_2_pro_zigzag_Nhmaxg","pro_app_screen_z8iBKU","prod_membership_program_nAXaLL","gen_2_product_table_QRd97t"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "main",
+    "related-products",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}
