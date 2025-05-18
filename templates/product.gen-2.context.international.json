@@ -1,1 +1,24 @@
-{"parent":"product.gen-2.json","context":{"market":"international"},"sections":{"main":{"settings":{"cutoff_price":"$680 CAD","actual_price":"$595 CAD"},"blocks":{"mobile_usp_jCL6zp":{"disabled":true,"settings":{}},"mobile_usp_Rb48h3":{"settings":{"mobile_text":"Due to high demand ships in 5 weeks"}}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.gen-2.json",
+  "context": { "market": "international" },
+  "sections": {
+    "main": {
+      "settings": { "cutoff_price": "$680 CAD", "actual_price": "$595 CAD" },
+      "blocks": {
+        "mobile_usp_jCL6zp": { "disabled": true, "settings": {} },
+        "mobile_usp_Rb48h3": {
+          "settings": { "mobile_text": "Due to high demand ships in 5 weeks" }
+        }
+      }
+    }
+  }
+}
