@@ -37,11 +37,15 @@
           }
         }
       },
-      "block_order": ["block_XmVhHj", "block_E7VFcM", "block_VVA9Vq"],
+      "block_order": [
+        "block_XmVhHj",
+        "block_E7VFcM",
+        "block_VVA9Vq"
+      ],
       "settings": {
         "pre_heading": "★ ★ ★ ★ ★ Over <br>1,400 5-star reviews",
         "heading": "The all new Nora Gen 2",
-        "sub_heading": "The revolutionary anti-snoring solution,\u2028just got smarter!",
+        "sub_heading": "The revolutionary anti-snoring solution, just got smarter!",
         "button_label": "Shop Now",
         "button_link": "shopify://products/nora-gen-2",
         "desktop_background_video": "shopify://files/videos/FINAL ATF_Desktop.mp4",
@@ -95,7 +99,7 @@
         "logo_PGbdEk"
       ],
       "settings": {
-        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3_1.svg",
         "top_quote": "\"The best <br> anti-snore solution.\""
       }
     },
@@ -151,19 +155,31 @@
       "blocks": {
         "review_JrdAMD": {
           "type": "review",
-          "settings": { "title": "It’s a miracle!", "author": "Doug and Cara" }
+          "settings": {
+            "title": "It’s a miracle!",
+            "author": "Doug and Cara"
+          }
         },
         "review_rBJMqw": {
           "type": "review",
-          "settings": { "title": "Changed my life!", "author": "HLC" }
+          "settings": {
+            "title": "Changed my life!",
+            "author": "HLC"
+          }
         },
         "review_8keYEh": {
           "type": "review",
-          "settings": { "title": "Worth every penny", "author": "Eva" }
+          "settings": {
+            "title": "Worth every penny",
+            "author": "Eva"
+          }
         },
         "review_YE8mgr": {
           "type": "review",
-          "settings": { "title": "Saved my marriage", "author": "David W" }
+          "settings": {
+            "title": "Saved my marriage",
+            "author": "David W"
+          }
         }
       },
       "block_order": [
@@ -172,7 +188,9 @@
         "review_8keYEh",
         "review_YE8mgr"
       ],
-      "settings": { "heading": "Over 100,000 people sleep better with Nora" }
+      "settings": {
+        "heading": "Over 100,000 people sleep better with Nora"
+      }
     },
     "press_slider_8Grryb": {
       "type": "press-slider",
@@ -180,42 +198,42 @@
         "slide_6HnVR9": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/Men_s_Health_1.svg",
+            "slide_image": "shopify://shop_images/Men_s_Health_1_1.svg",
             "slide_description": "“The device that could save your marriage... Really!”"
           }
         },
         "slide_k3ezrx": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/The_Oprah_Mazagine_1.svg",
+            "slide_image": "shopify://shop_images/The_Oprah_Mazagine_1_1.svg",
             "slide_description": "“If you sleep with a snorer  you will love Nora!”"
           }
         },
         "slide_UfWagG": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/Forbes_logo.svg",
+            "slide_image": "shopify://shop_images/Forbes_logo_1.svg",
             "slide_description": "“Compelled to scream this solution from the rooftops.”"
           }
         },
         "slide_zMMzLX": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/Good_Morning_America_2021_logo.svg",
+            "slide_image": "shopify://shop_images/Good_Morning_America_2021_logo_1.svg",
             "slide_description": "“It’s the best solution we’ve seen.”"
           }
         },
         "slide_NptNeW": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/thrillist-vector-logo.svg",
+            "slide_image": "shopify://shop_images/thrillist-vector-logo_1.svg",
             "slide_description": "“This simple, small device will stop your snoring.”"
           }
         },
         "slide_GXzaAy": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify://shop_images/Bravo_2017_logo.svg",
+            "slide_image": "shopify://shop_images/Bravo_2017_logo_1.svg",
             "slide_description": "“Do you sleep with a snorer?This device will save your relationship.”"
           }
         }
@@ -230,7 +248,7 @@
       ],
       "settings": {
         "press_title": "IN THE PRESS",
-        "left_section_image": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "left_section_image": "shopify://shop_images/TNYT_Wirecutter_3_1_056ec4fe-5ccc-4215-a40c-c514c00b3f02.svg",
         "left_section_text": "\"Best anti-snoring solution.\"",
         "left_section_span": ""
       }
@@ -298,8 +316,6 @@
     "gen_2_home_img_counter_yyeTqW": {
       "type": "gen-2-home-img-counter",
       "settings": {
-        "desktop_image": "shopify://shop_images/Left.png",
-        "mobile_image": "shopify://shop_images/mobile-img.png",
         "snore_score": "15",
         "weekly_avg_percentage": "77",
         "night_data_title": "Last Night",
@@ -350,7 +366,11 @@
           }
         }
       },
-      "block_order": ["slide_BVQhtR", "slide_cAaC8n", "slide_A7zLmb"],
+      "block_order": [
+        "slide_BVQhtR",
+        "slide_cAaC8n",
+        "slide_A7zLmb"
+      ],
       "settings": {
         "pre_heading": "Benefits",
         "heading": "Get the benefits of unbroken sleep",
@@ -417,7 +437,6 @@
       "type": "gen-2-home-video-text",
       "settings": {
         "video": "shopify://files/videos/Founder Story - Final (5) (2).mp4",
-        "image": "shopify://shop_images/Gro3.webp",
         "pre_heading": "About us",
         "heading": "Made by snorers, \nfor snorers",
         "content": "We struggled with snoring, and we couldn’t find a solution that was both comfortable and actually worked. Everything we tried either felt  invasive or didn’t help at all. So we decided to take matters into our  own hands...",
