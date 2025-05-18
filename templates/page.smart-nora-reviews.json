@@ -9,25 +9,285 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "review_instagram_4PRcJK": {
+      "type": "review-instagram",
+      "blocks": {
+        "video_7wVyrQ": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 1 (1) (1).mp4",
+            "poster": "shopify://shop_images/image_214.png"
+          }
+        },
+        "video_jDgpqG": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 2_8cef5f55-e949-4f78-abaa-8a52dcb44467.mp4",
+            "poster": "shopify://shop_images/image_215_c2245de1-746e-4f11-9ae2-a69435fbd350.png"
+          }
+        },
+        "video_QKcWyU": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 3_7d7ecc75-2a86-439a-af16-bf4e9fa328a0.mp4",
+            "poster": "shopify://shop_images/IMG_2142.png"
+          }
+        },
+        "video_FwDJmB": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 4_11fdf1d2-2dd6-437a-befe-99517a2574ee.mp4",
+            "poster": "shopify://shop_images/Group_20370.png"
+          }
+        },
+        "video_zkgW8z": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 6_5264a7b7-d71b-4041-a34f-de76cb94943f.mp4",
+            "poster": "shopify://shop_images/IMG_2141_1.png"
+          }
+        },
+        "video_PQ7ahY": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Testimonial 5_8a9b7d96-efd0-4d0b-8454-ea4b6b4e834d.mp4",
+            "poster": "shopify://shop_images/IMG_2141.png"
+          }
+        }
+      },
+      "block_order": [
+        "video_7wVyrQ",
+        "video_jDgpqG",
+        "video_QKcWyU",
+        "video_FwDJmB",
+        "video_zkgW8z",
+        "video_PQ7ahY"
+      ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "pre_heading": "Over 1,400 5-star reviews",
+        "heading": "More than 100,000 couples get better sleep with Nora."
       }
     },
-    "shogun-helper": {
-      "type": "shogun-helper",
-      "settings": {}
+    "home_logos_tTfpQe": {
+      "type": "home-logos",
+      "blocks": {
+        "logo_Y3RQBt": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/Time_4461e4d1-ffaf-4ee1-82fa-2864a29b17ae.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_89DKRy": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/Good_Morning_America_dc8fc3fa-a451-47e9-b522-6724e98bd5dd.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_ygJKDh": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/Forbes_fdeb0594-223c-49a2-943b-711a522870c9.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_c6dhaV": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/The_Oprah_Magazine_073324b1-58da-43ed-be11-1acf949b37b8.svg",
+            "logo_alt": ""
+          }
+        },
+        "logo_PGbdEk": {
+          "type": "logo",
+          "settings": {
+            "logo_image": "shopify://shop_images/Menshealth_f7ea7574-88e1-4734-86d0-12b755d84ba4.svg",
+            "logo_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Y3RQBt",
+        "logo_89DKRy",
+        "logo_ygJKDh",
+        "logo_c6dhaV",
+        "logo_PGbdEk"
+      ],
+      "settings": {
+        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "top_quote": "\"The best anti-snore solution.\""
+      }
     },
-    "shogun-optimizer": {
-      "type": "shogun-optimizer",
-      "settings": {}
-    }
+    "video_text_review_xB6Vde": {
+      "type": "video-text-review",
+      "blocks": {
+        "testimonial_fVEgzA": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "From the first night, I haven't had to leave the room once!",
+            "content": "Trent has been married to Deborah for 21 years and sleeping next to a snorer led to him wearing earplugs or sleeping on the couch. With Nora, Kent is now able to sleep through the night just fine. Being able to go to sleep together, cuddle up and wake up together is a dream come true for them both.",
+            "poster": "shopify://shop_images/Video_6_Thumbnail.webp",
+            "video": "https://vimeo.com/489993869"
+          }
+        },
+        "testimonial_dX9HAw": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "Our relationship has gone through tremendous healing!",
+            "content": "Jon shares his story of how over the past 2 years Smart Nora has been life-changing for him and his partner. Desperate to solve his snoring, he went through a number of snoring solutions, but nothing worked until he found Smart Nora. Now he won’t even travel without it and his wife makes sure Smart Nora comes with them wherever they go.",
+            "poster": "shopify://shop_images/Video_7_Thumbnail.webp",
+            "video": "https://vimeo.com/489968334"
+          }
+        },
+        "testimonial_rmTKRH": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "He rarely snores at all anymore.",
+            "content": "James has been in the market for a snoring solution and has tried so many things without success. Ranging from chinstraps, and mouthguards, to CPAP and even surgery! His favourite thing about Nora is that it doesn't interfere with his sleep. Both he and his wife Heidi are pleasantly surprised with Smart Nora.",
+            "poster": "shopify://shop_images/Video_3_Thumbnail.webp",
+            "video": "https://vimeo.com/541822925"
+          }
+        },
+        "testimonial_XNLBCk": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "It's a miracle!",
+            "content": "No more pillow kingdoms in the middle of the bed for Doug and Cara! Doug is a back snorer, and he's tried nasal strips but it didn't solve the issue completely so he turned to Smart Nora. Cara noted the difference according to her it was like a miracle. Doug now feels better,  gets more sleep, and is sleeping longer. The couple highly recommends Nora.",
+            "poster": "shopify://shop_images/Video_4_Thumbnail.webp",
+            "video": "https://vimeo.com/542234809"
+          }
+        },
+        "testimonial_37KQAC": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "We're both happier in the morning.",
+            "content": "Rachel shares her story on how she no longer needs to be disturbed at night with her husband's snoring. Having tried CPAPs, mouthstrips and an array of snoring aids, they are happy to have found Smart Nora.",
+            "poster": "shopify://shop_images/Video_1_Thumbnail.webp",
+            "video": "https://vimeo.com/497692280"
+          }
+        },
+        "testimonial_LD9rqV": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "It really works, that's the takeaway.",
+            "content": "Richard has tried many snoring aids before and what he likes about Smart Nora is that it is completely contact-less. Two months into using the product and his wife says the snoring is no more. Richard finds Nora to be an option that is well worth it.",
+            "poster": "shopify://shop_images/Video_2_Thumbnail.webp",
+            "video": "https://vimeo.com/542220644"
+          }
+        },
+        "testimonial_fwVAwh": {
+          "type": "testimonial",
+          "settings": {
+            "pre_title": "",
+            "title": "It stopped my snoring silently and gently.",
+            "content": "Vicki was in denial of her snoring when her family brought it up, but when she decided to look into it with a tracking app the truth became undeniable. So she gave Nora a try, and on the very first night the tracking app instantly showed fewer detections of snoring. Now everyone in her household is sleeping better, all thanks to Smart Nora.",
+            "poster": "shopify://shop_images/Video_5_Thumbnail.webp",
+            "video": "https://vimeo.com/489968963"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_fVEgzA",
+        "testimonial_dX9HAw",
+        "testimonial_rmTKRH",
+        "testimonial_XNLBCk",
+        "testimonial_37KQAC",
+        "testimonial_LD9rqV",
+        "testimonial_fwVAwh"
+      ],
+      "settings": {
+        "button_label": "Shop Smart Nora",
+        "button_link": "shopify://products/nora-gen-2"
+      }
+    },
+    "review_press_kDnbfF": {
+      "type": "review-press",
+      "blocks": {
+        "press_t8dRtg": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/Men_s_Health_1.svg",
+            "title": "Men's Health",
+            "content": "“The device that could save your marriage... Really!”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.menshealth.com/health/a26936643/anti-snoring-devices-review/"
+          }
+        },
+        "press_WREMLC": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/thrillist-vector-logo.svg",
+            "title": "Thrillist",
+            "content": "“This simple, small device will stop your snoring.”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.thrillist.com/shopping/nation/smart-nora-snoring-solution-march-2020-how-to-stop-snoring"
+          }
+        },
+        "press_pp4pCb": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/Bravo_2017_logo.svg",
+            "title": "Bravo",
+            "content": "“Do you sleep with a snorer? This device will save your relationship.”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.bravotv.com/most-wanted/smart-nora-review-anti-snoring-smart-device"
+          }
+        },
+        "press_ndaWHt": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/The_Oprah_Mazagine_1.svg",
+            "title": "The Oprah Magazine",
+            "content": "“If you sleep with a snorer you will love Nora!”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.oprah.com/gift/oprahs-favorite-things-2017-full-list-contact-free-snoring-solution?editors_pick_id=71355"
+          }
+        },
+        "press_Jph9XL": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/Good_Morning_America_2021_logo.svg",
+            "title": "Good Morning America",
+            "content": "“It’s the best solution we’ve seen.”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.youtube.com/watch?v=4XgNWSjWAe8&t=12s"
+          }
+        },
+        "press_6w67rf": {
+          "type": "press",
+          "settings": {
+            "logo": "shopify://shop_images/Forbes_logo.svg",
+            "title": "Forbes",
+            "content": "“Compelled to scream this solution from the rooftops.”",
+            "button_label": "Full Review →",
+            "button_link": "https://www.forbes.com/sites/meggentaylor/2019/03/01/smart-nora-could-be-your-savior-if-you-sleep-with-a-snorer/?sh=1493268c5ad8"
+          }
+        }
+      },
+      "block_order": [
+        "press_t8dRtg",
+        "press_WREMLC",
+        "press_pp4pCb",
+        "press_ndaWHt",
+        "press_Jph9XL",
+        "press_6w67rf"
+      ],
+      "settings": { "heading": "In the Press" }
+    },
+    "review_yotpo_TzCccC": { "type": "review-yotpo", "settings": {} }
   },
   "order": [
-    "shogun-helper",
-    "main",
-    "shogun-optimizer"
+    "review_instagram_4PRcJK",
+    "home_logos_tTfpQe",
+    "video_text_review_xB6Vde",
+    "review_press_kDnbfF",
+    "review_yotpo_TzCccC"
   ]
 }
