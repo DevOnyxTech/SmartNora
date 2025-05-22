@@ -115,7 +115,7 @@
         "logo_PGbdEk"
       ],
       "settings": {
-        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3_1_9299a02f-60d8-4957-82be-1d700ef51f30.svg",
+        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3.svg",
         "top_quote": "\"The best anti-snore solution.\""
       }
     },
@@ -128,6 +128,7 @@
             "pre_title": "",
             "title": "From the first night, I haven't had to leave the room once!",
             "content": "Trent has been married to Deborah for 21 years and sleeping next to a snorer led to him wearing earplugs or sleeping on the couch. With Nora, Kent is now able to sleep through the night just fine. Being able to go to sleep together, cuddle up and wake up together is a dream come true for them both.",
+            "poster": "shopify://shop_images/Video_6_Thumbnail.webp",
             "video": "https://vimeo.com/489993869"
           }
         },
@@ -137,6 +138,7 @@
             "pre_title": "",
             "title": "Our relationship has gone through tremendous healing!",
             "content": "Jon shares his story of how over the past 2 years Smart Nora has been life-changing for him and his partner. Desperate to solve his snoring, he went through a number of snoring solutions, but nothing worked until he found Smart Nora. Now he won’t even travel without it and his wife makes sure Smart Nora comes with them wherever they go.",
+            "poster": "shopify://shop_images/Video_7_Thumbnail.webp",
             "video": "https://vimeo.com/489968334"
           }
         },
@@ -146,6 +148,7 @@
             "pre_title": "",
             "title": "He rarely snores at all anymore.",
             "content": "James has been in the market for a snoring solution and has tried so many things without success. Ranging from chinstraps, and mouthguards, to CPAP and even surgery! His favourite thing about Nora is that it doesn't interfere with his sleep. Both he and his wife Heidi are pleasantly surprised with Smart Nora.",
+            "poster": "shopify://shop_images/Video_3_Thumbnail.webp",
             "video": "https://vimeo.com/541822925"
           }
         },
@@ -155,6 +158,7 @@
             "pre_title": "",
             "title": "It's a miracle!",
             "content": "No more pillow kingdoms in the middle of the bed for Doug and Cara! Doug is a back snorer, and he's tried nasal strips but it didn't solve the issue completely so he turned to Smart Nora. Cara noted the difference according to her it was like a miracle. Doug now feels better,  gets more sleep, and is sleeping longer. The couple highly recommends Nora.",
+            "poster": "shopify://shop_images/Video_4_Thumbnail.webp",
             "video": "https://vimeo.com/542234809"
           }
         },
@@ -164,6 +168,7 @@
             "pre_title": "",
             "title": "We're both happier in the morning.",
             "content": "Rachel shares her story on how she no longer needs to be disturbed at night with her husband's snoring. Having tried CPAPs, mouthstrips and an array of snoring aids, they are happy to have found Smart Nora.",
+            "poster": "shopify://shop_images/Video_1_Thumbnail.webp",
             "video": "https://vimeo.com/497692280"
           }
         },
@@ -173,6 +178,7 @@
             "pre_title": "",
             "title": "It really works, that's the takeaway.",
             "content": "Richard has tried many snoring aids before and what he likes about Smart Nora is that it is completely contact-less. Two months into using the product and his wife says the snoring is no more. Richard finds Nora to be an option that is well worth it.",
+            "poster": "shopify://shop_images/Video_2_Thumbnail.webp",
             "video": "https://vimeo.com/542220644"
           }
         },
@@ -182,6 +188,7 @@
             "pre_title": "",
             "title": "It stopped my snoring silently and gently.",
             "content": "Vicki was in denial of her snoring when her family brought it up, but when she decided to look into it with a tracking app the truth became undeniable. So she gave Nora a try, and on the very first night the tracking app instantly showed fewer detections of snoring. Now everyone in her household is sleeping better, all thanks to Smart Nora.",
+            "poster": "shopify://shop_images/Video_5_Thumbnail.webp",
             "video": "https://vimeo.com/489968963"
           }
         }
@@ -206,6 +213,7 @@
         "press_t8dRtg": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/Men_s_Health_1.svg",
             "title": "Men's Health",
             "content": "“The device that could save your marriage... Really!”",
             "button_label": "Full Review →",
@@ -215,6 +223,7 @@
         "press_WREMLC": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/thrillist-vector-logo.svg",
             "title": "Thrillist",
             "content": "“This simple, small device will stop your snoring.”",
             "button_label": "Full Review →",
@@ -224,6 +233,7 @@
         "press_pp4pCb": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/Bravo_2017_logo.svg",
             "title": "Bravo",
             "content": "“Do you sleep with a snorer? This device will save your relationship.”",
             "button_label": "Full Review →",
@@ -233,6 +243,7 @@
         "press_ndaWHt": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/The_Oprah_Mazagine_1.svg",
             "title": "The Oprah Magazine",
             "content": "“If you sleep with a snorer you will love Nora!”",
             "button_label": "Full Review →",
@@ -242,6 +253,7 @@
         "press_Jph9XL": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/Good_Morning_America_2021_logo.svg",
             "title": "Good Morning America",
             "content": "“It’s the best solution we’ve seen.”",
             "button_label": "Full Review →",
@@ -251,6 +263,7 @@
         "press_6w67rf": {
           "type": "press",
           "settings": {
+            "logo": "shopify://shop_images/Forbes_logo.svg",
             "title": "Forbes",
             "content": "“Compelled to scream this solution from the rooftops.”",
             "button_label": "Full Review →",
@@ -266,14 +279,9 @@
         "press_Jph9XL",
         "press_6w67rf"
       ],
-      "settings": {
-        "heading": "In the Press"
-      }
+      "settings": { "heading": "In the Press" }
     },
-    "review_yotpo_TzCccC": {
-      "type": "review-yotpo",
-      "settings": {}
-    }
+    "review_yotpo_TzCccC": { "type": "review-yotpo", "settings": {} }
   },
   "order": [
     "review_instagram_4PRcJK",
