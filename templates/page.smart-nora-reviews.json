@@ -115,7 +115,7 @@
         "logo_PGbdEk"
       ],
       "settings": {
-        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3.svg",
+        "top_logo": "shopify://shop_images/TNYT_Wirecutter_3_1_9299a02f-60d8-4957-82be-1d700ef51f30.svg",
         "top_quote": "\"The best anti-snore solution.\""
       }
     },
@@ -213,7 +213,7 @@
         "press_t8dRtg": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/Men_s_Health_1.svg",
+            "logo": "shopify://shop_images/Men_s_Health_1_1_777cdac8-b885-48e9-a4bc-48b2e13b35fb.svg",
             "title": "Men's Health",
             "content": "“The device that could save your marriage... Really!”",
             "button_label": "Full Review →",
@@ -223,7 +223,7 @@
         "press_WREMLC": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/thrillist-vector-logo.svg",
+            "logo": "shopify://shop_images/thrillist-vector-logo_1_2fb3b17f-80a4-449b-ae2a-283898d05d3a.svg",
             "title": "Thrillist",
             "content": "“This simple, small device will stop your snoring.”",
             "button_label": "Full Review →",
@@ -233,7 +233,7 @@
         "press_pp4pCb": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/Bravo_2017_logo.svg",
+            "logo": "shopify://shop_images/Bravo_2017_logo_1_f4a49492-8bd5-446f-9700-6b0ad7c28a71.svg",
             "title": "Bravo",
             "content": "“Do you sleep with a snorer? This device will save your relationship.”",
             "button_label": "Full Review →",
@@ -243,7 +243,7 @@
         "press_ndaWHt": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/The_Oprah_Mazagine_1.svg",
+            "logo": "shopify://shop_images/The_Oprah_Mazagine_1_1_8ca8c1cb-d017-4a3f-9d89-5aa121200904.svg",
             "title": "The Oprah Magazine",
             "content": "“If you sleep with a snorer you will love Nora!”",
             "button_label": "Full Review →",
@@ -253,7 +253,7 @@
         "press_Jph9XL": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/Good_Morning_America_2021_logo.svg",
+            "logo": "shopify://shop_images/Good_Morning_America_2021_logo_1_919991fa-3936-47f6-8781-e2853c48cee1.svg",
             "title": "Good Morning America",
             "content": "“It’s the best solution we’ve seen.”",
             "button_label": "Full Review →",
@@ -263,7 +263,7 @@
         "press_6w67rf": {
           "type": "press",
           "settings": {
-            "logo": "shopify://shop_images/Forbes_logo.svg",
+            "logo": "shopify://shop_images/Forbes_logo_1_d91443c9-44d0-405d-88e6-d9de88c8aa6e.svg",
             "title": "Forbes",
             "content": "“Compelled to scream this solution from the rooftops.”",
             "button_label": "Full Review →",
@@ -279,9 +279,14 @@
         "press_Jph9XL",
         "press_6w67rf"
       ],
-      "settings": { "heading": "In the Press" }
+      "settings": {
+        "heading": "In the Press"
+      }
     },
-    "review_yotpo_TzCccC": { "type": "review-yotpo", "settings": {} }
+    "review_yotpo_TzCccC": {
+      "type": "review-yotpo",
+      "settings": {}
+    }
   },
   "order": [
     "review_instagram_4PRcJK",
