@@ -137,7 +137,11 @@
           }
         }
       },
-      "block_order": ["item_JkNieK", "item_qqMGUd", "item_kEbJFJ"],
+      "block_order": [
+        "item_JkNieK",
+        "item_qqMGUd",
+        "item_kEbJFJ"
+      ],
       "settings": {
         "pre_heading": "In the box",
         "additional_bottom_content": "Universal charging cables"
@@ -204,7 +208,10 @@
           }
         }
       },
-      "block_order": ["image_block_jcV4U7", "image_block_CzVa7A"],
+      "block_order": [
+        "image_block_jcV4U7",
+        "image_block_CzVa7A"
+      ],
       "settings": {
         "pre_heading": "Get in bed with Nora",
         "heading": "What to expect from Smart Nora"
