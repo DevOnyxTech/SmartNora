@@ -12,6 +12,8 @@
     "main": {
       "type": "accesories-banner",
       "settings": {
+        "background_image": "shopify://shop_images/banner-image.webp",
+        "pre_heading_icon": "shopify://shop_images/snoring.svg",
         "pre_heading": "Sleep Accessories",
         "heading": "Get the best sleep of your life",
         "bottom_heading": "Smart Nora 100% Silk Sleep Mask",
@@ -91,6 +93,7 @@
         "perks_XXy88G"
       ],
       "settings": {
+        "pre_heading_icon": "shopify://shop_images/perks.svg",
         "pre_heading": "Perks",
         "heading": "Nora Membership",
         "content": "Members get lifetime protection on Smart Nora snoring solution, priority customer support, discounts and more.",
@@ -99,12 +102,14 @@
         "price": "Only $5.99/month",
         "dis_price": "",
         "button_label": "Add to cart",
-        "button_link": "https://admin.shopify.com/store/snoringsolution/products/14628698227060"
+        "button_link": "https://admin.shopify.com/store/rrxjux-12/products/14628698227060"
       }
     },
     "accesories_pebble_yQdcwf": {
       "type": "accesories-pebble",
       "settings": {
+        "pebble": "shopify://shop_images/nora-device.webp",
+        "pebble_mobile": "shopify://shop_images/5-NORA2017001GL_-_Copy_1_webp.webp",
         "heading": "Smart Nora<br> \nSnoring Solution",
         "content": "The revolutionary, AI-powered, non-invasive device that stops snoring, saves your sleep and your relationship",
         "price": "<span>$499</span> $439 USD",
