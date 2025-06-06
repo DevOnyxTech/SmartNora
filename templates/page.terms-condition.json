@@ -1,1 +1,150 @@
-{"sections":{"main":{"type":"main-policy","blocks":{"content_block_ACiDPc":{"type":"content_block","settings":{"subtitle":"","paragraph":"<p><strong>Nora comes with a one-year limited warranty, from the time of receiving it, which protects you against manufacturing defects. There is also a 30-day satisfaction guarantee, so that if you are not satisfied with your purchase, you can return Nora in its original condition to receive a full refund. The 30-day satisfaction guarantee starts from delivery date.<\/strong><\/p><p><strong>If you are within the limited warranty, you have an option to <\/strong><a href=\"https:\/\/smartnora.com\/extended-warranty\/\" target=\"_blank\"><strong>extend the warranty<\/strong><\/a><strong> for an additional 1-3 years. To learn more about our policy, please read the details below.<\/strong><\/p>"}},"content_block_MbhfGY":{"type":"content_block","settings":{"subtitle":"Limited Warranty","paragraph":"<p>SMART NORA, INC. (“Nora”, “Smart Nora, the smart snoring solution”) warrants Smart Nora (the “product”) and only the Product, against defects in materials and workmanship under normal use for a period of ONE YEAR (365 days) from the date of receiving the unit by the original Consumer (“Limited Warranty Period”). This warranty is only valid from the date of receiving Nora and the Consumer must provide proof of purchase.<\/p><p>The consumer’s sole and exclusive remedy, and Smart Nora Inc’s sole and exclusive responsibility under this warranty, if a hardware defect arises and a valid claim is received by Smart Nora, Inc. within the Warranty Period, at its option and to the extent permitted by law, Smart Nora Inc., will either (1) repair the Product at no charge (postage fees for returning the product are responsibility of the consumer), using new or refurbished replace parts or (2) exchange the Product with a new or refurbished Product, so that it performs substantially in accordance with the accompanying documentation on the date of consumer’s initial purchase. <\/p><p>Please note that the return policy begins 30 days from delivery date.<\/p><p>* The 30 day risk-free trial is only available for online purchases. Purchases at re-sellers or distributors may or may not offer this 30 day risk free trial.<\/p><p>   &nbsp;<\/p>"}},"content_block_tYHAih":{"type":"content_block","settings":{"subtitle":"Disclaimer of Warranties","paragraph":"<p>OUR PRODUCTS ARE NOT MEDICAL DEVICES AND ARE NOT REGULATED NOR APPROVED BY THE U.S. FOOD AND DRUG ADMINISTRATION. OUR PRODUCTS AND SERVICES ARE INTENDED TO PROVIDE YOU WITH SNORING RELIEF AND \/ OR REDUCED SOUNDS OF SNORING. OUR IOS COMPANION APP IS INTENDED TO PROVIDE YOU WITH DATA AND INFORMATION ABOUT YOUR SLEEP, HOW NORA IS WORKING TO REDUCE YOUR SNORING, AND IS NOT INTENDED TO BE USED AS A SUBSTITUTE FOR MEDICAL ATTENTION OR SUPERVISION. YOUR USE OF NORA AND THE IOS APP IS AT YOUR SOLE RISK. THE SERVICE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. SMART NORA INC., EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.<\/p><p>SMART NORA, INC. MAKES NO WARRANTY THAT (I) THE SERVICE WILL MEET YOUR REQUIREMENTS, (II) THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, OR (III) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICE WILL MEET YOUR EXPECTATIONS. Our Products may include product warnings and instructions on the packaging, labels and documentation. AS A CONDITION TO RECEIVING SERVICES, YOU AGREE TO STRICTLY COMPLY WITH ALL PRODUCT WARNINGS AND INSTRUCTIONS ON THE PACKAGING, LABELS AND DOCUMENTATION OF PRODUCTS, AND ANY UPDATES THAT WE PROVIDE TO YOU VIA THE SERVICES. In addition, you agree to only use the Products in a manner that complies with all applicable laws and regulations.<\/p>"}}},"block_order":["content_block_ACiDPc","content_block_MbhfGY","content_block_tYHAih"],"settings":{"title":"Terms & Conditions"}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-policy",
+      "blocks": {
+        "content_block_ACiDPc": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "",
+            "paragraph": "<p><strong>Nora comes with a one-year limited warranty, from the time of receiving it, which protects you against manufacturing defects. There is also a 30-day satisfaction guarantee, so that if you are not satisfied with your purchase, you can return Nora in its original condition to receive a full refund. The 30-day satisfaction guarantee starts from delivery date.</strong></p><p><strong>If you are within the limited warranty, you have an option to </strong><a href=\"https://smartnora.com/extended-warranty/\" target=\"_blank\"><strong>extend the warranty</strong></a><strong> for an additional 1-3 years. To learn more about our policy, please read the details below.</strong></p>"
+          }
+        },
+        "content_block_MbhfGY": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "Limited Warranty",
+            "paragraph": "<p>SMART NORA, INC. (“Nora”, “Smart Nora, the smart snoring solution”) warrants Smart Nora (the “product”) and only the Product, against defects in materials and workmanship under normal use for a period of ONE YEAR (365 days) from the date of receiving the unit by the original Consumer (“Limited Warranty Period”). This warranty is only valid from the date of receiving Nora and the Consumer must provide proof of purchase.</p><p>The consumer’s sole and exclusive remedy, and Smart Nora Inc’s sole and exclusive responsibility under this warranty, if a hardware defect arises and a valid claim is received by Smart Nora, Inc. within the Warranty Period, at its option and to the extent permitted by law, Smart Nora Inc., will either (1) repair the Product at no charge (postage fees for returning the product are responsibility of the consumer), using new or refurbished replace parts or (2) exchange the Product with a new or refurbished Product, so that it performs substantially in accordance with the accompanying documentation on the date of consumer’s initial purchase. </p><p>Please note that the return policy begins 30 days from delivery date.</p><p>* The 30 day risk-free trial is only available for online purchases. Purchases at re-sellers or distributors may or may not offer this 30 day risk free trial.</p><p>   &nbsp;</p>"
+          }
+        },
+        "content_block_tYHAih": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "Disclaimer of Warranties",
+            "paragraph": "<p>OUR PRODUCTS ARE NOT MEDICAL DEVICES AND ARE NOT REGULATED NOR APPROVED BY THE U.S. FOOD AND DRUG ADMINISTRATION. OUR PRODUCTS AND SERVICES ARE INTENDED TO PROVIDE YOU WITH SNORING RELIEF AND / OR REDUCED SOUNDS OF SNORING. OUR IOS COMPANION APP IS INTENDED TO PROVIDE YOU WITH DATA AND INFORMATION ABOUT YOUR SLEEP, HOW NORA IS WORKING TO REDUCE YOUR SNORING, AND IS NOT INTENDED TO BE USED AS A SUBSTITUTE FOR MEDICAL ATTENTION OR SUPERVISION. YOUR USE OF NORA AND THE IOS APP IS AT YOUR SOLE RISK. THE SERVICE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. SMART NORA INC., EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.</p><p>SMART NORA, INC. MAKES NO WARRANTY THAT (I) THE SERVICE WILL MEET YOUR REQUIREMENTS, (II) THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, OR (III) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICE WILL MEET YOUR EXPECTATIONS. Our Products may include product warnings and instructions on the packaging, labels and documentation. AS A CONDITION TO RECEIVING SERVICES, YOU AGREE TO STRICTLY COMPLY WITH ALL PRODUCT WARNINGS AND INSTRUCTIONS ON THE PACKAGING, LABELS AND DOCUMENTATION OF PRODUCTS, AND ANY UPDATES THAT WE PROVIDE TO YOU VIA THE SERVICES. In addition, you agree to only use the Products in a manner that complies with all applicable laws and regulations.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_ACiDPc",
+        "content_block_MbhfGY",
+        "content_block_tYHAih"
+      ],
+      "settings": {
+        "title": "Terms & Conditions"
+      }
+    },
+    "main_policy_VEDRmC": {
+      "type": "main-policy",
+      "blocks": {
+        "content_block_WhJFcp": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "",
+            "paragraph": "<p>These Terms & Conditions govern the <strong>Nora Membership</strong> program offered by Smart Nora Inc. By subscribing to Nora Membership, you agree to be bound by these terms.</p>"
+          }
+        },
+        "content_block_kdNFae": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "1. Membership Overview",
+            "paragraph": "<p>The <strong>Nora Membership</strong> is a subscription-based service providing extended warranty coverage, priority customer support, exclusive discounts, and firmware updates for Smart Nora devices.</p><p><strong>Membership Benefits Include:<br/></strong> ✅ Lifetime Warranty (see Section 3)<br/> ✅ VIP Customer Support<br/> ✅ 40% Off Accessories<br/> ✅ Firmware Updates & New Features</p><p>Monthly Fee: <strong>$5.99 USD/month</strong> (subject to change with notice).</p>"
+          }
+        },
+        "content_block_BezxPE": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "2. Membership Eligibility & Activation",
+            "paragraph": "<ul><li>The <strong>Nora Membership is available only to Smart Nora device owners</strong>.</li><li>Members must enroll using a valid payment method. Subscription will auto-renew unless canceled (see Section 7).</li><li>If your <strong>original warranty has expired before subscribing</strong>, you must remain subscribed for <strong>at least 12 months</strong> after the warranty claim.</li><li>Membership benefits <strong>cannot be transferred</strong> to another person or device.</li></ul>"
+          }
+        },
+        "content_block_NjiQ9w": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "3. Lifetime Warranty Terms & Limitations",
+            "paragraph": "<ul><li>The <strong>Lifetime Warranty covers repairs and replacements of defective parts</strong> for as long as you maintain an active membership.</li><li><strong>Coverage is for repair or replacement of specific faulty components only</strong>, not a full unit replacement unless deemed necessary by Smart Nora.</li><li><strong>Damage due to misuse, accidents, unauthorized modifications, or improper storage is not covered.</strong></li><li><strong>Shipping fees for warranty claims apply</strong> and will be communicated at the time of service.</li></ul>"
+          }
+        },
+        "content_block_qVJFyH": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "4. VIP Customer Support",
+            "paragraph": "<ul><li>Members receive priority access to customer support.</li><li>Support inquiries are handled faster than standard non-member requests, but <strong>response times may vary based on demand</strong>.</li></ul>"
+          }
+        },
+        "content_block_7J8ULe": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "5. Exclusive 40% Discount on Accessories",
+            "paragraph": "<ul><li>The discount applies only to <strong>specific Smart Nora accessories</strong>, including but not limited to sleep masks, massage guns, nasal strips, and similar products.</li><li>The discount <strong>does not apply to Smart Nora Snoring Solution </strong>or third-party products.</li></ul><p>Discounts <strong>cannot be combined with other promotions or offers</strong> unless explicitly stated.</p>"
+          }
+        },
+        "content_block_E7DGYK": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "6. Firmware Updates & New Features",
+            "paragraph": "<ul><li>Members receive <strong>access to firmware updates and new features</strong> developed for Smart Nora devices.</li><li>Some updates <strong>may require compatible hardware</strong>, and older versions of Smart Nora may not support all future updates.</li></ul>"
+          }
+        },
+        "content_block_FyqTBU": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "7. Membership Billing & Cancellation",
+            "paragraph": "<ul><li>The <strong>$5.99/month membership fee is billed automatically</strong> on the same day each month.</li><li>Members can <strong>cancel at any time, but benefits (including warranty coverage) will end immediately</strong>.</li><li><strong>If you cancel after using the warranty, you must pay for the repair or replacement costs incurred if the membership duration is less than 12 months.</strong></li><li>No refunds or prorated credits will be issued for partial months or unused benefits.</li></ul>"
+          }
+        },
+        "content_block_rmAV83": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "8. Fraud & Abuse Prevention",
+            "paragraph": "<ul><li>Smart Nora reserves the right to <strong>deny service, void warranty claims, or terminate membership</strong> if we suspect abuse, fraud, or violation of these terms.</li><li>Examples of abuse include, but are not limited to:</li><li>Subscribing only when an issue arises and canceling afterward.</li><li>Attempting to transfer benefits to another person.</li><li>Filing false or exaggerated warranty claims.</li></ul>"
+          }
+        },
+        "content_block_Fp7pwp": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "9. Changes to Membership & Terms",
+            "paragraph": "<ul><li>Smart Nora <strong>reserves the right to modify or discontinue the Nora Membership program</strong> at any time.</li><li>We may update these Terms & Conditions periodically. <strong>Continued use of the membership after changes constitutes acceptance of the new terms.</strong></li></ul>"
+          }
+        },
+        "content_block_B46LTC": {
+          "type": "content_block",
+          "settings": {
+            "subtitle": "10. Contact Information",
+            "paragraph": "<p>For questions about your membership, contact <strong>support@smartnora.com</strong>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_WhJFcp",
+        "content_block_kdNFae",
+        "content_block_BezxPE",
+        "content_block_NjiQ9w",
+        "content_block_qVJFyH",
+        "content_block_7J8ULe",
+        "content_block_E7DGYK",
+        "content_block_FyqTBU",
+        "content_block_rmAV83",
+        "content_block_Fp7pwp",
+        "content_block_B46LTC"
+      ],
+      "name": "Terms & Conditions",
+      "settings": {
+        "title": "Nora Membership Terms & Conditions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_policy_VEDRmC"
+  ]
+}
