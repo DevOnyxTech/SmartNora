@@ -60,6 +60,7 @@
         "perks_DiaUEr": {
           "type": "perks",
           "settings": {
+            "icon": "shopify://shop_images/Icon.svg",
             "title": "Lifetime Protection",
             "content": "Stay covered with a continuous warranty"
           }
@@ -67,6 +68,7 @@
         "perks_Mt4G8C": {
           "type": "perks",
           "settings": {
+            "icon": "shopify://shop_images/2.svg",
             "title": "Always Up-to-Date",
             "content": "Access to firmware updates and app features"
           }
@@ -74,6 +76,7 @@
         "perks_FFM7eN": {
           "type": "perks",
           "settings": {
+            "icon": "shopify://shop_images/Icon_2_b7b9c235-00dc-40e3-9c86-590b4efa2923.svg",
             "title": "Member Discounts",
             "content": "Save on Nora accessories &amp; partner products"
           }
@@ -81,6 +84,7 @@
         "perks_XXy88G": {
           "type": "perks",
           "settings": {
+            "icon": "shopify://shop_images/Icon_1_9b70b4d4-1846-4cc6-9d21-e2a1206feb32.svg",
             "title": "VIP Support",
             "content": "Get priority help from our Nora experts"
           }
