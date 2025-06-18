@@ -181,7 +181,7 @@
         background: #05243B;
     }
     .box-tab-item img {
-        margin-bottom: 100px;
+        margin-bottom: 15px;
         border-radius: 20px;
         aspect-ratio: 1/1;
         object-fit: cover;
