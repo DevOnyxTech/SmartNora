@@ -136,13 +136,14 @@
     .accordion_images {
         width: 100%;
     }
-    /* .box-tabs-items-wrapper .tagline {
-        justify-content: center;
-        position: absolute;
-        top: 98vw;
-        left: 0;
-        right: 0;
-    } */
+
+    .in_the_box_section .tagline {
+      /* margin-bottom: 15px;
+      margin-top: 0;
+      text-align: center; */
+      margin: 0 auto 15px auto;
+      display: block;
+    }
     .box-tabs-items {
         margin-top: 30px;
         margin-inline: auto;
