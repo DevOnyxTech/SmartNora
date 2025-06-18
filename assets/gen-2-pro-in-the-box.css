@@ -136,13 +136,13 @@
     .accordion_images {
         width: 100%;
     }
-    .box-tabs-items-wrapper .tagline {
+    /* .box-tabs-items-wrapper .tagline {
         justify-content: center;
         position: absolute;
         top: 98vw;
         left: 0;
         right: 0;
-    }
+    } */
     .box-tabs-items {
         margin-top: 30px;
         margin-inline: auto;
