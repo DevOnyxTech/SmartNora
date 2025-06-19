@@ -355,4 +355,7 @@ p.snoring-breaks__description {
   .full-width-banner .snoring-image-break-section {
       background-image: url(https://cdn.shopify.com/s/files/1/1053/4408/files/Image.jpg?v=1743677133);
   }
+  .snoring-breaks-equal-blocks.snoring-image-break-section {
+    padding-bottom: 0;
+  }
 }
