@@ -120,22 +120,12 @@
         "offer_price": "Save $60. Limited time offer ends March 31",
         "button_label": "Shop now"
       }
-    },
-    "custom_liquid_DAmXU9": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<style type=\"text/css\">\n      .template-404 .title + * {\n        margin-top: 1rem;\n      }\n  .custom-404-container {\n    width: 100%;\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 0 20px;\n  }\n\n  .custom-404-content {\n    max-width: 512px;\n    margin: 0 auto;\n    padding: 80px 0px;\n  }\n\n  .custom-404-message {\n    margin-bottom: 40px;\n    text-align: center;\n  }\n\n  .custom-404-subtitle {\n    font-size: 18px;\n    color: #6B7280;\n    margin: 0;\n  }\n\n  .custom-404-title {\n    font-size: 36px;\n    line-height: 38px;\n    color: #05243b;\n    font-weight: 500;\n    margin-bottom: 20px;\n    margin-top:11px;\n  }\n\n  .custom-404-button {\n    background-color: #97ca3b;\n    border-radius: 9999px;\n    position: relative;\n    color: white;\n    display: inline-flex;\n    font-weight: 600;\n    align-items: center;\n    padding: 9.4px 20px;\n     padding-left: 48px;\n    font-size: 14px;\n    transition: all 0.3s;\n    text-decoration:none;\n  }\n\n  /* .custom-404-button:hover {\n    background-color: #059669;\n  } */\n\n  .custom-404-icon {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 20px;\n    transition: all 0.3s;\n  }\n\n  .custom-404-icon-home {\n    opacity: 1;\n  }\n\n  .custom-404-button:hover .custom-404-icon-home {\n    opacity: 0;\n    transform: translateX(8px);\n  }\n\n  .custom-404-icon-rocket {\n    width: 20px;\n    height: 20px;\n    opacity: 0;\n    transform: translateX(-8px);\n  }\n\n  .custom-404-button:hover .custom-404-icon-rocket {\n    opacity: 1;\n    transform: translateX(0);\n  }\n      @media screen and (min-width: 750px) {\n        .template-404 .title + * {\n          margin-top: 2rem;\n        }\n      }\n</style>\n\n<div class=\"custom-404-container\">\n  <div class=\"custom-404-content\">\n    <div\n      class=\"custom-404-message\"\n      data-sr-id=\"0\"\n      style=\"visibility: visible; opacity: 1; transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.1s;\"\n    >\n      <p class=\"custom-404-subtitle\">Uh oh, we've got a 404 here.</p>\n      <h2 class=\"custom-404-title\">Someone must be sleeping on the job.</h2>\n      <a\n        href=\"/\"\n        class=\"custom-404-button\"\n      >\n        <svg\n          class=\"custom-404-icon custom-404-icon-home\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          viewBox=\"0 0 24 24\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\">\n          </path>\n        </svg>\n\n        <svg\n          class=\"custom-404-icon custom-404-icon-rocket\"\n          fill=\"none\"\n          stroke=\"currentColor\"\n          viewBox=\"0 0 24 24\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122\">\n          </path>\n        </svg>\n        <span>Visit Home Page</span>\n      </a>\n    </div>\n  </div>\n</div>\n\n{% comment %}\n  <div class=\"template-404 page-width page-margin center\">\n    <p>\n      {{ 'templates.404.subtext' | t }}\n    </p>\n    <h1 class=\"title\">\n      {{ 'templates.404.title' | t }}\n    </h1>\n    <a href=\"{{ routes.all_products_collection_url }}\" class=\"button\">\n      {{ 'general.continue_shopping' | t }}\n    </a>\n  </div>\n{% endcomment %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
     "accesories_product_grid_bfYxQR",
     "accesories_membership_perks_cxJVKg",
-    "accesories_pebble_yQdcwf",
-    "custom_liquid_DAmXU9"
+    "accesories_pebble_yQdcwf"
   ]
 }
