@@ -12,5 +12,13 @@
   "context": {
     "market": "ca"
   },
-  "sections": {}
+  "sections": {
+    "gen_2_image_text_PLxiiK": {
+      "settings": {
+        "heading": "30-Day Money-Back Guarantee",
+        "description": "Experience Nora Gen 2 at home. If you're not satisfied, return it in original condition for a full refund."
+      },
+      "blocks": {}
+    }
+  }
 }
