@@ -408,8 +408,8 @@ f=false,w=window,d=document,vwoCodeEl=d.querySelector('#vwoCode'),code={use_exis
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
-<script src="{{%20'predictive-search.js'%20|%20asset_url%20}}" defer></script>
-<script src="{{%20'cart-drawer.js'%20|%20asset_url%20}}" defer></script>
+<script src="{{ renamed_variable_20.predictive-search.js['20'] }}" defer></script>
+<script src="{{ renamed_variable_20.cart-drawer.js['20'] }}" defer></script>
 <script>
                                    document.addEventListener("DOMContentLoaded", function () {
                                    const loader = document.getElementById('loader');
@@ -471,3 +471,16 @@ f=false,w=window,d=document,vwoCodeEl=d.querySelector('#vwoCode'),code={use_exis
     
   </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{%20'predictive-search.js'%20|%20asset_url%20}}"
+  to: "{{ renamed_variable_20.predictive-search.js['20'] }}"
+  position: 29983..30035
+- from: "{{%20'cart-drawer.js'%20|%20asset_url%20}}"
+  to: "{{ renamed_variable_20.cart-drawer.js['20'] }}"
+  position: 30066..30112
+{% endcomment %}
